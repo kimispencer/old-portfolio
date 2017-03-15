@@ -10,7 +10,13 @@ const Topic = ({ match }) => (
 
 const Topics = ({ match }) => (
   <div>
-    <h2>Topics</h2>
+    
+    <h2 className="title center">Topics</h2>
+      <Route exact path={match.url} render={() => (
+      <h3>Please select a topic.</h3>
+    )}/>
+    <Route path={`${match.url}/:topicId`} component={Topic}/>
+
     <ul>
       <li>
         <Link to={`${match.url}/rendering`}>
@@ -28,11 +34,6 @@ const Topics = ({ match }) => (
         </Link>
       </li>
     </ul>
-
-    <Route path={`${match.url}/:topicId`} component={Topic}/>
-    <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
   </div>
 )
 export default Topics;
