@@ -4,10 +4,9 @@
   position: relative;
   margin: 0;
   padding: 0; }
-
-.App .main-content {
-  border: 1px dashed green;
-  padding: 20px; }
+  .App .main-content {
+    border: 1px dashed green;
+    padding: 20px; }
 
 .NavBar {
   background-color: lightgrey;

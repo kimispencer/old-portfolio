@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
+import Nav from './Nav';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Topics from './pages/Topics/Topics';
 
 import './App.css';
-
-const NavBar = () => (
-	<div className="NavBar">
-	  <ul>
-		<li><Link to="/">Home</Link></li>
-		<li><Link to="/about">About</Link></li>
-		<li><Link to="/topics">Topics</Link></li>
-	  </ul>
-	</div>
-)
 
 const Footer = () => (
 	<div className="Footer">
@@ -33,7 +23,7 @@ class App extends Component {
 			<div className="App">
 			  <Router>
 				<div>
-					<NavBar />
+					<Nav />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/about" component={About}/>
