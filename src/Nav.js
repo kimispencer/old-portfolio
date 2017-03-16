@@ -30,7 +30,7 @@ import './Nav.css';
 /* ES 6 */
 const NavTrigger = (props) => (
 	<div className="NavTrigger" onClick={props.handleClick}>
-		<h1>|||</h1>
+		<p>|||</p>
 	</div>
 )
 
@@ -55,9 +55,10 @@ class Nav extends Component {
 				<NavTrigger handleClick={this.handleClick} />
 				<div className={cssClasses}>
 					<ul>
-						<li><Link to="/" onClick={this.handleClick}>Home</Link></li>
-						<li><Link to="/about" onClick={this.handleClick}>About</Link></li>
-						<li><Link to="/topics" onClick={this.handleClick}>Topics</Link></li>
+						<li><Link to="/" onClick={this.handleClick}><p>Home</p></Link></li>
+						<li><Link to="/about" onClick={this.handleClick}><p>About</p></Link></li>
+						<li><Link to="/works" onClick={this.handleClick}><p>Works</p></Link></li>
+						<li><Link to="/topics" onClick={this.handleClick}><p>Topics</p></Link></li>
 					</ul>
 				</div>
 			</div>

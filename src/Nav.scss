@@ -1,4 +1,4 @@
-@import './styles/_all.scss';
+@import './styles/_all';
 
 .Nav {
 	z-index: 100;
@@ -44,6 +44,7 @@
 @media only screen and (max-width : $breakpoint) {
 	.NavTrigger {
 		display: block;
+		padding: $gutter/2;
 		cursor: pointer;
 		position: fixed;
 		top: 0;

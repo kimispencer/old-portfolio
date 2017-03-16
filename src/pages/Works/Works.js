@@ -4,7 +4,7 @@ import { Route, Link } from 'react-router-dom';
 
 const Work = ({ match }) => (
 	<div>
-	<h3>{match.params.topicId}</h3>
+		<h3>{match.params.topicId}</h3>
 	</div>
 	)
 
