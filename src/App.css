@@ -1,18 +1,22 @@
+/* breakpoints */
+/* base units */
+/* nav */
 .App {
   border: 1px dashed red;
   min-height: 100vh;
   position: relative;
   margin: 0;
   padding: 0; }
-  .App .main-content {
-    border: 1px dashed green;
-    padding: 20px; }
 
-.NavBar {
-  background-color: lightgrey;
+.App .Nav {
+  /* CSS on the component level */ }
+
+.App .main-content {
+  border: 1px dashed green;
+  margin-top: 40px;
   padding: 20px; }
 
-.Footer {
+.App .Footer {
   background-color: black;
   color: white;
   padding: 20px;

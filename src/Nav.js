@@ -55,14 +55,18 @@ class Nav extends Component {
 				<NavTrigger handleClick={this.handleClick} />
 				<div className={cssClasses}>
 					<ul>
-						<li><Link to="/">Home</Link></li>
-						<li><Link to="/about">About</Link></li>
-						<li><Link to="/topics">Topics</Link></li>
+						<li><Link to="/" onClick={this.handleClick}>Home</Link></li>
+						<li><Link to="/about" onClick={this.handleClick}>About</Link></li>
+						<li><Link to="/topics" onClick={this.handleClick}>Topics</Link></li>
 					</ul>
 				</div>
 			</div>
-			);
+		);
 	}
 }
+
+// function logUpdate() {
+// 	console.log('current url: ' + window.location.pathname);
+// }
 
 export default Nav;

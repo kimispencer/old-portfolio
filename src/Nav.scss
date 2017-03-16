@@ -1,25 +1,77 @@
-.NavTrigger {
-	position: fixed;
-	top: 0;
-	right: 0;
-	padding: 10px;
-	color: red;
-	h1 {
-		display: inline-block;
-	}
-}
+@import './styles/_all.scss';
+
 .Nav {
+	z-index: 100;
 	transition: all .5s ease;
 	background-color: lightgrey;
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: 50vw;
-	&.open {
-		transform: translate3d(0vw, 0, 0);
+
+	ul {
+		@include flexbox();
+		li {
+			list-style: none;
+			margin: 10px;
+			display: inline;
+		}
 	}
-	&.closed {
-		transform: translate3d(-100vw, 0, 0);
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.NavTrigger {
+		display: none;
+	}
+	.Nav {
+		height: $fixed_nav_height;
+		width: 100vw;
+
+		ul {
+			@include flex-flow(row);
+			@include justify-content(flex-end);
+			padding: 0;
+			margin: 0 $gutter;
+			li {
+				margin: 10px;
+				display: inline;
+			}
+		}
+	}
+}
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.NavTrigger {
+		display: block;
+		cursor: pointer;
+		position: fixed;
+		top: 0;
+		right: 0;
+		h1 {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+	.Nav {
+		height: 100vh;
+		width: $slideout_nav_width;
+		max-width: 70vw;
+
+		&.open {
+			transform: translate3d(0vw, 0, 0);
+		}
+		&.closed {
+			transform: translate3d(-$slideout_nav_width, 0, 0);
+		}
+		ul {
+			@include flex-flow(column);
+			padding: $gutter;
+			margin: 0;
+			li {
+				margin: 10px;
+				display: block;
+			}
+		}
 	}
 }

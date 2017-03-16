@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+
 import './index.css';
 import './styles/typography.css';
+
+import App from './App';
 
 ReactDOM.render(
 	<App />,

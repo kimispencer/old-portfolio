@@ -1,25 +1,27 @@
+@import './styles/_all.scss';
+
 .App {
 	border: 1px dashed red;
 	min-height: 100vh;
 	position: relative;
 	margin: 0;
 	padding: 0;
+	.Nav {
+		/* CSS on the component level */
+	}
 	.main-content {
 		border: 1px dashed green;
+		margin-top: $fixed_nav_height;
 		padding: 20px;
 	}
-}
-.NavBar {
-	background-color: lightgrey;
-	padding: 20px;
-}
-.Footer {
-	background-color: black;
-	color: white;
-	padding: 20px;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	text-align: center;
+	.Footer {
+		background-color: black;
+		color: white;
+		padding: 20px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	}
 }
