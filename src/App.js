@@ -19,13 +19,25 @@ const Footer = () => (
 )
 
 class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			isNavOpen: false
+		}
+		this.toggleNav = this.toggleNav.bind(this);
+	}
+	toggleNav() {
+		this.setState(prevState => ({
+			isNavOpen: !prevState.isNavOpen
+		}));
+	}
 	render() {
 		return(
 			<div className="App">
 			  <Router>
 				<div>
-					<Nav />
-					<div className="main-content">
+					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
+					<div className="main-content" onClick={this.toggleNav}>
 						<Route exact path="/" component={Home}/>
 						<Route path="/about" component={About}/>
 						<Route path="/works" component={Works}/>
