@@ -3,13 +3,13 @@ import { Route, Link } from 'react-router-dom';
 
 
 const Work = ({ match }) => (
-	<div>
+	<div className="Work">
 		<h3>{match.params.topicId}</h3>
 	</div>
 	)
 
 const Works = ({ match }) => (
-	<div>
+	<div className="Works">
 		<h2 className="title center">Works</h2>
 		<Route exact path={match.url} render={() => (
 			<h3>Please select a topic.</h3>

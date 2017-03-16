@@ -1,5 +1,6 @@
 /* breakpoints */
 /* base units */
+/* z-index */
 /* nav */
 .App {
   border: 1px dashed red;
@@ -7,21 +8,18 @@
   position: relative;
   margin: 0;
   padding: 0; }
-
-.App .Nav {
-  /* CSS on the component level */ }
-
-.App .main-content {
-  border: 1px dashed green;
-  margin-top: 40px;
-  padding: 20px; }
-
-.App .Footer {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center; }
+  .App .Nav {
+    /* CSS on the component level */ }
+  .App .main-content {
+    border: 1px dashed green;
+    margin-top: 40px;
+    padding: 20px; }
+  .App .Footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center; }

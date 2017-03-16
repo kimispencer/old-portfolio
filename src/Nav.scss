@@ -1,7 +1,7 @@
 @import './styles/_all';
 
 .Nav {
-	z-index: 100;
+	z-index: $ultimate_top;
 	transition: all .5s ease;
 	background-color: lightgrey;
 	position: fixed;
@@ -11,6 +11,7 @@
 	ul {
 		@include flexbox();
 		li {
+			@include border(red);
 			list-style: none;
 			margin: 10px;
 			display: inline;

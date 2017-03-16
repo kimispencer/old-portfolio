@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import Nav from './Nav';
+import Shroud from './Shroud';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Works from './pages/Works/Works';
@@ -37,7 +38,8 @@ class App extends Component {
 			  <Router>
 				<div>
 					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
-					<div className="main-content" onClick={this.toggleNav}>
+					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
+					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/about" component={About}/>
 						<Route path="/works" component={Works}/>
@@ -51,18 +53,3 @@ class App extends Component {
 	}
 }
 export default App;
-
-// import React, { Component } from 'react';
-// import './App.css';
-
-// class App extends Component {
-// 	render() {
-// 		return (
-// 			<div class="App">
-// 				<h1>hi</h1>
-// 			</div>
-// 		);
-// 	}
-// }
-
-// export default App;
