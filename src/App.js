@@ -8,7 +8,7 @@ import Nav from './Nav';
 import Shroud from './Shroud';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Works from './pages/Works/Works';
+import WorkList from './pages/Works/WorkList';
 import Topics from './pages/Topics/Topics';
 
 import './App.css';
@@ -42,7 +42,7 @@ class App extends Component {
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/about" component={About}/>
-						<Route path="/works" component={Works}/>
+						<Route path="/works" component={WorkList}/>
 						<Route path="/topics" component={Topics}/>
 					</div>
 					<Footer />

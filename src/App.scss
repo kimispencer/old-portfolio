@@ -12,6 +12,7 @@
 	.main-content {
 		border: 1px dashed green;
 		margin-top: $fixed_nav_height;
+		margin-bottom: $footer_height + $gutter*2;
 		padding: 20px;
 	}
 	.Footer {
@@ -23,5 +24,6 @@
 		bottom: 0;
 		left: 0;
 		text-align: center;
+		height: $footer_height;
 	}
 }
