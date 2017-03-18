@@ -1,0 +1,23 @@
+@import './styles/_all';
+
+.Shroud {
+	z-index: $top;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	&.show {
+		display: block;
+	}
+	&.hide {
+		display: none;
+	}
+}
+
+@media only screen and (min-width : $breakpoint) {
+	.Shroud {
+		display: none !important;
+	}
+}
