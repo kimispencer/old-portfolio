@@ -4,16 +4,16 @@ import { Route, Link } from 'react-router-dom';
 
 const Topic = ({ match }) => (
   <div>
-    <h3>{match.params.topicId}</h3>
+    <p>{match.params.topicId}</p>
   </div>
 )
 
 const Topics = ({ match }) => (
   <div>
     
-    <h2 className="title center">Topics</h2>
+    <h4 className="title center">Topics</h4>
       <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
+      <p>Please select a topic.</p>
     )}/>
     <Route path={`${match.url}/:topicId`} component={Topic}/>
 

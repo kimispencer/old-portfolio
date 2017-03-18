@@ -4,22 +4,26 @@
 /* nav */
 /* footer */
 body {
-  font-size: 12px; }
+  font-size: 12px;
+  font-family: Helvetica, Arial, Sans-Serif; }
 
-/*h1 {
-	font-size: ms(5);
-}
+h1 {
+  font-size: 6.8541em; }
+
 h2 {
-	font-size: ms(4);
-}
+  font-size: 4.23607em; }
+
 h3 {
-	font-size: ms(3);
-}
+  font-size: 2.61803em; }
+
 h4 {
-	font-size: ms(2);
-}
+  font-size: 1.61803em; }
+
 p {
-	font-size: ms(1);
-}*/
+  font-size: 1em; }
+
+.title {
+  margin-bottom: 20px; }
+
 .title.center {
   text-align: center; }

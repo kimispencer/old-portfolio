@@ -6,25 +6,27 @@ $ms-ratio: $golden;
 
 body {
 	font-size: 12px;	
+	font-family: Helvetica, Arial, Sans-Serif;
 }
 
-/*h1 {
-	font-size: ms(5);
-}
-h2 {
+h1 {
 	font-size: ms(4);
 }
-h3 {
+h2 {
 	font-size: ms(3);
 }
-h4 {
+h3 {
 	font-size: ms(2);
 }
-p {
+h4 {
 	font-size: ms(1);
-}*/
+}
+p {
+	font-size: ms(0);
+}
 
 .title {
+	margin-bottom: $gutter;
 	&.center {
 		text-align: center;
 	}

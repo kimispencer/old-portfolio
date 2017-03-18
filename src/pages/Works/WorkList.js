@@ -24,7 +24,7 @@ const WorkList = () => {
 	];
 	return (
 		<div className="WorkList">
-			<h2 className="title center">Works</h2>
+			<h4 className="title center">Works</h4>
 			<ul className="work-list">
 				{projects.map((project, index) => <WorkItem project={project} key={index}/>)}
 			</ul>
