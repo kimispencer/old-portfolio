@@ -9,7 +9,6 @@ import Shroud from './Shroud';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import ProjectList from './pages/Projects/ProjectList';
-import Topics from './pages/Topics/Topics';
 
 import './App.css';
 
@@ -43,7 +42,6 @@ class App extends Component {
 						<Route exact path="/" component={Home}/>
 						<Route path="/about" component={About}/>
 						<Route path="/projects" component={ProjectList}/>
-						<Route path="/topics" component={Topics}/>
 					</div>
 					<Footer />
 				</div>
