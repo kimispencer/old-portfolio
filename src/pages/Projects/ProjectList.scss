@@ -18,6 +18,10 @@ $work_tile_size: 300px;
 	/*margin: $gutter;*/
 	background-size: cover;
 	background-position: 50% 50%;
-	color: white;
+	color: yellow;
 	cursor: pointer;
+}
+.ProjectDetail {
+	border: 1px dashed yellow;
+	min-height: 100vh;
 }

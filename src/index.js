@@ -17,6 +17,7 @@ ReactDOM.render(
 	const ListItem = (props) => <li className="list-item">{props.item.name}</li>;
 
 	// I use this when my component has no logic outside JSX
+	// NOTE -- does not use 'props' everything else does
 	const List = ({ items }) => (
 	  <ul className="list">
 	    {items.map(item => <ListItem item={item} />)}

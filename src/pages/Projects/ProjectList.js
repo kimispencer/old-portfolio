@@ -7,8 +7,8 @@ import {
 import './ProjectList.css';
 
 const ProjectDetail = ({match}) => (
-	<div>
-		<h3>ID: {match.params.id}</h3>
+	<div className="ProjectDetail">
+		<h3 className="title center">ProjectId: {match.params.projectId}</h3>
 	</div>
 )
 
@@ -19,7 +19,7 @@ const ProjectItem = (props) => {
 	return (
 		<div className="ProjectItem" style={style}>
 			<div className="text">
-				{props.project.name}
+				<h4>{props.project.url}</h4>
 			</div>
 		</div>
 	);
@@ -33,15 +33,22 @@ const ProjectList = (props) => {
 	];
 	return (
 		<div className="ProjectList">
-			<h4 className="title center">Project</h4>		
+			<h4 className="title center">Projects</h4>		
+			
+			<Route exact path={props.match.url} render={() => (
+			  <p>Please select a project.</p>
+			)}/>
+			<Route path={`${props.match.url}/:projectId`} component={ProjectDetail}/>
+
 			<ul className="project-list">
 				{projects.map((project, index) => 
-					<Link to={project.url} key={index}>
-						<ProjectItem project={project}/>
-					</Link>
+					<li key={index}>
+						 <Link to={props.match.url + '/' + project.url}>
+							<ProjectItem project={project}/>
+						</Link>
+					</li>
 				)}
 			</ul>
-			<Route path="/:id" component={ProjectDetail}/>
 		</div>
 	);
 }
