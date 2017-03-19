@@ -2,14 +2,14 @@
 
 $work_tile_size: 300px;
 
-.WorkList {
+.ProjectList {
 	border: 1px dashed blue;
-	ul.work-list {
+	ul.project-list {
 		@include flexbox-center(row);
 		@include flex-wrap(wrap);
 	}
 }
-.WorkItem {
+.ProjectItem {
 	border: 1px dashed red;
 	@include flexbox-center(column);
 	width: $work_tile_size;

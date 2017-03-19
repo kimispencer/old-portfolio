@@ -24,6 +24,5 @@ p {
 
 .title {
   margin-bottom: 20px; }
-
-.title.center {
-  text-align: center; }
+  .title.center {
+    text-align: center; }
