@@ -96,6 +96,9 @@
 .Resume .resume-container .resume-section .resume-section-item .title.flex-row .institution {
   margin-right: 20px; }
 
+.Resume .resume-container .resume-section ul li {
+  list-style: disc; }
+
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {
   .Resume .resume-container .resume-section {
@@ -123,7 +126,7 @@
     align-items: flex-start;
     width: 1000px; }
   .Resume .resume-container .resume-section#Skills .resume-section-item {
-    margin-right: 10px; }
+    margin-right: 20px; }
   .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
     margin-right: 0; }
   .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {

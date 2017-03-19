@@ -35,6 +35,11 @@
 					}
 				}
 			}
+			ul {
+				li {
+					list-style: disc;
+				}
+			}
 		}
 	}
 }
@@ -49,7 +54,7 @@
 				width: 1000px;
 				&#Skills {
 					.resume-section-item{
-						margin-right: $gutter/2;
+						margin-right: $gutter;
 						&:last-child {
 							margin-right: 0;
 						}

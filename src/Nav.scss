@@ -13,7 +13,6 @@
 	ul {
 		@include flexbox();
 		li {
-			list-style: none;
 			margin: 10px;
 			display: inline;
 		}

@@ -21,7 +21,7 @@ const Resume = ({}) => (
 					<h4 className="bold title underline">PROFILE</h4>
 				</div>
 				<div className="right-col">
-					<p>Nunc vestibulum enim ut cursus bibendum. In maximus quam enim, non interdum lectus porta quis. Nam dictum, velit ut porta iaculis, leo dolor vestibulum nisi, vel tincidunt sapien eros id est. Sed tristique congue facilisis. In neque ante, mattis at vehicula vitae, tincidunt et est. Fusce mollis feugiat libero, eu dictum nunc dictum nec. Suspendisse sollicitudin turpis magna, in consequat dui tincidunt at. Vestibulum interdum dictum eros, in efficitur dui. Sed sed est tortor. Integer sit amet tortor id augue malesuada fermentum. Suspendisse consectetur mi quis vestibulum condimentum.</p>
+					<p>Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. I have over 8 years experience working in technology from San Francisco startups to NYC digital agencies. I create identity and digital experiences through concept development, UX & visual design, and creative coding solutions. I have a personal passion for data visualization and creating visuals for music performances.</p>
 				</div>
 			</div>
 			<div className="resume-section" id="WorkExperience">
@@ -32,54 +32,62 @@ const Resume = ({}) => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<div className="flex-col institution">
-								<h4 className="bold uppercase">brainchildco</h4>
+								<h4 className="bold uppercase">brainchild</h4>
 								<h4 className="bold uppercase">the arrivals</h4>
 								<h4 className="bold uppercase">onomie</h4>
 							</div>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">Lead Front-end Engineer & UX Designer, Brainchild Co — 2014 to present</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
-						<p>Nunc vestibulum enim ut cursus bibendum. In maximus quam enim, non interdum lectus porta quis. Nam dictum, velit ut porta iaculis, leo dolor vestibulum nisi, vel tincidunt sapien eros id est. Sed tristique congue facilisis. In neque ante, mattis at vehicula vitae, tincidunt et est. Fusce mollis feugiat libero, eu dictum nunc dictum nec. Suspendisse sollicitudin turpis magna, in consequat dui tincidunt at. Vestibulum interdum dictum eros, in efficitur dui. Sed sed est tortor. Integer sit amet tortor id augue malesuada fermentum. Suspendisse consectetur mi quis vestibulum condimentum.</p>
+						<p>Brainchild is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
+						<br />
+						<p>As the lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">Arrivals</a>, <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild</a> brands I was individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app.</p>
+						<br />
+						<ul>
+							<li><p>Lead the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
+							<li><p>Created UX/UI mockups, graphic/web designs, as well as translated mockups into code.</p></li>
+							<li><p>Assisted with back-end integration and templating.</p></li>
+							<li><p>Oversaw the launch of multiple successful sites from start to finish under strict deadlines.</p></li>
+						</ul>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">Lead Front-End Engineer & UX Designer - 2016 to present</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">bolster</h4>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">Front-end Developer & UX Designer - 2013 to 2014</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">10x management</h4>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">+plusign</h4>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">r/ga</h4>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">Experience Design Intern - 2011</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">guide by cell</h4>
-							<p className="job-title serif">front-end engineer</p>
+							<p className="job-title serif">Project Manager & Web/Graphic Designer - 2008 to 2010</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
