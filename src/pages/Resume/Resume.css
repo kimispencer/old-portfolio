@@ -33,30 +33,7 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
-.ProjectList ul.project-list {
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 20px; }
-
-.ProjectListItem {
-  cursor: pointer;
-  background-image: none !important;
-  color: red;
-  /*	
-	// box/tile design
-	@include flexbox-center(column);
-	width: $project_tile_size;
-	max-width: 100vw;
-	height: $project_tile_size;
-	background-size: cover;
-	background-position: 50% 50%;
-*/ }
-  .ProjectListItem .text {
-    padding: 5px; }
-
-.ProjectDetail {
+.Resume .resume-container {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -75,14 +52,26 @@
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: 50% 50%;
-  color: red; }
+  margin-top: 40px; }
+  .Resume .resume-container .left-col, .Resume .resume-container .right-col {
+    border: 1px dashed blue; }
+  .Resume .resume-container .resume-section {
+    border: 1px dashed red;
+    width: 100%;
+    max-width: 90vw;
+    margin-bottom: 40px; }
+    .Resume .resume-container .resume-section#Skills .skill-section {
+      width: 100%;
+      border: 1px dashed red; }
+    .Resume .resume-container .resume-section .resume-section-list {
+      border: 1px dashed green;
+      margin-bottom: 20px; }
+      .Resume .resume-container .resume-section .resume-section-list:last-child {
+        margin-bottom: 0; }
 
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {
-  .ProjectList ul.project-list {
+  .Resume .resume-container .resume-section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -100,13 +89,27 @@
     -moz-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    -ms-flex-pack: center; }
-  .ProjectListItem {
-    margin-right: 10px; } }
+    -ms-flex-pack: center;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    width: 1000px; }
+    .Resume .resume-container .resume-section#Skills .skill-section {
+      margin-right: 10px;
+      width: 33%; }
+      .Resume .resume-container .resume-section#Skills .skill-section:last-child {
+        margin-right: 0; }
+  .Resume .resume-container .left-col {
+    margin-right: 40px;
+    width: 20%; }
+  .Resume .resume-container .right-col {
+    margin-left: 40px;
+    width: 80%; } }
 
 /* 640px or smaller */
 @media only screen and (max-width: 640px) {
-  .ProjectList ul.project-list {
+  .Resume .resume-container .resume-section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -125,5 +128,11 @@
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-  .ProjectListItem {
-    margin-bottom: 10px; } }
+    .Resume .resume-container .resume-section#Skills .skill-section {
+      margin-bottom: 20px; }
+      .Resume .resume-container .resume-section#Skills .skill-section:last-child {
+        margin-bottom: 0; }
+    .Resume .resume-container .resume-section .left-col, .Resume .resume-container .resume-section .right-col {
+      width: 100%; }
+    .Resume .resume-container .resume-section .left-col {
+      margin-bottom: 20px; } }

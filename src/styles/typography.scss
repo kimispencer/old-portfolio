@@ -11,23 +11,39 @@ body {
 
 h1 {
 	font-size: ms(4);
+	/*line-height: ms(4) * 1.2;*/
 }
 h2 {
 	font-size: ms(3);
+	line-height: ms(3) * .5;
 }
 h3 {
 	font-size: ms(2);
+	line-height: ms(2) * 0.7;
 }
 h4 {
 	font-size: ms(1);
+	line-height: ms(1) * 1.2;
 }
 p {
 	font-size: ms(0);
+	line-height: ms(0) * 1.2;
 }
 
 .title {
 	margin-bottom: $gutter;
+}
+.center {
+	* { text-align: center; }
+}
+h1, h2, h3, h4, p {
 	&.center {
 		text-align: center;
 	}
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.bold {
+	font-weight: bold;
 }

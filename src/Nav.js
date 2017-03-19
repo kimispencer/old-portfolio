@@ -20,8 +20,9 @@ const Nav = (props) => {
 			<div className={cssClasses}>
 				<ul>
 					<li><Link to="/" onClick={props.handleClick}><p>Home</p></Link></li>
-					<li><Link to="/about" onClick={props.handleClick}><p>About</p></Link></li>
 					<li><Link to="/projects" onClick={props.handleClick}><p>Projects</p></Link></li>
+					<li><Link to="/resume" onClick={props.handleClick}><p>Resume</p></Link></li>
+					<li><Link to="/contact" onClick={props.handleClick}><p>Contact</p></Link></li>
 				</ul>
 			</div>
 		</div>

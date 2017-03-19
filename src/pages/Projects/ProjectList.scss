@@ -8,7 +8,7 @@ $project_tile_size: 200px;
 		margin-bottom: $gutter;
 	}
 }
-.ProjectItem {
+.ProjectListItem {
 	cursor: pointer;
 	background-image: none !important;
 	color: red;
@@ -21,6 +21,9 @@ $project_tile_size: 200px;
 	background-size: cover;
 	background-position: 50% 50%;
 */
+	.text {
+		padding: $gutter/4;
+	}
 }
 .ProjectDetail {
 	@include flexbox-center(column);
@@ -37,7 +40,7 @@ $project_tile_size: 200px;
 			@include flexbox-center(row);
 		}
 	}
-	.ProjectItem {
+	.ProjectListItem {
 		margin-right: $gutter/2;
 	}
 }
@@ -49,7 +52,7 @@ $project_tile_size: 200px;
 			@include flexbox-center(column);
 		}
 	}
-	.ProjectItem {
+	.ProjectListItem {
 		margin-bottom: $gutter/2;
 	}
 }

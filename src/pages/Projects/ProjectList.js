@@ -18,6 +18,11 @@ const PROJECTS = [
 		coverImg: "https://unsplash.it/410/540"
 	},
 	{
+		url: 'kimispencer', 
+		name: "Portfolio Site", 
+		coverImg: "https://unsplash.it/410/580"
+	},
+	{
 		url: 'onomie', 
 		name: "Onomie", 
 		coverImg: "https://unsplash.it/420/540"
@@ -36,6 +41,11 @@ const PROJECTS = [
 		url: 'plusign', 
 		name: "Plusign",  
 		coverImg: "https://unsplash.it/520/450"
+	},
+	{
+		url: 'creep', 
+		name: "CREEP",  
+		coverImg: "https://unsplash.it/230/450"
 	},
 	{
 		url: 'live-visuals', 
@@ -65,12 +75,12 @@ const ProjectDetail = ({match}) => {
 	);
 }
 
-const ProjectItem = (props) => {
+const ProjectListItem = (props) => {
 	const style = {
 		backgroundImage: 'url(' + props.project.coverImg + ')'
 	}
 	return (
-		<div className="ProjectItem" style={style}>
+		<div className="ProjectListItem" style={style}>
 			<div className="text">
 				<p>{props.project.name}</p>
 			</div>
@@ -88,7 +98,7 @@ const ProjectList = (props) => {
 				{PROJECTS.map((project, index) => 
 					<li key={index}>
 						 <Link to={props.match.url + '/' + project.url}>
-							<ProjectItem project={project}/>
+							<ProjectListItem project={project}/>
 						</Link>
 					</li>
 				)}

@@ -1,0 +1,91 @@
+@import '../../styles/_all';
+
+.Resume {
+	.resume-container {
+		@include flexbox-center(column);
+		margin-top: $gutter*2;
+
+		.left-col, .right-col {
+			border: 1px dashed blue;
+		}
+		.left-col {
+		}
+		.right-col {
+
+		}
+		.resume-section {
+			border: 1px dashed red;
+			width: 100%;
+			max-width: 90vw;
+			margin-bottom: $gutter*2;
+			&#Skills {
+				.skill-section {
+					width: 100%;
+					border: 1px dashed red;
+				}
+			}
+			.resume-section-list {
+				border: 1px dashed green;
+				margin-bottom: $gutter;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.Resume {
+		.resume-container {
+			.resume-section {
+				@include flexbox-center(row);
+				@include align-items(flex-start);
+				width: 1000px;
+				&#Skills {
+					.skill-section {
+						margin-right: $gutter/2;
+						width: 33%;
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+			.left-col {
+				margin-right: $gutter*2;
+				width: 20%;
+			}
+			.right-col {
+				margin-left: $gutter*2;
+				width: 80%;
+			}
+		}
+	}
+}
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.Resume {
+		.resume-container {
+			.resume-section {
+				@include flexbox-center(column);
+				&#Skills {
+					.skill-section {
+						margin-bottom: $gutter;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				.left-col, .right-col {
+					width: 100%;
+				}
+				.left-col {
+					margin-bottom: $gutter;
+				}
+			}
+		}
+	}
+}
