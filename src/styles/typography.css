@@ -33,32 +33,52 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("./fonts/roboto/Roboto-Regular.ttf"); }
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url("./fonts/roboto/Roboto-Bold.ttf"); }
+
+.serif {
+  font-family: 'Libre Baskerville', serif; }
+
+html {
+  font-size: 1em; }
+
 body {
-  font-size: 12px;
-  font-family: Helvetica, Arial, Sans-Serif; }
+  background-color: white;
+  /*font-family: 'Libre Baskerville', serif;*/
+  font-family: Roboto, Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+/*p {margin-bottom: 1.3em;}*/
+h1, h2, h3, h4 {
+  /*margin: 1.414em 0 0.5em;*/
+  font-weight: inherit;
+  line-height: 1.2; }
 
 h1 {
-  font-size: 6.8541em;
-  /*line-height: ms(4) * 1.2;*/ }
+  margin-top: 0;
+  font-size: 3.998em; }
 
 h2 {
-  font-size: 4.23607em;
-  line-height: 2.11803em; }
+  font-size: 2.827em; }
 
 h3 {
-  font-size: 2.61803em;
-  line-height: 1.83262em; }
+  font-size: 1.999em; }
 
 h4 {
-  font-size: 1.61803em;
-  line-height: 1.94164em; }
+  font-size: 1.414em; }
 
-p {
-  font-size: 1em;
-  line-height: 1.2em; }
+small, .font_small {
+  font-size: 0.707em; }
 
 .title {
-  margin-bottom: 20px; }
+  /*margin-bottom: $gutter;*/ }
 
 .center * {
   text-align: center; }
@@ -70,4 +90,5 @@ h1.center, h2.center, h3.center, h4.center, p.center {
   text-transform: uppercase; }
 
 .bold {
-  font-weight: bold; }
+  /*font-weight: bold;*/
+  font-family: 'RobotoBold'; }

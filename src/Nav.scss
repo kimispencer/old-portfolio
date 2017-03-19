@@ -7,7 +7,9 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-
+	#Logo {
+		position: fixed;
+	}
 	ul {
 		@include flexbox();
 		li {
@@ -27,7 +29,10 @@
 	.Nav {
 		height: $fixed_nav_height;
 		width: 100vw;
-
+		#Logo {
+			top: $gutter/2;
+			left: $gutter;
+		}
 		ul {
 			@include flex-flow(row);
 			@include justify-content(flex-end);
@@ -44,6 +49,7 @@
 /* 640px or smaller */
 @media only screen and (max-width : $breakpoint) {
 	.NavTrigger {
+		transform: rotate(90deg);
 		display: block;
 		padding: $gutter/2;
 		cursor: pointer;
@@ -59,12 +65,15 @@
 		height: 100vh;
 		width: $slideout_nav_width;
 		max-width: 70vw;
-
 		&.open {
 			transform: translate3d(0vw, 0, 0);
 		}
 		&.closed {
 			transform: translate3d(-$slideout_nav_width, 0, 0);
+		}
+		#Logo {
+			left: $gutter*2;
+			bottom: $gutter;
 		}
 		ul {
 			@include flex-flow(column);

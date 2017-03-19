@@ -53,8 +53,9 @@
 	background-size: cover;
 	background-position: 50% 50%;
 */ }
-  .ProjectListItem .text {
-    padding: 5px; }
+
+.ProjectListItem .text {
+  padding: 5px; }
 
 .ProjectDetail {
   display: -webkit-box;

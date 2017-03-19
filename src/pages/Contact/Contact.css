@@ -1,5 +1,50 @@
+/* breakpoints */
+/* base units */
+/* z-index */
+/* nav */
+/* footer */
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row; }
+
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  .flex-row.responsive {
+    -webkit-flex-flow: column;
+    -moz-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
+
+.flex-col {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
 .Contact {
   border: 1px dashed red; }
 
 .Contact .left-row, .Contact .right-row {
   border: 1px dashed red; }
+
+/* 640px or bigger */
+@media only screen and (min-width: 640px) {
+  .Contact .left-row, .Contact .right-row {
+    width: 50%; } }
+
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  .Contact .left-row, .Contact .right-row {
+    width: 100%; } }

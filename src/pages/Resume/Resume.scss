@@ -30,6 +30,13 @@
 				&:last-child {
 					margin-bottom: 0;
 				}
+				.title.flex-row {
+					margin-bottom: $gutter;
+					.company {
+					}
+					.job-title {
+					}
+				}
 			}
 		}
 	}
@@ -46,9 +53,20 @@
 				&#Skills {
 					.skill-section {
 						margin-right: $gutter/2;
-						width: 33%;
+						/*width: 33%;*/
 						&:last-child {
 							margin-right: 0;
+						}
+						&#Skillset {
+							ul {
+								margin-right: $gutter;
+								&:last-child {
+									margin-right: 0;
+								}
+							}
+						}
+						&#Tools {
+							width: 33%;
 						}
 					}
 				}

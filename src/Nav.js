@@ -7,7 +7,7 @@ import './Nav.css';
 
 const NavTrigger = (props) => (
 	<div className="NavTrigger" onClick={props.handleClick}>
-		<p>|||</p>
+		<h3 className="bold">|||</h3>
 	</div>
 )
 
@@ -18,6 +18,7 @@ const Nav = (props) => {
 		<div>
 			<NavTrigger handleClick={props.handleClick} />
 			<div className={cssClasses}>
+				<h4 className="bold" id="Logo">kimi</h4>
 				<ul>
 					<li><Link to="/" onClick={props.handleClick}><p>Home</p></Link></li>
 					<li><Link to="/projects" onClick={props.handleClick}><p>Projects</p></Link></li>

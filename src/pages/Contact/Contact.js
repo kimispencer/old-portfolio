@@ -6,10 +6,15 @@ const Contact = () => (
     <h4 className="title center">Contact</h4>
     <div className="flex-row responsive">
     	<div className="left-row">
-    		left
+    		<p>kimispencer@gmail.com</p>
+    		<p>brooklyn, ny</p>
+    		<div className="flex-row">
+    			<p>linkedin</p>
+    			<p>facebook</p>
+    		</div>
     	</div>
     	<div className="right-row">
-    		right
+    		<h4>FORM</h4>
     	</div>
     </div>
   </div>
