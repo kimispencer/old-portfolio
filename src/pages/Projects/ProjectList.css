@@ -3,6 +3,7 @@
 /* z-index */
 /* nav */
 /* footer */
+/* colors */
 .flex-row {
   display: -webkit-box;
   display: -moz-box;
@@ -33,7 +34,29 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
+/* centering with flex */
+.center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
 .ProjectList ul.project-list {
+  margin-top: 20px;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -43,7 +66,6 @@
 .ProjectListItem {
   cursor: pointer;
   background-image: none !important;
-  color: red;
   /*	
 	// box/tile design
 	@include flexbox-center(column);
@@ -75,11 +97,27 @@
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center;
-  min-height: 100vh;
+  -ms-flex-pack: center; }
+
+.ProjectDetail .project-detail-cover {
+  height: 400px;
+  width: 100vw;
   background-size: cover;
-  background-position: 50% 50%;
-  color: red; }
+  background-position: 50% 50%; }
+
+.ProjectDetail .text {
+  width: 900px;
+  max-width: calc(100vw - 20px*2); }
+
+.ProjectDetail .text .list-container {
+  margin-right: 60px;
+  margin-bottom: 20px; }
+
+.ProjectDetail .text .list-container:last-child {
+  margin-right: 0; }
+
+.ProjectDetail .text .list-container ul {
+  list-style: disc; }
 
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {

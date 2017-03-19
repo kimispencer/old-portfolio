@@ -4,6 +4,7 @@ $project_tile_size: 200px;
 
 .ProjectList {
 	ul.project-list {
+		margin-top: $gutter;
 		@include flex-wrap(wrap);
 		margin-bottom: $gutter;
 	}
@@ -11,7 +12,6 @@ $project_tile_size: 200px;
 .ProjectListItem {
 	cursor: pointer;
 	background-image: none !important;
-	color: red;
 /*	
 	// box/tile design
 	@include flexbox-center(column);
@@ -27,10 +27,26 @@ $project_tile_size: 200px;
 }
 .ProjectDetail {
 	@include flexbox-center(column);
-	min-height: 100vh;
-	background-size: cover;
-	background-position: 50% 50%;
-	color: red;
+	.project-detail-cover {
+		height: 400px;
+		width: 100vw;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+	.text {
+		width: 900px;
+		max-width: calc(100vw - #{$gutter}*2);
+		.list-container {
+			margin-right: $gutter*3;
+			margin-bottom: $gutter;
+			&:last-child {
+				margin-right: 0;
+			}
+			ul {
+				list-style: disc;
+			}
+		}
+	}
 }
 
 /* 640px or bigger */

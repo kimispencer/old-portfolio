@@ -6,7 +6,6 @@
 		margin-top: $gutter*2;
 
 		.left-col, .right-col {
-			border: 1px dashed blue;
 		}
 		.left-col {
 		}
@@ -14,25 +13,23 @@
 
 		}
 		.resume-section {
-			border: 1px dashed red;
 			width: 100%;
 			max-width: 90vw;
 			margin-bottom: $gutter*2;
 			&#Skills {
 				.skill-section {
 					width: 100%;
-					border: 1px dashed red;
 				}
 			}
-			.resume-section-list {
-				border: 1px dashed green;
+			.resume-section-item {
 				margin-bottom: $gutter;
 				&:last-child {
 					margin-bottom: 0;
 				}
 				.title.flex-row {
 					margin-bottom: $gutter;
-					.company {
+					.institution {
+						margin-right: $gutter;
 					}
 					.job-title {
 					}
@@ -51,9 +48,8 @@
 				@include align-items(flex-start);
 				width: 1000px;
 				&#Skills {
-					.skill-section {
+					.resume-section-item{
 						margin-right: $gutter/2;
-						/*width: 33%;*/
 						&:last-child {
 							margin-right: 0;
 						}
@@ -90,18 +86,31 @@
 			.resume-section {
 				@include flexbox-center(column);
 				&#Skills {
-					.skill-section {
+					.resume-section-item {
 						margin-bottom: $gutter;
 						&:last-child {
 							margin-bottom: 0;
 						}
+						&#Skillset {
+							ul {
+								margin-right: $gutter*2;
+							}
+						}
+						.title {
+							margin-top: 0;
+						}
+
+					}
+				}
+				.resume-section-item {
+					.title {
+						margin-top: 0;
 					}
 				}
 				.left-col, .right-col {
 					width: 100%;
 				}
 				.left-col {
-					margin-bottom: $gutter;
 				}
 			}
 		}

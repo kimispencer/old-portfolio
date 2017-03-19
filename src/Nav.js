@@ -18,12 +18,12 @@ const Nav = (props) => {
 		<div>
 			<NavTrigger handleClick={props.handleClick} />
 			<div className={cssClasses}>
-				<h4 className="bold" id="Logo">kimi</h4>
+				<Link to="/" onClick={props.handleClick}><h4 className="bold" id="Logo">kimi</h4></Link>
 				<ul>
-					<li><Link to="/" onClick={props.handleClick}><p>Home</p></Link></li>
-					<li><Link to="/projects" onClick={props.handleClick}><p>Projects</p></Link></li>
-					<li><Link to="/resume" onClick={props.handleClick}><p>Resume</p></Link></li>
-					<li><Link to="/contact" onClick={props.handleClick}><p>Contact</p></Link></li>
+					<li><Link to="/" onClick={props.handleClick}><small className="uppercase">Home</small></Link></li>
+					<li><Link to="/projects" onClick={props.handleClick}><small className="uppercase">Projects</small></Link></li>
+					<li><Link to="/resume" onClick={props.handleClick}><small className="uppercase">Resume</small></Link></li>
+					<li><Link to="/contact" onClick={props.handleClick}><small className="uppercase">Contact</small></Link></li>
 				</ul>
 			</div>
 		</div>

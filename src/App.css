@@ -3,6 +3,7 @@
 /* z-index */
 /* nav */
 /* footer */
+/* colors */
 .flex-row {
   display: -webkit-box;
   display: -moz-box;
@@ -32,6 +33,27 @@
   -moz-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column; }
+
+/* centering with flex */
+.center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
 
 html {
   height: 100%; }

@@ -3,6 +3,7 @@
 /* z-index */
 /* nav */
 /* footer */
+/* colors */
 .flex-row {
   display: -webkit-box;
   display: -moz-box;
@@ -33,19 +34,43 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
+/* centering with flex */
+.center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
 .Shroud {
   z-index: 10;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  transition: all 350ms ease; }
 
 .Shroud.show {
+  opacity: 1;
   display: block; }
 
 .Shroud.hide {
+  opacity: 0;
   display: none; }
 
 @media only screen and (min-width: 640px) {

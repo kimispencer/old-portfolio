@@ -38,13 +38,13 @@ class App extends Component {
 			  <Router>
 				<div>
 					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
-					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={ProjectList}/>
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
 					</div>
+					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<Footer />
 				</div>
 			  </Router>

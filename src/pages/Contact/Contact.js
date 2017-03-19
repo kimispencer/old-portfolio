@@ -14,7 +14,11 @@ const Contact = () => (
     		</div>
     	</div>
     	<div className="right-row">
-    		<h4>FORM</h4>
+    		<h4 className="center">Form</h4>
+    		<form>
+    			<input type="email" placeholder="Email" />
+    			<button type="submit">submit</button>
+    		</form>
     	</div>
     </div>
   </div>
