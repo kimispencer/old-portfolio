@@ -1,28 +1,55 @@
 @import '../../styles/_all';
 
-$work_tile_size: 300px;
+$project_tile_size: 200px;
 
 .ProjectList {
-	border: 1px dashed blue;
 	ul.project-list {
-		@include flexbox-center(row);
 		@include flex-wrap(wrap);
+		margin-bottom: $gutter;
 	}
 }
 .ProjectItem {
-	border: 1px dashed red;
-	/*@include flexbox-center(column);*/
-	/*width: $work_tile_size;*/
-	/*max-width: 100vw;*/
-	/*height: $work_tile_size;*/
-	/*margin: $gutter;*/
-	/*color: yellow;*/
 	cursor: pointer;
+	background-image: none !important;
+	color: red;
+/*	
+	// box/tile design
+	@include flexbox-center(column);
+	width: $project_tile_size;
+	max-width: 100vw;
+	height: $project_tile_size;
+	background-size: cover;
+	background-position: 50% 50%;
+*/
 }
 .ProjectDetail {
-	border: 1px dashed yellow;
+	@include flexbox-center(column);
 	min-height: 100vh;
 	background-size: cover;
 	background-position: 50% 50%;
 	color: red;
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.ProjectList {
+		ul.project-list {
+			@include flexbox-center(row);
+		}
+	}
+	.ProjectItem {
+		margin-right: $gutter/2;
+	}
+}
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.ProjectList {
+		ul.project-list {
+			@include flexbox-center(column);
+		}
+	}
+	.ProjectItem {
+		margin-bottom: $gutter/2;
+	}
 }

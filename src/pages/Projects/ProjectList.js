@@ -7,9 +7,46 @@ import {
 import './ProjectList.css';
 
 const PROJECTS = [
-	{url: 'john', name: "John", id: 120, age: 22, gender: "male", coverImg: "https://unsplash.it/500/500"},
-	{url: 'beth', name: "Beth", id: 443, age: 24, gender: "female", coverImg: "https://unsplash.it/400/540"},
-	{url: 'jane', name: "Jane", id: 510, age: 19, gender: "female", coverImg: "https://unsplash.it/500/450"}
+	{
+		url: 'arrivals', 
+		name: "The Arrivals", 
+		coverImg: "https://unsplash.it/500/500"
+	},
+	{
+		url: 'suited', 
+		name: "Suited Magazine", 
+		coverImg: "https://unsplash.it/410/540"
+	},
+	{
+		url: 'onomie', 
+		name: "Onomie", 
+		coverImg: "https://unsplash.it/420/540"
+	},
+	{
+		url: 'brainchild', 
+		name: "BrainchildCo",  
+		coverImg: "https://unsplash.it/500/450"
+	},
+	{
+		url: 'bolster', 
+		name: "Bolster",  
+		coverImg: "https://unsplash.it/510/450"
+	},
+	{
+		url: 'plusign', 
+		name: "Plusign",  
+		coverImg: "https://unsplash.it/520/450"
+	},
+	{
+		url: 'live-visuals', 
+		name: "Live Visuals",  
+		coverImg: "https://unsplash.it/530/450"
+	},
+	{
+		url: 'dataviz', 
+		name: "Data Visualization",  
+		coverImg: "https://unsplash.it/540/450"
+	}
 ];
 
 const ProjectDetail = ({match}) => {
@@ -23,16 +60,19 @@ const ProjectDetail = ({match}) => {
 
 	return(
 		<div className="ProjectDetail" style={style}>
-			<h3 className="title center">ProjectId: {match.params.id}</h3>
+			<h3 className="title center">{project.name}</h3>
 		</div>
 	);
 }
 
 const ProjectItem = (props) => {
+	const style = {
+		backgroundImage: 'url(' + props.project.coverImg + ')'
+	}
 	return (
-		<div className="ProjectItem">
+		<div className="ProjectItem" style={style}>
 			<div className="text">
-				<h4>{props.project.url}</h4>
+				<p>{props.project.name}</p>
 			</div>
 		</div>
 	);
@@ -41,7 +81,9 @@ const ProjectItem = (props) => {
 const ProjectList = (props) => {
 	return (
 		<div className="ProjectList">
-			<h4 className="title center">Projects</h4>
+			<Link to={props.match.url}>
+				<h4 className="title center">Projects</h4>
+			</Link>
 			<ul className="project-list">
 				{PROJECTS.map((project, index) => 
 					<li key={index}>
