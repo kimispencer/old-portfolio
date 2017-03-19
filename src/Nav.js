@@ -22,7 +22,6 @@ const Nav = (props) => {
 					<li><Link to="/" onClick={props.handleClick}><p>Home</p></Link></li>
 					<li><Link to="/about" onClick={props.handleClick}><p>About</p></Link></li>
 					<li><Link to="/projects" onClick={props.handleClick}><p>Projects</p></Link></li>
-					<li><Link to="/topics" onClick={props.handleClick}><p>Topics</p></Link></li>
 				</ul>
 			</div>
 		</div>
