@@ -3,13 +3,67 @@
 /* z-index */
 /* nav */
 /* footer */
+/* colors */
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row; }
+
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  .flex-row.responsive {
+    -webkit-flex-flow: column;
+    -moz-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
+
+.flex-col {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+/* centering with flex */
+.center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
 .Nav {
   z-index: 100;
-  transition: all .5s ease;
-  background-color: lightgrey;
+  transition: all 350ms ease;
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0; }
+  .Nav #Logo {
+    position: fixed; }
   .Nav ul {
     display: -webkit-box;
     display: -moz-box;
@@ -17,8 +71,6 @@
     display: -webkit-flex;
     display: flex; }
     .Nav ul li {
-      border: 1px dashed red;
-      list-style: none;
       margin: 10px;
       display: inline; }
 
@@ -28,7 +80,11 @@
     display: none; }
   .Nav {
     height: 40px;
-    width: 100vw; }
+    width: 100vw;
+    border-bottom: 1px solid lightgrey; }
+    .Nav #Logo {
+      top: 10px;
+      left: 20px; }
     .Nav ul {
       -webkit-flex-flow: row;
       -moz-flex-flow: row;
@@ -48,6 +104,7 @@
 /* 640px or smaller */
 @media only screen and (max-width: 640px) {
   .NavTrigger {
+    transform: rotate(90deg);
     display: block;
     padding: 10px;
     cursor: pointer;
@@ -60,11 +117,16 @@
   .Nav {
     height: 100vh;
     width: 300px;
-    max-width: 70vw; }
+    max-width: 70vw;
+    background-color: #030303;
+    color: white; }
     .Nav.open {
       transform: translate3d(0vw, 0, 0); }
     .Nav.closed {
       transform: translate3d(-300px, 0, 0); }
+    .Nav #Logo {
+      left: 40px;
+      bottom: 20px; }
     .Nav ul {
       -webkit-flex-flow: column;
       -moz-flex-flow: column;
@@ -73,5 +135,8 @@
       padding: 20px;
       margin: 0; }
       .Nav ul li {
+        /*@include border(red);*/
         margin: 10px;
-        display: block; } }
+        display: block; }
+        .Nav ul li p {
+          color: white; } }

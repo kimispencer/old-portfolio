@@ -2,17 +2,17 @@
 
 .Nav {
 	z-index: $ultimate_top;
-	transition: all .5s ease;
-	background-color: lightgrey;
+	transition: all $transition_speed ease;
+	background-color: white;
 	position: fixed;
 	top: 0;
 	left: 0;
-
+	#Logo {
+		position: fixed;
+	}
 	ul {
 		@include flexbox();
 		li {
-			@include border(red);
-			list-style: none;
 			margin: 10px;
 			display: inline;
 		}
@@ -27,7 +27,11 @@
 	.Nav {
 		height: $fixed_nav_height;
 		width: 100vw;
-
+		border-bottom: 1px solid lightgrey;
+		#Logo {
+			top: $gutter/2;
+			left: $gutter;
+		}
 		ul {
 			@include flex-flow(row);
 			@include justify-content(flex-end);
@@ -44,6 +48,7 @@
 /* 640px or smaller */
 @media only screen and (max-width : $breakpoint) {
 	.NavTrigger {
+		transform: rotate(90deg);
 		display: block;
 		padding: $gutter/2;
 		cursor: pointer;
@@ -59,20 +64,27 @@
 		height: 100vh;
 		width: $slideout_nav_width;
 		max-width: 70vw;
-
+		background-color: $matte_black;
+		color: white;
 		&.open {
 			transform: translate3d(0vw, 0, 0);
 		}
 		&.closed {
 			transform: translate3d(-$slideout_nav_width, 0, 0);
 		}
+		#Logo {
+			left: $gutter*2;
+			bottom: $gutter;
+		}
 		ul {
 			@include flex-flow(column);
 			padding: $gutter;
 			margin: 0;
 			li {
+				/*@include border(red);*/
 				margin: 10px;
 				display: block;
+				p {color: white; }
 			}
 		}
 	}

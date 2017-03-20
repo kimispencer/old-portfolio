@@ -1,0 +1,123 @@
+@import '../../styles/_all';
+
+.Resume {
+	.resume-container {
+		@include flexbox-center(column);
+		margin-top: $gutter*2;
+
+		.left-col, .right-col {
+		}
+		.left-col {
+		}
+		.right-col {
+
+		}
+		.resume-section {
+			width: 100%;
+			max-width: 90vw;
+			margin-bottom: $gutter*2;
+			&#Skills {
+				.skill-section {
+					width: 100%;
+				}
+			}
+			.resume-section-item {
+				margin-bottom: $gutter;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.title.flex-row {
+					margin-bottom: $gutter;
+					.institution {
+						margin-right: $gutter;
+					}
+					.job-title {
+					}
+				}
+			}
+			ul {
+				li {
+					/*list-style: disc;*/
+				}
+			}
+		}
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.Resume {
+		.resume-container {
+			.resume-section {
+				@include flexbox-center(row);
+				@include align-items(flex-start);
+				width: 1000px;
+				&#Skills {
+					.resume-section-item{
+						margin-right: $gutter;
+						&:last-child {
+							margin-right: 0;
+						}
+						&#Skillset {
+							ul {
+								margin-right: $gutter;
+								&:last-child {
+									margin-right: 0;
+								}
+							}
+						}
+						&#Tools {
+							width: 33%;
+						}
+					}
+				}
+			}
+			.left-col {
+				margin-right: $gutter*2;
+				width: 20%;
+			}
+			.right-col {
+				margin-left: $gutter*2;
+				width: 80%;
+			}
+		}
+	}
+}
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.Resume {
+		.resume-container {
+			.resume-section {
+				@include flexbox-center(column);
+				&#Skills {
+					.resume-section-item {
+						margin-bottom: $gutter;
+						&:last-child {
+							margin-bottom: 0;
+						}
+						&#Skillset {
+							ul {
+								margin-right: $gutter*2;
+							}
+						}
+						.title {
+							margin-top: 0;
+						}
+
+					}
+				}
+				.resume-section-item {
+					.title {
+						margin-top: 0;
+					}
+				}
+				.left-col, .right-col {
+					width: 100%;
+				}
+				.left-col {
+				}
+			}
+		}
+	}
+}

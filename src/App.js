@@ -7,8 +7,9 @@ import {
 import Nav from './Nav';
 import Shroud from './Shroud';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
 import ProjectList from './pages/Projects/ProjectList';
+import Resume from './pages/Resume/Resume';
+import Contact from './pages/Contact/Contact';
 
 import './App.css';
 
@@ -22,7 +23,7 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			isNavOpen: false
+			isNavOpen: false,
 		}
 		this.toggleNav = this.toggleNav.bind(this);
 	}
@@ -37,12 +38,13 @@ class App extends Component {
 			  <Router>
 				<div>
 					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
-					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
-						<Route path="/about" component={About}/>
 						<Route path="/projects" component={ProjectList}/>
+						<Route path="/resume" component={Resume}/>
+						<Route path="/contact" component={Contact}/>
 					</div>
+					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<Footer />
 				</div>
 			  </Router>

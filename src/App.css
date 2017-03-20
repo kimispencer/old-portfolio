@@ -3,29 +3,76 @@
 /* z-index */
 /* nav */
 /* footer */
+/* colors */
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row; }
+
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  .flex-row.responsive {
+    -webkit-flex-flow: column;
+    -moz-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; } }
+
+.flex-col {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+/* centering with flex */
+.center {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+html {
+  height: 100%; }
+
 .App {
-  border: 1px dashed red;
+  /*border: 1px dashed red;*/
   min-height: 100vh;
   position: relative;
   margin: 0;
   padding: 0; }
-
-.App .Nav {
-  /* CSS on the component level */ }
-
-.App .main-content {
-  border: 1px dashed green;
-  margin-top: 40px;
-  margin-bottom: 140px;
-  padding: 20px; }
-
-.App .Footer {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  height: 100px; }
+  .App .Nav {
+    /* CSS on the component level */ }
+  .App .main-content {
+    min-height: calc(100vh - 100px - 40px);
+    margin-top: 40px;
+    padding: 20px; }
+  .App .Footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 100px; }

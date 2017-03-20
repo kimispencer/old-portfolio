@@ -55,31 +55,7 @@
   justify-content: center;
   -ms-flex-pack: center; }
 
-.ProjectList ul.project-list {
-  margin-top: 20px;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 20px; }
-
-.ProjectListItem {
-  border: 1px dashed red;
-  cursor: pointer;
-  background-image: none !important;
-  /*	
-	// box/tile design
-	@include flexbox-center(column);
-	width: $project_tile_size;
-	max-width: 100vw;
-	height: $project_tile_size;
-	background-size: cover;
-	background-position: 50% 50%;
-*/ }
-  .ProjectListItem .text {
-    padding: 5px; }
-
-.ProjectDetail {
+.Resume .resume-container {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -97,26 +73,28 @@
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center; }
-  .ProjectDetail .project-detail-cover {
-    height: 400px;
-    width: 100vw;
-    background-size: cover;
-    background-position: 50% 50%; }
-  .ProjectDetail .text {
-    width: 900px;
-    max-width: calc(100vw - 20px*2); }
-    .ProjectDetail .text .list-container {
-      margin-right: 60px;
+  -ms-flex-pack: center;
+  margin-top: 40px; }
+  .Resume .resume-container .resume-section {
+    width: 100%;
+    max-width: 90vw;
+    margin-bottom: 40px; }
+    .Resume .resume-container .resume-section#Skills .skill-section {
+      width: 100%; }
+    .Resume .resume-container .resume-section .resume-section-item {
       margin-bottom: 20px; }
-      .ProjectDetail .text .list-container:last-child {
-        margin-right: 0; }
-      .ProjectDetail .text .list-container ul {
-        list-style: disc; }
+      .Resume .resume-container .resume-section .resume-section-item:last-child {
+        margin-bottom: 0; }
+      .Resume .resume-container .resume-section .resume-section-item .title.flex-row {
+        margin-bottom: 20px; }
+        .Resume .resume-container .resume-section .resume-section-item .title.flex-row .institution {
+          margin-right: 20px; }
+    .Resume .resume-container .resume-section ul li {
+      /*list-style: disc;*/ }
 
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {
-  .ProjectList ul.project-list {
+  .Resume .resume-container .resume-section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -134,13 +112,32 @@
     -moz-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    -ms-flex-pack: center; }
-  .ProjectListItem {
-    margin-right: 10px; } }
+    -ms-flex-pack: center;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    width: 1000px; }
+    .Resume .resume-container .resume-section#Skills .resume-section-item {
+      margin-right: 20px; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
+        margin-right: 0; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
+        margin-right: 20px; }
+        .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
+          margin-right: 0; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item#Tools {
+        width: 33%; }
+  .Resume .resume-container .left-col {
+    margin-right: 40px;
+    width: 20%; }
+  .Resume .resume-container .right-col {
+    margin-left: 40px;
+    width: 80%; } }
 
 /* 640px or smaller */
 @media only screen and (max-width: 640px) {
-  .ProjectList ul.project-list {
+  .Resume .resume-container .resume-section {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -159,5 +156,15 @@
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-  .ProjectListItem {
-    margin-bottom: 10px; } }
+    .Resume .resume-container .resume-section#Skills .resume-section-item {
+      margin-bottom: 20px; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
+        margin-bottom: 0; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
+        margin-right: 40px; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item .title {
+        margin-top: 0; }
+    .Resume .resume-container .resume-section .resume-section-item .title {
+      margin-top: 0; }
+    .Resume .resume-container .resume-section .left-col, .Resume .resume-container .resume-section .right-col {
+      width: 100%; } }

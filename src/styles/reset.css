@@ -44,3 +44,14 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+<<<<<<< HEAD
+=======
+
+/* addons */
+a {
+  text-decoration: none;
+  color: inherit; }
+
+p a {
+  text-decoration: underline; }
+>>>>>>> test

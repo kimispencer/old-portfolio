@@ -1,28 +1,75 @@
 @import '../../styles/_all';
 
-$work_tile_size: 300px;
+$project_tile_size: 200px;
 
 .ProjectList {
-	border: 1px dashed blue;
 	ul.project-list {
-		@include flexbox-center(row);
+		margin-top: $gutter;
 		@include flex-wrap(wrap);
+		margin-bottom: $gutter;
 	}
 }
-.ProjectItem {
-	border: 1px dashed red;
-	/*@include flexbox-center(column);*/
-	/*width: $work_tile_size;*/
-	/*max-width: 100vw;*/
-	/*height: $work_tile_size;*/
-	/*margin: $gutter;*/
-	/*color: yellow;*/
+.ProjectListItem {
+	@include border(red);
 	cursor: pointer;
-}
-.ProjectDetail {
-	border: 1px dashed yellow;
-	min-height: 100vh;
+	background-image: none !important;
+/*	
+	// box/tile design
+	@include flexbox-center(column);
+	width: $project_tile_size;
+	max-width: 100vw;
+	height: $project_tile_size;
 	background-size: cover;
 	background-position: 50% 50%;
-	color: red;
+*/
+	.text {
+		padding: $gutter/4;
+	}
+}
+.ProjectDetail {
+	@include flexbox-center(column);
+	.project-detail-cover {
+		height: 400px;
+		width: 100vw;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+	.text {
+		width: 900px;
+		max-width: calc(100vw - #{$gutter}*2);
+		.list-container {
+			margin-right: $gutter*3;
+			margin-bottom: $gutter;
+			&:last-child {
+				margin-right: 0;
+			}
+			ul {
+				list-style: disc;
+			}
+		}
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.ProjectList {
+		ul.project-list {
+			@include flexbox-center(row);
+		}
+	}
+	.ProjectListItem {
+		margin-right: $gutter/2;
+	}
+}
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.ProjectList {
+		ul.project-list {
+			@include flexbox-center(column);
+		}
+	}
+	.ProjectListItem {
+		margin-bottom: $gutter/2;
+	}
 }
