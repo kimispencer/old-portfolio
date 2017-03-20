@@ -85,11 +85,11 @@ const PROJECTS = [
 ];
 
 const ProjectDetail = ({match}) => {
-	const project = PROJECTS.filter(function (p) {
+	let project = PROJECTS.filter(function (p) {
 	    return p.url === match.params.id;
 	})[0];
 	// console.log(project)
-	const style = {
+	let style = {
 		backgroundImage: 'url(' + project.coverImg + ')'
 	}
 	return(
@@ -121,11 +121,13 @@ const ProjectDetail = ({match}) => {
 }
 
 const ProjectListItem = (props) => {
-	const style = {
+	let style = {
 		backgroundImage: 'url(' + props.project.coverImg + ')'
 	}
+	let navStyle = props.listStyle ? 'list-style' : 'box-style';
+	let classes = `${navStyle} ProjectListItem`;
 	return (
-		<div className="ProjectListItem" style={style} onClick={props.handleClick}>
+		<div className={classes} style={style} onClick={props.handleClick}>
 			<div className="text">
 				<p>{props.project.name}</p>
 			</div>
@@ -138,48 +140,54 @@ class ProjectList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isProjectOpen: false,
-			matchUrl : props.match.url
+			showNav: false,
+			listStyle: false,
+			matchUrl : props.match.url,
 		}
 		this.toggleProjectNav = this.toggleProjectNav.bind(this);
 	}
 	toggleProjectNav() {
 		this.setState(prevState => ({
-			isProjectOpen: !prevState.isProjectOpen
+			showNav: !prevState.showNav,
+			listStyle: true,
 		}));
 	}
-	openProjectnav() {
-		this.setState({
-			isProjectOpen: true
-		});
+	changeListStyle() {
+		this.setState(prevState => ({
+			showNav: false,
+			listStyle: !prevState.listStyle,
+		}));
 	}
 	render() {
 		return(
 			<div className="ProjectList">
-				<Link to={this.state.matchUrl} onClick={this.openProjectnav}>
+				<Link to={this.state.matchUrl} onClick={this.changeListStyle}>
 					<h4 className="title center">Projects</h4>
 				</Link>
 
-				<div className="center" onClick={this.toggleProjectNav}>Menu</div>
+				{ this.state.listStyle ?
+					<div className="center" onClick={this.toggleProjectNav}>Menu</div>
+					: null
+				}
 
-					<ul className="project-list">
-						<ReactCSSTransitionGroup
-							transitionName="example"
-							transitionAppear={true}
-						>
-							{ this.state.isProjectOpen ? 
-								null
-								:
-								PROJECTS.map((project, index) => 
-									<li key={index} >
-										 <Link to={this.state.matchUrl + '/' + project.url} >
-											<ProjectListItem project={project} handleClick={this.toggleProjectNav}/>
-										</Link>
-									</li>
-								)
-							}
-						</ReactCSSTransitionGroup>	
-					</ul>	
+				<ReactCSSTransitionGroup
+					transitionName="example"
+					transitionAppear={true}
+				>
+				<ul className="project-list">
+						{ this.state.showNav ? 
+							null :
+							PROJECTS.map((project, index) => 
+								<li key={index} >
+									 <Link to={this.state.matchUrl + '/' + project.url} >
+										<ProjectListItem project={project} handleClick={this.toggleProjectNav} listStyle={this.state.listStyle}/>
+									</Link>
+								</li>
+							)
+						}
+				</ul>	
+				</ReactCSSTransitionGroup>	
+				
 				<Route path={`${this.state.matchUrl}/:id`} component={ProjectDetail}/>
 			</div>
 		);

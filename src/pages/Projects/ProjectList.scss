@@ -20,23 +20,26 @@ $project_tile_size: 200px;
 .ProjectList {
 	ul.project-list {
 		margin-top: $gutter;
-		@include flex-wrap(wrap);
+		@include flexbox();
 		margin-bottom: $gutter;
 	}
 }
 .ProjectListItem {
-	@include border(red);
 	cursor: pointer;
-	background-image: none !important;
-/*	
-	// box/tile design
-	@include flexbox-center(column);
-	width: $project_tile_size;
-	max-width: 100vw;
-	height: $project_tile_size;
-	background-size: cover;
-	background-position: 50% 50%;
-	*/
+	&.list-style {
+		display: block;
+		background-image: none !important;
+		height: auto;
+		width: auto;
+	}
+	&.box-style {
+		@include flexbox-center(column);
+		width: $project_tile_size;
+		max-width: 100vw;
+		height: $project_tile_size;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
 	.text {
 		padding: $gutter/4;
 	}
@@ -69,10 +72,12 @@ $project_tile_size: 200px;
 @media only screen and (min-width : $breakpoint) {
 	.ProjectList {
 		ul.project-list {
-			@include flexbox-center(row);
+			@include flex-flow(row);
+			@include flex-wrap(wrap);
 		}
 	}
 	.ProjectListItem {
+		margin-top: $gutter/2;
 		margin-right: $gutter/2;
 	}
 }
@@ -85,6 +90,8 @@ $project_tile_size: 200px;
 		}
 	}
 	.ProjectListItem {
-		margin-bottom: $gutter/2;
+		&.box-style {
+			width: 100vw;
+		}
 	}
 }
