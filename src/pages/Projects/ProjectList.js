@@ -140,29 +140,39 @@ class ProjectList extends Component {
 			isProjectOpen: false,
 			matchUrl : props.match.url
 		}
-		this.toggleProjectDetail = this.toggleProjectDetail.bind(this);
+		this.toggleProjectNav = this.toggleProjectNav.bind(this);
 	}
-	toggleProjectDetail() {
+	toggleProjectNav() {
 		this.setState(prevState => ({
 			isProjectOpen: !prevState.isProjectOpen
 		}));
-console.log(this.state.isProjectOpen)
+	}
+	openProjectnav() {
+		this.setState({
+			isProjectOpen: true
+		});
 	}
 	render() {
 		return(
 			<div className="ProjectList">
-				<Link to={this.state.matchUrl}>
+				<Link to={this.state.matchUrl} onClick={this.openProjectnav}>
 					<h4 className="title center">Projects</h4>
 				</Link>
+				<TransitionGroup>
 				<ul className="project-list">
-					{PROJECTS.map((project, index) => 
-						<li key={index} >
-							 <Link to={this.state.matchUrl + '/' + project.url} >
-								<ProjectListItem project={project} handleClick={this.toggleProjectDetail}/>
-							</Link>
-						</li>
-					)}
-				</ul>		
+					{ this.state.isProjectOpen ? 
+						<div onClick={this.toggleProjectNav}>Menu</div>
+						:
+						PROJECTS.map((project, index) => 
+							<li key={index} >
+								 <Link to={this.state.matchUrl + '/' + project.url} >
+									<ProjectListItem project={project} handleClick={this.toggleProjectNav}/>
+								</Link>
+							</li>
+						)
+					}
+				</ul>	
+				</TransitionGroup>	
 				<Route path={`${this.state.matchUrl}/:id`} component={ProjectDetail}/>
 			</div>
 		);
