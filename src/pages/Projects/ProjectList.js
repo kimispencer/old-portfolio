@@ -3,7 +3,7 @@ import {
 	Route, 
 	Link 
 } from 'react-router-dom';
-import TransitionGroup from 'react-addons-transition-group';
+import CSSTransitionGroup from 'react-addons-transition-group';
 
 import './ProjectList.css';
 
@@ -158,21 +158,29 @@ class ProjectList extends Component {
 				<Link to={this.state.matchUrl} onClick={this.openProjectnav}>
 					<h4 className="title center">Projects</h4>
 				</Link>
-				<TransitionGroup>
-				<ul className="project-list">
-					{ this.state.isProjectOpen ? 
-						<div onClick={this.toggleProjectNav}>Menu</div>
-						:
-						PROJECTS.map((project, index) => 
-							<li key={index} >
-								 <Link to={this.state.matchUrl + '/' + project.url} >
-									<ProjectListItem project={project} handleClick={this.toggleProjectNav}/>
-								</Link>
-							</li>
-						)
-					}
-				</ul>	
-				</TransitionGroup>	
+
+				<div className="center" onClick={this.toggleProjectNav}>Menu</div>
+
+					<ul className="project-list">
+						<CSSTransitionGroup
+						transitionName="example"
+						transitionAppear={true}
+						transitionAppearTimeout={500000}
+						transitionEnterTimeout={500000}
+						transitionLeaveTimeout={300000} >
+							{ this.state.isProjectOpen ? 
+								null
+								:
+								PROJECTS.map((project, index) => 
+									<li key={index} >
+										 <Link to={this.state.matchUrl + '/' + project.url} >
+											<ProjectListItem project={project} handleClick={this.toggleProjectNav}/>
+										</Link>
+									</li>
+								)
+							}
+						</CSSTransitionGroup>	
+					</ul>	
 				<Route path={`${this.state.matchUrl}/:id`} component={ProjectDetail}/>
 			</div>
 		);
