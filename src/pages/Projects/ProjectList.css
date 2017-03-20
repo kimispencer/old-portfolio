@@ -165,8 +165,7 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .ProjectListItem {
-    margin-top: 10px;
-    margin-right: 10px; } }
+    margin: 5px; } }
 
 /* 640px or smaller */
 @media only screen and (max-width: 640px) {

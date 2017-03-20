@@ -69,7 +69,7 @@ html {
 
 .App .main-content {
   min-height: calc(100vh - 100px - 40px);
-  margin-top: 40px; }
+  margin-top: calc(40px + 20px); }
 
 .App .Footer {
   background-color: black;
