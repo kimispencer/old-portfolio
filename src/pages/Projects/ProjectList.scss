@@ -1,40 +1,14 @@
-/* animation testing */
-.example {
-	background-color: red;
-}
+/* animation test */
 .example-enter {
-	opacity: 0.01;
-	@include border(green);
+    height: 0px;
 }
-
 .example-enter.example-enter-active {
-	opacity: 1;
-	transition: opacity 500000ms ease-in;
-	@include border(green);
+    height: 100px;
+    -webkit-transition: height .3s ease;
 }
-
-.example-leave {
-	opacity: 1;
-	@include border(green);
-}
-
 .example-leave.example-leave-active {
-	opacity: 0.01;
-	transition: opacity 300000ms ease-in;
-	@include border(green);
-
-}
-.example-appear {
-	opacity: 0.01;
-	@include border(green);
-
-}
-
-.example-appear.example-appear-active {
-	opacity: 1;
-	transition: opacity 5s ease-in;
-	@include border(green);
-
+    height: 0px;
+    -webkit-transition: height .3s ease;
 }
 
 

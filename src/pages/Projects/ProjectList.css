@@ -1,24 +1,14 @@
-/* animation testing */
+/* animation test */
 .example-enter {
-  opacity: 0.01; }
+  height: 0px; }
 
 .example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in; }
-
-.example-leave {
-  opacity: 1; }
+  height: 100px;
+  -webkit-transition: height .3s ease; }
 
 .example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in; }
-
-.example-appear {
-  opacity: 0.01; }
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in; }
+  height: 0px;
+  -webkit-transition: height .3s ease; }
 
 /* breakpoints */
 /* base units */
@@ -97,7 +87,7 @@
 	height: $project_tile_size;
 	background-size: cover;
 	background-position: 50% 50%;
-*/ }
+	*/ }
 
 .ProjectListItem .text {
   padding: 5px; }
