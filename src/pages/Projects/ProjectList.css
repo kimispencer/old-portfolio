@@ -64,6 +64,7 @@
   margin-bottom: 20px; }
 
 .ProjectListItem {
+  border: 1px dashed red;
   cursor: pointer;
   background-image: none !important;
   /*	

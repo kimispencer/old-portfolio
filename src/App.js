@@ -23,7 +23,7 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			isNavOpen: false
+			isNavOpen: false,
 		}
 		this.toggleNav = this.toggleNav.bind(this);
 	}

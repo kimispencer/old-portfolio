@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Resume.css';
 
-const Resume = ({}) => (	
+const Resume = () => (	
 	<div className="Resume">
 
 		<div className="resume-container">
@@ -21,7 +21,7 @@ const Resume = ({}) => (
 					<h4 className="bold title underline">PROFILE</h4>
 				</div>
 				<div className="right-col">
-					<p>Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. I have over 8 years experience working in technology from San Francisco startups to NYC digital agencies. I create identity and digital experiences through concept development, UX & visual design, and creative coding solutions. I have a personal passion for data visualization and creating visuals for music performances.</p>
+					<p>Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. I have over 9 years experience working in technology from San Francisco startups to NYC digital agencies. I create identity and digital experiences through concept development, UX & visual design, and creative coding solutions. I have a personal passion for data visualization and creating visuals for music performances.</p>
 				</div>
 			</div>
 			<div className="resume-section" id="WorkExperience">
@@ -40,28 +40,30 @@ const Resume = ({}) => (
 						</div>
 						<p>Brainchild is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
-						<p>As the lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">Arrivals</a>, <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild</a> brands I was individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app.</p>
+						<p>As the lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">TheArrivals.com</a>, <a href="http://onomie.com" target="_blank">Onomie.com</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites I was individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on UX studies.</p>
 						<br />
 						<ul>
-							<li><p>Lead the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
-							<li><p>Created UX/UI mockups, graphic/web designs, as well as translated mockups into code.</p></li>
-							<li><p>Assisted with back-end integration and templating.</p></li>
-							<li><p>Oversaw the launch of multiple successful sites from start to finish under strict deadlines.</p></li>
+							<li><p>&bull; Lead the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
+							<li><p>&bull; Created UX/UI mockups, graphic/web designs, as well as translated mockups into code.</p></li>
+							<li><p>&bull; Assisted with back-end integration and templating.</p></li>
+							<li><p>&bull; Oversaw the launch of multiple successf`ul sites from start to finish under strict deadlines.</p></li>
 						</ul>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title serif">Lead Front-End Engineer & UX Designer - 2016 to present</p>
+							<p className="job-title serif">Lead Full-stack Engineer & UX Designer - 2016 to present</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Our objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
+						<br />
+						<p>Full-stack engineer and UX designer for <a href="http://suitedmagazine.com" target="_blank">SuitedMagazine.com</a>; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to build visual mockups and interface designs.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">bolster</h4>
 							<p className="job-title serif">Front-end Developer & UX Designer - 2013 to 2014</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p><a href="http://bolster.us" target="_blank">Bolster.us</a> is a web application for home owners & contractors to connect and manage home remodeling projects. Designed and developed a user-facing public website as well as an admin site for users to log in, find their match, upload/share documents & monitor their project's progression. Built with AngularJS using modern web standards.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
@@ -75,21 +77,21 @@ const Resume = ({}) => (
 							<h4 className="bold uppercase institution">+plusign</h4>
 							<p className="job-title serif">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p>+plusign is an award-winning creative studio that does branding, digital, and design. UX designer and Front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. <a href="http://plusign.com" target="_blank">Plusign.com</a></p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">r/ga</h4>
 							<p className="job-title serif">Experience Design Intern - 2011</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p>Developed detailed wireframes and collaborated in the redesign of Verizon Wireless in-store touch screen experiences. Designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points of the Verizon brand experience. <a href="http://rga.com" target="_blank">RGA.com</a></p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">guide by cell</h4>
 							<p className="job-title serif">Project Manager & Web/Graphic Designer - 2008 to 2010</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p>Designed, user tested, and launched interactive mobile applications and media content for over 300 museums and exhibitions. Participated in the development of Ghosts of a Chance the first Augmented Reality Game (ARG) played at the Smithsonian Museum of American Art. Created wireframes, developed mobile games and location-based narratives.</p>
 					</div>
 				</div>
 			</div>

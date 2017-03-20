@@ -10,6 +10,7 @@ $project_tile_size: 200px;
 	}
 }
 .ProjectListItem {
+	@include border(red);
 	cursor: pointer;
 	background-image: none !important;
 /*	

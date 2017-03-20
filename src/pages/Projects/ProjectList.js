@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { 
 	Route, 
 	Link 
 } from 'react-router-dom';
+import TransitionGroup from 'react-addons-transition-group';
 
 import './ProjectList.css';
 
@@ -91,7 +92,6 @@ const ProjectDetail = ({match}) => {
 	const style = {
 		backgroundImage: 'url(' + project.coverImg + ')'
 	}
-
 	return(
 		<div className="ProjectDetail">
 			<div className="project-detail-cover" style={style}></div>
@@ -125,7 +125,7 @@ const ProjectListItem = (props) => {
 		backgroundImage: 'url(' + props.project.coverImg + ')'
 	}
 	return (
-		<div className="ProjectListItem" style={style}>
+		<div className="ProjectListItem" style={style} onClick={props.handleClick}>
 			<div className="text">
 				<p>{props.project.name}</p>
 			</div>
@@ -133,23 +133,57 @@ const ProjectListItem = (props) => {
 	);
 }
 
-const ProjectList = (props) => {
-	return (
-		<div className="ProjectList">
-			<Link to={props.match.url}>
-				<h4 className="title center">Projects</h4>
-			</Link>
-			<ul className="project-list">
-				{PROJECTS.map((project, index) => 
-					<li key={index}>
-						 <Link to={props.match.url + '/' + project.url}>
-							<ProjectListItem project={project}/>
-						</Link>
-					</li>
-				)}
-			</ul>		
-			<Route path={`${props.match.url}/:id`} component={ProjectDetail}/>
-		</div>
-	);
+class ProjectList extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isProjectOpen: false,
+			matchUrl : props.match.url
+		}
+		this.toggleProjectDetail = this.toggleProjectDetail.bind(this);
+	}
+	toggleProjectDetail() {
+		this.setState(prevState => ({
+			isProjectOpen: !prevState.isProjectOpen
+		}));
+console.log(this.state.isProjectOpen)
+	}
+	render() {
+		return(
+			<div className="ProjectList">
+				<Link to={this.state.matchUrl}>
+					<h4 className="title center">Projects</h4>
+				</Link>
+				<ul className="project-list">
+					{PROJECTS.map((project, index) => 
+						<li key={index} >
+							 <Link to={this.state.matchUrl + '/' + project.url} >
+								<ProjectListItem project={project} handleClick={this.toggleProjectDetail}/>
+							</Link>
+						</li>
+					)}
+				</ul>		
+				<Route path={`${this.state.matchUrl}/:id`} component={ProjectDetail}/>
+			</div>
+		);
+	}
 }
+
+// const ProjectList = (props) => {
+// 	return (
+// 		<div className="ProjectList">
+// 			<h4 className="title center">Projects</h4>
+// 			<ul className="project-list">
+// 				{PROJECTS.map((project, index) => 
+// 					<li key={index} onClick={props.handleClick} >
+// 						 <Link to={props.match.url + '/' + project.url} >
+// 							<ProjectListItem project={project} />
+// 						</Link>
+// 					</li>
+// 				)}
+// 			</ul>		
+// 			<Route path={`${props.match.url}/:id`} component={ProjectDetail}/>
+// 		</div>
+// 	);
+// }
 export default ProjectList;
