@@ -135,93 +135,43 @@ const ProjectListItem = (props) => {
 	);
 }
 
-/* full code */
-class ProjectList extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			matchUrl : props.match.url,
-		}
-	}
-	render() {
-		return(
-			<div className="ProjectList">
-				
-				<Link to={this.state.matchUrl} onClick={this.props.changeProjectNavStyle}>
-					{ this.props.listStyle 
-						? <h4 className="title center" id="PageTitle">Projects</h4>
-						: null
-					}
-				</Link>
-
-				{ this.props.listStyle 
-					? <div className="center title" onClick={this.props.toggleProjectNav} id="Menu">Menu</div>
+const ProjectList = (props) => {
+	return(
+		<div className="ProjectList">
+			
+			<Link to={props.match.url} onClick={props.changeProjectNavStyle}>
+				{ props.listStyle 
+					? <h4 className="title center" id="PageTitle">Projects</h4>
 					: null
 				}
+			</Link>
 
-				<ReactCSSTransitionGroup
-					transitionName="example"
-					transitionAppear={true}
-				>
-				{ this.props.showProjectNav 
-					? null 
-					: <ul className="project-list">
-						{ PROJECTS.map((project, index) => 
-							<li key={index} >
-								 <Link to={this.state.matchUrl + '/' + project.url} >
-									<ProjectListItem project={project} handleClick={this.props.toggleProjectNav} listStyle={this.props.listStyle}/>
-								</Link>
-							</li>
-						) }
-					</ul>
-				}
-				</ReactCSSTransitionGroup>	
+			{ props.listStyle 
+				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
+				: null
+			}
 
-				<Route path={`${this.state.matchUrl}/:id`} component={ProjectDetail}/>
-			</div>
-		);
-	}
+			<ReactCSSTransitionGroup
+				transitionName="example"
+				transitionAppear={true}
+			>
+			{ props.showProjectNav 
+				? null 
+				: <ul className="project-list">
+					{ PROJECTS.map((project, index) => 
+						<li key={index} >
+							 <Link to={props.match.url + '/' + project.url} >
+								<ProjectListItem project={project} handleClick={props.toggleProjectNav} listStyle={props.listStyle}/>
+							</Link>
+						</li>
+					) }
+				</ul>
+			}
+			</ReactCSSTransitionGroup>	
+
+			<Route path={`${props.match.url}/:id`} component={ProjectDetail}/>
+		</div>
+	);
 }
-
-/* !!! stripped down for animation test debugging */
-// class ProjectList extends Component {
-// 	constructor(props) {
-// 		super(props);
-// 		this.state = {
-// 			isProjectOpen: false,
-// 		}
-// 		this.toggleProjectNav = this.toggleProjectNav.bind(this);
-// 	}
-// 	toggleProjectNav() {
-// 		this.setState(prevState => ({
-// 			isProjectOpen: !prevState.isProjectOpen
-// 		}));
-// 	}
-// 	render() {
-// 		return(
-// 			<div className="ProjectList">
-// 				<button onClick={this.toggleProjectNav}>{this.state.isProjectOpen ? 'Show' : 'Hide'}</button>
-// 				<ul className="project-list">
-// 					<ReactCSSTransitionGroup
-// 						transitionName="example"
-// 						transitionAppear={true}
-// 					>
-// 						{ this.state.isProjectOpen ? 
-// 							null
-// 							:
-// 							PROJECTS.map((project, index) => 
-// 								<li key={index} >
-// 									 <Link to={this.state.matchUrl + '/' + project.url} >
-// 										<ProjectListItem project={project} handleClick={this.toggleProjectNav}/>
-// 									</Link>
-// 								</li>
-// 							)
-// 						}
-// 					</ReactCSSTransitionGroup>	
-// 				</ul>	
-// 			</div>
-// 		);
-// 	}
-// }
 
 export default ProjectList;

@@ -57,4 +57,18 @@ ReactDOM.render(
 	Page.propTypes = {
 	  rawItems: React.PropTypes.array.isRequired,
 	};
+
+	// ES6 class
+	// !!! uses this.props inside render()
+	// "this" is from constructor()?
+	class App extends Component {
+		constructor(props) {
+			super(props);
+		}
+		render() {
+			return(
+
+			);
+		}
+	}
 */
