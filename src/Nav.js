@@ -6,7 +6,7 @@ import {
 import './Nav.css';
 
 const NavTrigger = (props) => (
-	<div className="NavTrigger" onClick={props.handleClick}>
+	<div className="NavTrigger" onClick={props.toggleNav}>
 		<h3 className="bold">|||</h3>
 	</div>
 )
@@ -14,15 +14,19 @@ const NavTrigger = (props) => (
 const Nav = (props) => {
 	let open = props.isNavOpen ? 'open' : 'closed';
 	let cssClasses = `${open} Nav`;
+	const toggleNav_boxProjectNavStyle = () => {
+		props.toggleNav();
+		props.boxProjectNavStyle();
+	}
 	return (
 		<div>
-			<NavTrigger handleClick={props.handleClick} />
+			<NavTrigger toggleNav={props.toggleNav} />
 			<div className={cssClasses}>
 				<ul>
-					<li><Link to="/" onClick={props.handleClick}><small className="uppercase">Home</small></Link></li>
-					<li><Link to="/projects" onClick={props.handleClick}><small className="uppercase">Projects</small></Link></li>
-					<li><Link to="/resume" onClick={props.handleClick}><small className="uppercase">Resume</small></Link></li>
-					<li><Link to="/contact" onClick={props.handleClick}><small className="uppercase">Contact</small></Link></li>
+					<li><Link to="/" onClick={props.toggleNav}><small className="uppercase">Home</small></Link></li>
+					<li><Link to="/projects" onClick={toggleNav_boxProjectNavStyle}><small className="uppercase">Projects</small></Link></li>
+					<li><Link to="/resume" onClick={props.toggleNav}><small className="uppercase">Resume</small></Link></li>
+					<li><Link to="/contact" onClick={props.toggleNav}><small className="uppercase">Contact</small></Link></li>
 				</ul>
 			</div>
 		</div>
@@ -30,5 +34,3 @@ const Nav = (props) => {
 }
 
 export default Nav;
-
-// <Link to="/" onClick={props.handleClick}><h4 className="bold" id="Logo">kimi</h4></Link>

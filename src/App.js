@@ -34,7 +34,6 @@ class App extends Component {
 	toggleNav() {
 		this.setState(prevState => ({
 			isNavOpen: !prevState.isNavOpen,
-			projectNavStyle_list: true,
 		}));
 	}
 	toggleProjectNav() {
@@ -49,12 +48,17 @@ class App extends Component {
 			projectNavStyle_list: !prevState.projectNavStyle_list,
 		}));
 	}
+	boxProjectNavStyle() {
+		this.setState({
+			projectNavStyle_list: false
+		});
+	}
 	render() {
 		return(
 			<div className="App">
 			  <Router>
 				<div>
-					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
+					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} boxProjectNavStyle={this.boxProjectNavStyle}/>
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
