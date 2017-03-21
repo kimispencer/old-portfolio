@@ -13,11 +13,11 @@ html {
 	}
 	.main-content {
 		min-height: calc(100vh - #{$footer_height} - #{$fixed_nav_height});
-		margin-top: calc(#{$fixed_nav_height} + #{$gutter});
+		margin-top: $fixed_nav_height; //calc(#{$fixed_nav_height} + #{$gutter});
 	}
 	.Footer {
-		background-color: black;
-		color: white;
+		background-color: $footer_color;
+		color: black;
 		padding: 20px;
 		text-align: center;
 		height: $footer_height;

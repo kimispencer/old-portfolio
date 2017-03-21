@@ -55,25 +55,25 @@
   justify-content: center;
   -ms-flex-pack: center; }
 
-html {
-  height: 100%; }
-
-.App {
-  min-height: 100vh;
-  position: relative;
-  margin: 0;
-  padding: 0; }
-
-.App .Nav {
-  /* CSS on the component level */ }
-
-.App .main-content {
-  min-height: calc(100vh - 100px - 60px);
-  margin-top: 60px; }
-
-.App .Footer {
-  background-color: #f3f3f3;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  height: 100px; }
+.Home {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  height: calc(100vh - 60px);
+  background: black;
+  color: white; }

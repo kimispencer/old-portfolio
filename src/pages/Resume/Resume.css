@@ -173,5 +173,7 @@
     margin-top: 0; }
   .Resume .resume-container .resume-section .resume-section-item .title {
     margin-top: 0; }
+  .Resume .resume-container .resume-section .resume-section-item .institution {
+    margin-bottom: 10px; }
   .Resume .resume-container .resume-section .left-col, .Resume .resume-container .resume-section .right-col {
     width: 100%; } }

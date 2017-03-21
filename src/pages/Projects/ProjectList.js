@@ -141,7 +141,7 @@ class ProjectList extends Component {
 		super(props);
 		this.state = {
 			showNav: false,
-			listStyle: false,
+			listStyle: false,						// shit I need to move this up to the App level! (Projects, go to PDP, then NAV back to Projects)
 			matchUrl : props.match.url,
 		}
 		this.toggleProjectNav = this.toggleProjectNav.bind(this);
@@ -152,7 +152,7 @@ class ProjectList extends Component {
 			listStyle: true,
 		}));
 	}
-	changeListStyle() {
+	changeProjectListStyle() {
 		this.setState(prevState => ({
 			showNav: false,
 			listStyle: !prevState.listStyle,
@@ -161,9 +161,9 @@ class ProjectList extends Component {
 	render() {
 		return(
 			<div className="ProjectList">
-				<Link to={this.state.matchUrl} onClick={this.changeListStyle}>
+				<Link to={this.state.matchUrl} onClick={this.changeProjectListStyle}>
 					{ this.state.listStyle 
-						? <h4 className="title center">Projects</h4>
+						? <h4 className="title center" id="PageTitle">Projects</h4>
 						: null
 					}
 				</Link>

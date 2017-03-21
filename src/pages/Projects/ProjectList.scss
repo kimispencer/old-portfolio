@@ -18,6 +18,12 @@
 $project_tile_size: 300px;
 
 .ProjectList {
+	#PageTitle {
+		padding-top: $gutter;
+	}
+	#Menu {
+		@include clickable();
+	}
 	ul.project-list {
 		margin-top: $gutter;
 		@include flexbox();

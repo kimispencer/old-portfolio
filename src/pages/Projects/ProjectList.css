@@ -67,6 +67,13 @@
   justify-content: center;
   -ms-flex-pack: center; }
 
+.ProjectList #PageTitle {
+  padding-top: 20px; }
+
+.ProjectList #Menu {
+  cursor: pointer;
+  text-decoration: underline; }
+
 .ProjectList ul.project-list {
   margin-top: 20px;
   display: -webkit-box;
