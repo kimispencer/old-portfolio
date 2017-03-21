@@ -140,40 +140,22 @@ class ProjectList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			showNav: false,
-			listStyle: false,						// shit I need to move this up to the App level! (Projects, go to PDP, then NAV back to Projects)
 			matchUrl : props.match.url,
 		}
-		this.toggleProjectNav = this.toggleProjectNav.bind(this);
-	}
-	toggleProjectNav() {
-		this.setState(prevState => ({
-			showNav: !prevState.showNav,
-			listStyle: true,
-		}));
-	}
-	changeProjectListStyle() {
-		this.setState(prevState => ({
-			showNav: false,
-			listStyle: !prevState.listStyle,
-		}));
 	}
 	render() {
-console.log(this.props)
 		return(
 			<div className="ProjectList">
 				
-<p onClick={this.props.testFunction} >click me</p>
-
-				<Link to={this.state.matchUrl} onClick={this.changeProjectListStyle}>
-					{ this.state.listStyle 
+				<Link to={this.state.matchUrl} onClick={this.props.changeProjectNavStyle}>
+					{ this.props.listStyle 
 						? <h4 className="title center" id="PageTitle">Projects</h4>
 						: null
 					}
 				</Link>
 
-				{ this.state.listStyle 
-					? <div className="center title" onClick={this.toggleProjectNav} id="Menu">Menu</div>
+				{ this.props.listStyle 
+					? <div className="center title" onClick={this.props.toggleProjectNav} id="Menu">Menu</div>
 					: null
 				}
 
@@ -181,13 +163,13 @@ console.log(this.props)
 					transitionName="example"
 					transitionAppear={true}
 				>
-				{ this.state.showNav 
+				{ this.props.showProjectNav 
 					? null 
 					: <ul className="project-list">
 						{ PROJECTS.map((project, index) => 
 							<li key={index} >
 								 <Link to={this.state.matchUrl + '/' + project.url} >
-									<ProjectListItem project={project} handleClick={this.toggleProjectNav} listStyle={this.state.listStyle}/>
+									<ProjectListItem project={project} handleClick={this.props.toggleProjectNav} listStyle={this.props.listStyle}/>
 								</Link>
 							</li>
 						) }

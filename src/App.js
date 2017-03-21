@@ -24,17 +24,30 @@ class App extends Component {
 		super();
 		this.state = {
 			isNavOpen: false,
+			showProjectNav: false,
+			projectNavStyle_list: false,
 		}
 		this.toggleNav = this.toggleNav.bind(this);
-		// this.foo = this.foo.bind(this);
+		this.toggleProjectNav = this.toggleProjectNav.bind(this);
+		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
 	}
 	toggleNav() {
 		this.setState(prevState => ({
-			isNavOpen: !prevState.isNavOpen
+			isNavOpen: !prevState.isNavOpen,
+			projectNavStyle_list: true,
 		}));
 	}
-	foo() {
-		console.log('bar');
+	toggleProjectNav() {
+		this.setState(prevState => ({
+			showProjectNav: !prevState.showProjectNav,
+			projectNavStyle_list: true,
+		}));
+	}
+	changeProjectNavStyle() {
+		this.setState(prevState => ({
+			showProjectNav: false,
+			projectNavStyle_list: !prevState.projectNavStyle_list,
+		}));
 	}
 	render() {
 		return(
@@ -44,8 +57,13 @@ class App extends Component {
 					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
-						<Route path="/projects" component={(props, state, params) => <ProjectList testFunction={this.foo} isNavOpen={this.state.isNavOpen} {...props} />} />
-						{ /*<Route path="/projects" component={ProjectList} />*/ }
+						<Route path="/projects" component={(props, state, params) => 
+							<ProjectList 
+								changeProjectNavStyle={this.changeProjectNavStyle} 
+								listStyle={this.state.projectNavStyle_list} 
+								toggleProjectNav={this.toggleProjectNav} 
+								showProjectNav={this.state.showProjectNav} 
+							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
 					</div>

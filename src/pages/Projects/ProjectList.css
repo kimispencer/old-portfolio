@@ -92,7 +92,9 @@
   width: auto; }
 
 .ProjectListItem.box-style {
-  /*color: white;*/
+  color: white;
+  background-color: lightgrey;
+  border: 1px dashed black;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -145,6 +147,7 @@
 .ProjectDetail .project-detail-cover {
   height: 400px;
   width: 100vw;
+  background-color: lightgrey;
   background-size: cover;
   background-position: 50% 50%; }
 
