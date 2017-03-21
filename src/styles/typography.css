@@ -55,6 +55,7 @@
   justify-content: center;
   -ms-flex-pack: center; }
 
+/* !!! not using modular scale */
 @font-face {
   font-family: 'Roboto';
   src: url("./fonts/roboto/Roboto-Regular.ttf"); }
@@ -104,6 +105,9 @@ small, .font_small {
   margin-bottom: 20px; }
 
 h1.center, h2.center, h3.center, h4.center, p.center, small.center {
+  text-align: center; }
+
+.text.center h1, .text.center h2, .text.center h3, .text.center h4, .text.center p, .text.center small {
   text-align: center; }
 
 .uppercase {

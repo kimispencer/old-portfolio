@@ -57,8 +57,9 @@
 
 .Contact {
   border: 1px dashed red; }
-  .Contact .left-row, .Contact .right-row {
-    border: 1px dashed red; }
+
+.Contact .left-row, .Contact .right-row {
+  border: 1px dashed red; }
 
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {

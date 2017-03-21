@@ -15,6 +15,7 @@
 		li {
 			margin: 10px;
 			display: inline;
+			letter-spacing: 0.2em;
 		}
 	}
 }
@@ -28,6 +29,9 @@
 		height: $fixed_nav_height;
 		width: 100vw;
 		border-bottom: 1px solid lightgrey;
+		@include flexbox-center(row);
+		@include justify-content(flex-end);
+
 		#Logo {
 			top: $gutter/2;
 			left: $gutter;
@@ -55,6 +59,7 @@
 		position: fixed;
 		top: 0;
 		right: 0;
+		text-shadow: white 1px 0px 0px;
 		h1 {
 			display: inline-block;
 			margin: 0;

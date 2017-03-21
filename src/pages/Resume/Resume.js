@@ -21,7 +21,7 @@ const Resume = () => (
 					<h4 className="bold title underline">PROFILE</h4>
 				</div>
 				<div className="right-col">
-					<p>Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. I have over 9 years experience working in technology from San Francisco startups to NYC digital agencies. I create identity and digital experiences through concept development, UX & visual design, and creative coding solutions. I have a personal passion for data visualization and creating visuals for music performances.</p>
+					<p>Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. I have over 9 years experience working in interactive technology from San Francisco startups to NYC digital agencies; and spanning industries from museum education, high-end fashion to music production. I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also have a personal passion for data visualization, art, arugula & alliteration.</p>
 				</div>
 			</div>
 			<div className="resume-section" id="WorkExperience">
@@ -40,7 +40,7 @@ const Resume = () => (
 						</div>
 						<p>Brainchild is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
-						<p>As the lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">TheArrivals.com</a>, <a href="http://onomie.com" target="_blank">Onomie.com</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites I was individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on UX studies.</p>
+						<p>As the lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">TheArrivals.com</a>, <a href="http://onomie.com" target="_blank">Onomie.com</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites I was individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
 						<ul>
 							<li><p>&bull; Lead the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
@@ -77,7 +77,7 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">+plusign</h4>
 							<p className="job-title serif">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
-						<p>+plusign is an award-winning creative studio that does branding, digital, and design. UX designer and Front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. <a href="http://plusign.com" target="_blank">Plusign.com</a></p>
+						<p>+plusign is an award-winning creative studio that does branding, digital, and design. UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. <a href="http://plusign.com" target="_blank">Plusign.com</a></p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
@@ -127,7 +127,7 @@ const Resume = () => (
 							<div className="flex-row">
 								<ul>
 									<li>HTML5</li>
-									<li>CSS3 via SASS/LESS</li>
+									<li>CSS3/SASS/LESS</li>
 									<li>Javascript/ES6</li>
 									<li>Webpack</li>
 									<li>Git</li>
@@ -137,20 +137,23 @@ const Resume = () => (
 									<li>Javascript frameworks (React, AngularJS)</li>
 									<li>Python</li>
 									<li>PHP</li>
+									<li>Processing/Java</li>
 									<li>Wordpress, Squarespace</li>
 									<li>Data Visualization</li>
-									<li>Projection Mapping</li>
 								</ul>
 							</div>
 						</div>
 						<div className="flex-col resume-section-item" id="Tools">
-							<h4 className="title bold uppercase">software tools</h4>
+							<h4 className="title bold uppercase">tools</h4>
 							<ul>
-								<li>Adobe Creative Suite</li>
+								<li>Sublime</li>
+								<li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, Premiere)</li>
 								<li>Sketch</li>
 								<li>VDMX</li>
+								{/*
 								<li>Cinema4D</li>
 								<li>Rhino</li>
+								*/}
 							</ul>
 						</div>
 					</div>

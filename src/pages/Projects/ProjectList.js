@@ -162,11 +162,14 @@ class ProjectList extends Component {
 		return(
 			<div className="ProjectList">
 				<Link to={this.state.matchUrl} onClick={this.changeListStyle}>
-					<h4 className="title center">Projects</h4>
+					{ this.state.listStyle 
+						? <h4 className="title center">Projects</h4>
+						: null
+					}
 				</Link>
 
-				{ this.state.listStyle ?
-					<div className="center" onClick={this.toggleProjectNav}>Menu</div>
+				{ this.state.listStyle 
+					? <div className="center title" onClick={this.toggleProjectNav} id="Menu">Menu</div>
 					: null
 				}
 
@@ -174,20 +177,20 @@ class ProjectList extends Component {
 					transitionName="example"
 					transitionAppear={true}
 				>
-				<ul className="project-list">
-						{ this.state.showNav ? 
-							null :
-							PROJECTS.map((project, index) => 
-								<li key={index} >
-									 <Link to={this.state.matchUrl + '/' + project.url} >
-										<ProjectListItem project={project} handleClick={this.toggleProjectNav} listStyle={this.state.listStyle}/>
-									</Link>
-								</li>
-							)
-						}
-				</ul>	
+				{ this.state.showNav 
+					? null 
+					: <ul className="project-list">
+						{ PROJECTS.map((project, index) => 
+							<li key={index} >
+								 <Link to={this.state.matchUrl + '/' + project.url} >
+									<ProjectListItem project={project} handleClick={this.toggleProjectNav} listStyle={this.state.listStyle}/>
+								</Link>
+							</li>
+						) }
+					</ul>
+				}
 				</ReactCSSTransitionGroup>	
-				
+
 				<Route path={`${this.state.matchUrl}/:id`} component={ProjectDetail}/>
 			</div>
 		);

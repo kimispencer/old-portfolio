@@ -18,7 +18,6 @@ const Nav = (props) => {
 		<div>
 			<NavTrigger handleClick={props.handleClick} />
 			<div className={cssClasses}>
-				<Link to="/" onClick={props.handleClick}><h4 className="bold" id="Logo">kimi</h4></Link>
 				<ul>
 					<li><Link to="/" onClick={props.handleClick}><small className="uppercase">Home</small></Link></li>
 					<li><Link to="/projects" onClick={props.handleClick}><small className="uppercase">Projects</small></Link></li>
@@ -31,3 +30,5 @@ const Nav = (props) => {
 }
 
 export default Nav;
+
+// <Link to="/" onClick={props.handleClick}><h4 className="bold" id="Logo">kimi</h4></Link>

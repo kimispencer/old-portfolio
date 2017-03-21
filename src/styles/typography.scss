@@ -1,5 +1,5 @@
 @import '_all';
-@import '_modular-scale';
+@import '_modular-scale'; /* !!! not using modular scale */
 
 $ms-base: 1em;
 $ms-ratio: $golden;
@@ -13,6 +13,9 @@ $ms-ratio: $golden;
 	src: url('./fonts/roboto/Roboto-Bold.ttf');
 }
 
+@mixin serif($font) {
+	font-family: "ff-tisa-web-pro",Palatino," Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+}
 .serif {
 	font-family: 'Libre Baskerville', serif;
 }
@@ -56,6 +59,13 @@ small, .font_small {font-size: 0.707em;}
 h1, h2, h3, h4, p, small {
 	&.center {
 		text-align: center;
+	}
+}
+.text {
+	&.center {
+		h1, h2, h3, h4, p, small {
+			text-align: center;
+		}
 	}
 }
 .uppercase {

@@ -68,8 +68,8 @@ html {
   /* CSS on the component level */ }
 
 .App .main-content {
-  min-height: calc(100vh - 100px - 40px);
-  margin-top: calc(40px + 20px); }
+  min-height: calc(100vh - 100px - 60px);
+  margin-top: calc(60px + 20px); }
 
 .App .Footer {
   background-color: black;
