@@ -40,7 +40,8 @@ class App extends Component {
 					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
-						<Route path="/projects" component={ProjectList}/>
+						<Route path="/projects" component={(props, state, params) => <ProjectList isNavOpen={this.state.isNavOpen} {...props} />} />
+						{ /*<Route path="/projects" component={ProjectList} />*/ }
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
 					</div>

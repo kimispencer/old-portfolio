@@ -75,29 +75,22 @@
   justify-content: center;
   -ms-flex-pack: center;
   margin-top: 40px; }
-
-.Resume .resume-container .resume-section {
-  width: 100%;
-  max-width: 90vw;
-  margin-bottom: 40px; }
-
-.Resume .resume-container .resume-section#Skills .skill-section {
-  width: 100%; }
-
-.Resume .resume-container .resume-section .resume-section-item {
-  margin-bottom: 20px; }
-
-.Resume .resume-container .resume-section .resume-section-item:last-child {
-  margin-bottom: 0; }
-
-.Resume .resume-container .resume-section .resume-section-item .title.flex-row {
-  margin-bottom: 20px; }
-
-.Resume .resume-container .resume-section .resume-section-item .title.flex-row .institution {
-  margin-right: 20px; }
-
-.Resume .resume-container .resume-section ul li {
-  /*list-style: disc;*/ }
+  .Resume .resume-container .resume-section {
+    width: 100%;
+    max-width: 90vw;
+    margin-bottom: 40px; }
+    .Resume .resume-container .resume-section#Skills .skill-section {
+      width: 100%; }
+    .Resume .resume-container .resume-section .resume-section-item {
+      margin-bottom: 20px; }
+      .Resume .resume-container .resume-section .resume-section-item:last-child {
+        margin-bottom: 0; }
+      .Resume .resume-container .resume-section .resume-section-item .title.flex-row {
+        margin-bottom: 20px; }
+        .Resume .resume-container .resume-section .resume-section-item .title.flex-row .institution {
+          margin-right: 20px; }
+    .Resume .resume-container .resume-section ul li {
+      /*list-style: disc;*/ }
 
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {
@@ -125,16 +118,16 @@
     -ms-align-items: flex-start;
     align-items: flex-start;
     width: 1000px; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item {
-    margin-right: 20px; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
-    margin-right: 0; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
-    margin-right: 20px; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
-    margin-right: 0; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item#Tools {
-    width: 33%; }
+    .Resume .resume-container .resume-section#Skills .resume-section-item {
+      margin-right: 20px; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
+        margin-right: 0; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
+        margin-right: 20px; }
+        .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
+          margin-right: 0; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item#Tools {
+        width: 33%; }
   .Resume .resume-container .left-col {
     margin-right: 40px;
     width: 20%; }
@@ -163,17 +156,17 @@
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item {
-    margin-bottom: 20px; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
-    margin-bottom: 0; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
-    margin-right: 40px; }
-  .Resume .resume-container .resume-section#Skills .resume-section-item .title {
-    margin-top: 0; }
-  .Resume .resume-container .resume-section .resume-section-item .title {
-    margin-top: 0; }
-  .Resume .resume-container .resume-section .resume-section-item .institution {
-    margin-bottom: 10px; }
-  .Resume .resume-container .resume-section .left-col, .Resume .resume-container .resume-section .right-col {
-    width: 100%; } }
+    .Resume .resume-container .resume-section#Skills .resume-section-item {
+      margin-bottom: 20px; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
+        margin-bottom: 0; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
+        margin-right: 40px; }
+      .Resume .resume-container .resume-section#Skills .resume-section-item .title {
+        margin-top: 0; }
+    .Resume .resume-container .resume-section .resume-section-item .title {
+      margin-top: 0; }
+    .Resume .resume-container .resume-section .resume-section-item .institution {
+      margin-bottom: 10px; }
+    .Resume .resume-container .resume-section .left-col, .Resume .resume-container .resume-section .right-col {
+      width: 100%; } }

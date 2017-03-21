@@ -12,12 +12,22 @@ ReactDOM.render(
 );
 
 /*
-	* sample code for different ways of declaring a component
+	**** how to pass Component props via a Route
+
+	<Route path="/projects" component={ProjectList} />
+	vs.
+	// create a stateless component that is wrapping the ProjectList component
+	<Route path="/projects" component={(props, state, params) => <ProjectList isNavOpen={this.state.isNavOpen} {...props} />} />
+
+	
+
+	**** sample code for different ways of declaring a component
+
 	// I use this syntax when my component fits on one line
 	const ListItem = (props) => <li className="list-item">{props.item.name}</li>;
 
 	// I use this when my component has no logic outside JSX
-	// NOTE -- does not use 'props' when you have ({ items }) vs (props) -> props.items
+	// !!! does not use 'props' when you have ({ items }) vs (props) -> props.items
 	const List = ({ items }) => (
 	  <ul className="list">
 	    {items.map(item => <ListItem item={item} />)}

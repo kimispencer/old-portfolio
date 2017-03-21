@@ -1,0 +1,21 @@
+.flex-row {
+	@include flexbox();
+	@include flex-flow(row);
+}
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.flex-row {
+		&.responsive {
+			@include flex-flow(column);
+		}
+	}
+}
+.flex-col {
+	@include flexbox();
+	@include flex-flow(column);
+}
+
+/* centering with flex */
+.center {
+	@include flexbox-center(column);
+}

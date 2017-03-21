@@ -129,7 +129,7 @@ const ProjectListItem = (props) => {
 	return (
 		<div className={classes} style={style} onClick={props.handleClick}>
 			<div className="text">
-				<p>{props.project.name}</p>
+				{ /*<p>{props.project.name}</p>*/ }
 			</div>
 		</div>
 	);
@@ -159,6 +159,7 @@ class ProjectList extends Component {
 		}));
 	}
 	render() {
+		console.log(this.props)
 		return(
 			<div className="ProjectList">
 				<Link to={this.state.matchUrl} onClick={this.changeProjectListStyle}>
