@@ -26,11 +26,15 @@ class App extends Component {
 			isNavOpen: false,
 		}
 		this.toggleNav = this.toggleNav.bind(this);
+		// this.foo = this.foo.bind(this);
 	}
 	toggleNav() {
 		this.setState(prevState => ({
 			isNavOpen: !prevState.isNavOpen
 		}));
+	}
+	foo() {
+		console.log('bar');
 	}
 	render() {
 		return(
@@ -40,7 +44,7 @@ class App extends Component {
 					<Nav handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
-						<Route path="/projects" component={(props, state, params) => <ProjectList isNavOpen={this.state.isNavOpen} {...props} />} />
+						<Route path="/projects" component={(props, state, params) => <ProjectList testFunction={this.foo} isNavOpen={this.state.isNavOpen} {...props} />} />
 						{ /*<Route path="/projects" component={ProjectList} />*/ }
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>

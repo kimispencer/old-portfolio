@@ -159,9 +159,12 @@ class ProjectList extends Component {
 		}));
 	}
 	render() {
-		console.log(this.props)
+console.log(this.props)
 		return(
 			<div className="ProjectList">
+				
+<p onClick={this.props.testFunction} >click me</p>
+
 				<Link to={this.state.matchUrl} onClick={this.changeProjectListStyle}>
 					{ this.state.listStyle 
 						? <h4 className="title center" id="PageTitle">Projects</h4>

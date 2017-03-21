@@ -92,7 +92,7 @@
   width: auto; }
 
 .ProjectListItem.box-style {
-  color: white;
+  /*color: white;*/
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

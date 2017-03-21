@@ -38,7 +38,7 @@ $project_tile_size: 300px;
 		width: auto;
 	}
 	&.box-style {
-		color: white;
+		/*color: white;*/
 		@include flexbox-center(column);
 		width: 100vw; //$project_tile_size;
 		max-width: 100vw;
