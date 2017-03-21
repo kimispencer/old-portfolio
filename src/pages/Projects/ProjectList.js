@@ -129,7 +129,7 @@ const ProjectListItem = (props) => {
 	return (
 		<div className={classes} style={style} onClick={props.handleClick}>
 			<div className="text">
-				{ /*<p>{props.project.name}</p>*/ }
+				<p>{props.project.name}</p>
 			</div>
 		</div>
 	);
