@@ -24,12 +24,13 @@ class App extends Component {
 		super();
 		this.state = {
 			isNavOpen: false,
-			showProjectNav: false,
-			projectNavStyle_list: false,
+			isProjectNavOpen: false,
+			projectNavStyle_isList: false,
 		}
 		this.toggleNav = this.toggleNav.bind(this);
 		this.toggleProjectNav = this.toggleProjectNav.bind(this);
 		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
+		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
 	}
 	toggleNav() {
 		this.setState(prevState => ({
@@ -38,19 +39,19 @@ class App extends Component {
 	}
 	toggleProjectNav() {
 		this.setState(prevState => ({
-			showProjectNav: !prevState.showProjectNav,
-			projectNavStyle_list: true,
+			isProjectNavOpen: !prevState.isProjectNavOpen,
+			projectNavStyle_isList: true,
 		}));
 	}
 	changeProjectNavStyle() {
 		this.setState(prevState => ({
-			showProjectNav: false,
-			projectNavStyle_list: !prevState.projectNavStyle_list,
+			isProjectNavOpen: false,
+			projectNavStyle_isList: !prevState.projectNavStyle_isList,
 		}));
 	}
-	boxProjectNavStyle() {
+	changeProjectNavStyle_toBox() {
 		this.setState({
-			projectNavStyle_list: false
+			projectNavStyle_isList: false
 		});
 	}
 	render() {
@@ -58,15 +59,15 @@ class App extends Component {
 			<div className="App">
 			  <Router>
 				<div>
-					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} boxProjectNavStyle={this.boxProjectNavStyle}/>
+					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox}/>
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
 								changeProjectNavStyle={this.changeProjectNavStyle} 
-								listStyle={this.state.projectNavStyle_list} 
+								listStyle={this.state.projectNavStyle_isList} 
 								toggleProjectNav={this.toggleProjectNav} 
-								showProjectNav={this.state.showProjectNav} 
+								isProjectNavOpen={this.state.isProjectNavOpen} 
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>

@@ -155,7 +155,7 @@ const ProjectList = (props) => {
 				transitionName="example"
 				transitionAppear={true}
 			>
-			{ props.showProjectNav 
+			{ props.isProjectNavOpen 
 				? null 
 				: <ul className="project-list">
 					{ PROJECTS.map((project, index) => 

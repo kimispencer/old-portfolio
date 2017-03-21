@@ -14,9 +14,9 @@ const NavTrigger = (props) => (
 const Nav = (props) => {
 	let open = props.isNavOpen ? 'open' : 'closed';
 	let cssClasses = `${open} Nav`;
-	const toggleNav_boxProjectNavStyle = () => {
+	const toggleNav_changeProjectNavStyle_toBox = () => {
 		props.toggleNav();
-		props.boxProjectNavStyle();
+		props.changeProjectNavStyle_toBox();
 	}
 	return (
 		<div>
@@ -24,7 +24,7 @@ const Nav = (props) => {
 			<div className={cssClasses}>
 				<ul>
 					<li><Link to="/" onClick={props.toggleNav}><small className="uppercase">Home</small></Link></li>
-					<li><Link to="/projects" onClick={toggleNav_boxProjectNavStyle}><small className="uppercase">Projects</small></Link></li>
+					<li><Link to="/projects" onClick={toggleNav_changeProjectNavStyle_toBox}><small className="uppercase">Projects</small></Link></li>
 					<li><Link to="/resume" onClick={props.toggleNav}><small className="uppercase">Resume</small></Link></li>
 					<li><Link to="/contact" onClick={props.toggleNav}><small className="uppercase">Contact</small></Link></li>
 				</ul>
