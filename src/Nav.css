@@ -62,21 +62,18 @@
   position: fixed;
   top: 0;
   left: 0; }
-
-.Nav #Logo {
-  position: fixed; }
-
-.Nav ul {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
-.Nav ul li {
-  margin: 10px;
-  display: inline;
-  letter-spacing: 0.2em; }
+  .Nav #Logo {
+    position: fixed; }
+  .Nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    .Nav ul li {
+      margin: 10px;
+      display: inline;
+      letter-spacing: 0.2em; }
 
 /* 640px or bigger */
 @media only screen and (min-width: 640px) {
@@ -109,24 +106,24 @@
     -ms-justify-content: flex-end;
     justify-content: flex-end;
     -ms-flex-pack: flex-end; }
-  .Nav #Logo {
-    top: 10px;
-    left: 20px; }
-  .Nav ul {
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    -webkit-justify-content: flex-end;
-    -moz-justify-content: flex-end;
-    -ms-justify-content: flex-end;
-    justify-content: flex-end;
-    -ms-flex-pack: flex-end;
-    padding: 0;
-    margin: 0 20px; }
-  .Nav ul li {
-    margin: 10px;
-    display: inline; } }
+    .Nav #Logo {
+      top: 10px;
+      left: 20px; }
+    .Nav ul {
+      -webkit-flex-flow: row;
+      -moz-flex-flow: row;
+      -ms-flex-flow: row;
+      flex-flow: row;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      justify-content: flex-end;
+      -ms-flex-pack: flex-end;
+      padding: 0;
+      margin: 0 20px; }
+      .Nav ul li {
+        margin: 10px;
+        display: inline; } }
 
 /* 640px or smaller */
 @media only screen and (max-width: 640px) {
@@ -139,32 +136,32 @@
     top: 0;
     right: 0;
     text-shadow: white 1px 0px 0px; }
-  .NavTrigger h1 {
-    display: inline-block;
-    margin: 0; }
+    .NavTrigger h1 {
+      display: inline-block;
+      margin: 0; }
   .Nav {
     height: 100vh;
     width: 300px;
     max-width: 70vw;
     background-color: #030303;
     color: white; }
-  .Nav.open {
-    transform: translate3d(0vw, 0, 0); }
-  .Nav.closed {
-    transform: translate3d(-300px, 0, 0); }
-  .Nav #Logo {
-    left: 40px;
-    bottom: 20px; }
-  .Nav ul {
-    -webkit-flex-flow: column;
-    -moz-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    padding: 20px;
-    margin: 0; }
-  .Nav ul li {
-    /*@include border(red);*/
-    margin: 10px;
-    display: block; }
-  .Nav ul li p {
-    color: white; } }
+    .Nav.open {
+      transform: translate3d(0vw, 0, 0); }
+    .Nav.closed {
+      transform: translate3d(-300px, 0, 0); }
+    .Nav #Logo {
+      left: 40px;
+      bottom: 20px; }
+    .Nav ul {
+      -webkit-flex-flow: column;
+      -moz-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      padding: 20px;
+      margin: 0; }
+      .Nav ul li {
+        /*@include border(red);*/
+        margin: 10px;
+        display: block; }
+        .Nav ul li p {
+          color: white; } }
