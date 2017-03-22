@@ -17,6 +17,7 @@ const Nav = (props) => {
 	const toggleNav_changeProjectNavStyle_toBox = () => {
 		props.toggleNav();
 		props.changeProjectNavStyle_toBox();
+		props.toggleProjectNav();
 	}
 	return (
 		<div>
