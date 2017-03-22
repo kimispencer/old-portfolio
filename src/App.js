@@ -3,6 +3,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+// libraries
+import smoothScroll from 'smoothscroll';
 
 import Nav from './Nav';
 import Shroud from './Shroud';
@@ -13,11 +15,15 @@ import Contact from './pages/Contact/Contact';
 
 import './App.css';
 
-const Footer = () => (
-	<div className="Footer">
-		<p>footer content</p>
-	</div>
-)
+const Footer = (props) => {
+	return (
+		<div className="Footer">
+			<p>footer content</p>
+			<br />
+			<p onClick={props.smoothScrollTop} >smooth scroll top ^</p>
+		</div>
+	);
+}
 
 class App extends Component {
 	constructor() {
@@ -31,11 +37,15 @@ class App extends Component {
 		this.toggleProjectNav = this.toggleProjectNav.bind(this);
 		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
 		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
+		this.smoothScrollTop = this.smoothScrollTop.bind(this);
 	}
 	toggleNav() {
 		this.setState(prevState => ({
 			isNavOpen: !prevState.isNavOpen,
 		}));
+	}
+	smoothScrollTop() {
+		smoothScroll(0); // tech should fire when Route change is complete
 	}
 	toggleProjectNav() {
 		this.setState(prevState => ({
@@ -73,7 +83,7 @@ class App extends Component {
 						<Route path="/contact" component={Contact}/>
 					</div>
 					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
-					<Footer />
+					<Footer smoothScrollTop={this.smoothScrollTop} />
 				</div>
 			  </Router>
 			</div>

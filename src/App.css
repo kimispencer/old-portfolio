@@ -63,14 +63,17 @@ html {
   position: relative;
   margin: 0;
   padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    background-color: #f3f3f3;
-    color: black;
-    padding: 20px;
-    text-align: center;
-    height: 100px; }
+
+.App .Nav {
+  /* CSS on the component level */ }
+
+.App .main-content {
+  min-height: calc(100vh - 100px - 60px);
+  margin-top: 60px; }
+
+.App .Footer {
+  background-color: #f3f3f3;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  height: 100px; }

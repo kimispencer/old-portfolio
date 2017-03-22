@@ -3,7 +3,7 @@ import {
 	Route, 
 	Link 
 } from 'react-router-dom';
-import ReactCSSTransitionGroup from 'react-addons-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './ProjectList.css';
 
@@ -135,9 +135,37 @@ const ProjectListItem = (props) => {
 	);
 }
 
+/* !!! WORKING CSSTRANSITION SLIDE UP/DOWN */
+class SlideExample extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = { visible: false };
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick() {
+    	this.setState({ visible: ! this.state.visible });
+    }
+
+    render() {
+        return <div>
+            <p onClick={this.handleClick}>{this.state.visible ? 'Slide up' : 'Slide down'}</p>
+            <ReactCSSTransitionGroup 
+            	transitionName="example"
+            	transitionEnterTimeout={300}
+            	transitionLeaveTimeout={300}
+            >
+            	{ this.state.visible ? <div className='panel' /> : null }
+            </ReactCSSTransitionGroup>
+        </div>
+    }
+}
+
 const ProjectList = (props) => {
 	return(
 		<div className="ProjectList">
+			<SlideExample />
+
 			<Link to={props.match.url} onClick={props.changeProjectNavStyle}>
 				{ props.listStyle 
 					? <h4 className="title center" id="PageTitle">Projects</h4>
@@ -150,23 +178,18 @@ const ProjectList = (props) => {
 				: null
 			}
 
-			<ReactCSSTransitionGroup
-				transitionName="example"
-				transitionAppear={true}
-			>
 			{ props.isProjectNavOpen 
 				? null 
 				: <ul className="project-list">
 					{ PROJECTS.map((project, index) => 
-						<li key={index} >
-							 <Link to={props.match.url + '/' + project.url} >
-								<ProjectListItem project={project} handleClick={props.toggleProjectNav} listStyle={props.listStyle}/>
-							</Link>
-						</li>
+					<li key={index} >
+						 <Link to={props.match.url + '/' + project.url} >
+							<ProjectListItem project={project} handleClick={props.toggleProjectNav} listStyle={props.listStyle}/>
+						</Link>
+					</li>
 					) }
 				</ul>
 			}
-			</ReactCSSTransitionGroup>	
 
 			<Route path={`${props.match.url}/:id`} component={ProjectDetail}/>
 		</div>
