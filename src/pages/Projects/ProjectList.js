@@ -138,8 +138,6 @@ const ProjectListItem = (props) => {
 const ProjectList = (props) => {
 	return(
 		<div className="ProjectList">
-			<h4>hello?</h4>
-			
 			<Link to={props.match.url} onClick={props.changeProjectNavStyle}>
 				{ props.listStyle 
 					? <h4 className="title center" id="PageTitle">Projects</h4>
