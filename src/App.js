@@ -26,8 +26,8 @@ const Footer = (props) => {
 }
 
 class App extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			isNavOpen: false,
 			isProjectNavOpen: false,
@@ -74,10 +74,10 @@ class App extends Component {
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
-								changeProjectNavStyle={this.changeProjectNavStyle} 
-								listStyle={this.state.projectNavStyle_isList} 
-								toggleProjectNav={this.toggleProjectNav} 
 								isProjectNavOpen={this.state.isProjectNavOpen} 
+								toggleProjectNav={this.toggleProjectNav} 
+								projectNavStyle_isList={this.state.projectNavStyle_isList} 
+								changeProjectNavStyle={this.changeProjectNavStyle} 
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>

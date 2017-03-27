@@ -124,7 +124,7 @@ const ProjectListItem = (props) => {
 	let style = {
 		backgroundImage: 'url(' + props.project.coverImg + ')'
 	}
-	let navStyle = props.listStyle ? 'list-style' : 'box-style';
+	let navStyle = props.projectNavStyle_isList ? 'list-style' : 'box-style';
 	let classes = `${navStyle} ProjectListItem`;
 	return (
 		<div className={classes} style={style} onClick={props.handleClick}>
@@ -167,13 +167,13 @@ const ProjectList = (props) => {
 			<SlideExample />
 
 			<Link to={props.match.url} onClick={props.changeProjectNavStyle}>
-				{ props.listStyle 
+				{ props.projectNavStyle_isList 
 					? <h4 className="title center" id="PageTitle">Projects</h4>
 					: null
 				}
 			</Link>
 
-			{ props.listStyle 
+			{ props.projectNavStyle_isList 
 				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
 				: null
 			}
@@ -184,7 +184,7 @@ const ProjectList = (props) => {
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={props.toggleProjectNav} listStyle={props.listStyle}/>
+							<ProjectListItem project={project} handleClick={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
 						</Link>
 					</li>
 					) }
