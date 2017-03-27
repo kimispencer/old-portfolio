@@ -44,9 +44,6 @@ class App extends Component {
 			isNavOpen: !prevState.isNavOpen,
 		}));
 	}
-	smoothScrollTop() {
-		smoothScroll(0); // tech should fire when Route change is complete
-	}
 	toggleProjectNav() {
 		this.setState(prevState => ({
 			isProjectNavOpen: !prevState.isProjectNavOpen,
@@ -64,12 +61,15 @@ class App extends Component {
 			projectNavStyle_isList: false
 		});
 	}
+	smoothScrollTop() {
+		smoothScroll(0); // tech should fire when Route change is complete
+	}
 	render() {
 		return(
 			<div className="App">
 			  <Router>
 				<div>
-					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} toggleProjectNav={this.state.toggleProjectNav} changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox}/>
+					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox}/>
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
