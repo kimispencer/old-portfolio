@@ -1,4 +1,5 @@
 .app {
   border: 1px dashed blue; }
-  .app .title {
-    text-align: center; }
+
+.app .title {
+  text-align: center; }
