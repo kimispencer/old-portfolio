@@ -94,9 +94,10 @@ const ProjectDetail = ({match}) => {
 	}
 	return(
 		<div className="ProjectDetail">
+			<h3 className="title">{project.name}</h3>
 			<div className="project-detail-cover" style={style}></div>
 			<div className="text center">
-				<h3 className="title">{project.name}</h3>
+				<h4 className="title">Lorem Ipsum</h4>
 				<p>{project.intro}</p>
 				<div className="flex-row">
 					<div className="flex-col list-container">
