@@ -23,18 +23,25 @@ ReactDOM.render(
 
 	**** sample code for different ways of declaring a component
 
-	// I use this syntax when my component fits on one line
+	// 1. I use this syntax when my component fits on one line
+
 	const ListItem = (props) => <li className="list-item">{props.item.name}</li>;
 
-	// I use this when my component has no logic outside JSX
+
+
+	// 2. I use this when my component has no logic outside JSX
 	// !!! does not use 'props' when you have ({ items }) vs (props) -> props.items
+
 	const List = ({ items }) => (
 	  <ul className="list">
 	    {items.map(item => <ListItem item={item} />)}
 	  </ul>
 	);
 
-	// I use this when the component needs logic outside JSX.
+
+
+	// 3. I use this when the component needs logic outside JSX.
+
 	const Body = (props) => {
 	  let items = transformItems(props.rawItems);
 	  return (
@@ -45,7 +52,9 @@ ReactDOM.render(
 	  );
 	};
 
-	// This is equivalent to the last example
+
+
+	// 4. This is equivalent to the last example but using ES5
 	function Page(props, context) {
 	  return (
 	    <div>
@@ -53,17 +62,27 @@ ReactDOM.render(
 	    </div>
 	  );
 	}
-	// propTypes and contextTypes are supported
+
+
+
+	// 5. propTypes and contextTypes are supported
+
 	Page.propTypes = {
 	  rawItems: React.PropTypes.array.isRequired,
 	};
 
-	// ES6 class
+
+
+	// 6. ES6 class
 	// !!! uses this.props inside render()
-	// "this" is from constructor()?
+
 	class App extends Component {
 		constructor(props) {
 			super(props);
+			this.myFunction = this.myFunction.bind(this);	// need to bind functions
+		}
+		myFunction() {
+	
 		}
 		render() {
 			return(
