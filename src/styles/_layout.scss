@@ -14,8 +14,21 @@
 	@include flexbox();
 	@include flex-flow(column);
 }
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.flex-col {
+		&.responsive {
+			@include flex-flow(row);
+		}
+	}
+}
 
 /* centering with flex */
-.center {
-	@include flexbox-center(column);
+.flex-center {
+	&.flex-row {
+		@include flexbox-center(row);
+	}
+	&.flex-col {
+		@include flexbox-center(column);
+	}
 }

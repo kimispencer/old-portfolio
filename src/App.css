@@ -4,6 +4,7 @@
 /* nav */
 /* footer */
 /* colors */
+/* forms */
 .flex-row {
   display: -webkit-box;
   display: -moz-box;
@@ -34,8 +35,36 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  .flex-col.responsive {
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row; } }
+
 /* centering with flex */
-.center {
+.flex-center.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+.flex-center.flex-col {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -55,6 +84,61 @@
   justify-content: center;
   -ms-flex-pack: center; }
 
+form {
+  max-width: calc(100vw - 40px); }
+  form input, form textarea {
+    color: #3c3c3c;
+    background-color: #fbfbfb;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+  form input, form textarea {
+    border: 3px solid black;
+    /*		border: 0;
+		outline: 0;
+		background: transparent;
+		border-bottom: 3px solid black;*/ }
+  form textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical; }
+  form button[type='submit'] {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 13px;
+    /*width: $button_width;*/
+    cursor: pointer;
+    text-decoration: underline; }
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s; }
+
+/* 640px or bigger */
+@media only screen and (min-width: 640px) {
+  form {
+    min-width: 500px; } }
+
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  form {
+    width: 100%; } }
+
 html {
   height: 100%; }
 
@@ -63,17 +147,14 @@ html {
   position: relative;
   margin: 0;
   padding: 0; }
-
-.App .Nav {
-  /* CSS on the component level */ }
-
-.App .main-content {
-  min-height: calc(100vh - 100px - 60px);
-  margin-top: 60px; }
-
-.App .Footer {
-  background-color: #f3f3f3;
-  color: black;
-  padding: 20px;
-  text-align: center;
-  height: 100px; }
+  .App .Nav {
+    /* CSS on the component level */ }
+  .App .main-content {
+    min-height: calc(100vh - 100px - 60px);
+    margin-top: 60px; }
+  .App .Footer {
+    background-color: #f3f3f3;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    height: 100px; }
