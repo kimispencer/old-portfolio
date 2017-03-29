@@ -11,7 +11,7 @@ const Resume = () => (
 				<div className="right-col">
 					<div className="center">
 						<h2 className="bold title">KIMI SPENCER</h2>
-						<p className="serif uppercase">kimispencer@gmail.com</p>
+						<p className="serif uppercase">hello@kimispencer.com</p>
 						<p className="serif uppercase">Brooklyn, NY</p>
 					</div>
 				</div>

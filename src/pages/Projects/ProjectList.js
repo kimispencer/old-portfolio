@@ -99,7 +99,7 @@ const ProjectDetail = ({match}) => {
 			<div className="text center">
 				<h4 className="title">Lorem Ipsum</h4>
 				<p>{project.intro}</p>
-				<div className="flex-row">
+				<div className="flex-row flex-center">
 					<div className="flex-col list-container">
 						<h4 className="title underline">Role</h4>
 						<ul>

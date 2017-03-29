@@ -3,15 +3,6 @@
 .Resume {
 	.resume-container {
 		@include flexbox-center(column);
-		margin-top: $gutter*2;
-
-		.left-col, .right-col {
-		}
-		.left-col {
-		}
-		.right-col {
-
-		}
 		.resume-section {
 			width: 100%;
 			max-width: 90vw;
