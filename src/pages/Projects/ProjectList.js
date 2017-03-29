@@ -84,9 +84,47 @@ const PROJECTS = [
 	}
 ];
 
-const ProjectDetail = ({match}) => {
+// const ProjectDetail = ({match}) => {
+// 	let project = PROJECTS.filter(function (p) {
+// 	    return p.url === match.params.id;
+// 	})[0];
+// 	// console.log(project)
+// 	let style = {
+// 		backgroundImage: 'url(' + project.coverImg + ')'
+// 	}
+// 	return(
+// 		<div className="ProjectDetail">
+// 			<h3 className="title">{project.name}</h3>
+// 			<div className="project-detail-cover" style={style}></div>
+// 			<div className="text center">
+// 				<h4 className="title">Lorem Ipsum</h4>
+// 				<p>{project.intro}</p>
+// 				<div className="flex-row flex-center">
+// 					<div className="flex-col list-container">
+// 						<h4 className="title underline">Role</h4>
+// 						<ul>
+// 							<li>lead front-end engineer</li>
+// 							<li>ux design</li>
+// 						</ul>
+// 					</div>
+// 					<div className="flex-col list-container">
+// 						<h4 className="title underline">Tools</h4>
+// 						<ul>
+// 							<li>reactjs</li>
+// 							<li>es6</li>
+// 						</ul>
+// 					</div>
+// 				</div>
+// 				<p>{project.intro}</p>
+// 			</div>
+// 		</div>
+// 	);
+// }
+
+const ProjectDetail = (props) => {
+	console.log(props)
 	let project = PROJECTS.filter(function (p) {
-	    return p.url === match.params.id;
+	    return p.url === props.match.params.id;
 	})[0];
 	// console.log(project)
 	let style = {
@@ -94,6 +132,9 @@ const ProjectDetail = ({match}) => {
 	}
 	return(
 		<div className="ProjectDetail">
+
+			<h4 onClick={props.sayHi}>ProjectDetail hello?</h4>
+		
 			<h3 className="title">{project.name}</h3>
 			<div className="project-detail-cover" style={style}></div>
 			<div className="text center">
@@ -167,6 +208,8 @@ const ProjectList = (props) => {
 		<div className="ProjectList">
 			<SlideExample />
 
+			<h4 onClick={props.sayHi}>ProjectList hello?</h4>
+
 			<Link to={props.match.url} onClick={props.changeProjectNavStyle}>
 				{ props.projectNavStyle_isList 
 					? <h4 className="title center" id="PageTitle">Projects</h4>
@@ -192,7 +235,11 @@ const ProjectList = (props) => {
 				</ul>
 			}
 
-			<Route path={`${props.match.url}/:id`} component={ProjectDetail}/>
+			{/* <Route path={`${props.match.url}/:id`} component={ProjectDetail}/> */}
+			<Route path={`${props.match.url}/:id`} component={(props, state, params) => 
+				<ProjectDetail 
+					sayHi={props.sayHi}
+				{...props} />} />
 		</div>
 	);
 }

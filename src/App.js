@@ -38,6 +38,7 @@ class App extends Component {
 		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
 		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
 		this.smoothScrollTop = this.smoothScrollTop.bind(this);
+		this.sayHi = this.sayHi.bind(this);
 	}
 	toggleNav() {
 		this.setState(prevState => ({
@@ -64,6 +65,9 @@ class App extends Component {
 	smoothScrollTop() {
 		smoothScroll(0); // tech should fire when Route change is complete
 	}
+	sayHi() {
+		console.log('hi')
+	}
 	render() {
 		return(
 			<div className="App">
@@ -78,6 +82,7 @@ class App extends Component {
 								toggleProjectNav={this.toggleProjectNav} 
 								projectNavStyle_isList={this.state.projectNavStyle_isList} 
 								changeProjectNavStyle={this.changeProjectNavStyle} 
+								sayHi={this.sayHi}
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
