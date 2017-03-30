@@ -122,9 +122,16 @@ const PROJECTS = [
 // }
 
 const ProjectDetail = (props) => {
-	console.log(props)
+	// console.log(props)
+	/*
+		Cannot update during an existing state transition (such as within  render or another component's constructor). 
+		Render methods should be a pure function of props and state; constructor side-effects are an anti-pattern, 
+		but can be moved to componentWillMount.
+	*/
+	// props.changeProjectNavStyle_toList();		// need this inside componentWillMount 
+	
 	let project = PROJECTS.filter(function (p) {
-	    return p.url === props.match.params.id;
+	    return p.url === props.routeProps.match.params.id;
 	})[0];
 	// console.log(project)
 	let style = {
@@ -132,7 +139,6 @@ const ProjectDetail = (props) => {
 	}
 	return(
 		<div className="ProjectDetail">
-
 			<h4 onClick={props.sayHi}>ProjectDetail hello?</h4>
 		
 			<h3 className="title">{project.name}</h3>
@@ -236,9 +242,11 @@ const ProjectList = (props) => {
 			}
 
 			{/* <Route path={`${props.match.url}/:id`} component={ProjectDetail}/> */}
-			<Route path={`${props.match.url}/:id`} component={(props, state, params) => 
+			<Route path={`${props.match.url}/:id`} component={(routeProps, state, params) => 
 				<ProjectDetail 
 					sayHi={props.sayHi}
+					changeProjectNavStyle_toList={props.changeProjectNavStyle_toList}
+					routeProps={routeProps}
 				{...props} />} />
 		</div>
 	);

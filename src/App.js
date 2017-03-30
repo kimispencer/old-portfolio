@@ -26,8 +26,8 @@ const Footer = (props) => {
 }
 
 class App extends Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 		this.state = {
 			isNavOpen: false,
 			isProjectNavOpen: false,
@@ -37,6 +37,7 @@ class App extends Component {
 		this.toggleProjectNav = this.toggleProjectNav.bind(this);
 		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
 		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
+		this.changeProjectNavStyle_toList = this.changeProjectNavStyle_toList.bind(this);
 		this.smoothScrollTop = this.smoothScrollTop.bind(this);
 		this.sayHi = this.sayHi.bind(this);
 	}
@@ -44,6 +45,9 @@ class App extends Component {
 		this.setState(prevState => ({
 			isNavOpen: !prevState.isNavOpen,
 		}));
+	}
+	smoothScrollTop() {
+		smoothScroll(0); // tech should fire when Route change is complete
 	}
 	toggleProjectNav() {
 		this.setState(prevState => ({
@@ -62,8 +66,11 @@ class App extends Component {
 			projectNavStyle_isList: false
 		});
 	}
-	smoothScrollTop() {
-		smoothScroll(0); // tech should fire when Route change is complete
+	changeProjectNavStyle_toList() {
+		console.log('to list')
+		this.setState({
+			projectNavStyle_isList: true
+		});
 	}
 	sayHi() {
 		console.log('hi')
@@ -73,15 +80,17 @@ class App extends Component {
 			<div className="App">
 			  <Router>
 				<div>
-					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox}/>
+					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} toggleProjectNav={this.toggleProjectNav} changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox}/>
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
-								isProjectNavOpen={this.state.isProjectNavOpen} 
-								toggleProjectNav={this.toggleProjectNav} 
-								projectNavStyle_isList={this.state.projectNavStyle_isList} 
+								sayHi={this.sayHi}
 								changeProjectNavStyle={this.changeProjectNavStyle} 
+								changeProjectNavStyle_toList={this.changeProjectNavStyle_toList}
+								projectNavStyle_isList={this.state.projectNavStyle_isList} 
+								toggleProjectNav={this.toggleProjectNav} 
+								isProjectNavOpen={this.state.isProjectNavOpen} 
 								sayHi={this.sayHi}
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
