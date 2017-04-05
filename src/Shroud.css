@@ -86,39 +86,35 @@
 
 form {
   max-width: calc(100vw - 40px); }
-
-form input, form textarea {
-  color: #3c3c3c;
-  background-color: #fbfbfb;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-
-form input, form textarea {
-  border: 3px solid black;
-  /*		border: 0;
+  form input, form textarea {
+    color: #3c3c3c;
+    background-color: #fbfbfb;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+  form input, form textarea {
+    border: 2px solid black;
+    /*		border: 0;
 		outline: 0;
 		background: transparent;
 		border-bottom: 3px solid black;*/ }
-
-form textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%;
-  resize: vertical; }
-
-form button[type='submit'] {
-  border: none;
-  background-color: black;
-  color: white;
-  padding: 13px;
-  /*width: $button_width;*/
-  cursor: pointer;
-  text-decoration: underline; }
+  form textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical; }
+  form button[type='submit'] {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 13px;
+    /*width: $button_width;*/
+    cursor: pointer;
+    text-decoration: underline; }
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -152,18 +148,13 @@ select:-webkit-autofill:focus {
   top: 0;
   left: 0;
   transition: all 350ms ease; }
-
-.Shroud.show {
-  opacity: 1;
-  display: block; }
-
-.Shroud.hide {
-  opacity: 0;
-  display: none; }
+  .Shroud.show {
+    opacity: 1;
+    display: block; }
+  .Shroud.hide {
+    opacity: 0;
+    display: none; }
 
 @media only screen and (min-width: 640px) {
-  .Shroud {
-    display: none !important; } }
-h: 640px) {
   .Shroud {
     display: none !important; } }

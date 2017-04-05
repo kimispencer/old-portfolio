@@ -8,7 +8,7 @@ const Contact = () => (
                 <h4 className="bold title underline ">CONTACT</h4>
                 <p className="serif"><small>CURRENTLY AVAILABLE FOR CONTRACT OR FULL-TIME WORK.</small></p>
                 <p className="serif"><small>hello@kimispencer.com</small></p>
-                <p className="serif"><small>Brooklyn, NY | Portland, OR</small></p>
+                <p className="serif"><small>Brooklyn, NY</small></p>
             </div>
             <div id="ContactForm" className="flex-center flex-col">
                 <form>

@@ -84,41 +84,131 @@ const PROJECTS = [
 	}
 ];
 
-const ProjectDetail = ({match}) => {
-	let project = PROJECTS.filter(function (p) {
-	    return p.url === match.params.id;
-	})[0];
-	// console.log(project)
-	let style = {
-		backgroundImage: 'url(' + project.coverImg + ')'
+// const ProjectDetail = ({match}) => {
+// 	let project = PROJECTS.filter(function (p) {
+// 	    return p.url === match.params.id;
+// 	})[0];
+// 	// console.log(project)
+// 	let style = {
+// 		backgroundImage: 'url(' + project.coverImg + ')'
+// 	}
+// 	return(
+// 		<div className="ProjectDetail">
+// 			<h3 className="title">{project.name}</h3>
+// 			<div className="project-detail-cover" style={style}></div>
+// 			<div className="text center">
+// 				<h4 className="title">Lorem Ipsum</h4>
+// 				<p>{project.intro}</p>
+// 				<div className="flex-row flex-center">
+// 					<div className="flex-col list-container">
+// 						<h4 className="title underline">Role</h4>
+// 						<ul>
+// 							<li>lead front-end engineer</li>
+// 							<li>ux design</li>
+// 						</ul>
+// 					</div>
+// 					<div className="flex-col list-container">
+// 						<h4 className="title underline">Tools</h4>
+// 						<ul>
+// 							<li>reactjs</li>
+// 							<li>es6</li>
+// 						</ul>
+// 					</div>
+// 				</div>
+// 				<p>{project.intro}</p>
+// 			</div>
+// 		</div>
+// 	);
+// }
+
+// const ProjectDetail = (props) => {	
+// 	let project = PROJECTS.filter(function (p) {
+// 	    return p.url === props.routeProps.match.params.id;
+// 	})[0];
+// 	// console.log(project)
+// 	let style = {
+// 		backgroundImage: 'url(' + project.coverImg + ')'
+// 	}
+// 	return(
+// 		<div className="ProjectDetail">
+// 			<h4 onClick={props.sayHi}>ProjectDetail hello?</h4>
+		
+// 			<h3 className="title">{project.name}</h3>
+// 			<div className="project-detail-cover" style={style}></div>
+// 			<div className="text center">
+// 				<h4 className="title">Lorem Ipsum</h4>
+// 				<p>{project.intro}</p>
+// 				<div className="flex-row flex-center">
+// 					<div className="flex-col list-container">
+// 						<h4 className="title underline">Role</h4>
+// 						<ul>
+// 							<li>lead front-end engineer</li>
+// 							<li>ux design</li>
+// 						</ul>
+// 					</div>
+// 					<div className="flex-col list-container">
+// 						<h4 className="title underline">Tools</h4>
+// 						<ul>
+// 							<li>reactjs</li>
+// 							<li>es6</li>
+// 						</ul>
+// 					</div>
+// 				</div>
+// 				<p>{project.intro}</p>
+// 			</div>
+// 		</div>
+// 	);
+// }
+
+class ProjectDetail extends React.Component{
+	constructor(props) {
+		super(props);
 	}
-	return(
-		<div className="ProjectDetail">
-			<h3 className="title">{project.name}</h3>
-			<div className="project-detail-cover" style={style}></div>
-			<div className="text center">
-				<h4 className="title">Lorem Ipsum</h4>
-				<p>{project.intro}</p>
-				<div className="flex-row flex-center">
-					<div className="flex-col list-container">
-						<h4 className="title underline">Role</h4>
-						<ul>
-							<li>lead front-end engineer</li>
-							<li>ux design</li>
-						</ul>
+	componentDidMount() {
+		this.handleProjectNav();
+	}
+	handleProjectNav() {
+		console.log(this.props)
+		if(!this.props.projectNavStyle_isList) {
+			this.props.handleProjectDetailLanding();
+		}
+	}
+	render() {
+		let match = this.props.routeProps.match.params.id;
+		let project = PROJECTS.filter(function (p) {
+		    return p.url === match;
+		})[0];
+		let style = {
+			backgroundImage: 'url(' + project.coverImg + ')'
+		}
+		return(
+			<div className="ProjectDetail">
+				<h3 className="title">{project.name}</h3>
+				<div className="project-detail-cover" style={style}></div>
+				<div className="text center">
+					<h4 className="title">Lorem Ipsum</h4>
+					<p>{project.intro}</p>
+					<div className="flex-row flex-center">
+						<div className="flex-col list-container">
+							<h4 className="title underline">Role</h4>
+							<ul>
+								<li>lead front-end engineer</li>
+								<li>ux design</li>
+							</ul>
+						</div>
+						<div className="flex-col list-container">
+							<h4 className="title underline">Tools</h4>
+							<ul>
+								<li>reactjs</li>
+								<li>es6</li>
+							</ul>
+						</div>
 					</div>
-					<div className="flex-col list-container">
-						<h4 className="title underline">Tools</h4>
-						<ul>
-							<li>reactjs</li>
-							<li>es6</li>
-						</ul>
-					</div>
+					<p>{project.intro}</p>
 				</div>
-				<p>{project.intro}</p>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
 const ProjectListItem = (props) => {
@@ -136,65 +226,70 @@ const ProjectListItem = (props) => {
 	);
 }
 
-/* !!! WORKING CSSTRANSITION SLIDE UP/DOWN */
-class SlideExample extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = { visible: false };
-        this.handleClick = this.handleClick.bind(this)
-    }
-
-    handleClick() {
-    	this.setState({ visible: ! this.state.visible });
-    }
-
-    render() {
-        return <div>
-            <p onClick={this.handleClick}>{this.state.visible ? 'Slide up' : 'Slide down'}</p>
-            <ReactCSSTransitionGroup 
-            	transitionName="example"
-            	transitionEnterTimeout={300}
-            	transitionLeaveTimeout={300}
-            >
-            	{ this.state.visible ? <div className='panel' /> : null }
-            </ReactCSSTransitionGroup>
-        </div>
-    }
-}
-
 const ProjectList = (props) => {
 	return(
 		<div className="ProjectList">
-			<SlideExample />
 
-			<Link to={props.match.url} onClick={props.changeProjectNavStyle}>
-				{ props.projectNavStyle_isList 
-					? <h4 className="title center" id="PageTitle">Projects</h4>
-					: null
-				}
-			</Link>
-
+			{ props.projectNavStyle_isList 
+				? <Link to={props.match.url} onClick={props.handleProjectLanding}>
+					<h4 className="title center" id="PageTitle">Projects</h4>
+				</Link>
+				: null
+			}
+			
 			{ props.projectNavStyle_isList 
 				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
 				: null
 			}
 
 			{ props.isProjectNavOpen 
-				? null 
-				: <ul className="project-list">
+				? <ul className="project-list">
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
+							<ProjectListItem project={project} handleClick={props.toggleProjectNav} toggleProjectNav={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
 						</Link>
 					</li>
 					) }
 				</ul>
+				: null
 			}
 
-			<Route path={`${props.match.url}/:id`} component={ProjectDetail}/>
+			<Route path={`${props.match.url}/:id`} component={(routeProps, state, params) => 
+				<ProjectDetail 
+					handleProjectDetailLanding={props.handleProjectDetailLanding}
+					routeProps={routeProps}
+				{...props} />} />
+
 		</div>
 	);
 }
 
 export default ProjectList;
+
+
+/* !!! WORKING CSSTRANSITION SLIDE UP/DOWN */
+// class SlideExample extends React.Component{
+//     constructor(props) {
+//         super(props);
+//         this.state = { visible: false };
+//         this.handleClick = this.handleClick.bind(this)
+//     }
+
+//     handleClick() {
+//     	this.setState({ visible: ! this.state.visible });
+//     }
+
+//     render() {
+//         return <div>
+//             <p onClick={this.handleClick}>{this.state.visible ? 'Slide up' : 'Slide down'}</p>
+//             <ReactCSSTransitionGroup 
+//             	transitionName="example"
+//             	transitionEnterTimeout={300}
+//             	transitionLeaveTimeout={300}
+//             >
+//             	{ this.state.visible ? <div className='panel' /> : null }
+//             </ReactCSSTransitionGroup>
+//         </div>
+//     }
+// }
