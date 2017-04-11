@@ -38,13 +38,13 @@ class App extends Component {
 		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
 		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
 		this.changeProjectNavStyle_toList = this.changeProjectNavStyle_toList.bind(this);
-		this.smoothScrollTop = this.smoothScrollTop.bind(this);
+		this.smoothScroll = this.smoothScroll.bind(this);
 		this.handleProjectLanding= this.handleProjectLanding.bind(this);
 		this.handleProjectDetailLanding = this.handleProjectDetailLanding.bind(this);
 		this.sayHi = this.sayHi.bind(this);
 	}
-	smoothScrollTop() {
-		smoothScroll(0); // tech should fire when Route change is complete
+	smoothScroll(loc) {
+		smoothScroll(loc);
 	}
 	toggleNav() {
 		this.setState(prevState => ({
@@ -92,6 +92,7 @@ class App extends Component {
 			  <Router>
 				<div>
 					<Nav 
+						smoothScroll={this.smoothScroll}
 						isNavOpen={this.state.isNavOpen} 
 						toggleNav={this.toggleNav} 
 						isProjectNavOpen={this.state.isProjectNavOpen} 
@@ -101,6 +102,7 @@ class App extends Component {
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
+								smoothScroll={this.smoothScroll}
 								changeProjectNavStyle={this.changeProjectNavStyle} 
 								changeProjectNavStyle_toList={this.changeProjectNavStyle_toList}
 								projectNavStyle_isList={this.state.projectNavStyle_isList} 

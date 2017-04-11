@@ -14,20 +14,27 @@ const NavTrigger = (props) => (
 const Nav = (props) => {
 	let open = props.isNavOpen ? 'open' : 'closed';
 	let cssClasses = `${open} Nav`;
-	const toggleNav_changeProjectNavStyle_toBox = () => {
+
+	const handle_navClick = () => {
+		props.toggleNav();
+		props.smoothScroll(0);
+	}
+	const handle_navClick_Projects = () => {
 		props.toggleNav();
 		if(!props.isProjectNavOpen) props.toggleProjectNav();
 		props.changeProjectNavStyle_toBox();
+		props.smoothScroll(0);
 	}
+
 	return (
 		<div>
 			<NavTrigger toggleNav={props.toggleNav} />
 			<div className={cssClasses}>
 				<ul>
-					<li><Link to="/" onClick={props.toggleNav}><small className="uppercase">Home</small></Link></li>
-					<li><Link to="/projects" onClick={toggleNav_changeProjectNavStyle_toBox}><small className="uppercase">Projects</small></Link></li>
-					<li><Link to="/resume" onClick={props.toggleNav}><small className="uppercase">Resume</small></Link></li>
-					<li><Link to="/contact" onClick={props.toggleNav}><small className="uppercase">Contact</small></Link></li>
+					<li><Link to="/" onClick={handle_navClick}><small className="uppercase">Home</small></Link></li>
+					<li><Link to="/projects" onClick={handle_navClick_Projects}><small className="uppercase">Projects</small></Link></li>
+					<li><Link to="/resume" onClick={handle_navClick}><small className="uppercase">Resume</small></Link></li>
+					<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>
 				</ul>
 			</div>
 		</div>

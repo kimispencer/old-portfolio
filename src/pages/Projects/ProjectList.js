@@ -216,6 +216,7 @@ const ProjectListItem = (props) => {
 	}
 	let navStyle = props.projectNavStyle_isList ? 'list-style' : 'box-style';
 	let classes = `${navStyle} ProjectListItem`;
+
 	return (
 		<div className={classes} style={style} onClick={props.handleClick}>
 			<div className="text">
@@ -226,6 +227,11 @@ const ProjectListItem = (props) => {
 }
 
 const ProjectList = (props) => {
+	const handle_projectNavClick = () => {
+		props.toggleProjectNav();
+		props.smoothScroll(0);
+	}
+
 	return(
 		<div className="ProjectList">
 
@@ -241,12 +247,14 @@ const ProjectList = (props) => {
 				: null
 			}
 
+			{ /*<SlideExample match={props.match} isProjectNavOpen={props.isProjectNavOpen} toggleProjectNav={props.toggleProjectNav} /> */ }
+
 			{ props.isProjectNavOpen 
 				? <ul className="project-list">
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={props.toggleProjectNav} toggleProjectNav={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
+							<ProjectListItem project={project} handleClick={handle_projectNavClick} toggleProjectNav={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
 						</Link>
 					</li>
 					) }
@@ -266,29 +274,34 @@ const ProjectList = (props) => {
 
 export default ProjectList;
 
-
-/* !!! WORKING CSSTRANSITION SLIDE UP/DOWN */
-// class SlideExample extends React.Component{
-//     constructor(props) {
-//         super(props);
-//         this.state = { visible: false };
-//         this.handleClick = this.handleClick.bind(this)
-//     }
-
-//     handleClick() {
-//     	this.setState({ visible: ! this.state.visible });
-//     }
-
-//     render() {
-//         return <div>
-//             <p onClick={this.handleClick}>{this.state.visible ? 'Slide up' : 'Slide down'}</p>
-//             <ReactCSSTransitionGroup 
-//             	transitionName="example"
-//             	transitionEnterTimeout={300}
-//             	transitionLeaveTimeout={300}
-//             >
-//             	{ this.state.visible ? <div className='panel' /> : null }
-//             </ReactCSSTransitionGroup>
-//         </div>
-//     }
-// }
+/*
+class SlideExample extends React.Component{
+    constructor(props) {
+        super(props);
+        console.log(props)
+    }
+    render() {
+        return <div>
+            <p onClick={this.props.toggleProjectNav}>{this.props.isProjectNavOpen  ? 'Slide up' : 'Slide down'}</p>
+            <ReactCSSTransitionGroup 
+            	transitionName="example"
+            	transitionEnterTimeout={500}
+            	transitionLeaveTimeout={250}
+            >
+				{ this.props.isProjectNavOpen 
+					? <ul className="project-list">
+						{ PROJECTS.map((project, index) => 
+						<li key={index} >
+							 <Link to={this.props.match.url + '/' + project.url} >
+								<ProjectListItem project={project} handleClick={this.props.toggleProjectNav} toggleProjectNav={this.props.toggleProjectNav} projectNavStyle_isList={this.props.projectNavStyle_isList}/>
+							</Link>
+						</li>
+						) }
+					</ul>
+					: null
+				}
+            </ReactCSSTransitionGroup>
+        </div>
+    }
+}
+*/
