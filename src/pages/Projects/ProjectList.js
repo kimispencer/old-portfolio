@@ -160,7 +160,7 @@ const PROJECTS = [
 // 	);
 // }
 
-class ProjectDetail extends React.Component{
+class ProjectDetail extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -168,7 +168,6 @@ class ProjectDetail extends React.Component{
 		this.handleProjectNav();
 	}
 	handleProjectNav() {
-		console.log(this.props)
 		if(!this.props.projectNavStyle_isList) {
 			this.props.handleProjectDetailLanding();
 		}
