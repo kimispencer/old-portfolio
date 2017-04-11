@@ -226,6 +226,36 @@ const ProjectListItem = (props) => {
 	);
 }
 
+class SlideExample extends React.Component{
+    constructor(props) {
+        super(props);
+        console.log(props)
+    }
+    render() {
+        return <div>
+            <p onClick={this.props.toggleProjectNav}>{this.props.isProjectNavOpen  ? 'Slide up' : 'Slide down'}</p>
+            <ReactCSSTransitionGroup 
+            	transitionName="example"
+            	transitionEnterTimeout={500}
+            	transitionLeaveTimeout={250}
+            >
+				{ this.props.isProjectNavOpen 
+					? <ul className="project-list">
+						{ PROJECTS.map((project, index) => 
+						<li key={index} >
+							 <Link to={this.props.match.url + '/' + project.url} >
+								<ProjectListItem project={project} handleClick={this.props.toggleProjectNav} toggleProjectNav={this.props.toggleProjectNav} projectNavStyle_isList={this.props.projectNavStyle_isList}/>
+							</Link>
+						</li>
+						) }
+					</ul>
+					: null
+				}
+            </ReactCSSTransitionGroup>
+        </div>
+    }
+}
+
 const ProjectList = (props) => {
 	return(
 		<div className="ProjectList">
@@ -241,6 +271,8 @@ const ProjectList = (props) => {
 				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
 				: null
 			}
+
+			{ /*<SlideExample match={props.match} isProjectNavOpen={props.isProjectNavOpen} toggleProjectNav={props.toggleProjectNav} /> */ }
 
 			{ props.isProjectNavOpen 
 				? <ul className="project-list">
@@ -266,30 +298,3 @@ const ProjectList = (props) => {
 }
 
 export default ProjectList;
-
-
-/* !!! WORKING CSSTRANSITION SLIDE UP/DOWN */
-// class SlideExample extends React.Component{
-//     constructor(props) {
-//         super(props);
-//         this.state = { visible: false };
-//         this.handleClick = this.handleClick.bind(this)
-//     }
-
-//     handleClick() {
-//     	this.setState({ visible: ! this.state.visible });
-//     }
-
-//     render() {
-//         return <div>
-//             <p onClick={this.handleClick}>{this.state.visible ? 'Slide up' : 'Slide down'}</p>
-//             <ReactCSSTransitionGroup 
-//             	transitionName="example"
-//             	transitionEnterTimeout={300}
-//             	transitionLeaveTimeout={300}
-//             >
-//             	{ this.state.visible ? <div className='panel' /> : null }
-//             </ReactCSSTransitionGroup>
-//         </div>
-//     }
-// }
