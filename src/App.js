@@ -19,8 +19,6 @@ const Footer = (props) => {
 	return (
 		<div className="Footer">
 			<p>footer content</p>
-			<br />
-			<p onClick={props.smoothScrollTop} >smooth scroll top ^</p>
 		</div>
 	);
 }
@@ -116,7 +114,7 @@ class App extends Component {
 						<Route path="/contact" component={Contact}/>
 					</div>
 					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
-					<Footer smoothScrollTop={this.smoothScrollTop} />
+					<Footer />
 				</div>
 			  </Router>
 			</div>

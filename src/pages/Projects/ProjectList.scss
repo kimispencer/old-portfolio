@@ -145,7 +145,7 @@ $project_tile_size: 300px;
 .ProjectDetail {
 	@include flexbox-center(column);
 	margin-top: $gutter;
-	margin-bottom: $gutter*4;
+	margin-bottom: $gutter;
 	.project-detail-cover {
 		height: 400px;
 		width: 100vw;
