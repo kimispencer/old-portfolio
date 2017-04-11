@@ -216,6 +216,7 @@ const ProjectListItem = (props) => {
 	}
 	let navStyle = props.projectNavStyle_isList ? 'list-style' : 'box-style';
 	let classes = `${navStyle} ProjectListItem`;
+
 	return (
 		<div className={classes} style={style} onClick={props.handleClick}>
 			<div className="text">
@@ -225,6 +226,55 @@ const ProjectListItem = (props) => {
 	);
 }
 
+const ProjectList = (props) => {
+	const handle_projectNavClick = () => {
+		props.toggleProjectNav();
+		props.smoothScroll(0);
+	}
+
+	return(
+		<div className="ProjectList">
+
+			{ props.projectNavStyle_isList 
+				? <Link to={props.match.url} onClick={props.handleProjectLanding}>
+					<h4 className="title center" id="PageTitle">Projects</h4>
+				</Link>
+				: null
+			}
+			
+			{ props.projectNavStyle_isList 
+				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
+				: null
+			}
+
+			{ /*<SlideExample match={props.match} isProjectNavOpen={props.isProjectNavOpen} toggleProjectNav={props.toggleProjectNav} /> */ }
+
+			{ props.isProjectNavOpen 
+				? <ul className="project-list">
+					{ PROJECTS.map((project, index) => 
+					<li key={index} >
+						 <Link to={props.match.url + '/' + project.url} >
+							<ProjectListItem project={project} handleClick={handle_projectNavClick} toggleProjectNav={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
+						</Link>
+					</li>
+					) }
+				</ul>
+				: null
+			}
+
+			<Route path={`${props.match.url}/:id`} component={(routeProps, state, params) => 
+				<ProjectDetail 
+					handleProjectDetailLanding={props.handleProjectDetailLanding}
+					routeProps={routeProps}
+				{...props} />} />
+
+		</div>
+	);
+}
+
+export default ProjectList;
+
+/*
 class SlideExample extends React.Component{
     constructor(props) {
         super(props);
@@ -254,46 +304,4 @@ class SlideExample extends React.Component{
         </div>
     }
 }
-
-const ProjectList = (props) => {
-	return(
-		<div className="ProjectList">
-
-			{ props.projectNavStyle_isList 
-				? <Link to={props.match.url} onClick={props.handleProjectLanding}>
-					<h4 className="title center" id="PageTitle">Projects</h4>
-				</Link>
-				: null
-			}
-			
-			{ props.projectNavStyle_isList 
-				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
-				: null
-			}
-
-			{ /*<SlideExample match={props.match} isProjectNavOpen={props.isProjectNavOpen} toggleProjectNav={props.toggleProjectNav} /> */ }
-
-			{ props.isProjectNavOpen 
-				? <ul className="project-list">
-					{ PROJECTS.map((project, index) => 
-					<li key={index} >
-						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={props.toggleProjectNav} toggleProjectNav={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
-						</Link>
-					</li>
-					) }
-				</ul>
-				: null
-			}
-
-			<Route path={`${props.match.url}/:id`} component={(routeProps, state, params) => 
-				<ProjectDetail 
-					handleProjectDetailLanding={props.handleProjectDetailLanding}
-					routeProps={routeProps}
-				{...props} />} />
-
-		</div>
-	);
-}
-
-export default ProjectList;
+*/
