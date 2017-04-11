@@ -23,7 +23,7 @@ const Nav = (props) => {
 		props.toggleNav();
 		if(!props.isProjectNavOpen) props.toggleProjectNav();
 		props.changeProjectNavStyle_toBox();
-		props.smoothScrollTop();
+		props.smoothScroll(0);
 	}
 
 	return (
