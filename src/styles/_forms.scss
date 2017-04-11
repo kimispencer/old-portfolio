@@ -22,15 +22,21 @@ form {
 		line-height: 150%;
 		resize:vertical;
 	}
-	button[type='submit'] {
-		border: none;
-		background-color: black;
-		color: white;
-		padding: 13px;
-		/*width: $button_width;*/
-		@include clickable();
+	button[type='submit'], .button {
+		width: 100%;
 	}
 }
+
+/* buttons */
+.button, button[type='submit'] {
+	@include button();
+	width: auto;
+	@include transition(all $transition_speed ease);
+	&.transparent {
+		@include button(rgba(0,0,0,0), black);
+	}
+}
+
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 

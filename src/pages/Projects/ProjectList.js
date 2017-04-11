@@ -9,27 +9,62 @@ import './ProjectList.css';
 
 const PROJECTS = [
 	{
-		url: 'arrivals', 
+		url: 'arrivals',
 		name: "The Arrivals NYC", 
-		coverImg: "https://unsplash.it/1200/500",
+		coverImg: "https://unsplash.it/1210/541",
+		siteUrl: 'http://thearrivals.com',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
 		url: 'suited', 
 		name: "Suited Magazine", 
 		coverImg: "https://unsplash.it/1210/540",
+		siteUrl: 'http://suitedmagazine.com',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
 		url: 'kimispencer', 
 		name: "Portfolio", 
 		coverImg: "https://unsplash.it/1205/580",
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
 		url: 'onomie', 
 		name: "Onomie", 
 		coverImg: "https://unsplash.it/1215/540",
+		siteUrl: 'http://onomie.com',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -37,6 +72,15 @@ const PROJECTS = [
 		url: 'brainchild', 
 		name: "Brainchild.Co",  
 		coverImg: "https://unsplash.it/1222/450",
+		siteUrl: 'http://brainchild.co',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -44,6 +88,15 @@ const PROJECTS = [
 		url: 'bolster', 
 		name: "Bolster",  
 		coverImg: "https://unsplash.it/1214/450",
+		siteUrl: 'http://bolster.us',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -51,6 +104,15 @@ const PROJECTS = [
 		url: 'creep', 
 		name: "CREEP",  
 		coverImg: "https://unsplash.it/1200/450",
+		siteUrl: 'http://officialcreep.com',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -58,6 +120,15 @@ const PROJECTS = [
 		url: 'plusign', 
 		name: "Plusign",  
 		coverImg: "https://unsplash.it/1210/450",
+		siteUrl: 'http://plusign.com',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -65,6 +136,15 @@ const PROJECTS = [
 		url: 'tomtommag', 
 		name: "Tom Tom Magazine",  
 		coverImg: "https://unsplash.it/1220/350",
+		siteUrl: 'http://tomtommag.com',
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -72,6 +152,14 @@ const PROJECTS = [
 		url: 'live-visuals', 
 		name: "Live Visuals",  
 		coverImg: "https://unsplash.it/1200/540",
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -79,6 +167,14 @@ const PROJECTS = [
 		url: 'dataviz', 
 		name: "Data Visualization",  
 		coverImg: "https://unsplash.it/1201/450",
+		projectType: 'Responsive Ecommerce website',
+		projectRole: [
+			'Front-end development',
+			'UX design',
+			'CMS backend',
+			'Weekly interactive site campaigns'
+		],
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	}
@@ -184,27 +280,37 @@ class ProjectDetail extends React.Component {
 			<div className="ProjectDetail">
 				<h3 className="title">{project.name}</h3>
 				<div className="project-detail-cover" style={style}></div>
-				<div className="text center">
-					<h4 className="title">Lorem Ipsum</h4>
-					<p>{project.intro}</p>
-					<div className="flex-row flex-center">
-						<div className="flex-col list-container">
-							<h4 className="title underline">Role</h4>
-							<ul>
-								<li>lead front-end engineer</li>
-								<li>ux design</li>
-							</ul>
-						</div>
-						<div className="flex-col list-container">
-							<h4 className="title underline">Tools</h4>
-							<ul>
-								<li>reactjs</li>
-								<li>es6</li>
-							</ul>
+
+				<div className="text-container flex-row responsive">
+					<div className="text" id="ProjectDescription">
+						<p className="title uppercase bold">project description</p>
+						<p>{project.intro}</p>
+						<br />
+						<p>{project.intro}</p>
+					</div>
+					<div className="text" id="ProjectSkillsList">
+						<div className="flex-col">
+							<p className="title uppercase bold">project type</p>
+							<p className="serif">{project.projectType}</p>
+
+							<p className="title uppercase bold">project role</p>
+							{project.projectRole.map((role, index) =>
+								<p className="serif" key={index} >{role}</p>
+							)}
+
+							<p className="title uppercase bold">technology used</p>
+							<p className="serif">{project.technologyUsed}</p>
+
+							{ project.siteUrl
+								? <a href={project.siteUrl} target="_blank">
+									<div className="button"><p>visit website</p></div>
+								</a>
+								: null
+							}
 						</div>
 					</div>
-					<p>{project.intro}</p>
 				</div>
+
 			</div>
 		);
 	}

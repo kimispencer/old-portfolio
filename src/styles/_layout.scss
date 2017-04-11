@@ -1,15 +1,32 @@
+/*
+	* flex rows
+*/
 .flex-row {
 	@include flexbox();
 	@include flex-flow(row);
+}
+/* spans */
+.flex-row {
+	.half-span {
+		width: 50%;
+		height: 100%;
+	}
 }
 /* 640px or smaller */
 @media only screen and (max-width : $breakpoint) {
 	.flex-row {
 		&.responsive {
 			@include flex-flow(column);
+			.half-span {
+				height: 50%;
+				width: 100%;
+			}
 		}
 	}
 }
+/*
+	* flex cols
+*/
 .flex-col {
 	@include flexbox();
 	@include flex-flow(column);

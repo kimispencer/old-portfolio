@@ -153,18 +153,15 @@ $project_tile_size: 300px;
 		background-size: cover;
 		background-position: 50% 50%;
 	}
-	.text {
-		width: 900px;
+	.text-container {
 		max-width: calc(100vw - #{$gutter}*2);
-		.list-container {
-			margin-right: $gutter*3;
-			margin-bottom: $gutter;
-			&:last-child {
-				margin-right: 0;
-			}
-			ul {
-				list-style: disc;
-			}
+		width: 900px;
+		/*@include border(blue);*/
+		@include align-items(flex-start);
+		@include justify-content(center);
+
+		.button {
+			margin-top: $gutter;
 		}
 	}
 }
@@ -196,6 +193,20 @@ $project_tile_size: 300px;
 	}
 	.ProjectListItem {
 		padding: $gutter/4 0;
+	}
+	.ProjectDetail {
+		.text-container {
+			.text {
+				&#ProjectDescription {
+					width: 75%;
+					margin-right: $gutter;
+				}
+				&#ProjectSkillsList {
+					width: 25%;
+					margin-left: $gutter;
+				}
+			}
+		}
 	}
 }
 
