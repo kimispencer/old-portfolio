@@ -16,8 +16,8 @@ const Nav = (props) => {
 	let cssClasses = `${open} Nav`;
 	const toggleNav_changeProjectNavStyle_toBox = () => {
 		props.toggleNav();
+		if(!props.isProjectNavOpen) props.toggleProjectNav();
 		props.changeProjectNavStyle_toBox();
-		// props.toggleProjectNav();
 	}
 	return (
 		<div>

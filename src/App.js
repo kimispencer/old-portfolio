@@ -91,7 +91,12 @@ class App extends Component {
 			<div className="App">
 			  <Router>
 				<div>
-					<Nav toggleNav={this.toggleNav} isNavOpen={this.state.isNavOpen} toggleProjectNav={this.toggleProjectNav} changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox}/>
+					<Nav 
+						isNavOpen={this.state.isNavOpen} 
+						toggleNav={this.toggleNav} 
+						isProjectNavOpen={this.state.isProjectNavOpen} 
+						toggleProjectNav={this.toggleProjectNav} 
+						changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
