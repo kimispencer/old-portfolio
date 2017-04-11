@@ -15,12 +15,13 @@ const PROJECTS = [
 		siteUrl: 'http://thearrivals.com',
 		projectType: 'Responsive Ecommerce website',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
+			'Lead Front-end developer',
+			'Lead UX designer',
+			'Responsive web design',
+			'CMS backend integration',
 			'Weekly interactive site campaigns'
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
@@ -28,28 +29,28 @@ const PROJECTS = [
 		name: "Suited Magazine", 
 		coverImg: "https://unsplash.it/1210/540",
 		siteUrl: 'http://suitedmagazine.com',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Responsive Editorial/Arts Publication website',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Custom SquareSpace template design & development',
+			'Lead Front-end developer',
+			'Lead UX designer',
+			'Responsive web design',
+			'CMS backend integration',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
 		url: 'kimispencer', 
 		name: "Portfolio", 
 		coverImg: "https://unsplash.it/1205/580",
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'ReactJS portfolio site',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Lead Front-end developer',
+			'Lead Visual & UX designer',
+			'Responsive web design',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'ReactJS, HTML5, CSS3/SASS, Webpack, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
@@ -59,12 +60,13 @@ const PROJECTS = [
 		siteUrl: 'http://onomie.com',
 		projectType: 'Responsive Ecommerce website',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Lead Front-end developer',
+			'Lead UX designer',
+			'Responsive web design',
+			'CMS backend integration',
+			'Monthly interactive site campaigns'
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -73,14 +75,14 @@ const PROJECTS = [
 		name: "Brainchild.Co",  
 		coverImg: "https://unsplash.it/1222/450",
 		siteUrl: 'http://brainchild.co',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Corporate Portfolio website',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Lead Front-end developer',
+			'Lead Visual & UX designer',
+			'Responsive web design',
+			'CMS backend integration',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, Django, Python, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -89,14 +91,12 @@ const PROJECTS = [
 		name: "Bolster",  
 		coverImg: "https://unsplash.it/1214/450",
 		siteUrl: 'http://bolster.us',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Responsive web application',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Front-end developer',
+			'Visual & UX designer',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'AngularJS, HTML5, CSS3/LESS, jQUERY, Grunt, Ajax, PHP, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -105,14 +105,14 @@ const PROJECTS = [
 		name: "CREEP",  
 		coverImg: "https://unsplash.it/1200/450",
 		siteUrl: 'http://officialcreep.com',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Official Band site',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Lead Front-end developer',
+			'Lead Visual & UX designer',
+			'Responsive web design',
+			'CMS backend integration',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -121,14 +121,12 @@ const PROJECTS = [
 		name: "Plusign",  
 		coverImg: "https://unsplash.it/1210/450",
 		siteUrl: 'http://plusign.com',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Digital Agency portfolio site + Client Projects',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Front-end developer',
+			'Visual & UXdesigner',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3, jQUERY, Photoshop, Illustrator, Java/Processing',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -139,12 +137,12 @@ const PROJECTS = [
 		siteUrl: 'http://tomtommag.com',
 		projectType: 'Responsive Ecommerce website',
 		projectRole: [
+			'Custom Shopify template design & development',
 			'Front-end development',
 			'UX design',
 			'CMS backend',
-			'Weekly interactive site campaigns'
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'HTML5, CSS3, jQUERY, Ajax, PHP, Photoshop, Shopify',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -152,14 +150,12 @@ const PROJECTS = [
 		url: 'live-visuals', 
 		name: "Live Visuals",  
 		coverImg: "https://unsplash.it/1200/540",
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Live Visuals for events',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Art Director',
+			'Visual Designer',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'VDMX, Java/Processing, After Effects, Premiere, MadMapper, Cinema4D',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -167,14 +163,11 @@ const PROJECTS = [
 		url: 'dataviz', 
 		name: "Data Visualization",  
 		coverImg: "https://unsplash.it/1201/450",
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Data Visualization projects',
 		projectRole: [
-			'Front-end development',
-			'UX design',
-			'CMS backend',
-			'Weekly interactive site campaigns'
+			'Lead Developer & Designer'
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Ajax, PHP, Photoshop, Sketch',
+		technologyUsed: 'Python, Java/Processing, Natural Language Toolkit, mongoDB',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	}
