@@ -31,57 +31,57 @@ class App extends Component {
 			isProjectNavOpen: true,
 			projectNavStyle_isList: false,
 		}
-		this.toggleNav = this.toggleNav.bind(this);
-		this.toggleProjectNav = this.toggleProjectNav.bind(this);
-		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
-		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
-		this.changeProjectNavStyle_toList = this.changeProjectNavStyle_toList.bind(this);
-		this.smoothScroll = this.smoothScroll.bind(this);
-		this.handleProjectLanding= this.handleProjectLanding.bind(this);
-		this.handleProjectDetailLanding = this.handleProjectDetailLanding.bind(this);
-		this.sayHi = this.sayHi.bind(this);
+		this._toggleNav = this._toggleNav.bind(this);
+		this._toggleProjectNav = this._toggleProjectNav.bind(this);
+		this._changeProjectNavStyle = this._changeProjectNavStyle.bind(this);
+		this._changeProjectNavStyle_toBox = this._changeProjectNavStyle_toBox.bind(this);
+		this._changeProjectNavStyle_toList = this._changeProjectNavStyle_toList.bind(this);
+		this._smoothScroll = this._smoothScroll.bind(this);
+		this._handleProjectLanding= this._handleProjectLanding.bind(this);
+		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
+		this._sayHi = this._sayHi.bind(this);
 	}
-	smoothScroll(loc) {
+	_smoothScroll(loc) {
 		smoothScroll(loc);
 	}
-	toggleNav() {
+	_toggleNav() {
 		this.setState(prevState => ({
 			isNavOpen: !prevState.isNavOpen,
 		}));
 	}
-	toggleProjectNav() {
+	_toggleProjectNav() {
 		this.setState(prevState => ({
 			isProjectNavOpen: !prevState.isProjectNavOpen,
 		}));
 	}
-	changeProjectNavStyle() {
+	_changeProjectNavStyle() {
 		this.setState(prevState => ({
 			projectNavStyle_isList: !prevState.projectNavStyle_isList,
 		}));
 	}
-	changeProjectNavStyle_toBox() {
+	_changeProjectNavStyle_toBox() {
 		this.setState({
 			projectNavStyle_isList: false
 		});
 	}
-	changeProjectNavStyle_toList() {
+	_changeProjectNavStyle_toList() {
 		this.setState({
 			projectNavStyle_isList: true
 		});
 	}
-	handleProjectLanding() {
+	_handleProjectLanding() {
 		this.setState(prevState => ({
 			isProjectNavOpen: true,
 			projectNavStyle_isList: false,
 		}));
 	}
-	handleProjectDetailLanding() {
+	_handleProjectDetailLanding() {
 		this.setState(prevState => ({
 			isProjectNavOpen: false,
 			projectNavStyle_isList: true,
 		}));
 	}
-	sayHi() {
+	_sayHi() {
 		console.log('hi')
 	}
 	render() {
@@ -91,26 +91,26 @@ class App extends Component {
 				<div>
 					<Nav 
 						isNavOpen={this.state.isNavOpen} 
-						toggleNav={this.toggleNav} 
+						_toggleNav={this._toggleNav} 
 						isProjectNavOpen={this.state.isProjectNavOpen} 
-						toggleProjectNav={this.toggleProjectNav} 
-						changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox} />
+						_toggleProjectNav={this._toggleProjectNav} 
+						_changeProjectNavStyle_toBox={this._changeProjectNavStyle_toBox} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
-								changeProjectNavStyle={this.changeProjectNavStyle} 
-								changeProjectNavStyle_toList={this.changeProjectNavStyle_toList}
+								_changeProjectNavStyle={this._changeProjectNavStyle} 
+								_changeProjectNavStyle_toList={this._changeProjectNavStyle_toList}
 								projectNavStyle_isList={this.state.projectNavStyle_isList} 
-								toggleProjectNav={this.toggleProjectNav} 
+								_toggleProjectNav={this._toggleProjectNav} 
 								isProjectNavOpen={this.state.isProjectNavOpen} 
-								handleProjectLanding={this.handleProjectLanding}
-								handleProjectDetailLanding={this.handleProjectDetailLanding}
+								_handleProjectLanding={this._handleProjectLanding}
+								_handleProjectDetailLanding={this._handleProjectDetailLanding}
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
 					</div>
-					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
+					<Shroud handleClick={this._toggleNav} isNavOpen={this.state.isNavOpen} />
 					<Footer />
 				</div>
 			  </Router>

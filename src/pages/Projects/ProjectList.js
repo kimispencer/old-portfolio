@@ -220,7 +220,7 @@ const PROJECTS = [
 // 	}
 // 	return(
 // 		<div className="ProjectDetail">
-// 			<h4 onClick={props.sayHi}>ProjectDetail hello?</h4>
+// 			<h4 onClick={props._sayHi}>ProjectDetail hello?</h4>
 		
 // 			<h3 className="title">{project.name}</h3>
 // 			<div className="project-detail-cover" style={style}></div>
@@ -258,7 +258,7 @@ class ProjectDetail extends React.Component {
 	}
 	handleProjectNav() {
 		if(!this.props.projectNavStyle_isList) {
-			this.props.handleProjectDetailLanding();
+			this.props._handleProjectDetailLanding();
 		}
 	}
 	render() {
@@ -328,7 +328,7 @@ const ProjectListItem = (props) => {
 
 const ProjectList = (props) => {
 	const handle_projectNavClick = () => {
-		props.toggleProjectNav();
+		props._toggleProjectNav();
 		window.scrollTo(0, 0);
 	}
 
@@ -336,25 +336,25 @@ const ProjectList = (props) => {
 		<div className="ProjectList">
 
 			{ props.projectNavStyle_isList 
-				? <Link to={props.match.url} onClick={props.handleProjectLanding}>
+				? <Link to={props.match.url} onClick={props._handleProjectLanding}>
 					<h4 className="title center" id="PageTitle">Projects</h4>
 				</Link>
 				: null
 			}
 			
 			{ props.projectNavStyle_isList 
-				? <div className="center title" onClick={props.toggleProjectNav} id="Menu">Menu</div>
+				? <div className="center title" onClick={props._toggleProjectNav} id="Menu">Menu</div>
 				: null
 			}
 
-			{ /*<SlideExample match={props.match} isProjectNavOpen={props.isProjectNavOpen} toggleProjectNav={props.toggleProjectNav} /> */ }
+			{ /*<SlideExample match={props.match} isProjectNavOpen={props.isProjectNavOpen} _toggleProjectNav={props._toggleProjectNav} /> */ }
 
 			{ props.isProjectNavOpen 
 				? <ul className="project-list">
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={handle_projectNavClick} toggleProjectNav={props.toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
+							<ProjectListItem project={project} handleClick={handle_projectNavClick} _toggleProjectNav={props._toggleProjectNav} projectNavStyle_isList={props.projectNavStyle_isList}/>
 						</Link>
 					</li>
 					) }
@@ -364,7 +364,7 @@ const ProjectList = (props) => {
 
 			<Route path={`${props.match.url}/:id`} component={(routeProps, state, params) => 
 				<ProjectDetail 
-					handleProjectDetailLanding={props.handleProjectDetailLanding}
+					_handleProjectDetailLanding={props._handleProjectDetailLanding}
 					routeProps={routeProps}
 				{...props} />} />
 
@@ -382,7 +382,7 @@ class SlideExample extends React.Component{
     }
     render() {
         return <div>
-            <p onClick={this.props.toggleProjectNav}>{this.props.isProjectNavOpen  ? 'Slide up' : 'Slide down'}</p>
+            <p onClick={this.props._toggleProjectNav}>{this.props.isProjectNavOpen  ? 'Slide up' : 'Slide down'}</p>
             <ReactCSSTransitionGroup 
             	transitionName="example"
             	transitionEnterTimeout={500}
@@ -393,7 +393,7 @@ class SlideExample extends React.Component{
 						{ PROJECTS.map((project, index) => 
 						<li key={index} >
 							 <Link to={this.props.match.url + '/' + project.url} >
-								<ProjectListItem project={project} handleClick={this.props.toggleProjectNav} toggleProjectNav={this.props.toggleProjectNav} projectNavStyle_isList={this.props.projectNavStyle_isList}/>
+								<ProjectListItem project={project} handleClick={this.props._toggleProjectNav} _toggleProjectNav={this.props._toggleProjectNav} projectNavStyle_isList={this.props.projectNavStyle_isList}/>
 							</Link>
 						</li>
 						) }

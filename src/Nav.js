@@ -6,7 +6,7 @@ import {
 import './Nav.css';
 
 const NavTrigger = (props) => (
-	<div className="NavTrigger" onClick={props.toggleNav}>
+	<div className="NavTrigger" onClick={props._toggleNav}>
 		<h3 className="bold">|||</h3>
 	</div>
 )
@@ -16,19 +16,19 @@ const Nav = (props) => {
 	let cssClasses = `${open} Nav`;
 
 	const handle_navClick = () => {
-		props.toggleNav();
+		props._toggleNav();
 		window.scrollTo(0, 0);
 	}
 	const handle_navClick_Projects = () => {
-		props.toggleNav();
-		if(!props.isProjectNavOpen) props.toggleProjectNav();
-		props.changeProjectNavStyle_toBox();
+		props._toggleNav();
+		if(!props.isProjectNavOpen) props._toggleProjectNav();
+		props._changeProjectNavStyle_toBox();
 		window.scrollTo(0, 0);
 	}
 
 	return (
 		<div>
-			<NavTrigger toggleNav={props.toggleNav} />
+			<NavTrigger _toggleNav={props._toggleNav} />
 			<div className={cssClasses}>
 				<ul>
 					<li><Link to="/" onClick={handle_navClick}><small className="uppercase">Home</small></Link></li>
