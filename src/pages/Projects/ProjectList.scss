@@ -11,7 +11,6 @@ $project_tile_height: 350px;
 		@include clickable();
 	}
 	ul.project-list {
-		margin-top: $gutter;
 		@include flexbox();
 	}
 }
@@ -25,13 +24,23 @@ $project_tile_height: 350px;
 		.bg-img {
 			background-image: none !important;
 		}
+		.text {
+			.project-name {
+				font-size: 1em;
+			}
+			.project-type {
+				display: none;
+			}
+		}
 	}
 	&.box-style {
 		@include flexbox-center(column);
 		width: $project_tile_width;
 		height: $project_tile_height;
-		margin: $gutter/2;
-		p {font-size: 1.414em;}						// !! make font-size var
+		.text {
+			text-align: center;
+			margin-top: $gutter/2;
+		}
 		.bg-img {
 			height: 100%;
 			width: 100%;
@@ -73,19 +82,29 @@ $project_tile_height: 350px;
 			/*display: none;*/
 		}
 		ul.project-list {
+			padding-top: $gutter;
+			padding-bottom: $gutter;
 			@include flex-flow(row);
 			@include flex-wrap(wrap);
 			@include justify-content(center);
 			li {
-				.text {
-					p { 
-						border-right: 1px solid black; 
-						padding: 0 $gutter;
+				.ProjectListItem {
+					&.list-style {
+						.text {
+							.project-name { 
+								border-right: 1px solid black; 
+								padding: 0 $gutter;
+							}
+						}
 					}
 				}
 				&:last-child {
-					.text {
-						p { border-right: none; }
+					.ProjectListItem {
+						&.list-style {
+							.text {
+								.project-name { border-right: none; }
+							}
+						}
 					}
 				}
 			}
@@ -93,6 +112,9 @@ $project_tile_height: 350px;
 	}
 	.ProjectListItem {
 		padding: $gutter/4 0;
+		&.box-style {
+			margin: $gutter/2;
+		}
 	}
 	.ProjectDetail {
 		.text-container {
@@ -121,10 +143,16 @@ $project_tile_height: 350px;
 		}
 	}
 	.ProjectListItem {
-		&.box-style {
+		&.list-style {
+			.text {
+				margin-bottom: $gutter/2;
+			}
 		}
-		.text {
-			padding: $gutter/4;
+		&.box-style {
+			margin-bottom: $gutter;
+			.text {
+				padding: $gutter/4;
+			}
 		}
 	}
 }

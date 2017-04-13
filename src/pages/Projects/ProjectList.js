@@ -320,7 +320,8 @@ const ProjectListItem = (props) => {
 		<div className={classes} onClick={props.handleClick} >
 			<div className="bg-img" style={style}></div>
 			<div className="text monospace">
-				<p>{props.project.name}</p>
+				<h4 className="project-name">{props.project.name}</h4>
+				<p className="project-type">{props.project.projectType}</p>
 			</div>
 		</div>
 	);
