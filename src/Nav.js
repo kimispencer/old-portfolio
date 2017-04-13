@@ -12,7 +12,7 @@ const NavTrigger = (props) => (
 )
 
 const Nav = (props) => {
-	let open = props.isNavOpen ? 'open' : 'closed';
+	let open = props._isNavOpen ? 'open' : 'closed';
 	let cssClasses = `${open} Nav`;
 
 	const handle_navClick = () => {
@@ -21,7 +21,7 @@ const Nav = (props) => {
 	}
 	const handle_navClick_Projects = () => {
 		props._toggleNav();
-		if(!props.isProjectNavOpen) props._toggleProjectNav();
+		if(!props._isProjectNavOpen) props._toggleProjectNav();
 		props._changeProjectNavStyle_toBox();
 		window.scrollTo(0, 0);
 	}

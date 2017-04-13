@@ -12,24 +12,17 @@ import Home from './pages/Home/Home';
 import ProjectList from './pages/Projects/ProjectList';
 import Resume from './pages/Resume/Resume';
 import Contact from './pages/Contact/Contact';
+import Footer from './Footer';
 
 import './App.css';
-
-const Footer = (props) => {
-	return (
-		<div className="Footer">
-			<p>footer content</p>
-		</div>
-	);
-}
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			isNavOpen: false,
-			isProjectNavOpen: true,
-			projectNavStyle_isList: false,
+			_isNavOpen: false,
+			_isProjectNavOpen: true,
+			_projectNavStyle_isList: false,
 		}
 		this._toggleNav = this._toggleNav.bind(this);
 		this._toggleProjectNav = this._toggleProjectNav.bind(this);
@@ -46,39 +39,39 @@ class App extends Component {
 	}
 	_toggleNav() {
 		this.setState(prevState => ({
-			isNavOpen: !prevState.isNavOpen,
+			_isNavOpen: !prevState._isNavOpen,
 		}));
 	}
 	_toggleProjectNav() {
 		this.setState(prevState => ({
-			isProjectNavOpen: !prevState.isProjectNavOpen,
+			_isProjectNavOpen: !prevState._isProjectNavOpen,
 		}));
 	}
 	_changeProjectNavStyle() {
 		this.setState(prevState => ({
-			projectNavStyle_isList: !prevState.projectNavStyle_isList,
+			_projectNavStyle_isList: !prevState._projectNavStyle_isList,
 		}));
 	}
 	_changeProjectNavStyle_toBox() {
 		this.setState({
-			projectNavStyle_isList: false
+			_projectNavStyle_isList: false
 		});
 	}
 	_changeProjectNavStyle_toList() {
 		this.setState({
-			projectNavStyle_isList: true
+			_projectNavStyle_isList: true
 		});
 	}
 	_handleProjectLanding() {
 		this.setState(prevState => ({
-			isProjectNavOpen: true,
-			projectNavStyle_isList: false,
+			_isProjectNavOpen: true,
+			_projectNavStyle_isList: false,
 		}));
 	}
 	_handleProjectDetailLanding() {
 		this.setState(prevState => ({
-			isProjectNavOpen: false,
-			projectNavStyle_isList: true,
+			_isProjectNavOpen: false,
+			_projectNavStyle_isList: true,
 		}));
 	}
 	_sayHi() {
@@ -87,12 +80,13 @@ class App extends Component {
 	render() {
 		return(
 			<div className="App">
-			  <Router>
+				<Router>
 				<div>
+					<progress id="ScrollProgress" max="100" value="80"></progress>
 					<Nav 
-						isNavOpen={this.state.isNavOpen} 
+						_isNavOpen={this.state._isNavOpen} 
 						_toggleNav={this._toggleNav} 
-						isProjectNavOpen={this.state.isProjectNavOpen} 
+						_isProjectNavOpen={this.state._isProjectNavOpen} 
 						_toggleProjectNav={this._toggleProjectNav} 
 						_changeProjectNavStyle_toBox={this._changeProjectNavStyle_toBox} />
 					<div className="main-content">
@@ -101,19 +95,19 @@ class App extends Component {
 							<ProjectList 
 								_changeProjectNavStyle={this._changeProjectNavStyle} 
 								_changeProjectNavStyle_toList={this._changeProjectNavStyle_toList}
-								projectNavStyle_isList={this.state.projectNavStyle_isList} 
+								_projectNavStyle_isList={this.state._projectNavStyle_isList} 
 								_toggleProjectNav={this._toggleProjectNav} 
-								isProjectNavOpen={this.state.isProjectNavOpen} 
+								_isProjectNavOpen={this.state._isProjectNavOpen} 
 								_handleProjectLanding={this._handleProjectLanding}
 								_handleProjectDetailLanding={this._handleProjectDetailLanding}
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
 					</div>
-					<Shroud handleClick={this._toggleNav} isNavOpen={this.state.isNavOpen} />
+					<Shroud handleClick={this._toggleNav} _isNavOpen={this.state._isNavOpen} />
 					<Footer />
 				</div>
-			  </Router>
+				</Router>
 			</div>
 		);
 	}

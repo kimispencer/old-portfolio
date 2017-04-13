@@ -17,7 +17,7 @@ ReactDOM.render(
 	<Route path="/projects" component={ProjectList} />
 	vs.
 	// create a stateless component that is wrapping the ProjectList component
-	<Route path="/projects" component={(props, state, params) => <ProjectList isNavOpen={this.state.isNavOpen} {...props} />} />
+	<Route path="/projects" component={(props, state, params) => <ProjectList _isNavOpen={this.state._isNavOpen} {...props} />} />
 
 	
 

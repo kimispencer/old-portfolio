@@ -1,7 +1,7 @@
 @import './styles/_all';
 
 .Nav {
-	z-index: $ultimate_top;
+	z-index: $top;
 	@include transition(all $transition_speed ease);
 	background-color: white;
 	position: fixed;
@@ -51,6 +51,9 @@
 
 /* 640px or smaller */
 @media only screen and (max-width : $breakpoint) {
+	.Nav {
+		z-index: $ultimate_top;
+	}
 	.NavTrigger {
 		@include transform(rotate(90deg));
 		display: block;

@@ -1,0 +1,11 @@
+@import './styles/_all';
+
+.Footer {
+	border-top: 2px solid $footer_color;
+	width: 70vw;
+	margin: 0 auto;
+	color: black;
+	padding: 20px;
+	text-align: center;
+	height: $footer_height;
+}
