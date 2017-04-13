@@ -32,17 +32,28 @@ class App extends Component {
 		this._smoothScroll = this._smoothScroll.bind(this);
 		this._handleProjectLanding= this._handleProjectLanding.bind(this);
 		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
-		this._handleScroll = this._handleScroll.bind(this);
 		this._sayHi = this._sayHi.bind(this);
 	}
 	componentDidMount() {
+
+	}
+	componentDidUpdate() {
+		this._setScrollProgress();
 		window.addEventListener('scroll', this._handleScroll);
 	}
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this._handleScroll);
 	}
+	_setScrollProgress() {
+		const body = document.body,
+			html = document.documentElement;
+		const height = Math.max( body.scrollHeight, body.offsetHeight, 
+			html.clientHeight, html.scrollHeight, html.offsetHeight );
+		document.getElementById('ScrollProgress').max = (height - window.innerHeight);
+	}
 	_handleScroll() {
-		console.log('scrolling')
+		let scrollTop = window.pageYOffset | document.body.scrollTop;
+		document.getElementById('ScrollProgress').value = scrollTop;
 	}
 	_smoothScroll(loc) {
 		smoothScroll(loc);
@@ -92,7 +103,7 @@ class App extends Component {
 			<div className="App">
 				<Router>
 				<div>
-					<progress id="ScrollProgress" max="100" value="80"></progress>
+					<progress id="ScrollProgress" max="100" value="0"></progress>
 					<Nav 
 						_isNavOpen={this.state._isNavOpen} 
 						_toggleNav={this._toggleNav} 
