@@ -32,7 +32,17 @@ class App extends Component {
 		this._smoothScroll = this._smoothScroll.bind(this);
 		this._handleProjectLanding= this._handleProjectLanding.bind(this);
 		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
+		this._handleScroll = this._handleScroll.bind(this);
 		this._sayHi = this._sayHi.bind(this);
+	}
+	componentDidMount() {
+		window.addEventListener('scroll', this._handleScroll);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this._handleScroll);
+	}
+	_handleScroll() {
+		console.log('scrolling')
 	}
 	_smoothScroll(loc) {
 		smoothScroll(loc);
