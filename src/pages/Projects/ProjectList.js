@@ -336,12 +336,12 @@ const ProjectList = (props) => {
 	return(
 		<div className="ProjectList">
 
-			{ props.projectNavStyle_isList 
+			{ /*props.projectNavStyle_isList 
 				? <Link to={props.match.url} onClick={props._handleProjectLanding}>
 					<h4 className="title center" id="PageTitle">Projects</h4>
 				</Link>
 				: null
-			}
+			*/ }
 			
 			{ props.projectNavStyle_isList 
 				? <div className="center title" onClick={props._toggleProjectNav} id="Menu">Menu</div>
