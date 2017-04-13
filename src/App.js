@@ -34,10 +34,11 @@ class App extends Component {
 		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
 		this._sayHi = this._sayHi.bind(this);
 	}
-	componentDidMount() {
-
+	componentDidMount() {	/* runs on initial mount */
+		// this._setScrollProgress();
+		// window.addEventListener('scroll', this._handleScroll);
 	}
-	componentDidUpdate() {
+	componentDidUpdate() {	/* run everytime component is updated (past initial mount) */
 		this._setScrollProgress();
 		window.addEventListener('scroll', this._handleScroll);
 	}
