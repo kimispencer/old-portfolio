@@ -246,5 +246,5 @@ select:-webkit-autofill:focus {
   justify-content: center;
   -ms-flex-pack: center;
   height: calc(100vh - 60px);
-  background: black;
-  color: white; }
+  /*background: black;*/
+  /*color: white*/ }

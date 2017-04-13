@@ -284,15 +284,15 @@ class ProjectDetail extends React.Component {
 					<div className="text" id="ProjectSkillsList">
 						<div className="flex-col">
 							<p className="title uppercase bold">project type</p>
-							<p className="serif">{project.projectType}</p>
+							<p className="monospace">{project.projectType}</p>
 
 							<p className="title uppercase bold">project role</p>
 							{project.projectRole.map((role, index) =>
-								<p className="serif" key={index} >{role}</p>
+								<p className="monospace" key={index} >{role}</p>
 							)}
 
 							<p className="title uppercase bold">technology used</p>
-							<p className="serif">{project.technologyUsed}</p>
+							<p className="monospace">{project.technologyUsed}</p>
 
 							{ project.siteUrl
 								? <a href={project.siteUrl} target="_blank">
@@ -317,8 +317,9 @@ const ProjectListItem = (props) => {
 	let classes = `${navStyle} ProjectListItem`;
 
 	return (
-		<div className={classes} style={style} onClick={props.handleClick}>
-			<div className="text">
+		<div className={classes} onClick={props.handleClick} >
+			<div className="bg-img" style={style}></div>
+			<div className="text monospace">
 				<p>{props.project.name}</p>
 			</div>
 		</div>
