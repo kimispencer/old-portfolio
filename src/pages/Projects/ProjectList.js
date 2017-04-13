@@ -328,7 +328,7 @@ const ProjectListItem = (props) => {
 const ProjectList = (props) => {
 	const handle_projectNavClick = () => {
 		props.toggleProjectNav();
-		props.smoothScroll(0);
+		window.scrollTo(0, 0);
 	}
 
 	return(

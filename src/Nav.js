@@ -17,13 +17,13 @@ const Nav = (props) => {
 
 	const handle_navClick = () => {
 		props.toggleNav();
-		props.smoothScroll(0);
+		window.scrollTo(0, 0);
 	}
 	const handle_navClick_Projects = () => {
 		props.toggleNav();
 		if(!props.isProjectNavOpen) props.toggleProjectNav();
 		props.changeProjectNavStyle_toBox();
-		props.smoothScroll(0);
+		window.scrollTo(0, 0);
 	}
 
 	return (

@@ -90,7 +90,6 @@ class App extends Component {
 			  <Router>
 				<div>
 					<Nav 
-						smoothScroll={this.smoothScroll}
 						isNavOpen={this.state.isNavOpen} 
 						toggleNav={this.toggleNav} 
 						isProjectNavOpen={this.state.isProjectNavOpen} 
@@ -100,7 +99,6 @@ class App extends Component {
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
-								smoothScroll={this.smoothScroll}
 								changeProjectNavStyle={this.changeProjectNavStyle} 
 								changeProjectNavStyle_toList={this.changeProjectNavStyle_toList}
 								projectNavStyle_isList={this.state.projectNavStyle_isList} 
