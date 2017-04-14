@@ -9,6 +9,7 @@ $project_tile_height: 350px;
 	}
 	#Menu {
 		@include clickable();
+		padding: 0;
 	}
 	ul.project-list {
 		@include flexbox();
@@ -85,6 +86,8 @@ $project_tile_height: 350px;
 	.ProjectList {
 		#Menu {
 			/*display: none;*/
+			@include border(red);
+			padding-top: $gutter;
 		}
 		ul.project-list {
 			padding-top: $gutter;
@@ -150,7 +153,7 @@ $project_tile_height: 350px;
 	.ProjectListItem {
 		&.list-style {
 			.text {
-				margin-bottom: $gutter/2;
+				margin-top: $gutter/2;
 			}
 		}
 		&.box-style {

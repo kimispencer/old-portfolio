@@ -363,8 +363,8 @@ const ProjectList = (props) => {
 				: null
 			*/ }
 			
-			{ props._projectNavStyle_isList 
-				? <div className="center title" onClick={props._toggleProjectNav} id="Menu">Menu</div>
+			{ props._projectNavStyle_isList
+				? <div className="center title monospace" onClick={props._toggleProjectNav} id="Menu">Menu</div>
 				: null
 			}
 

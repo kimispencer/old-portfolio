@@ -123,6 +123,7 @@
 
 .padded-width {
   width: 1000px;
+  max-width: calc(100vw - 20px * 2);
   margin-left: auto;
   margin-right: auto; }
 
@@ -273,7 +274,8 @@ select:-webkit-autofill:focus {
 
 .ProjectList #Menu {
   cursor: pointer;
-  text-decoration: underline; }
+  text-decoration: underline;
+  padding: 0; }
 
 .ProjectList ul.project-list {
   display: -webkit-box;
@@ -386,7 +388,9 @@ select:-webkit-autofill:focus {
 /* 640px or bigger */
 @media only screen and (min-width: 769px) {
   .ProjectList #Menu {
-    /*display: none;*/ }
+    /*display: none;*/
+    border: 1px dashed red;
+    padding-top: 20px; }
   .ProjectList ul.project-list {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -444,7 +448,7 @@ select:-webkit-autofill:focus {
     justify-content: center;
     -ms-flex-pack: center; }
   .ProjectListItem.list-style .text {
-    margin-bottom: 10px; }
+    margin-top: 10px; }
   .ProjectListItem.box-style {
     margin-bottom: 20px; }
   .ProjectListItem.box-style .text {

@@ -32,6 +32,7 @@ class App extends Component {
 		}
 		this._toggleNav = this._toggleNav.bind(this);
 		this._toggleProjectNav = this._toggleProjectNav.bind(this);
+		this._openProjectNav = this._openProjectNav.bind(this);
 		this._changeProjectNavStyle = this._changeProjectNavStyle.bind(this);
 		this._changeProjectNavStyle_toBox = this._changeProjectNavStyle_toBox.bind(this);
 		this._changeProjectNavStyle_toList = this._changeProjectNavStyle_toList.bind(this);
@@ -42,12 +43,9 @@ class App extends Component {
 	}
 	componentDidMount() {	/* runs on initial mount */
 		this._setLayout();
-		// this._setScrollProgress();
-		// window.addEventListener('scroll', this._handleScroll);
 	}
 	componentDidUpdate() {	/* run everytime component is updated (past initial mount) */
-		this._setLayout();
-		this._setScrollProgress();
+		this._setScrollProgress();		// not waiting for images to load...
 		window.addEventListener('scroll', this._handleScroll);
 	}
 	componentWillUnmount() {
@@ -58,21 +56,26 @@ class App extends Component {
 		if(svg) {
 			document.getElementById("MobileSVG").appendChild(svg); 			
 		}
+		/* breakpoint 769px */
+		var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		if(width > 768) {
+			// this._openProjectNav();
+		}
 	}
 	_setScrollProgress() {
-		const body = document.body,
-			html = document.documentElement;
-		const height = Math.max( body.scrollHeight, body.offsetHeight, 
-			html.clientHeight, html.scrollHeight, html.offsetHeight );
+		var height = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+			document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+// console.log('max,' + (height - window.innerHeight))
 		document.getElementById('ScrollProgress').max = (height - window.innerHeight);
 	}
 	_handleScroll() {
 		let scrollTop = window.pageYOffset | document.body.scrollTop;
+// console.log('scroll, ' + scrollTop)
 		document.getElementById('ScrollProgress').value = scrollTop;
 
 		/* SVG scroll animation */
 		// Get a reference to the <path>
-		var path = document.querySelector('#star-path');
+		var path = document.querySelector('#StarPath');
 		if(path) {
 			// Get length of path... ~577px in this case
 			var pathLength = path.getTotalLength();
@@ -124,6 +127,11 @@ class App extends Component {
 	_toggleProjectNav() {
 		this.setState(prevState => ({
 			_isProjectNavOpen: !prevState._isProjectNavOpen,
+		}));
+	}
+	_openProjectNav() {
+		this.setState(prevState => ({
+			_isProjectNavOpen: true,
 		}));
 	}
 	_changeProjectNavStyle() {
