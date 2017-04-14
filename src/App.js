@@ -12,16 +12,13 @@ import Home from './pages/Home/Home';
 import ProjectList from './pages/Projects/ProjectList';
 import Resume from './pages/Resume/Resume';
 import Contact from './pages/Contact/Contact';
+import Footer from './Footer';
 
 import './App.css';
 
-const Footer = (props) => {
-	return (
-		<div className="Footer">
-			<p>footer content</p>
-			<br />
-			<p onClick={props.smoothScrollTop} >smooth scroll top ^</p>
-		</div>
+const ScrollBar = () => {
+	return(
+		<progress id="ScrollProgress" max="100" value="0"></progress>
 	);
 }
 
@@ -29,96 +26,159 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			isNavOpen: false,
-			isProjectNavOpen: true,
-			projectNavStyle_isList: false,
+			_isNavOpen: false,
+			_isProjectNavOpen: true,
+			_projectNavStyle_isList: false,
 		}
-		this.toggleNav = this.toggleNav.bind(this);
-		this.toggleProjectNav = this.toggleProjectNav.bind(this);
-		this.changeProjectNavStyle = this.changeProjectNavStyle.bind(this);
-		this.changeProjectNavStyle_toBox = this.changeProjectNavStyle_toBox.bind(this);
-		this.changeProjectNavStyle_toList = this.changeProjectNavStyle_toList.bind(this);
-		this.smoothScroll = this.smoothScroll.bind(this);
-		this.handleProjectLanding= this.handleProjectLanding.bind(this);
-		this.handleProjectDetailLanding = this.handleProjectDetailLanding.bind(this);
-		this.sayHi = this.sayHi.bind(this);
+		this._toggleNav = this._toggleNav.bind(this);
+		this._toggleProjectNav = this._toggleProjectNav.bind(this);
+		this._changeProjectNavStyle = this._changeProjectNavStyle.bind(this);
+		this._changeProjectNavStyle_toBox = this._changeProjectNavStyle_toBox.bind(this);
+		this._changeProjectNavStyle_toList = this._changeProjectNavStyle_toList.bind(this);
+		this._smoothScroll = this._smoothScroll.bind(this);
+		this._handleProjectLanding= this._handleProjectLanding.bind(this);
+		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
+		this._sayHi = this._sayHi.bind(this);
 	}
-	smoothScroll(loc) {
+	componentDidMount() {	/* runs on initial mount */
+		// this._setScrollProgress();
+		// window.addEventListener('scroll', this._handleScroll);
+	}
+	componentDidUpdate() {	/* run everytime component is updated (past initial mount) */
+		this._setScrollProgress();
+		window.addEventListener('scroll', this._handleScroll);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this._handleScroll);
+	}
+	_setScrollProgress() {
+		const body = document.body,
+			html = document.documentElement;
+		const height = Math.max( body.scrollHeight, body.offsetHeight, 
+			html.clientHeight, html.scrollHeight, html.offsetHeight );
+		document.getElementById('ScrollProgress').max = (height - window.innerHeight);
+	}
+	_handleScroll() {
+		let scrollTop = window.pageYOffset | document.body.scrollTop;
+		document.getElementById('ScrollProgress').value = scrollTop;
+
+		/* SVG scroll animation */
+		// Get a reference to the <path>
+		var path = document.querySelector('#star-path');
+		if(path) {
+			// Get length of path... ~577px in this case
+			var pathLength = path.getTotalLength();
+
+			// Make very long dashes (the length of the path itself)
+			path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+			// Offset the dashes so the it appears hidden entirely
+			path.style.strokeDashoffset = pathLength;
+
+			// Jake Archibald says so
+			// https://jakearchibald.com/2013/animated-line-drawing-svg/
+			path.getBoundingClientRect();
+
+			// When the page scrolls...
+			window.addEventListener("scroll", function(e) {
+
+				// What % down is it? 
+				// https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
+				// Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
+				var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+				// Length to offset the dashes
+				var drawLength = pathLength * scrollPercentage;
+
+				// Draw in reverse
+				path.style.strokeDashoffset = pathLength - drawLength;
+
+				// When complete, remove the dash array, otherwise shape isn't quite sharp
+				// Accounts for fuzzy math
+				if (scrollPercentage >= 0.99) {
+					path.style.strokeDasharray = "none";
+
+				} else {
+					path.style.strokeDasharray = pathLength + ' ' + pathLength;
+				}
+
+			});
+		}
+	}
+	_smoothScroll(loc) {
 		smoothScroll(loc);
 	}
-	toggleNav() {
+	_toggleNav() {
 		this.setState(prevState => ({
-			isNavOpen: !prevState.isNavOpen,
+			_isNavOpen: !prevState._isNavOpen,
 		}));
 	}
-	toggleProjectNav() {
+	_toggleProjectNav() {
 		this.setState(prevState => ({
-			isProjectNavOpen: !prevState.isProjectNavOpen,
+			_isProjectNavOpen: !prevState._isProjectNavOpen,
 		}));
 	}
-	changeProjectNavStyle() {
+	_changeProjectNavStyle() {
 		this.setState(prevState => ({
-			projectNavStyle_isList: !prevState.projectNavStyle_isList,
+			_projectNavStyle_isList: !prevState._projectNavStyle_isList,
 		}));
 	}
-	changeProjectNavStyle_toBox() {
+	_changeProjectNavStyle_toBox() {
 		this.setState({
-			projectNavStyle_isList: false
+			_projectNavStyle_isList: false
 		});
 	}
-	changeProjectNavStyle_toList() {
+	_changeProjectNavStyle_toList() {
 		this.setState({
-			projectNavStyle_isList: true
+			_projectNavStyle_isList: true
 		});
 	}
-	handleProjectLanding() {
+	_handleProjectLanding() {
 		this.setState(prevState => ({
-			isProjectNavOpen: true,
-			projectNavStyle_isList: false,
+			_isProjectNavOpen: true,
+			_projectNavStyle_isList: false,
 		}));
 	}
-	handleProjectDetailLanding() {
+	_handleProjectDetailLanding() {
 		this.setState(prevState => ({
-			isProjectNavOpen: false,
-			projectNavStyle_isList: true,
+			_isProjectNavOpen: false,
+			_projectNavStyle_isList: true,
 		}));
 	}
-	sayHi() {
+	_sayHi() {
 		console.log('hi')
 	}
 	render() {
 		return(
 			<div className="App">
-			  <Router>
+				<Router>
 				<div>
+					<ScrollBar />
 					<Nav 
-						smoothScroll={this.smoothScroll}
-						isNavOpen={this.state.isNavOpen} 
-						toggleNav={this.toggleNav} 
-						isProjectNavOpen={this.state.isProjectNavOpen} 
-						toggleProjectNav={this.toggleProjectNav} 
-						changeProjectNavStyle_toBox={this.changeProjectNavStyle_toBox} />
+						_isNavOpen={this.state._isNavOpen} 
+						_toggleNav={this._toggleNav} 
+						_isProjectNavOpen={this.state._isProjectNavOpen} 
+						_toggleProjectNav={this._toggleProjectNav} 
+						_changeProjectNavStyle_toBox={this._changeProjectNavStyle_toBox} />
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
 							<ProjectList 
-								smoothScroll={this.smoothScroll}
-								changeProjectNavStyle={this.changeProjectNavStyle} 
-								changeProjectNavStyle_toList={this.changeProjectNavStyle_toList}
-								projectNavStyle_isList={this.state.projectNavStyle_isList} 
-								toggleProjectNav={this.toggleProjectNav} 
-								isProjectNavOpen={this.state.isProjectNavOpen} 
-								toggleProjectNav={this.toggleProjectNav}
-								handleProjectLanding={this.handleProjectLanding}
-								handleProjectDetailLanding={this.handleProjectDetailLanding}
+								_changeProjectNavStyle={this._changeProjectNavStyle} 
+								_changeProjectNavStyle_toList={this._changeProjectNavStyle_toList}
+								_projectNavStyle_isList={this.state._projectNavStyle_isList} 
+								_toggleProjectNav={this._toggleProjectNav} 
+								_isProjectNavOpen={this.state._isProjectNavOpen} 
+								_handleProjectLanding={this._handleProjectLanding}
+								_handleProjectDetailLanding={this._handleProjectDetailLanding}
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
 						<Route path="/contact" component={Contact}/>
 					</div>
-					<Shroud handleClick={this.toggleNav} isNavOpen={this.state.isNavOpen} />
-					<Footer smoothScrollTop={this.smoothScrollTop} />
+					<Shroud handleClick={this._toggleNav} _isNavOpen={this.state._isNavOpen} />
+					<Footer />
 				</div>
-			  </Router>
+				</Router>
 			</div>
 		);
 	}

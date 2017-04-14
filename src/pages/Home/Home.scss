@@ -1,8 +1,34 @@
 @import '../../styles/_all';
 
 .Home {
-	@include flexbox-center(column);
-	height: calc(100vh - #{$fixed_nav_height});
-	background: black;
-	color: white
+	/*@include flexbox-center(column);*/
+	.home-container {
+		height: 100%;
+		svg {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.Home {
+		.home-container {
+			svg {
+				position: fixed;
+				top: 100px;
+				left: 100px;
+			}
+		}
+	}
+}
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.Home {
+		.home-container {
+			text-align: center;
+		}
+	}
 }

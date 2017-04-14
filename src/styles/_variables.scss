@@ -10,10 +10,12 @@ $middle: 1;
 $top: 10;
 $ultimate_top: 100;
 
+/* transitions */
+$transition_speed: 350ms;
+
 /* nav */
 $fixed_nav_height: 60px;
 $slideout_nav_width: 300px;
-$transition_speed: 350ms;
 
 /* footer */
 $footer_height: 100px;
@@ -22,5 +24,5 @@ $footer_height: 100px;
 $matte_black: #030303;
 $footer_color: #f3f3f3;
 
-/* forms */
+/* buttons */
 $button_width: 280px;

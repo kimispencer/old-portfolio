@@ -16,10 +16,45 @@ html {
 		margin-top: $fixed_nav_height; //calc(#{$fixed_nav_height} + #{$gutter});
 	}
 	.Footer {
-		background-color: $footer_color;
-		color: black;
-		padding: 20px;
-		text-align: center;
-		height: $footer_height;
+		/* CSS on the component level */
+	}
+}
+
+/*
+	scroll progress bar
+*/
+#ScrollProgress {
+	height: 5px;
+	width: 100%;
+	color: blue;
+	background: #fff;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $ultimate_top;
+
+	/* Reset the appearance */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	/* Get rid of the default border in Firefox/Opera. */
+	border: none;
+
+	/* Progress bar container for Firefox/IE10+ */
+	background-color: transparent;
+
+	/* Progress bar value for IE10+ */
+	color: black;
+
+	&::-webkit-progress-bar {
+	  background-color: transparent;
+	}
+	&::-webkit-progress-value {
+	  background-color: black;
+	}
+	&::-moz-progress-bar {
+	  background-color: black;
 	}
 }

@@ -5,14 +5,14 @@ import './Resume.css';
 const Resume = () => (	
 	<div className="Resume">
 
-		<div className="resume-container">
+		<div className="resume-container padded-width">
 			<div className="resume-section" id="Header">
 				<div className="left-col"></div>
 				<div className="right-col">
 					<div className="center">
 						<h2 className="bold title">KIMI SPENCER</h2>
-						<p className="serif uppercase">hello@kimispencer.com</p>
-						<p className="serif uppercase">Brooklyn, NY</p>
+						<p className="monospace uppercase">hello@kimispencer.com</p>
+						<p className="monospace uppercase">Brooklyn, NY</p>
 					</div>
 				</div>
 			</div>
@@ -36,7 +36,7 @@ const Resume = () => (
 								<h4 className="bold uppercase">the arrivals</h4>
 								<h4 className="bold uppercase">onomie</h4>
 							</div>
-							<p className="job-title serif">Lead Front-end Engineer & UX Designer, Brainchild Co — 2014 to present</p>
+							<p className="job-title monospace">Lead Front-end Engineer & UX Designer, Brainchild Co — 2014 to present</p>
 						</div>
 						<p>Brainchild is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
@@ -52,7 +52,7 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title serif">Lead Full-stack Engineer & UX Designer - 2016 to present</p>
+							<p className="job-title monospace">Lead Full-stack Engineer & UX Designer - 2016 to present</p>
 						</div>
 						<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Our objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br />
@@ -61,35 +61,35 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">bolster</h4>
-							<p className="job-title serif">Front-end Developer & UX Designer - 2013 to 2014</p>
+							<p className="job-title monospace">Front-end Developer & UX Designer - 2013 to 2014</p>
 						</div>
 						<p><a href="http://bolster.us" target="_blank">Bolster.us</a> is a web application for home owners & contractors to connect and manage home remodeling projects. Designed and developed a user-facing public website as well as an admin site for users to log in, find their match, upload/share documents & monitor their project's progression. Built with AngularJS using modern web standards.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">10x management</h4>
-							<p className="job-title serif">UX Designer & Front-end Developer - 2012 to 2013</p>
+							<p className="job-title monospace">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">+plusign</h4>
-							<p className="job-title serif">UX Designer & Front-end Developer - 2012 to 2013</p>
+							<p className="job-title monospace">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
 						<p>+plusign is an award-winning creative studio that does branding, digital, and design. UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. <a href="http://plusign.com" target="_blank">Plusign.com</a></p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">r/ga</h4>
-							<p className="job-title serif">Experience Design Intern - 2011</p>
+							<p className="job-title monospace">Experience Design Intern - 2011</p>
 						</div>
 						<p>Developed detailed wireframes and collaborated in the redesign of Verizon Wireless in-store touch screen experiences. Designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points of the Verizon brand experience. <a href="http://rga.com" target="_blank">RGA.com</a></p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">guide by cell</h4>
-							<p className="job-title serif">Project Manager & Web/Graphic Designer - 2008 to 2010</p>
+							<p className="job-title monospace">Project Manager & Web/Graphic Designer - 2008 to 2010</p>
 						</div>
 						<p>Designed, user tested, and launched interactive mobile applications and media content for over 300 museums and exhibitions. Participated in the development of Ghosts of a Chance the first Augmented Reality Game (ARG) played at the Smithsonian Museum of American Art. Created wireframes, developed mobile games and location-based narratives.</p>
 					</div>
@@ -103,14 +103,14 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">nyu, tisch school of the arts</h4>
-							<p className="serif">M.P.S - Interactive Technology & Design</p>
+							<p className="monospace">M.P.S - Interactive Technology & Design</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">uc berkeley</h4>
-							<p className="serif">B.A. Politics</p>
+							<p className="monospace">B.A. Political Science</p>
 						</div>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
 					</div>
@@ -143,7 +143,7 @@ const Resume = () => (
 								</ul>
 							</div>
 						</div>
-						<div className="flex-col resume-section-item" id="Tools">
+						<div className="flex-col resume-section-item third-span" id="Tools">
 							<h4 className="title bold uppercase">tools</h4>
 							<ul>
 								<li>Sublime</li>

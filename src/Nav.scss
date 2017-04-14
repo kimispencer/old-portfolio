@@ -1,8 +1,8 @@
 @import './styles/_all';
 
 .Nav {
-	z-index: $ultimate_top;
-	transition: all $transition_speed ease;
+	z-index: $top;
+	@include transition(all $transition_speed ease);
 	background-color: white;
 	position: fixed;
 	top: 0;
@@ -51,8 +51,11 @@
 
 /* 640px or smaller */
 @media only screen and (max-width : $breakpoint) {
+	.Nav {
+		z-index: $ultimate_top;
+	}
 	.NavTrigger {
-		transform: rotate(90deg);
+		@include transform(rotate(90deg));
 		display: block;
 		padding: $gutter/2;
 		cursor: pointer;
@@ -72,10 +75,10 @@
 		background-color: $matte_black;
 		color: white;
 		&.open {
-			transform: translate3d(0vw, 0, 0);
+			@include transform(translate3d(0vw, 0, 0));
 		}
 		&.closed {
-			transform: translate3d(-$slideout_nav_width, 0, 0);
+			@include transform(translate3d(-$slideout_nav_width, 0, 0));
 		}
 		#Logo {
 			left: $gutter*2;
@@ -86,7 +89,6 @@
 			padding: $gutter;
 			margin: 0;
 			li {
-				/*@include border(red);*/
 				margin: 10px;
 				display: block;
 				p {color: white; }
