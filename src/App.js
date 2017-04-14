@@ -16,6 +16,12 @@ import Footer from './Footer';
 
 import './App.css';
 
+const ScrollBar = () => {
+	return(
+		<progress id="ScrollProgress" max="100" value="0"></progress>
+	);
+}
+
 class App extends Component {
 	constructor() {
 		super();
@@ -104,7 +110,7 @@ class App extends Component {
 			<div className="App">
 				<Router>
 				<div>
-					<progress id="ScrollProgress" max="100" value="0"></progress>
+					<ScrollBar />
 					<Nav 
 						_isNavOpen={this.state._isNavOpen} 
 						_toggleNav={this._toggleNav} 
