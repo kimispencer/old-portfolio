@@ -55,6 +55,13 @@ $project_tile_height: 350px;
 .ProjectDetail {
 	@include flexbox-center(column);
 	margin-bottom: $gutter;
+	img {
+		width: 100%;
+		max-width: 100vw;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: $gutter;
+	}
 	.project-detail-cover {
 		height: 400px;
 		width: 100vw;
@@ -130,7 +137,7 @@ $project_tile_height: 350px;
 	}
 }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width : $breakpoint) {
 	.ProjectList {
 		#Menu {

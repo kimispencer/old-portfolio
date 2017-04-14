@@ -36,7 +36,7 @@
 .flex-row .three-quarter-span {
   width: 75%; }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .flex-row.responsive {
     -webkit-flex-flow: column;
@@ -63,7 +63,7 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .flex-col.responsive {
     -webkit-flex-flow: row;
@@ -126,7 +126,7 @@
   margin-left: auto;
   margin-right: auto; }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .left-col, .right-col {
     margin-right: auto;
@@ -260,7 +260,7 @@ select:-webkit-autofill:focus {
   form {
     min-width: 500px; } }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   form {
     width: 100%; } }
@@ -354,6 +354,13 @@ select:-webkit-autofill:focus {
   -ms-flex-pack: center;
   margin-bottom: 20px; }
 
+.ProjectDetail img {
+  width: 100%;
+  max-width: 100vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px; }
+
 .ProjectDetail .project-detail-cover {
   height: 400px;
   width: 100vw;
@@ -412,7 +419,7 @@ select:-webkit-autofill:focus {
     /*width: 25%;*/
     margin-left: 20px; } }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .ProjectList #Menu {
     cursor: pointer;

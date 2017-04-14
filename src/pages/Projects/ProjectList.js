@@ -11,7 +11,7 @@ const PROJECTS = [
 	{
 		url: 'arrivals',
 		name: "The Arrivals NYC", 
-		coverImg: "https://unsplash.it/1210/541",
+		coverImg: "http://kimispencer.com/assets/portfolio/thearrivals/thearrivals.png",
 		siteUrl: 'http://thearrivals.com',
 		projectType: 'Responsive Ecommerce website',
 		projectRole: [
@@ -27,7 +27,7 @@ const PROJECTS = [
 	{
 		url: 'suited', 
 		name: "Suited Magazine", 
-		coverImg: "https://unsplash.it/1210/540",
+		coverImg: "http://kimispencer.com/assets/portfolio/suited/suited-00.png",
 		siteUrl: 'http://suitedmagazine.com',
 		projectType: 'Responsive Editorial/Arts Publication website',
 		projectRole: [
@@ -56,7 +56,7 @@ const PROJECTS = [
 	{
 		url: 'onomie', 
 		name: "Onomie", 
-		coverImg: "https://unsplash.it/1215/540",
+		coverImg: "http://kimispencer.com/assets/portfolio/onomie/onomie-00.png",
 		siteUrl: 'http://onomie.com',
 		projectType: 'Responsive Ecommerce website',
 		projectRole: [
@@ -73,7 +73,7 @@ const PROJECTS = [
 	{
 		url: 'brainchild', 
 		name: "Brainchild.Co",  
-		coverImg: "https://unsplash.it/1222/450",
+		coverImg: "http://kimispencer.com/assets/portfolio/brainchild/brainchild-00.png",
 		siteUrl: 'http://brainchild.co',
 		projectType: 'Corporate Portfolio website',
 		projectRole: [
@@ -103,7 +103,7 @@ const PROJECTS = [
 	{
 		url: 'creep', 
 		name: "CREEP",  
-		coverImg: "https://unsplash.it/1200/450",
+		coverImg: "http://kimispencer.com/assets/portfolio/creep/echoes.jpg",
 		siteUrl: 'http://officialcreep.com',
 		projectType: 'Official Band site',
 		projectRole: [
@@ -113,7 +113,12 @@ const PROJECTS = [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.',
+		projectImgs: [
+			'http://kimispencer.com/assets/portfolio/creep/echoes.jpg',
+			'http://kimispencer.com/assets/portfolio/creep/imac.png',
+			'http://kimispencer.com/assets/portfolio/creep/ipad.png'
+		]
 
 	},
 	{
@@ -162,13 +167,22 @@ const PROJECTS = [
 	{
 		url: 'dataviz', 
 		name: "Data Visualization",  
-		coverImg: "https://unsplash.it/1201/450",
+		coverImg: "http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-00.jpg",
 		projectType: 'Data Visualization projects',
 		projectRole: [
 			'Lead Developer & Designer'
 		],
 		technologyUsed: 'Python, Java/Processing, Natural Language Toolkit, mongoDB',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.',
+		projectImgs: [
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-01.jpg',
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-02.jpg',
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-03.jpg',
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-04.jpg',
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-05.jpg',
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-06.jpg',
+			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-loc.jpg'
+		]
 
 	}
 ];
@@ -280,6 +294,12 @@ class ProjectDetail extends React.Component {
 						<p>{project.intro}</p>
 						<br />
 						<p>{project.intro}</p>
+						{project.projectImgs 
+							? project.projectImgs.map((img, index) => 
+								<img src={img} key={index} />
+							)
+							: null
+						}
 					</div>
 					<div className="text quarter-span" id="ProjectSkillsList">
 						<div className="flex-col">

@@ -36,7 +36,7 @@
 .flex-row .three-quarter-span {
   width: 75%; }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .flex-row.responsive {
     -webkit-flex-flow: column;
@@ -63,7 +63,7 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .flex-col.responsive {
     -webkit-flex-flow: row;
@@ -126,7 +126,7 @@
   margin-left: auto;
   margin-right: auto; }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .left-col, .right-col {
     margin-right: auto;
@@ -260,7 +260,7 @@ select:-webkit-autofill:focus {
   form {
     min-width: 500px; } }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   form {
     width: 100%; } }
@@ -285,7 +285,7 @@ select:-webkit-autofill:focus {
     top: 100px;
     left: 100px; } }
 
-/* 640px or smaller */
+/* 769px or smaller */
 @media only screen and (max-width: 769px) {
   .Home .home-container {
     text-align: center; } }
