@@ -270,18 +270,18 @@ class ProjectDetail extends React.Component {
 			backgroundImage: 'url(' + project.coverImg + ')'
 		}
 		return(
-			<div className="ProjectDetail">
+			<div className="ProjectDetail padded-width">
 				<h3 className="title">{project.name}</h3>
 				<div className="project-detail-cover" style={style}></div>
 
 				<div className="text-container flex-row responsive">
-					<div className="text" id="ProjectDescription">
+					<div className="text three-quarter-span" id="ProjectDescription">
 						<p className="title uppercase bold">project description</p>
 						<p>{project.intro}</p>
 						<br />
 						<p>{project.intro}</p>
 					</div>
-					<div className="text" id="ProjectSkillsList">
+					<div className="text quarter-span" id="ProjectSkillsList">
 						<div className="flex-col">
 							<p className="title uppercase bold">project type</p>
 							<p className="monospace">{project.projectType}</p>

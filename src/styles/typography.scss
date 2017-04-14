@@ -71,6 +71,11 @@ h1, h2, h3, h4, p, small, .title {
 			text-align: center;
 		}
 	}
+	&.left {
+		h1, h2, h3, h4, p, small, .title {
+			text-align: left;
+		}
+	}
 }
 .uppercase {
 	text-transform: uppercase;

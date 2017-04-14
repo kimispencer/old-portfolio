@@ -46,15 +46,15 @@ html {
 	background-color: transparent;
 
 	/* Progress bar value for IE10+ */
-	color: blue;
+	color: black;
 
 	&::-webkit-progress-bar {
 	  background-color: transparent;
 	}
 	&::-webkit-progress-value {
-	  background-color: blue;
+	  background-color: black;
 	}
 	&::-moz-progress-bar {
-	  background-color: blue;
+	  background-color: black;
 	}
 }

@@ -5,7 +5,7 @@ import './Resume.css';
 const Resume = () => (	
 	<div className="Resume">
 
-		<div className="resume-container">
+		<div className="resume-container padded-width">
 			<div className="resume-section" id="Header">
 				<div className="left-col"></div>
 				<div className="right-col">
@@ -143,7 +143,7 @@ const Resume = () => (
 								</ul>
 							</div>
 						</div>
-						<div className="flex-col resume-section-item" id="Tools">
+						<div className="flex-col resume-section-item third-span" id="Tools">
 							<h4 className="title bold uppercase">tools</h4>
 							<ul>
 								<li>Sublime</li>

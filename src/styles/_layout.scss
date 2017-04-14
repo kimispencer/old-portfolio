@@ -5,13 +5,25 @@
 	@include flexbox();
 	@include flex-flow(row);
 }
-/* spans */
 .flex-row {
 	.half-span {
 		width: 50%;
 		height: 100%;
 	}
+	.third-span {
+		width: 33%;
+	}
+	.two-third-span {
+		width: 66%;
+	}
+	.quarter-span {
+		width: 25%;
+	}
+	.three-quarter-span {
+		width: 75%;
+	}
 }
+
 /* 640px or smaller */
 @media only screen and (max-width : $breakpoint) {
 	.flex-row {
@@ -21,9 +33,20 @@
 				height: 50%;
 				width: 100%;
 			}
+			.third-span {
+				width: 100%;
+			}
+			.two-third-span {
+				width: 100%;
+			}
 		}
 	}
+	.left-col, .right-col {
+		width: 100%;
+		margin: 0;
+	}
 }
+
 /*
 	* flex cols
 */
@@ -47,5 +70,42 @@
 	}
 	&.flex-col {
 		@include flexbox-center(column);
+	}
+}
+
+/* text content */
+.text-container {
+	@include border(red);
+	max-width: calc(100vw - #{$gutter}*2);
+	margin-left: auto;
+	margin-right: auto;
+}
+.text {
+	@include border(blue);
+}
+
+/* basic layouts + padded widths */
+.left-col, .right-col {
+	@include border(grey);
+}
+.left-col {
+	margin-right: $gutter*2;
+	width: 20%;
+}
+.right-col {
+	margin-left: $gutter*2;
+	width: 80%;
+}
+
+.padded-width {
+	max-width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+	@include border(orange);
+}
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.padded-width {
+		width: 1000px;
 	}
 }

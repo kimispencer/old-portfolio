@@ -63,8 +63,6 @@ $project_tile_height: 350px;
 		background-position: 50% 50%;
 	}
 	.text-container {
-		max-width: calc(100vw - #{$gutter}*2);
-		width: 900px;
 		/*@include border(blue);*/
 		@include align-items(flex-start);
 		@include justify-content(center);
@@ -120,11 +118,11 @@ $project_tile_height: 350px;
 		.text-container {
 			.text {
 				&#ProjectDescription {
-					width: 75%;
+					/*width: 75%;*/
 					margin-right: $gutter;
 				}
 				&#ProjectSkillsList {
-					width: 25%;
+					/*width: 25%;*/
 					margin-left: $gutter;
 				}
 			}
