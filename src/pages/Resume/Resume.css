@@ -376,6 +376,8 @@ select:-webkit-autofill:focus {
     margin-bottom: 0; }
   .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
     margin-right: 40px; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
+    margin-right: 0; }
   .Resume .resume-container .resume-section#Skills .resume-section-item .title {
     margin-top: 0; }
   .Resume .resume-container .resume-section .resume-section-item .title {
