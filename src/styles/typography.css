@@ -270,6 +270,9 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
+.grey {
+  color: grey; }
+
 /* !!! not using modular scale */
 @font-face {
   font-family: 'Roboto';

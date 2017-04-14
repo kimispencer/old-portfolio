@@ -6,8 +6,20 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: $gutter*2;
+	margin-bottom: $gutter*4;
 	color: black;
 	padding: 20px;
 	text-align: center;
-	height: $footer_height;
+	min-height: $footer_height;
+	height: auto;
+
+	#Hello {
+		padding-top: $gutter*2;
+	}
+	#SocialMediaList {
+		margin-top: $gutter*2;
+		li {
+			margin-top: $gutter/2;
+		}
+	}
 }
