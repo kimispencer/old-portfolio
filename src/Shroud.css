@@ -47,10 +47,7 @@
     height: 50%;
     width: 100%; }
   .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
-    width: 100%; }
-  .left-col, .right-col {
-    width: 100%;
-    margin: 0; } }
+    width: 100%; } }
 
 /*
 	* flex cols
@@ -117,18 +114,11 @@
 
 /* text content */
 .text-container {
-  border: 1px dashed red;
   max-width: calc(100vw - 20px*2);
   margin-left: auto;
   margin-right: auto; }
 
-.text {
-  border: 1px dashed blue; }
-
 /* basic layouts + padded widths */
-.left-col, .right-col {
-  border: 1px dashed grey; }
-
 .left-col {
   margin-right: 40px;
   width: 20%; }
@@ -151,8 +141,7 @@
   .padded-width {
     max-width: 90vw;
     margin-left: auto;
-    margin-right: auto;
-    border: 1px dashed orange; } }
+    margin-right: auto; } }
 
 form {
   max-width: calc(100vw - 40px); }
