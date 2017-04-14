@@ -85,8 +85,7 @@ $project_tile_height: 350px;
 @media only screen and (min-width : $breakpoint) {
 	.ProjectList {
 		#Menu {
-			/*display: none;*/
-			@include border(red);
+			display: none;
 			padding-top: $gutter;
 		}
 		ul.project-list {

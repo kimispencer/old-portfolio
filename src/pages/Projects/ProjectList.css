@@ -388,8 +388,7 @@ select:-webkit-autofill:focus {
 /* 640px or bigger */
 @media only screen and (min-width: 769px) {
   .ProjectList #Menu {
-    /*display: none;*/
-    border: 1px dashed red;
+    display: none;
     padding-top: 20px; }
   .ProjectList ul.project-list {
     padding-top: 20px;

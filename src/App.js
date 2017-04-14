@@ -32,7 +32,6 @@ class App extends Component {
 		}
 		this._toggleNav = this._toggleNav.bind(this);
 		this._toggleProjectNav = this._toggleProjectNav.bind(this);
-		this._openProjectNav = this._openProjectNav.bind(this);
 		this._changeProjectNavStyle = this._changeProjectNavStyle.bind(this);
 		this._changeProjectNavStyle_toBox = this._changeProjectNavStyle_toBox.bind(this);
 		this._changeProjectNavStyle_toList = this._changeProjectNavStyle_toList.bind(this);
@@ -55,11 +54,6 @@ class App extends Component {
 		var svg = document.getElementById("StarSVG");
 		if(svg) {
 			document.getElementById("MobileSVG").appendChild(svg); 			
-		}
-		/* breakpoint 769px */
-		var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-		if(width > 768) {
-			// this._openProjectNav();
 		}
 	}
 	_setScrollProgress() {
@@ -129,11 +123,6 @@ class App extends Component {
 			_isProjectNavOpen: !prevState._isProjectNavOpen,
 		}));
 	}
-	_openProjectNav() {
-		this.setState(prevState => ({
-			_isProjectNavOpen: true,
-		}));
-	}
 	_changeProjectNavStyle() {
 		this.setState(prevState => ({
 			_projectNavStyle_isList: !prevState._projectNavStyle_isList,
@@ -160,6 +149,13 @@ class App extends Component {
 			_isProjectNavOpen: false,
 			_projectNavStyle_isList: true,
 		}));
+		/* breakpoint 769px */
+		var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		if(width > 768) {
+			this.setState(prevState => ({
+					_isProjectNavOpen: true,
+			}));
+		}
 	}
 	_sayHi() {
 		console.log('hi')
