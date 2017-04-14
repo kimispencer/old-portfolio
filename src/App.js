@@ -41,15 +41,23 @@ class App extends Component {
 		this._sayHi = this._sayHi.bind(this);
 	}
 	componentDidMount() {	/* runs on initial mount */
+		this._setLayout();
 		// this._setScrollProgress();
 		// window.addEventListener('scroll', this._handleScroll);
 	}
 	componentDidUpdate() {	/* run everytime component is updated (past initial mount) */
+		this._setLayout();
 		this._setScrollProgress();
 		window.addEventListener('scroll', this._handleScroll);
 	}
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this._handleScroll);
+	}
+	_setLayout() {
+		var svg = document.getElementById("StarSVG");
+		if(svg) {
+			document.getElementById("MobileSVG").appendChild(svg); 			
+		}
 	}
 	_setScrollProgress() {
 		const body = document.body,

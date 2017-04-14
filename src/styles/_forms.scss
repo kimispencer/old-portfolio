@@ -31,6 +31,7 @@ form {
 .button, button[type='submit'] {
 	@include button();
 	width: auto;
+	max-width: $button_width;
 	@include transition(all $transition_speed ease);
 	&.transparent {
 		@include button(rgba(0,0,0,0), black);
