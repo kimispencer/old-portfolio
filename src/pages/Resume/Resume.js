@@ -36,7 +36,7 @@ const Resume = () => (
 								<h4 className="bold uppercase">the arrivals</h4>
 								<h4 className="bold uppercase">onomie</h4>
 							</div>
-							<p className="job-title monospace">Lead Front-end Engineer & UX Designer — 2014 to present</p>
+							<p className="job-title monospace attribute">Lead Front-end Engineer & UX Designer — 2014 to present</p>
 						</div>
 						<p>Brainchild is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
