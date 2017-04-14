@@ -22,6 +22,12 @@ $ms-ratio: $golden;
 
 .monospace {
 	font-family: monospace;
+	p {
+		font-size: 1.1em;
+	}
+}
+p.monospace {
+	font-size: 1.1em;
 }
 
 html {font-size: 1em;}
