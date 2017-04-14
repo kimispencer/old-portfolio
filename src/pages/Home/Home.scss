@@ -2,10 +2,7 @@
 
 .Home {
 	/*@include flexbox-center(column);*/
-	/*@include border(blue);*/
-	height: 100vh;
 	.home-container {
-		/*@include border(red);*/
 		height: 100%;
 		svg {
 			width: 100px;
@@ -21,7 +18,7 @@
 			svg {
 				position: fixed;
 				top: 100px;
-				left: 50px;
+				left: 100px;
 			}
 		}
 	}

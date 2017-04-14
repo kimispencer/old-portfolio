@@ -3,7 +3,7 @@ import './Home.css';
 
 const Home = () => (
 	<div className="Home">
-		<div className="home-container flex-row responsive">
+		<div className="home-container flex-row responsive padded-width">
 			<div className="left-col">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.6 107.6" id="star-svg">
 				    <path fill="none" stroke="black" strokeWidth="2" id="star-path" d="M43.7,65.8L19.9,83.3c-2.9,1.9-5.1,3.2-7.9,3.2c-5.7,0-10.5-5.1-10.5-10.8
@@ -16,7 +16,8 @@ const Home = () => (
 			<div className="right-col">
 				<div className="text-container left">
 					<h2 className="title bold uppercase">Kimi Spencer</h2>
-					<h4 className="title monospace">A front-end engineer & UX designer from Brooklyn, New York, focusing on interactive experiences & responsive web apps.</h4>
+					<h2 className="title monospace">A front-end engineer & UX designer from Brooklyn, New York, focusing on interactive experiences & responsive web apps.</h2>
+					<h4 className="title monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ac diam non dignissim. Donec vehicula orci ultrices nunc pellentesque, ut luctus arcu condimentum.</h4>
 				</div>
 			</div>
 		</div>

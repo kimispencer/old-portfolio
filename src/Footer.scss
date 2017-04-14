@@ -2,8 +2,10 @@
 
 .Footer {
 	border-top: 2px solid $footer_color;
-	width: 70vw;
-	margin: 0 auto;
+	width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: $gutter*2;
 	color: black;
 	padding: 20px;
 	text-align: center;

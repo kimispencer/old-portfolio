@@ -288,7 +288,7 @@ class ProjectDetail extends React.Component {
 
 							<p className="title uppercase bold">project role</p>
 							{project.projectRole.map((role, index) =>
-								<p className="monospace" key={index} >{role}</p>
+								<p className="monospace" key={index} >* {role}</p>
 							)}
 
 							<p className="title uppercase bold">technology used</p>

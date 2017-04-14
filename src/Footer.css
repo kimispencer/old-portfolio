@@ -272,8 +272,10 @@ select:-webkit-autofill:focus {
 
 .Footer {
   border-top: 2px solid #f3f3f3;
-  width: 70vw;
-  margin: 0 auto;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
   color: black;
   padding: 20px;
   text-align: center;

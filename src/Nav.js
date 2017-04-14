@@ -34,7 +34,7 @@ const Nav = (props) => {
 					<li><Link to="/" onClick={handle_navClick}><small className="uppercase">Home</small></Link></li>
 					<li><Link to="/projects" onClick={handle_navClick_Projects}><small className="uppercase">Projects</small></Link></li>
 					<li><Link to="/resume" onClick={handle_navClick}><small className="uppercase">Resume</small></Link></li>
-					<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>
+					{ /*<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>*/ }
 				</ul>
 			</div>
 		</div>

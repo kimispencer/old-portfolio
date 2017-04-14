@@ -271,12 +271,9 @@ select:-webkit-autofill:focus {
     width: 100%; } }
 
 .Home {
-  /*@include flexbox-center(column);*/
-  /*@include border(blue);*/
-  height: 100vh; }
+  /*@include flexbox-center(column);*/ }
 
 .Home .home-container {
-  /*@include border(red);*/
   height: 100%; }
 
 .Home .home-container svg {
@@ -288,7 +285,7 @@ select:-webkit-autofill:focus {
   .Home .home-container svg {
     position: fixed;
     top: 100px;
-    left: 50px; } }
+    left: 100px; } }
 
 /* 640px or smaller */
 @media only screen and (max-width: 640px) {
