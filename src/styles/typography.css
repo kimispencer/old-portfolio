@@ -112,12 +112,6 @@
   justify-content: center;
   -ms-flex-pack: center; }
 
-/* text content */
-.text-container {
-  max-width: calc(100vw - 20px*2);
-  margin-left: auto;
-  margin-right: auto; }
-
 /* basic layouts + padded widths */
 .left-col {
   margin-right: 40px;

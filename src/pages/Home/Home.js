@@ -14,7 +14,7 @@ const Home = () => (
 				</svg>
 			</div>
 			<div className="right-col">
-				<div className="text-container left">
+				<div className="">
 					<h2 className="title bold uppercase">Kimi Spencer</h2>
 					<h2 className="title monospace">A front-end engineer & UX designer from Brooklyn, New York, focusing on interactive experiences & responsive web apps.</h2>
 					<h4 className="title monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ac diam non dignissim. Donec vehicula orci ultrices nunc pellentesque, ut luctus arcu condimentum.</h4>
