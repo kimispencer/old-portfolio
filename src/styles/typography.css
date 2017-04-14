@@ -46,9 +46,7 @@
   .flex-row.responsive .half-span {
     height: 50%;
     width: 100%; }
-  .flex-row.responsive .third-span {
-    width: 100%; }
-  .flex-row.responsive .two-third-span {
+  .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
     width: 100%; }
   .left-col, .right-col {
     width: 100%;
@@ -140,15 +138,21 @@
   width: 80%; }
 
 .padded-width {
-  max-width: 90vw;
+  width: 1000px;
   margin-left: auto;
-  margin-right: auto;
-  border: 1px dashed orange; }
+  margin-right: auto; }
 
-/* 640px or bigger */
-@media only screen and (min-width: 640px) {
+/* 640px or smaller */
+@media only screen and (max-width: 640px) {
+  .left-col, .right-col {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%; }
   .padded-width {
-    width: 1000px; } }
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed orange; } }
 
 form {
   max-width: calc(100vw - 40px); }
@@ -332,10 +336,10 @@ small, .font_small {
 h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.center {
   text-align: center; }
 
-.text.center h1, .text.center h2, .text.center h3, .text.center h4, .text.center p, .text.center small, .text.center .title {
+.text.center h1, .text.center h2, .text.center h3, .text.center h4, .text.center p, .text.center small, .text.center .title, .text-container.center h1, .text-container.center h2, .text-container.center h3, .text-container.center h4, .text-container.center p, .text-container.center small, .text-container.center .title {
   text-align: center; }
 
-.text.left h1, .text.left h2, .text.left h3, .text.left h4, .text.left p, .text.left small, .text.left .title {
+.text.left h1, .text.left h2, .text.left h3, .text.left h4, .text.left p, .text.left small, .text.left .title, .text-container.left h1, .text-container.left h2, .text-container.left h3, .text-container.left h4, .text-container.left p, .text-container.left small, .text-container.left .title {
   text-align: left; }
 
 .uppercase {

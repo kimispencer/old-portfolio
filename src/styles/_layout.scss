@@ -33,10 +33,7 @@
 				height: 50%;
 				width: 100%;
 			}
-			.third-span {
-				width: 100%;
-			}
-			.two-third-span {
+			.third-span, .two-third-span, .quarter-span, .three-quarter-span {
 				width: 100%;
 			}
 		}
@@ -96,16 +93,23 @@
 	margin-left: $gutter*2;
 	width: 80%;
 }
-
 .padded-width {
-	max-width: 90vw;
+	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	@include border(orange);
 }
-/* 640px or bigger */
-@media only screen and (min-width : $breakpoint) {
+
+/* 640px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.left-col, .right-col {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
 	.padded-width {
-		width: 1000px;
+		max-width: 90vw;
+		margin-left: auto;
+		margin-right: auto;
+		@include border(orange);
 	}
 }

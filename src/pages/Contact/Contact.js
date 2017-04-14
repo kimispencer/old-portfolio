@@ -4,7 +4,7 @@ import './Contact.css';
 const Contact = () => (
     <div className="Contact">
         <div className="resume-container">
-            <div className="text center">
+            <div className="text-container center">
                 <h4 className="bold title underline ">CONTACT</h4>
                 <p className="monospace">CURRENTLY AVAILABLE FOR CONTRACT OR FULL-TIME WORK.</p>
                 <p className="monospace">hello@kimispencer.com</p>
