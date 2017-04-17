@@ -91,7 +91,7 @@ const PROJECTS = [
 		name: "Bolster",  
 		coverImg: "https://unsplash.it/1214/450",
 		siteUrl: 'http://bolster.us',
-		projectType: 'Responsive web application',
+		projectType: 'AngularJS web application',
 		projectRole: [
 			'Front-end developer',
 			'Visual & UX designer',
