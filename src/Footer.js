@@ -10,10 +10,9 @@ const Footer = (props) => {
 			<div className="flex-col">
 				<ul id="SocialMediaList">
 					<li>
-						<a href="https://www.linkedin.com/in/kimispencer" target="_blank"><p className="grey underline">LinkedIn</p></a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/kimispencer" target="_blank"><p className="grey underline">LinkedIn</p></a>
+						<a href="https://www.linkedin.com/in/kimispencer" target="_blank">
+							<object data="http://kimispencer.com/assets/portfolio/logos/linkedin.svg" type="image/svg+xml"></object>
+						</a>
 					</li>
 				</ul>
 			</div>
