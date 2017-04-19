@@ -5,16 +5,16 @@ import {
 } from 'react-router-dom';
 // libraries
 import smoothScroll from 'smoothscroll';
-
-import Nav from './Nav';
-import ScrollBar from './ScrollBar';
-import Shroud from './Shroud';
+// components
+import Nav from './layout/Nav/Nav';
+import ScrollBar from './common/ScrollBar/ScrollBar';
+import Shroud from './common/Shroud/Shroud';
 import Home from './pages/Home/Home';
 import ProjectList from './pages/Projects/ProjectList';
 import Resume from './pages/Resume/Resume';
 import Contact from './pages/Contact/Contact';
-import Footer from './Footer';
-
+import Footer from './layout/Footer/Footer';
+// css
 import './App.css';
 
 class App extends Component {
@@ -87,7 +87,7 @@ class App extends Component {
 		let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		if(width > 768) {
 			this.setState(prevState => ({
-					_isProjectNavOpen: true,
+				_isProjectNavOpen: true,
 			}));
 		}
 	}

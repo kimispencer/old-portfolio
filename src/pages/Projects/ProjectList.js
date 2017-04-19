@@ -348,7 +348,7 @@ const ProjectListItem = (props) => {
 }
 
 const ProjectList = (props) => {
-	const handle_projectNavClick = () => {
+	const _handleProjectNavClick = () => {
 		props._toggleProjectNav();
 		window.scrollTo(0, 0);
 	}
@@ -375,7 +375,7 @@ const ProjectList = (props) => {
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={handle_projectNavClick} _toggleProjectNav={props._toggleProjectNav} _projectNavStyle_isList={props._projectNavStyle_isList}/>
+							<ProjectListItem project={project} handleClick={_handleProjectNavClick} _toggleProjectNav={props._toggleProjectNav} _projectNavStyle_isList={props._projectNavStyle_isList}/>
 						</Link>
 					</li>
 					) }
