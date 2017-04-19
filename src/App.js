@@ -7,8 +7,8 @@ import {
 import smoothScroll from 'smoothscroll';
 // components
 import Nav from './layout/Nav/Nav';
-import ScrollBar from './common/ScrollBar/ScrollBar';
-import Shroud from './common/Shroud/Shroud';
+import ScrollBar from './utilities/ScrollBar/ScrollBar';
+import Shroud from './utilities/Shroud/Shroud';
 import Home from './pages/Home/Home';
 import ProjectList from './pages/Projects/ProjectList';
 import Resume from './pages/Resume/Resume';
