@@ -30,8 +30,8 @@ class ScrollBar extends Component {
 	}
 	_handleScroll() {
 		let scrollTop = window.pageYOffset | document.body.scrollTop;
-		document.getElementById('ScrollProgress').value = scrollTop;		// !!! why cant I use refs when bassed to 'scroll'?
-		// this.refs.ScrollProgress.value = scrollTop;
+		document.getElementById('ScrollProgress').value = scrollTop;		
+		// this.refs.ScrollProgress.value = scrollTop;					// !!! why cant I use refs when bassed to 'scroll'?
 	}
 	render() {
 		return(
