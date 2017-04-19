@@ -44,6 +44,7 @@ class App extends Component {
 		this._setLayout();
 	}
 	componentDidUpdate() {	/* run everytime component is updated (past initial mount) */
+		this._setLayout();
 		this._setScrollProgress();		// not waiting for images to load...
 		window.addEventListener('scroll', this._handleScroll);
 	}
