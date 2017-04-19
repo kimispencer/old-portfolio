@@ -7,6 +7,7 @@ import {
 import smoothScroll from 'smoothscroll';
 
 import Nav from './Nav';
+import ScrollBar from './ScrollBar';
 import Shroud from './Shroud';
 import Home from './pages/Home/Home';
 import ProjectList from './pages/Projects/ProjectList';
@@ -15,12 +16,6 @@ import Contact from './pages/Contact/Contact';
 import Footer from './Footer';
 
 import './App.css';
-
-const ScrollBar = () => {
-	return(
-		<progress id="ScrollProgress" max="100" value="0"></progress>
-	);
-}
 
 class App extends Component {
 	constructor() {
@@ -40,77 +35,15 @@ class App extends Component {
 		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
 		this._sayHi = this._sayHi.bind(this);
 	}
-	componentDidMount() {	/* runs on initial mount */
-		this._setLayout();
+	/* runs on initial mount */
+	componentDidMount() {
 	}
-	componentDidUpdate() {	/* run everytime component is updated (past initial mount) */
-		this._setLayout();
-		this._setScrollProgress();		// not waiting for images to load...
-		window.addEventListener('scroll', this._handleScroll);
+	/* run everytime component is updated (past initial mount) */
+	componentDidUpdate() {
 	}
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this._handleScroll);
 	}
-	_setLayout() {
-		var svg = document.getElementById("StarSVG");
-		if(svg) {
-			document.getElementById("MobileSVG").appendChild(svg); 			
-		}
-	}
-	_setScrollProgress() {
-		var height = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
-			document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-// console.log('max,' + (height - window.innerHeight))
-		document.getElementById('ScrollProgress').max = (height - window.innerHeight);
-	}
-	_handleScroll() {
-		let scrollTop = window.pageYOffset | document.body.scrollTop;
-// console.log('scroll, ' + scrollTop)
-		document.getElementById('ScrollProgress').value = scrollTop;
 
-		/* SVG scroll animation */
-		// Get a reference to the <path>
-		var path = document.querySelector('#StarPath');
-		if(path) {
-			// Get length of path... ~577px in this case
-			var pathLength = path.getTotalLength();
-
-			// Make very long dashes (the length of the path itself)
-			path.style.strokeDasharray = pathLength + ' ' + pathLength;
-
-			// Offset the dashes so the it appears hidden entirely
-			path.style.strokeDashoffset = pathLength;
-
-			// Jake Archibald says so
-			// https://jakearchibald.com/2013/animated-line-drawing-svg/
-			path.getBoundingClientRect();
-
-			// When the page scrolls...
-			window.addEventListener("scroll", function(e) {
-
-				// What % down is it? 
-				// https://stackoverflow.com/questions/2387136/cross-browser-method-to-determine-vertical-scroll-percentage-in-javascript/2387222#2387222
-				// Had to try three or four differnet methods here. Kind of a cross-browser nightmare.
-				var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-				// Length to offset the dashes
-				var drawLength = pathLength * scrollPercentage;
-
-				// Draw in reverse
-				path.style.strokeDashoffset = pathLength - drawLength;
-
-				// When complete, remove the dash array, otherwise shape isn't quite sharp
-				// Accounts for fuzzy math
-				if (scrollPercentage >= 0.99) {
-					path.style.strokeDasharray = "none";
-
-				} else {
-					path.style.strokeDasharray = pathLength + ' ' + pathLength;
-				}
-
-			});
-		}
-	}
 	_smoothScroll(loc) {
 		smoothScroll(loc);
 	}
@@ -151,7 +84,7 @@ class App extends Component {
 			_projectNavStyle_isList: true,
 		}));
 		/* breakpoint 769px */
-		var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		if(width > 768) {
 			this.setState(prevState => ({
 					_isProjectNavOpen: true,
