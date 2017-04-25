@@ -33,14 +33,29 @@ class App extends Component {
 		this._smoothScroll = this._smoothScroll.bind(this);
 		this._handleProjectLanding= this._handleProjectLanding.bind(this);
 		this._handleProjectDetailLanding = this._handleProjectDetailLanding.bind(this);
+		/* testing */
 		this._sayHi = this._sayHi.bind(this);
 	}
-	/* runs on initial mount */
+	/* 
+		* componentDidMount() is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. 
+		* If you need to load data from a remote endpoint, this is a good place to instantiate the network request. 
+		* Setting state in this method will trigger a re-rendering.
+	*/
 	componentDidMount() {
 	}
-	/* run everytime component is updated (past initial mount) */
+	/*
+		* componentDidUpdate() is invoked immediately after updating occurs. This method is not called for the initial render.
+		* Use this as an opportunity to operate on the DOM when the component has been updated. 
+		* This is also a good place to do network requests as long as you compare the current props to previous props 
+		* (e.g. a network request may not be necessary if the props have not changed). 
+	*/
 	componentDidUpdate() {
 	}
+	/*
+		* componentWillUnmount() is invoked immediately before a component is unmounted and destroyed. 
+		* Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any 
+		* DOM elements that were created in componentDidMount
+	*/
 	componentWillUnmount() {
 	}
 
@@ -83,8 +98,9 @@ class App extends Component {
 			_isProjectNavOpen: false,
 			_projectNavStyle_isList: true,
 		}));
-		/* breakpoint 769px */
 		let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		
+		/* breakpoint 769px */
 		if(width > 768) {
 			this.setState(prevState => ({
 				_isProjectNavOpen: true,
