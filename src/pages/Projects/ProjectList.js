@@ -4,7 +4,9 @@ import {
 	Link 
 } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
+// libraries
+import BackgroundImage from 'react-background-image-loader';
+// css
 import './ProjectList.css';
 
 const PROJECTS = [
@@ -329,16 +331,32 @@ class ProjectDetail extends React.Component {
 	}
 }
 
+// const ProjectListItem = (props) => {
+// 	let style = {
+// 		backgroundImage: 'url(' + props.project.coverImg + ')'
+// 	}
+// 	let navStyle = props._projectNavStyle_isList ? 'list-style' : 'box-style';
+// 	let classes = `${navStyle} ProjectListItem`;
+
+// 	return (
+// 		<div className={classes} onClick={props.handleClick} >
+// 			<div className="bg-img" style={style}></div>
+// 			<div className="text monospace">
+// 				<h4 className="project-name">{props.project.name}</h4>
+// 				<p className="project-type">{props.project.projectType}</p>
+// 			</div>
+// 		</div>
+// 	);
+// }
+
 const ProjectListItem = (props) => {
-	let style = {
-		backgroundImage: 'url(' + props.project.coverImg + ')'
-	}
 	let navStyle = props._projectNavStyle_isList ? 'list-style' : 'box-style';
 	let classes = `${navStyle} ProjectListItem`;
+	const localImage = '/spin.gif';
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
-			<div className="bg-img" style={style}></div>
+			<BackgroundImage className="bg-img" src={props.project.coverImg} placeholder={localImage} />
 			<div className="text monospace">
 				<h4 className="project-name">{props.project.name}</h4>
 				<p className="project-type">{props.project.projectType}</p>
