@@ -269,6 +269,19 @@ select:-webkit-autofill:focus {
 .grey {
   color: grey; }
 
+/*
+	* base for all background images
+*/
+.bg-img {
+  -webkit-transition: background-image 100ms ease-in;
+  -moz-transition: background-image 100ms ease-in;
+  -ms-transition: background-image 100ms ease-in;
+  -o-transition: background-image 100ms ease-in;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%; }
+
 .ProjectList #PageTitle {
   padding-top: 20px; }
 
@@ -327,12 +340,6 @@ select:-webkit-autofill:focus {
 .ProjectListItem.box-style .text {
   text-align: center;
   margin-top: 10px; }
-
-.ProjectListItem.box-style .bg-img {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: 50% 50%; }
 
 .ProjectDetail {
   display: -webkit-box;

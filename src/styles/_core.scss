@@ -1,0 +1,10 @@
+/*
+	* base for all background images
+*/
+.bg-img {
+	@include transition(background-image 100ms ease-in);
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+}
