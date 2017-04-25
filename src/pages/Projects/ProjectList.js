@@ -282,13 +282,12 @@ class ProjectDetail extends React.Component {
 		let project = PROJECTS.filter(function (p) {
 		    return p.url === match;
 		})[0];
-		let style = {
-			backgroundImage: 'url(' + project.coverImg + ')'
-		}
+		const localImage = '/spin.gif';
+
 		return(
 			<div className="ProjectDetail padded-width">
 				<h3 className="title">{project.name}</h3>
-				<div className="project-detail-cover" style={style}></div>
+				<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />
 
 				<div className="text-container flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
