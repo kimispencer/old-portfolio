@@ -279,8 +279,9 @@ select:-webkit-autofill:focus {
   -o-transition: background-image 100ms ease-in;
   height: 100%;
   width: 100%;
-  background-size: cover;
-  background-position: 50% 50%; }
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
 
 .ProjectList #PageTitle {
   padding-top: 20px; }
