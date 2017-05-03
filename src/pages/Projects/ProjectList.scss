@@ -59,7 +59,8 @@ $project_tile_height: 350px;
 		margin-top: $gutter;
 	}
 	.project-detail-cover {
-		height: 400px;
+		height: 600px;
+		max-height: 70vh;
 		width: 100vw;
 		background-color: lightgrey;
 		background-size: cover;
