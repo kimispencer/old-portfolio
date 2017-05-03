@@ -64,6 +64,7 @@ $project_tile_height: 350px;
 		background-color: lightgrey;
 		background-size: cover;
 		background-position: 50% 50%;
+		background-attachment: fixed;
 	}
 	.text-container {
 		/*@include border(blue);*/
