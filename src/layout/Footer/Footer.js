@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer = (props) => {
 	return (
 		<div className="Footer">
-			<a href="mailto:kimispencer@gmail.com"><h3 className="monospace underline center" id="Hello">hello@kimispencer.com</h3></a>
+			<a href="mailto:kimispencer@gmail.com"><h4 className="monospace underline center" id="Hello">hello@kimispencer.com</h4></a>
 
 			<div className="flex-col">
 				<ul id="SocialMediaList">
