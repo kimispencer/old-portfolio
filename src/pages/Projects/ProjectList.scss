@@ -67,6 +67,58 @@ $project_tile_height: 350px;
 		background-position: 50% 50%;
 		background-attachment: fixed;
 	}
+	.project-screenshots {
+		@include border(red);
+		max-width: 100vw;
+
+
+		figure.fluidratio {
+			/* This element will have fluid ratio from 4:1 at 800px to 2:1 at 300px. */
+			@include fluid-ratio(800px 200px, 300px 150px);
+			background-image: url(http://voormedia.com/examples/amsterdam.jpg);
+		}	
+	
+
+/*		.desktop-aspect-ratio {
+			@include aspect-ratio(566, 537);
+		}
+		.laptop-aspect-ratio {
+			@include aspect-ratio(488, 307);
+		}
+		.tablet-aspect-ratio {
+			@include aspect-ratio(246, 400);
+
+		}
+		.phone-aspect-ratio {
+			@include aspect-ratio(95, 196);
+
+		}*/
+
+/*		.screenshot {
+			background-size: cover;
+
+			&.desktop {	
+				background-image: url('/frames/desktop.png');	// 566 × 537
+				width: 566px;
+			    height: 538px;
+			}
+			&.laptop {
+				background-image: url('/frames/laptop.png');
+			    width: 477px;
+			    height: 307px;
+			}
+			&.tablet {
+				background-image: url('/frames/tablet.png');
+				width: 246px;
+			    height: 400px;
+			}
+			&.phone {
+				background-image: url('/frames/phone.png');
+			    width: 95px;
+			    height: 196px;
+			}
+		}
+*/	}
 	.text-container {
 		/*@include border(blue);*/
 		@include align-items(flex-start);

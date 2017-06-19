@@ -289,7 +289,39 @@ class ProjectDetail extends React.Component {
 				<h3 className="title">{project.name}</h3>
 				<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />
 
-				<div className="text-container flex-row responsive">
+				<section className="project-screenshots">
+
+					<div className="column">
+						<figure className="fluidratio"></figure>
+					</div>
+					
+					{ /*<div className="desktop-aspect-ratio">
+						<div className="content">
+							<img src="/frames/desktop.png" />
+						</div>
+					</div>
+					
+					<div className="laptop-aspect-ratio">
+						<div className="content">
+							<img src="/frames/laptop.png" />
+						</div>
+					</div>
+					
+					<div className="tablet-aspect-ratio">
+						<div className="content">
+							<img src="/frames/tablet.png" />
+						</div>
+					</div>
+
+					<div className="phone-aspect-ratio">
+						<div className="content">
+							<img src="/frames/phone.png" />
+						</div>
+					</div> */}
+
+				</section>
+
+				<section className="text-container flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
 						<p className="title uppercase bold">project description</p>
 						<p>{project.intro}</p>
@@ -323,7 +355,7 @@ class ProjectDetail extends React.Component {
 							}
 						</div>
 					</div>
-				</div>
+				</section>
 
 			</div>
 		);

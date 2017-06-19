@@ -6,6 +6,7 @@
 /* footer */
 /* colors */
 /* buttons */
+/* Calculate fluid ratio based on two dimensions (width/height) */
 /*
 	* flex rows
 */
@@ -43,11 +44,11 @@
     -moz-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
-  .flex-row.responsive .half-span {
-    height: 50%;
-    width: 100%; }
-  .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
-    width: 100%; } }
+    .flex-row.responsive .half-span {
+      height: 50%;
+      width: 100%; }
+    .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
+      width: 100%; } }
 
 /*
 	* flex cols
@@ -140,33 +141,29 @@
 
 form {
   max-width: calc(100vw - 40px); }
-
-form input, form textarea {
-  color: #3c3c3c;
-  background-color: #fbfbfb;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-
-form input, form textarea {
-  border: 2px solid black;
-  /*		border: 0;
+  form input, form textarea {
+    color: #3c3c3c;
+    background-color: #fbfbfb;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+  form input, form textarea {
+    border: 2px solid black;
+    /*		border: 0;
 		outline: 0;
 		background: transparent;
 		border-bottom: 3px solid black;*/ }
-
-form textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%;
-  resize: vertical; }
-
-form button[type='submit'], form .button {
-  width: 100%; }
+  form textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical; }
+  form button[type='submit'], form .button {
+    width: 100%; }
 
 /* buttons */
 .button, button[type='submit'] {
@@ -204,44 +201,41 @@ form button[type='submit'], form .button {
   -moz-transition: all 350ms ease;
   -ms-transition: all 350ms ease;
   -o-transition: all 350ms ease; }
-
-.button:hover, button[type='submit']:hover {
-  background-color: white;
-  color: black; }
-
-.button.transparent, button[type='submit'].transparent {
-  background-color: transparent;
-  color: black;
-  cursor: pointer;
-  text-decoration: underline;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  padding: 13.33333px;
-  cursor: pointer;
-  text-decoration: underline;
-  border: 2px solid black;
-  text-decoration: none;
-  text-transform: uppercase; }
-
-.button.transparent:hover, button[type='submit'].transparent:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: black; }
+  .button:hover, button[type='submit']:hover {
+    background-color: white;
+    color: black; }
+  .button.transparent, button[type='submit'].transparent {
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 13.33333px;
+    cursor: pointer;
+    text-decoration: underline;
+    border: 2px solid black;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .button.transparent:hover, button[type='submit'].transparent:hover {
+      background-color: rgba(255, 255, 255, 0);
+      color: black; }
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -293,21 +287,18 @@ select:-webkit-autofill:focus {
   position: fixed;
   top: 0;
   left: 0; }
-
-.Nav #Logo {
-  position: fixed; }
-
-.Nav ul {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex; }
-
-.Nav ul li {
-  margin: 10px;
-  display: inline;
-  letter-spacing: 0.2em; }
+  .Nav #Logo {
+    position: fixed; }
+  .Nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    .Nav ul li {
+      margin: 10px;
+      display: inline;
+      letter-spacing: 0.2em; }
 
 /* 640px or bigger */
 @media only screen and (min-width: 769px) {
@@ -340,24 +331,24 @@ select:-webkit-autofill:focus {
     -ms-justify-content: flex-end;
     justify-content: flex-end;
     -ms-flex-pack: flex-end; }
-  .Nav #Logo {
-    top: 10px;
-    left: 20px; }
-  .Nav ul {
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    -webkit-justify-content: flex-end;
-    -moz-justify-content: flex-end;
-    -ms-justify-content: flex-end;
-    justify-content: flex-end;
-    -ms-flex-pack: flex-end;
-    padding: 0;
-    margin: 0 20px; }
-  .Nav ul li {
-    margin: 10px;
-    display: inline; } }
+    .Nav #Logo {
+      top: 10px;
+      left: 20px; }
+    .Nav ul {
+      -webkit-flex-flow: row;
+      -moz-flex-flow: row;
+      -ms-flex-flow: row;
+      flex-flow: row;
+      -webkit-justify-content: flex-end;
+      -moz-justify-content: flex-end;
+      -ms-justify-content: flex-end;
+      justify-content: flex-end;
+      -ms-flex-pack: flex-end;
+      padding: 0;
+      margin: 0 20px; }
+      .Nav ul li {
+        margin: 10px;
+        display: inline; } }
 
 /* 769px or smaller */
 @media only screen and (max-width: 769px) {
@@ -375,37 +366,37 @@ select:-webkit-autofill:focus {
     top: 0;
     right: 0;
     text-shadow: white 1px 0px 0px; }
-  .NavTrigger h1 {
-    display: inline-block;
-    margin: 0; }
+    .NavTrigger h1 {
+      display: inline-block;
+      margin: 0; }
   .Nav {
     height: 100vh;
     width: 300px;
     max-width: 70vw;
     background-color: #030303;
     color: white; }
-  .Nav.open {
-    -webkit-transform: translate3d(0vw, 0, 0);
-    -moz-transform: translate3d(0vw, 0, 0);
-    -ms-transform: translate3d(0vw, 0, 0);
-    -o-transform: translate3d(0vw, 0, 0); }
-  .Nav.closed {
-    -webkit-transform: translate3d(-300px, 0, 0);
-    -moz-transform: translate3d(-300px, 0, 0);
-    -ms-transform: translate3d(-300px, 0, 0);
-    -o-transform: translate3d(-300px, 0, 0); }
-  .Nav #Logo {
-    left: 40px;
-    bottom: 20px; }
-  .Nav ul {
-    -webkit-flex-flow: column;
-    -moz-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    padding: 20px;
-    margin: 0; }
-  .Nav ul li {
-    margin: 10px;
-    display: block; }
-  .Nav ul li p {
-    color: white; } }
+    .Nav.open {
+      -webkit-transform: translate3d(0vw, 0, 0);
+      -moz-transform: translate3d(0vw, 0, 0);
+      -ms-transform: translate3d(0vw, 0, 0);
+      -o-transform: translate3d(0vw, 0, 0); }
+    .Nav.closed {
+      -webkit-transform: translate3d(-300px, 0, 0);
+      -moz-transform: translate3d(-300px, 0, 0);
+      -ms-transform: translate3d(-300px, 0, 0);
+      -o-transform: translate3d(-300px, 0, 0); }
+    .Nav #Logo {
+      left: 40px;
+      bottom: 20px; }
+    .Nav ul {
+      -webkit-flex-flow: column;
+      -moz-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      padding: 20px;
+      margin: 0; }
+      .Nav ul li {
+        margin: 10px;
+        display: block; }
+        .Nav ul li p {
+          color: white; } }
