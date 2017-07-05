@@ -8,10 +8,14 @@ import './ImageLoader.css';
 
 const ImageLoader = (props) => {
 	console.log(props)
+
 	let classes = `${props.className ? props.className : ''} image-loader bg-img`;
-	if(props.src) {
-		return (<div className={classes}>image loader</div>);
+	let style = {
+		backgroundImage: 'url(' + props.src + ')'
 	}
+	return (
+		<div className={classes} style={style}></div>
+	);
 }
 
 export default ImageLoader;
