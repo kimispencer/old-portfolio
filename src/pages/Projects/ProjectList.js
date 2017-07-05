@@ -287,7 +287,10 @@ class ProjectDetail extends React.Component {
 		return(
 			<div className="ProjectDetail padded-width">
 				<h3 className="title">{project.name}</h3>
-				{/*<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />*/}
+				{/*
+					<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />
+					!!! replace this with your own ImageLoader component (takes bg img src + CSS spinner animation)
+				*/}
 				<div className="project-detail-cover" src={project.coverImg} placeholder={localImage}></div>
 
 				<section className="project-screenshots">
@@ -388,8 +391,13 @@ const ProjectListItem = (props) => {
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
-			{/*<BackgroundImage className="bg-img" src={props.project.coverImg} placeholder={localImage} />*/}
+			{/*
+				<BackgroundImage className="bg-img" src={props.project.coverImg} placeholder={localImage} />
+				!!! replace this with your own ImageLoader component (takes bg img src + CSS spinner animation)
+			*/}
 			<div className="bg-img" src={props.project.coverImg} placeholder={localImage}></div>
+
+
 			<div className="text monospace">
 				<h4 className="project-name">{props.project.name}</h4>
 				<p className="project-type">{props.project.projectType}</p>
