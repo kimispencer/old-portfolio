@@ -14,7 +14,9 @@ const ImageLoader = (props) => {
 		backgroundImage: 'url(' + props.src + ')'
 	}
 	return (
-		<div className={classes} style={style}></div>
+		<div className={classes} style={style}>
+			<div className="spinner"></div>
+		</div>
 	);
 }
 
