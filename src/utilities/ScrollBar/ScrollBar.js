@@ -9,9 +9,9 @@ import './ScrollBar.css';
 // }
 
 class ScrollBar extends Component {
-	constructor() {
-		super();
-	}
+	// constructor() {
+	// 	super();
+	// }
 	componentDidMount() {
 		this._setMax();
 	}

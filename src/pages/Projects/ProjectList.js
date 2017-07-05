@@ -3,9 +3,9 @@ import {
 	Route, 
 	Link 
 } from 'react-router-dom';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // libraries
-import BackgroundImage from 'react-background-image-loader';
+// import BackgroundImage from 'react-background-image-loader';
 // css
 import './ProjectList.css';
 
@@ -266,9 +266,9 @@ const PROJECTS = [
 // }
 
 class ProjectDetail extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// }
 	componentDidMount() {
 		this._handleProjectNav();
 	}
@@ -287,7 +287,8 @@ class ProjectDetail extends React.Component {
 		return(
 			<div className="ProjectDetail padded-width">
 				<h3 className="title">{project.name}</h3>
-				<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />
+				{/*<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />*/}
+				<div className="project-detail-cover" src={project.coverImg} placeholder={localImage}></div>
 
 				<section className="project-screenshots">
 
@@ -329,7 +330,7 @@ class ProjectDetail extends React.Component {
 						<p>{project.intro}</p>
 						{project.projectImgs 
 							? project.projectImgs.map((img, index) => 
-								<img src={img} key={index} />
+								<img src={img} key={index} role="presentation" />
 							)
 							: null
 						}
@@ -387,7 +388,8 @@ const ProjectListItem = (props) => {
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
-			<BackgroundImage className="bg-img" src={props.project.coverImg} placeholder={localImage} />
+			{/*<BackgroundImage className="bg-img" src={props.project.coverImg} placeholder={localImage} />*/}
+			<div className="bg-img" src={props.project.coverImg} placeholder={localImage}></div>
 			<div className="text monospace">
 				<h4 className="project-name">{props.project.name}</h4>
 				<p className="project-type">{props.project.projectType}</p>

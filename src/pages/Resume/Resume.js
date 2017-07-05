@@ -21,11 +21,11 @@ const Resume = () => (
 					<h4 className="bold title underline">PROFILE</h4>
 				</div>
 				<div className="right-col">
-					<p>{`Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. 
+					<p>`Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. 
 						I have over 9 years experience working in interactive technology from San Francisco startups to NYC digital agencies; 
 						and spanning industries from museum education, high-end fashion to music production. 
 						I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. 
-						I also have a personal passion for music videos, conceptual art, arugula & alliteration.`}</p>
+						I also have a personal passion for music videos, conceptual art, arugula & alliteration.`</p>
 				</div>
 			</div>
 			<div className="resume-section" id="WorkExperience">
