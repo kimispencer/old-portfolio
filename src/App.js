@@ -5,15 +5,18 @@ import {
 } from 'react-router-dom';
 // libraries
 import smoothScroll from 'smoothscroll';
+
 // components
 import Nav from './layout/Nav/Nav';
-import ScrollBar from './utilities/ScrollBar/ScrollBar';
-import Shroud from './utilities/Shroud/Shroud';
+import Footer from './layout/Footer/Footer';
+
+import ScrollBar from './components/ScrollBar/ScrollBar';
+import Shroud from './components/Shroud/Shroud';
+
 import Home from './pages/Home/Home';
 import ProjectList from './pages/Projects/ProjectList';
 import Resume from './pages/Resume/Resume';
 import Contact from './pages/Contact/Contact';
-import Footer from './layout/Footer/Footer';
 // css
 import './App.css';
 
