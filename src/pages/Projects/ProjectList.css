@@ -310,7 +310,7 @@ select:-webkit-autofill:focus {
   width: auto; }
 
 .ProjectListItem.list-style .bg-img {
-  background-image: none !important; }
+  display: none !important; }
 
 .ProjectListItem.list-style .text .project-name {
   font-size: 1em; }

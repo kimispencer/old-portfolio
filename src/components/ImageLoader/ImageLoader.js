@@ -4,12 +4,14 @@
 */
 
 import React from 'react';
-// import './ImageLoader.css';
+import './ImageLoader.css';
 
 const ImageLoader = (props) => {
-	return (
-		<div className="image-loader">image loader</div>
-	);
+	console.log(props)
+	let classes = `${props.className ? props.className : ''} image-loader bg-img`;
+	if(props.src) {
+		return (<div className={classes}>image loader</div>);
+	}
 }
 
 export default ImageLoader;

@@ -3,10 +3,9 @@ import {
 	Route, 
 	Link 
 } from 'react-router-dom';
+import ImageLoader from '../../components/ImageLoader/ImageLoader';
+
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-// libraries
-// import BackgroundImage from 'react-background-image-loader';
-// css
 import './ProjectList.css';
 
 const PROJECTS = [
@@ -287,11 +286,7 @@ class ProjectDetail extends React.Component {
 		return(
 			<div className="ProjectDetail padded-width">
 				<h3 className="title">{project.name}</h3>
-				{/*
-					<BackgroundImage className="project-detail-cover" src={project.coverImg} placeholder={localImage} />
-					!!! replace this with your own ImageLoader component (takes bg img src + CSS spinner animation)
-				*/}
-				<div className="project-detail-cover" src={project.coverImg} placeholder={localImage}></div>
+				<ImageLoader className="project-detail-cover" src={project.coverImg} placeholder={localImage}/>
 
 				<section className="project-screenshots">
 
@@ -366,24 +361,6 @@ class ProjectDetail extends React.Component {
 	}
 }
 
-// const ProjectListItem = (props) => {
-// 	let style = {
-// 		backgroundImage: 'url(' + props.project.coverImg + ')'
-// 	}
-// 	let navStyle = props._projectNavStyle_isList ? 'list-style' : 'box-style';
-// 	let classes = `${navStyle} ProjectListItem`;
-
-// 	return (
-// 		<div className={classes} onClick={props.handleClick} >
-// 			<div className="bg-img" style={style}></div>
-// 			<div className="text monospace">
-// 				<h4 className="project-name">{props.project.name}</h4>
-// 				<p className="project-type">{props.project.projectType}</p>
-// 			</div>
-// 		</div>
-// 	);
-// }
-
 const ProjectListItem = (props) => {
 	let navStyle = props._projectNavStyle_isList ? 'list-style' : 'box-style';
 	let classes = `${navStyle} ProjectListItem`;
@@ -391,13 +368,7 @@ const ProjectListItem = (props) => {
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
-			{/*
-				<BackgroundImage className="bg-img" src={props.project.coverImg} placeholder={localImage} />
-				!!! replace this with your own ImageLoader component (takes bg img src + CSS spinner animation)
-			*/}
-			<div className="bg-img" src={props.project.coverImg} placeholder={localImage}></div>
-
-
+			<ImageLoader src={props.project.coverImg} placeholder={localImage}/>
 			<div className="text monospace">
 				<h4 className="project-name">{props.project.name}</h4>
 				<p className="project-type">{props.project.projectType}</p>
@@ -453,35 +424,3 @@ const ProjectList = (props) => {
 }
 
 export default ProjectList;
-
-/*
-class SlideExample extends React.Component{
-    constructor(props) {
-        super(props);
-        console.log(props)
-    }
-    render() {
-        return <div>
-            <p onClick={this.props._toggleProjectNav}>{this.props._isProjectNavOpen  ? 'Slide up' : 'Slide down'}</p>
-            <ReactCSSTransitionGroup 
-            	transitionName="example"
-            	transitionEnterTimeout={500}
-            	transitionLeaveTimeout={250}
-            >
-				{ this.props._isProjectNavOpen 
-					? <ul className="project-list">
-						{ PROJECTS.map((project, index) => 
-						<li key={index} >
-							 <Link to={this.props.match.url + '/' + project.url} >
-								<ProjectListItem project={project} handleClick={this.props._toggleProjectNav} _toggleProjectNav={this.props._toggleProjectNav} _projectNavStyle_isList={this.props._projectNavStyle_isList}/>
-							</Link>
-						</li>
-						) }
-					</ul>
-					: null
-				}
-            </ReactCSSTransitionGroup>
-        </div>
-    }
-}
-*/

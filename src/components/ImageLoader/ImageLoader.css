@@ -284,6 +284,9 @@ select:-webkit-autofill:focus {
   background-size: cover;
   background-position: center; }
 
+.image-loader {
+  background: #333; }
+
 .loader,
 .loader:after {
   border-radius: 50%;
