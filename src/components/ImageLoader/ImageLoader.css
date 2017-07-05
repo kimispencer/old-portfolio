@@ -268,7 +268,7 @@ select:-webkit-autofill:focus {
     width: 100%; } }
 
 .grey {
-  color: grey; }
+  color: #333; }
 
 /*
 	* base for all background images
@@ -299,7 +299,7 @@ select:-webkit-autofill:focus {
   border-top: 5px solid rgba(255, 255, 255, 0);
   border-right: 5px solid rgba(255, 255, 255, 0);
   border-bottom: 5px solid rgba(255, 255, 255, 0);
-  border-left: 5px solid red;
+  border-left: 5px #333;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
