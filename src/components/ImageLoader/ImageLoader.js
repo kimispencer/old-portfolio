@@ -6,18 +6,46 @@
 import React from 'react';
 import './ImageLoader.css';
 
-const ImageLoader = (props) => {
-	console.log(props)
-
-	let classes = `${props.className ? props.className : ''} image-loader bg-img`;
-	let style = {
-		backgroundImage: 'url(' + props.src + ')'
+class ImageLoader extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { 
+			imageStatus: 'loading',
+			loaded: false
+		};
 	}
-	return (
-		<div className={classes} style={style}>
-			<div className="spinner"></div>
-		</div>
-	);
-}
+ 
+	handleImageLoaded() {
+		this.setState({ 
+			imageStatus: 'loaded',
+			loaded: true
+		});
 
+	}
+
+	handleImageErrored() {
+		this.setState({ 
+			imageStatus: 'failed to load',
+			loaded: false
+		 });
+	}
+
+	render() {
+		let classes = `${this.props.className ? this.props.className : ''} image-loader bg-img`;
+		return (
+			<div className={classes} style={ {backgroundImage: 'url(' + this.props.src + ')'} }>
+				<img
+					style={ {display: 'none'} }
+					src={this.props.src}
+					onLoad={this.handleImageLoaded.bind(this)}
+					onError={this.handleImageErrored.bind(this)}
+				/>
+				<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
+					<div className="spinner"></div>
+				</div>
+				{this.state.imageStatus}
+			</div>
+		);
+	}
+}
 export default ImageLoader;

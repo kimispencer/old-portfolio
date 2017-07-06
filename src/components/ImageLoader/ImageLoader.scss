@@ -3,6 +3,15 @@
 .image-loader {
 	@include flexbox-center(column);
 }
+.spinner-container {
+	@include flexbox-center(column);
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	&.loaded {
+		display: none;
+	}
+}
 .spinner,
 .spinner:after {
 	border-radius: 50%;
