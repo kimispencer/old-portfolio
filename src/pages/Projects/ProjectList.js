@@ -281,12 +281,11 @@ class ProjectDetail extends React.Component {
 		let project = PROJECTS.filter(function (p) {
 		    return p.url === match;
 		})[0];
-		const localImage = '/spin.gif';
 
 		return(
 			<div className="ProjectDetail padded-width">
 				<h3 className="title">{project.name}</h3>
-				<ImageLoader className="project-detail-cover" src={project.coverImg} placeholder={localImage}/>
+				<ImageLoader className="project-detail-cover" src={project.coverImg} />
 
 				<section className="project-screenshots">
 
@@ -364,11 +363,10 @@ class ProjectDetail extends React.Component {
 const ProjectListItem = (props) => {
 	let navStyle = props._projectNavStyle_isList ? 'list-style' : 'box-style';
 	let classes = `${navStyle} ProjectListItem`;
-	const localImage = '/spin.gif';
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
-			<ImageLoader src={props.project.coverImg} placeholder={localImage}/>
+			<ImageLoader src={props.project.coverImg} />
 			<div className="text monospace">
 				<h4 className="project-name">{props.project.name}</h4>
 				<p className="project-type">{props.project.projectType}</p>
