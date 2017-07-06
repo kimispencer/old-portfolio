@@ -325,10 +325,11 @@ select:-webkit-autofill:focus {
   -ms-flex-pack: center;
   height: 100%;
   width: 100%;
-  background-color: red; }
+  opacity: 1;
+  transition: all 350ms ease; }
 
 .spinner-container.loaded {
-  display: none; }
+  opacity: 0; }
 
 .spinner,
 .spinner:after {

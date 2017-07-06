@@ -7,9 +7,10 @@
 	@include flexbox-center(column);
 	height: 100%;
 	width: 100%;
-	background-color: red;
+	opacity: 1;
+	transition: all $transition_speed ease;
 	&.loaded {
-		display: none;
+		opacity: 0;
 	}
 }
 .spinner,
