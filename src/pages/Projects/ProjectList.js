@@ -14,18 +14,32 @@ const PROJECTS = [
 		name: "The Arrivals NYC", 
 		coverImg: "http://kimispencer.com/assets/portfolio/thearrivals/thearrivals.png",
 		siteUrl: 'http://thearrivals.com',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Responsive Ecommerce/Fashion website',
 		projectRole: [
 			'Lead Front-end developer',
 			'Lead UX designer',
+			'Code conversion into ReactJS & ES6',
 			'Responsive web design',
-			'CMS backend integration',
+			'Headless CMS integration with Prismic.io',
 			'Weekly interactive site campaigns'
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
+		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
+		url: 'kimispencer', 
+		name: "Portfolio", 
+		coverImg: "https://unsplash.it/1205/580",
+		projectType: 'ReactJS portfolio site',
+		projectRole: [
+			'Full-stack developer',
+			'Visual & UX designer',
+			'Responsive web design',
+		],
+		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, SASS/CSS3, Sketch, Git',
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+	},
+	{ 
 		url: 'suited', 
 		name: "Suited Magazine", 
 		coverImg: "http://kimispencer.com/assets/portfolio/suited/suited-00.png",
@@ -38,20 +52,7 @@ const PROJECTS = [
 			'Responsive web design',
 			'CMS backend integration',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
-	},
-	{
-		url: 'kimispencer', 
-		name: "Portfolio", 
-		coverImg: "https://unsplash.it/1205/580",
-		projectType: 'ReactJS portfolio site',
-		projectRole: [
-			'Lead Front-end developer',
-			'Lead Visual & UX designer',
-			'Responsive web design',
-		],
-		technologyUsed: 'ReactJS, HTML5, CSS3/SASS, Webpack, Sketch, Git',
+		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 	},
 	{
@@ -59,7 +60,7 @@ const PROJECTS = [
 		name: "Onomie", 
 		coverImg: "http://kimispencer.com/assets/portfolio/onomie/onomie-00.png",
 		siteUrl: 'http://onomie.com',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Responsive Ecommerce/Beauty website',
 		projectRole: [
 			'Lead Front-end developer',
 			'Lead UX designer',
@@ -67,7 +68,7 @@ const PROJECTS = [
 			'CMS backend integration',
 			'Monthly interactive site campaigns'
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
+		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -76,14 +77,14 @@ const PROJECTS = [
 		name: "Brainchild.Co",  
 		coverImg: "http://kimispencer.com/assets/portfolio/brainchild/brainchild-00.png",
 		siteUrl: 'http://brainchild.co',
-		projectType: 'Corporate Portfolio website',
+		projectType: 'Company Portfolio website',
 		projectRole: [
 			'Lead Front-end developer',
 			'Lead Visual & UX designer',
 			'Responsive web design',
 			'CMS backend integration',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Gulp, Ajax, Django, Python, Photoshop, Sketch, Git',
+		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, Django, Python, Photoshop, Sketch, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -97,7 +98,7 @@ const PROJECTS = [
 			'Front-end developer',
 			'Visual & UX designer',
 		],
-		technologyUsed: 'AngularJS, HTML5, CSS3/LESS, jQUERY, Grunt, Ajax, PHP, Photoshop, Git',
+		technologyUsed: 'AngularJS, HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
@@ -108,12 +109,12 @@ const PROJECTS = [
 		siteUrl: 'http://officialcreep.com',
 		projectType: 'Official Band site',
 		projectRole: [
-			'Lead Front-end developer',
+			'Lead Full-stack developer',
 			'Lead Visual & UX designer',
 			'Responsive web design',
 			'CMS backend integration',
 		],
-		technologyUsed: 'HTML5, CSS3/LESS, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
+		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.',
 		projectImgs: [
 			'http://kimispencer.com/assets/portfolio/creep/echoes.jpg',
@@ -127,10 +128,10 @@ const PROJECTS = [
 		name: "Plusign",  
 		coverImg: "https://unsplash.it/1210/450",
 		siteUrl: 'http://plusign.com',
-		projectType: 'Digital Agency portfolio site + Client Projects',
+		projectType: 'Digital Agency web applications',
 		projectRole: [
 			'Front-end developer',
-			'Visual & UXdesigner',
+			'Visual & UX designer',
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Photoshop, Illustrator, Java/Processing',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
@@ -141,7 +142,7 @@ const PROJECTS = [
 		name: "Tom Tom Magazine",  
 		coverImg: "https://unsplash.it/1220/350",
 		siteUrl: 'http://tomtommag.com',
-		projectType: 'Responsive Ecommerce website',
+		projectType: 'Responsive Ecommerce/Music Publication website',
 		projectRole: [
 			'Custom Shopify template design & development',
 			'Front-end development',
@@ -325,12 +326,14 @@ class ProjectDetail extends React.Component {
 						<p>{project.intro}</p>
 						<br />
 						<p>{project.intro}</p>
+						<ul className="project-image-list">
 						{project.projectImgs 
 							? project.projectImgs.map((img, index) => 
-								<img src={img} key={index} role="presentation" />
+								<ImageLoader className="project-image" src={img} key={index} />
 							)
 							: null
 						}
+						</ul>
 					</div>
 					<div className="text quarter-span" id="ProjectSkillsList">
 						<div className="flex-col">

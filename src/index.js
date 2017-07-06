@@ -1,3 +1,8 @@
+/*
+	* kimispencer.com
+	* July 6, 2017
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

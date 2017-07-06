@@ -128,6 +128,13 @@ $project_tile_height: 350px;
 			margin-top: $gutter;
 		}
 	}
+	.project-image-list {
+		.project-image {
+			height: 400px;
+			width: 100%;
+			margin-top: $gutter;
+		}
+	}
 }
 
 /* 640px or bigger */
