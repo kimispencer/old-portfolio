@@ -262,18 +262,78 @@ select:-webkit-autofill:focus {
 .grey {
   color: grey; }
 
-html {
-  height: 100%; }
+/* !!! not using modular scale */
+@font-face {
+  font-family: 'Roboto';
+  src: url("./fonts/roboto/Roboto-Regular.ttf"); }
 
-.App {
-  /*min-height: 100vh;*/
-  position: relative;
-  margin: 0;
-  padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    /* CSS on the component level */ }
+@font-face {
+  font-family: 'RobotoBold';
+  src: url("./fonts/roboto/Roboto-Bold.ttf"); }
+
+.serif {
+  font-family: 'Libre Baskerville', serif; }
+
+.monospace {
+  font-family: monospace; }
+  .monospace p {
+    font-size: 1.1em; }
+
+p.monospace {
+  font-size: 1.1em; }
+
+html {
+  font-size: 1em; }
+
+body {
+  background-color: white;
+  /*font-family: 'Libre Baskerville', serif;*/
+  font-family: Roboto, Helvetica, Arial, Sans-Serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+/*p {margin-bottom: 1.3em;}*/
+h1, h2, h3, h4 {
+  /*margin: 1.414em 0 0.5em;*/
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em; }
+
+h2 {
+  font-size: 2.827em; }
+
+h3 {
+  font-size: 1.999em; }
+
+h4 {
+  font-size: 1.414em; }
+
+small, .font_small {
+  font-size: 0.707em; }
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.center {
+  text-align: center; }
+
+.text.center h1, .text.center h2, .text.center h3, .text.center h4, .text.center p, .text.center small, .text.center .title, .text-container.center h1, .text-container.center h2, .text-container.center h3, .text-container.center h4, .text-container.center p, .text-container.center small, .text-container.center .title {
+  text-align: center; }
+
+.text.left h1, .text.left h2, .text.left h3, .text.left h4, .text.left p, .text.left small, .text.left .title, .text-container.left h1, .text-container.left h2, .text-container.left h3, .text-container.left h4, .text-container.left p, .text-container.left small, .text-container.left .title {
+  text-align: left; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.bold {
+  /*font-weight: bold;*/
+  font-family: 'RobotoBold'; }
+
+.underline {
+  text-decoration: underline; }

@@ -262,18 +262,13 @@ select:-webkit-autofill:focus {
 .grey {
   color: grey; }
 
-html {
-  height: 100%; }
+.Contact #ContactForm {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  margin-top: 20px; }
 
-.App {
-  /*min-height: 100vh;*/
-  position: relative;
-  margin: 0;
-  padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    /* CSS on the component level */ }
+/* 640px or bigger */
+/* 769px or smaller */

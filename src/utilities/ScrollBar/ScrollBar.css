@@ -262,18 +262,31 @@ select:-webkit-autofill:focus {
 .grey {
   color: grey; }
 
-html {
-  height: 100%; }
-
-.App {
-  /*min-height: 100vh;*/
-  position: relative;
-  margin: 0;
-  padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    /* CSS on the component level */ }
+/*
+	scroll progress bar
+*/
+#ScrollProgress {
+  height: 5px;
+  width: 100%;
+  color: blue;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  /* Reset the appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+  /* Progress bar container for Firefox/IE10+ */
+  background-color: transparent;
+  /* Progress bar value for IE10+ */
+  color: red; }
+  #ScrollProgress::-webkit-progress-bar {
+    background-color: transparent; }
+  #ScrollProgress::-webkit-progress-value {
+    background-color: red; }
+  #ScrollProgress::-moz-progress-bar {
+    background-color: red; }

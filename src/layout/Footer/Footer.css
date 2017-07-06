@@ -262,18 +262,20 @@ select:-webkit-autofill:focus {
 .grey {
   color: grey; }
 
-html {
-  height: 100%; }
-
-.App {
-  /*min-height: 100vh;*/
-  position: relative;
-  margin: 0;
-  padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    /* CSS on the component level */ }
+.Footer {
+  border-top: 2px solid #f3f3f3;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  color: black;
+  text-align: center;
+  min-height: 100px;
+  height: auto; }
+  .Footer #Hello {
+    padding-top: 40px; }
+  .Footer #SocialMediaList {
+    margin-top: 40px; }
+    .Footer #SocialMediaList li {
+      margin-top: 10px; }

@@ -1,0 +1,98 @@
+@import '../../styles/_all';
+
+.Nav {
+	z-index: $top;
+	@include transition(all $transition_speed ease);
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	#Logo {
+		position: fixed;
+	}
+	ul {
+		@include flexbox();
+		li {
+			margin: 10px;
+			display: inline;
+			letter-spacing: 0.2em;
+		}
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.NavTrigger {
+		display: none;
+	}
+	.Nav {
+		height: $fixed_nav_height;
+		width: 100vw;
+		border-bottom: 1px solid lightgrey;
+		@include flexbox-center(row);
+		@include justify-content(flex-end);
+
+		#Logo {
+			top: $gutter/2;
+			left: $gutter;
+		}
+		ul {
+			@include flex-flow(row);
+			@include justify-content(flex-end);
+			padding: 0;
+			margin: 0 $gutter;
+			li {
+				margin: 10px;
+				display: inline;
+			}
+		}
+	}
+}
+
+/* 769px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.Nav {
+		z-index: $ultimate_top;
+	}
+	.NavTrigger {
+		@include transform(rotate(90deg));
+		display: block;
+		padding: $gutter/2;
+		cursor: pointer;
+		position: fixed;
+		top: 0;
+		right: 0;
+		text-shadow: white 1px 0px 0px;
+		h1 {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+	.Nav {
+		height: 100vh;
+		width: $slideout_nav_width;
+		max-width: 70vw;
+		background-color: $matte_black;
+		color: white;
+		&.open {
+			@include transform(translate3d(0vw, 0, 0));
+		}
+		&.closed {
+			@include transform(translate3d(-$slideout_nav_width, 0, 0));
+		}
+		#Logo {
+			left: $gutter*2;
+			bottom: $gutter;
+		}
+		ul {
+			@include flex-flow(column);
+			padding: $gutter;
+			margin: 0;
+			li {
+				margin: 10px;
+				display: block;
+				p {color: white; }
+			}
+		}
+	}
+}

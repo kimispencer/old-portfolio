@@ -1,0 +1,165 @@
+@import '../../styles/_all';
+
+$project_tile_width: 560px;
+$project_tile_height: 350px;
+
+.ProjectList {
+	#PageTitle {
+		padding-top: $gutter;
+	}
+	#Menu {
+		@include clickable();
+		padding: 0;
+	}
+	ul.project-list {
+		@include flexbox();
+	}
+}
+.ProjectListItem {
+	cursor: pointer;
+	max-width: 100vw;
+	&.list-style {
+		display: block;
+		height: auto;
+		width: auto;
+		.bg-img {
+			background-image: none !important;
+		}
+		.text {
+			.project-name {
+				font-size: 1em;
+			}
+			.project-type {
+				display: none;
+			}
+		}
+	}
+	&.box-style {
+		@include flexbox-center(column);
+		width: $project_tile_width;
+		height: $project_tile_height;
+		.text {
+			text-align: center;
+			margin-top: $gutter/2;
+		}
+		.bg-img {
+			height: 100%;
+			width: 100%;
+			background-color: lightgrey;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+	}
+	.text {
+	}
+}
+.ProjectDetail {
+	@include flexbox-center(column);
+	margin-bottom: $gutter;
+	img {
+		width: 100%;
+		max-width: 100vw;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: $gutter;
+	}
+	.project-detail-cover {
+		height: 400px;
+		width: 100vw;
+		background-color: lightgrey;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+	.text-container {
+		/*@include border(blue);*/
+		@include align-items(flex-start);
+		@include justify-content(center);
+
+		.button {
+			margin-top: $gutter;
+		}
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.ProjectList {
+		#Menu {
+			display: none;
+			padding-top: $gutter;
+		}
+		ul.project-list {
+			padding-top: $gutter;
+			padding-bottom: $gutter;
+			@include flex-flow(row);
+			@include flex-wrap(wrap);
+			@include justify-content(center);
+			li {
+				.ProjectListItem {
+					&.list-style {
+						.text {
+							.project-name { 
+								border-right: 1px solid black; 
+								padding: 0 $gutter;
+							}
+						}
+					}
+				}
+				&:last-child {
+					.ProjectListItem {
+						&.list-style {
+							.text {
+								.project-name { border-right: none; }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.ProjectListItem {
+		padding: $gutter/4 0;
+		&.box-style {
+			margin: $gutter/2;
+		}
+	}
+	.ProjectDetail {
+		.text-container {
+			.text {
+				&#ProjectDescription {
+					/*width: 75%;*/
+					margin-right: $gutter;
+				}
+				&#ProjectSkillsList {
+					/*width: 25%;*/
+					margin-left: $gutter;
+				}
+			}
+		}
+	}
+}
+
+/* 769px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.ProjectList {
+		#Menu {
+			@include clickable();
+		}
+		ul.project-list {
+			@include flexbox-center(column);
+		}
+	}
+	.ProjectListItem {
+		&.list-style {
+			.text {
+				margin-top: $gutter/2;
+			}
+		}
+		&.box-style {
+			margin-bottom: $gutter;
+			.text {
+				padding: $gutter/4;
+			}
+		}
+	}
+}

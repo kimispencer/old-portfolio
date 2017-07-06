@@ -262,18 +262,22 @@ select:-webkit-autofill:focus {
 .grey {
   color: grey; }
 
-html {
-  height: 100%; }
+.Shroud {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 350ms ease; }
+  .Shroud.show {
+    opacity: 1;
+    display: block; }
+  .Shroud.hide {
+    opacity: 0;
+    display: none; }
 
-.App {
-  /*min-height: 100vh;*/
-  position: relative;
-  margin: 0;
-  padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    /* CSS on the component level */ }
+@media only screen and (min-width: 769px) {
+  .Shroud {
+    display: none !important; } }

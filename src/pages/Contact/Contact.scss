@@ -1,0 +1,20 @@
+@import '../../styles/_all';
+
+.Contact {
+	#ContactForm {
+		@include justify-content(center);
+		margin-top: $gutter;
+	}
+}
+
+/* 640px or bigger */
+@media only screen and (min-width : $breakpoint) {
+	.Contact {
+	}
+}
+
+/* 769px or smaller */
+@media only screen and (max-width : $breakpoint) {
+	.Contact {
+	}
+}
