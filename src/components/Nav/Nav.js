@@ -2,7 +2,6 @@ import React from 'react';
 import {
 	Link
 } from 'react-router-dom';
-import {Mobile,Tablet} from '../../components/Responsive/Responsive';
 
 import './Nav.css';
 
@@ -29,9 +28,7 @@ const Nav = (props) => {
 
 	return (
 		<div>
-			<Tablet>
-				<NavTrigger _toggleNav={props._toggleNav} />
-			</Tablet>
+			<NavTrigger _toggleNav={props._toggleNav} />
 			<div className={cssClasses}>
 				<ul>
 					<li><Link to="/" onClick={handle_navClick}><small className="uppercase">Home</small></Link></li>

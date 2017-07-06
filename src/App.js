@@ -27,8 +27,10 @@ class App extends Component {
 			_isNavOpen: false,
 			_isProjectNavOpen: true,
 			_projectNavStyle_isList: false,
+			width: null,
+			height: null
 		}
-
+		this._updateDimensions = this._updateDimensions.bind(this);
 		this._toggleNav = this._toggleNav.bind(this);
 		this._toggleProjectNav = this._toggleProjectNav.bind(this);
 		this._toggleProjectNavStyle = this._toggleProjectNavStyle.bind(this);
@@ -40,12 +42,16 @@ class App extends Component {
 		/* testing */
 		this._sayHi = this._sayHi.bind(this);
 	}
+	componentWillMount() {
+		this._updateDimensions();
+	}
 	/* 
 		* componentDidMount() is invoked immediately after a component is mounted. Initialization that requires DOM nodes should go here. 
 		* If you need to load data from a remote endpoint, this is a good place to instantiate the network request. 
 		* Setting state in this method will trigger a re-rendering.
 	*/
 	componentDidMount() {
+		window.addEventListener("resize", this._updateDimensions);
 	}
 	/*
 		* componentDidUpdate() is invoked immediately after updating occurs. This method is not called for the initial render.
@@ -61,8 +67,18 @@ class App extends Component {
 		* DOM elements that were created in componentDidMount
 	*/
 	componentWillUnmount() {
+		window.removeEventListener("resize", this._updateDimensions);
 	}
+    _updateDimensions() {
+		var w = window,
+			d = document,
+			documentElement = d.documentElement,
+			body = d.getElementsByTagName('body')[0],
+			width = w.innerWidth || documentElement.clientWidth || body.clientWidth,
+			height = w.innerHeight|| documentElement.clientHeight|| body.clientHeight;
 
+			this.setState({width: width, height: height});
+    }
 	_smoothScroll(loc) {
 		smoothScroll(loc);
 	}
@@ -103,6 +119,7 @@ class App extends Component {
 			_projectNavStyle_isList: true,
 		}));
 
+console.log()
 // !!! NOTE -- use react-responsive and make this a global var
 		let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		/* breakpoint 769px */
