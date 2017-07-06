@@ -309,3 +309,7 @@ select:-webkit-autofill:focus {
 
 #ScrollProgress::-moz-progress-bar {
   background-color: red; }
+ress::-webkit-progress-value {
+    background-color: red; }
+  #ScrollProgress::-moz-progress-bar {
+    background-color: red; }

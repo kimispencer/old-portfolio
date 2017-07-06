@@ -299,3 +299,9 @@ select:-webkit-autofill:focus {
 @media only screen and (min-width: 1025px) {
   .Shroud {
     display: none !important; } }
+    opacity: 0;
+    display: none; }
+
+@media only screen and (min-width: 1025px) {
+  .Shroud {
+    display: none !important; } }

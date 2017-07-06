@@ -298,3 +298,8 @@ select:-webkit-autofill:focus {
 
 .Footer #SocialMediaList li {
   margin-top: 10px; }
+dding-top: 40px; }
+  .Footer #SocialMediaList {
+    margin-top: 40px; }
+    .Footer #SocialMediaList li {
+      margin-top: 10px; }

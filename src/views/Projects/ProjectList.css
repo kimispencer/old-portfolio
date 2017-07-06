@@ -514,3 +514,14 @@ select:-webkit-autofill:focus {
     margin-bottom: 20px; }
   .ProjectListItem.box-style .text {
     padding: 5px; } }
+-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+  .ProjectListItem.list-style .text {
+    margin-top: 10px; }
+  .ProjectListItem.box-style {
+    margin-bottom: 20px; }
+    .ProjectListItem.box-style .text {
+      padding: 5px; } }
