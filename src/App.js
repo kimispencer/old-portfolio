@@ -7,16 +7,16 @@ import {
 import smoothScroll from 'smoothscroll';
 
 // components
-import Nav from './layout/Nav/Nav';
-import Footer from './layout/Footer/Footer';
+import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer';
 
 import ScrollBar from './components/ScrollBar/ScrollBar';
 import Shroud from './components/Shroud/Shroud';
 
-import Home from './pages/Home/Home';
-import ProjectList from './pages/Projects/ProjectList';
-import Resume from './pages/Resume/Resume';
-import Contact from './pages/Contact/Contact';
+import Home from './views/Home/Home';
+import ProjectList from './views/Projects/ProjectList';
+import Resume from './views/Resume/Resume';
+import Contact from './views/Contact/Contact';
 // css
 import './App.css';
 
