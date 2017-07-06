@@ -308,8 +308,8 @@ select:-webkit-autofill:focus {
   .NavTrigger {
     display: none; }
   .Nav {
-    height: 60px;
     width: 100vw;
+    height: 60px;
     border-bottom: 1px solid lightgrey;
     display: -webkit-box;
     display: -moz-box;

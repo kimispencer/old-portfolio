@@ -20,17 +20,16 @@
 	}
 }
 
-@media #{$desktop} {
+@media #{$desktop} {	
 	.NavTrigger {
 		display: none;
 	}
 	.Nav {
-		height: $fixed_nav_height;
 		width: 100vw;
+		height: $fixed_nav_height;
 		border-bottom: 1px solid lightgrey;
 		@include flexbox-center(row);
 		@include justify-content(flex-end);
-
 		#Logo {
 			top: $gutter/2;
 			left: $gutter;
