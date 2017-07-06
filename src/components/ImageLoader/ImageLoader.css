@@ -302,7 +302,8 @@ select:-webkit-autofill:focus {
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center; }
+  -ms-flex-pack: center;
+  z-index: -1; }
 
 .spinner-container {
   display: -webkit-box;
@@ -340,7 +341,6 @@ select:-webkit-autofill:focus {
 
 .spinner {
   margin: 0px auto;
-  z-index: 999999999;
   border-top: 5px solid #333;
   border-right: 5px solid rgba(255, 255, 255, 0);
   border-bottom: 5px solid rgba(255, 255, 255, 0);
