@@ -379,15 +379,15 @@ const ProjectListItem = (props) => {
 
 const ProjectList = (props) => {
 	const _handleProjectNavClick = () => {
-		props._toggleProjectNav();
 		window.scrollTo(0, 0);
+		props._handleProjectDetailLanding();
 	}
 
 	return(
 		<div className="ProjectList">
 
 			{ /*props._projectNavStyle_isList 
-				? <Link to={props.match.url} onClick={props._handleProjectLanding}>
+				? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
 					<h4 className="title center" id="PageTitle">Projects</h4>
 				</Link>
 				: null
@@ -405,7 +405,10 @@ const ProjectList = (props) => {
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem project={project} handleClick={_handleProjectNavClick} _toggleProjectNav={props._toggleProjectNav} _projectNavStyle_isList={props._projectNavStyle_isList}/>
+							<ProjectListItem 
+								project={project} 
+								handleClick={_handleProjectNavClick} 
+								_projectNavStyle_isList={props._projectNavStyle_isList}/>
 						</Link>
 					</li>
 					) }
