@@ -11,8 +11,7 @@
 	}
 }
 
-/* 640px or bigger */
-@media only screen and (min-width : $breakpoint) {
+@media #{$desktop} {
 	.Home {
 		.home-container {
 			svg {
@@ -24,8 +23,7 @@
 	}
 }
 
-/* 769px or smaller */
-@media only screen and (max-width : $breakpoint) {
+@media #{$tablet} {
 	.Home {
 		.home-container {
 			text-align: center;

@@ -19,7 +19,7 @@
 	}
 }
 
-@media only screen and (min-width : $breakpoint) {
+@media #{$desktop} {
 	.Shroud {
 		display: none !important;
 	}

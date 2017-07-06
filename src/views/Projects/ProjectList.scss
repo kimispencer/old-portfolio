@@ -137,8 +137,7 @@ $project_tile_height: 350px;
 	}
 }
 
-/* 640px or bigger */
-@media only screen and (min-width : $breakpoint) {
+@media #{$desktop} {
 	.ProjectList {
 		#Menu {
 			display: none;
@@ -195,8 +194,7 @@ $project_tile_height: 350px;
 	}
 }
 
-/* 769px or smaller */
-@media only screen and (max-width : $breakpoint) {
+@media #{$tablet} {
 	.ProjectList {
 		#Menu {
 			@include clickable();

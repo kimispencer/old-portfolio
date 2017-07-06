@@ -20,8 +20,7 @@
 	}
 }
 
-/* 640px or bigger */
-@media only screen and (min-width : $breakpoint) {
+@media #{$desktop} {
 	.NavTrigger {
 		display: none;
 	}
@@ -49,8 +48,7 @@
 	}
 }
 
-/* 769px or smaller */
-@media only screen and (max-width : $breakpoint) {
+@media #{$tablet} {
 	.Nav {
 		z-index: $ultimate_top;
 	}

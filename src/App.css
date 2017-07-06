@@ -1,4 +1,3 @@
-/* breakpoints */
 /* base units */
 /* z-index */
 /* transitions */
@@ -37,18 +36,17 @@
 .flex-row .three-quarter-span {
   width: 75%; }
 
-/* 769px or smaller */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .flex-row.responsive {
     -webkit-flex-flow: column;
     -moz-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
-    .flex-row.responsive .half-span {
-      height: 50%;
-      width: 100%; }
-    .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
-      width: 100%; } }
+  .flex-row.responsive .half-span {
+    height: 50%;
+    width: 100%; }
+  .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
+    width: 100%; } }
 
 /*
 	* flex cols
@@ -64,8 +62,7 @@
   -ms-flex-flow: column;
   flex-flow: column; }
 
-/* 769px or smaller */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .flex-col.responsive {
     -webkit-flex-flow: row;
     -moz-flex-flow: row;
@@ -128,8 +125,7 @@
   margin-left: auto;
   margin-right: auto; }
 
-/* 769px or smaller */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   .left-col, .right-col {
     margin-right: auto;
     margin-left: auto;
@@ -139,31 +135,52 @@
     margin-left: auto;
     margin-right: auto; } }
 
+/*
+	* base for all background images
+*/
+.bg-img {
+  -webkit-transition: background-image 100ms ease-in;
+  -moz-transition: background-image 100ms ease-in;
+  -ms-transition: background-image 100ms ease-in;
+  -o-transition: background-image 100ms ease-in;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.grey {
+  color: #333; }
+
 form {
   max-width: calc(100vw - 40px); }
-  form input, form textarea {
-    color: #3c3c3c;
-    background-color: #fbfbfb;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box; }
-  form input, form textarea {
-    border: 2px solid black;
-    /*		border: 0;
+
+form input, form textarea {
+  color: #3c3c3c;
+  background-color: #fbfbfb;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+form input, form textarea {
+  border: 2px solid black;
+  /*		border: 0;
 		outline: 0;
 		background: transparent;
 		border-bottom: 3px solid black;*/ }
-  form textarea {
-    width: 100%;
-    height: 150px;
-    line-height: 150%;
-    resize: vertical; }
-  form button[type='submit'], form .button {
-    width: 100%; }
+
+form textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize: vertical; }
+
+form button[type='submit'], form .button {
+  width: 100%; }
 
 /* buttons */
 .button, button[type='submit'] {
@@ -201,41 +218,44 @@ form {
   -moz-transition: all 350ms ease;
   -ms-transition: all 350ms ease;
   -o-transition: all 350ms ease; }
-  .button:hover, button[type='submit']:hover {
-    background-color: white;
-    color: black; }
-  .button.transparent, button[type='submit'].transparent {
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-    text-decoration: underline;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    padding: 13.33333px;
-    cursor: pointer;
-    text-decoration: underline;
-    border: 2px solid black;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .button.transparent:hover, button[type='submit'].transparent:hover {
-      background-color: rgba(255, 255, 255, 0);
-      color: black; }
+
+.button:hover, button[type='submit']:hover {
+  background-color: white;
+  color: black; }
+
+.button.transparent, button[type='submit'].transparent {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 13.33333px;
+  cursor: pointer;
+  text-decoration: underline;
+  border: 2px solid black;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.button.transparent:hover, button[type='submit'].transparent:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: black; }
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -250,32 +270,13 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s; }
 
-/* 640px or bigger */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   form {
     min-width: 500px; } }
 
-/* 769px or smaller */
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1024px) {
   form {
     width: 100%; } }
-
-.grey {
-  color: #333; }
-
-/*
-	* base for all background images
-*/
-.bg-img {
-  -webkit-transition: background-image 100ms ease-in;
-  -moz-transition: background-image 100ms ease-in;
-  -ms-transition: background-image 100ms ease-in;
-  -o-transition: background-image 100ms ease-in;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
 
 html {
   height: 100%; }
@@ -285,10 +286,13 @@ html {
   position: relative;
   margin: 0;
   padding: 0; }
-  .App .Nav {
-    /* CSS on the component level */ }
-  .App .main-content {
-    min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
-  .App .Footer {
-    /* CSS on the component level */ }
+
+.App .Nav {
+  /* CSS on the component level */ }
+
+.App .main-content {
+  min-height: calc(100vh - 100px - 60px);
+  margin-top: 60px; }
+
+.App .Footer {
+  /* CSS on the component level */ }

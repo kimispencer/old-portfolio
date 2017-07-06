@@ -24,8 +24,7 @@
 	}
 }
 
-/* 769px or smaller */
-@media only screen and (max-width : $breakpoint) {
+@media #{$tablet} {
 	.flex-row {
 		&.responsive {
 			@include flex-flow(column);
@@ -47,8 +46,8 @@
 	@include flexbox();
 	@include flex-flow(column);
 }
-/* 769px or smaller */
-@media only screen and (max-width : $breakpoint) {
+
+@media #{$tablet} {
 	.flex-col {
 		&.responsive {
 			@include flex-flow(row);
@@ -82,8 +81,7 @@
 	margin-right: auto;
 }
 
-/* 769px or smaller */
-@media only screen and (max-width : $breakpoint) {
+@media #{$tablet} {
 	.left-col, .right-col {
 		margin-right: auto;
 		margin-left: auto;

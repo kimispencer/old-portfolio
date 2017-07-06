@@ -39,6 +39,7 @@ class ImageLoader extends React.Component {
 					src={this.props.src}
 					onLoad={this.handleImageLoaded.bind(this)}
 					onError={this.handleImageErrored.bind(this)}
+					role="presentation"
 				/>
 				<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
 					<div className="spinner"></div>
