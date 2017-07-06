@@ -326,7 +326,8 @@ select:-webkit-autofill:focus {
   height: 100%;
   width: 100%;
   opacity: 1;
-  transition: all 350ms ease; }
+  background: white;
+  transition: all 700ms ease; }
 
 .spinner-container.loaded {
   opacity: 0; }

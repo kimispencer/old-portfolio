@@ -8,7 +8,8 @@
 	height: 100%;
 	width: 100%;
 	opacity: 1;
-	transition: all $transition_speed ease;
+	background: white;
+	transition: all $transition_speed*2 ease;
 	&.loaded {
 		opacity: 0;
 	}

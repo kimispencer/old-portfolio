@@ -43,7 +43,7 @@ class ImageLoader extends React.Component {
 				<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
 					<div className="spinner"></div>
 				</div>
-				{this.state.imageStatus}
+				{/*this.state.imageStatus*/}
 			</div>
 		);
 	}
