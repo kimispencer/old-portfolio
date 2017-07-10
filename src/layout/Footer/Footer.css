@@ -6,6 +6,7 @@
 /* footer */
 /* colors */
 /* buttons */
+/* Calculate fluid ratio based on two dimensions (width/height) */
 /*
 	* flex rows
 */
@@ -260,7 +261,21 @@ select:-webkit-autofill:focus {
     width: 100%; } }
 
 .grey {
-  color: grey; }
+  color: #333; }
+
+/*
+	* base for all background images
+*/
+.bg-img {
+  -webkit-transition: background-image 100ms ease-in;
+  -moz-transition: background-image 100ms ease-in;
+  -ms-transition: background-image 100ms ease-in;
+  -o-transition: background-image 100ms ease-in;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .Footer {
   border-top: 2px solid #f3f3f3;

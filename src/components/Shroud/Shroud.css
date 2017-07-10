@@ -6,6 +6,7 @@
 /* footer */
 /* colors */
 /* buttons */
+/* Calculate fluid ratio based on two dimensions (width/height) */
 /*
 	* flex rows
 */
@@ -260,33 +261,38 @@ select:-webkit-autofill:focus {
     width: 100%; } }
 
 .grey {
-  color: grey; }
+  color: #333; }
 
 /*
-	scroll progress bar
+	* base for all background images
 */
-#ScrollProgress {
-  height: 5px;
+.bg-img {
+  -webkit-transition: background-image 100ms ease-in;
+  -moz-transition: background-image 100ms ease-in;
+  -ms-transition: background-image 100ms ease-in;
+  -o-transition: background-image 100ms ease-in;
+  height: 100%;
   width: 100%;
-  color: blue;
-  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.Shroud {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  /* Reset the appearance */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Get rid of the default border in Firefox/Opera. */
-  border: none;
-  /* Progress bar container for Firefox/IE10+ */
-  background-color: transparent;
-  /* Progress bar value for IE10+ */
-  color: red; }
-  #ScrollProgress::-webkit-progress-bar {
-    background-color: transparent; }
-  #ScrollProgress::-webkit-progress-value {
-    background-color: red; }
-  #ScrollProgress::-moz-progress-bar {
-    background-color: red; }
+  transition: all 350ms ease; }
+  .Shroud.show {
+    opacity: 1;
+    display: block; }
+  .Shroud.hide {
+    opacity: 0;
+    display: none; }
+
+@media only screen and (min-width: 769px) {
+  .Shroud {
+    display: none !important; } }

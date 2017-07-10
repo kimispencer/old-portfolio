@@ -22,7 +22,7 @@ const Nav = (props) => {
 	const handle_navClick_Projects = () => {
 		props._toggleNav();
 		if(!props._isProjectNavOpen) props._toggleProjectNav();
-		props._changeProjectNavStyle_toBox();
+		props._toggleProjectNavStyle_toBox();
 		window.scrollTo(0, 0);
 	}
 

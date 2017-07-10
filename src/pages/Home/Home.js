@@ -16,9 +16,12 @@ const Home = () => (
 			<div className="right-col">
 				<div className="">
 					<h2 className="title bold uppercase">Kimi Spencer</h2>
-					<h2 className="title monospace">A front-end engineer & UX designer from Brooklyn, New York, focusing on interactive experiences & responsive web apps.</h2>
+					<h2 className="title monospace">Is a designer who codes.</h2>
 					<div id="MobileSVG"></div>
-					<h4 className="title monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies ac diam non dignissim. Donec vehicula orci ultrices nunc pellentesque, ut luctus arcu condimentum.</h4>
+					<h4 className="title monospace">
+						<li>A front-end engineer & UX designer from Brooklyn, New York</li>
+						<li>Focusing on interactive experiences & responsive web apps</li>
+					</h4>
 				</div>
 			</div>
 		</div>
