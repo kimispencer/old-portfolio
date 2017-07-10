@@ -3,17 +3,30 @@
 .Home {
 	.home-container {
 		min-height: calc(100vh - #{$fixed_nav_height});
+		@include flexbox-center(column);
+		svg {
+			width: 100px;
+			height: 100px;
+		}
 	}
 }
 
 @media #{$desktop} {
 	.Home {
 		.home-container {
+			svg {
+				position: fixed;
+				top: 100px;
+				left: 100px;
+			}
 		}
 	}
 }
 
 @media #{$tablet} {
 	.Home {
+		.home-container {
+			text-align: center;
+		}
 	}
 }
