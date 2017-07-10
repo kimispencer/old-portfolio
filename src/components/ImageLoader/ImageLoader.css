@@ -112,12 +112,10 @@
 
 /* basic layouts + padded widths */
 .left-col {
-  background: pink;
   margin-right: 40px;
   width: 20%; }
 
 .right-col {
-  background: yellow;
   margin-left: 40px;
   width: 80%; }
 

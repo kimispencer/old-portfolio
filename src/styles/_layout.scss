@@ -67,12 +67,10 @@
 
 /* basic layouts + padded widths */
 .left-col {
-	background: pink;
 	margin-right: $gutter*2;
 	width: 20%;
 }
 .right-col {
-	background: yellow;
 	margin-left: $gutter*2;
 	width: 80%;
 }

@@ -42,11 +42,11 @@
     -moz-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
-    .flex-row.responsive .half-span {
-      height: 50%;
-      width: 100%; }
-    .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
-      width: 100%; } }
+  .flex-row.responsive .half-span {
+    height: 50%;
+    width: 100%; }
+  .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
+    width: 100%; } }
 
 /*
 	* flex cols
@@ -112,12 +112,10 @@
 
 /* basic layouts + padded widths */
 .left-col {
-  background: pink;
   margin-right: 40px;
   width: 20%; }
 
 .right-col {
-  background: yellow;
   margin-left: 40px;
   width: 80%; }
 
@@ -156,29 +154,33 @@
 
 form {
   max-width: calc(100vw - 40px); }
-  form input, form textarea {
-    color: #3c3c3c;
-    background-color: #fbfbfb;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box; }
-  form input, form textarea {
-    border: 2px solid black;
-    /*		border: 0;
+
+form input, form textarea {
+  color: #3c3c3c;
+  background-color: #fbfbfb;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+form input, form textarea {
+  border: 2px solid black;
+  /*		border: 0;
 		outline: 0;
 		background: transparent;
 		border-bottom: 3px solid black;*/ }
-  form textarea {
-    width: 100%;
-    height: 150px;
-    line-height: 150%;
-    resize: vertical; }
-  form button[type='submit'], form .button {
-    width: 100%; }
+
+form textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize: vertical; }
+
+form button[type='submit'], form .button {
+  width: 100%; }
 
 /* buttons */
 .button, button[type='submit'] {
@@ -216,41 +218,44 @@ form {
   -moz-transition: all 350ms ease;
   -ms-transition: all 350ms ease;
   -o-transition: all 350ms ease; }
-  .button:hover, button[type='submit']:hover {
-    background-color: white;
-    color: black; }
-  .button.transparent, button[type='submit'].transparent {
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-    text-decoration: underline;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    padding: 13.33333px;
-    cursor: pointer;
-    text-decoration: underline;
-    border: 2px solid black;
-    text-decoration: none;
-    text-transform: uppercase; }
-    .button.transparent:hover, button[type='submit'].transparent:hover {
-      background-color: rgba(255, 255, 255, 0);
-      color: black; }
+
+.button:hover, button[type='submit']:hover {
+  background-color: white;
+  color: black; }
+
+.button.transparent, button[type='submit'].transparent {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 13.33333px;
+  cursor: pointer;
+  text-decoration: underline;
+  border: 2px solid black;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.button.transparent:hover, button[type='submit'].transparent:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: black; }
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -292,21 +297,28 @@ select:-webkit-autofill:focus {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center; }
-  .Resume .resume-container .resume-section {
-    width: 100%;
-    margin-bottom: 40px; }
-    .Resume .resume-container .resume-section#Skills .skill-section {
-      width: 100%; }
-    .Resume .resume-container .resume-section .resume-section-item {
-      margin-bottom: 20px; }
-      .Resume .resume-container .resume-section .resume-section-item:last-child {
-        margin-bottom: 0; }
-      .Resume .resume-container .resume-section .resume-section-item .title.flex-row {
-        margin-bottom: 20px; }
-        .Resume .resume-container .resume-section .resume-section-item .title.flex-row .institution {
-          margin-right: 20px; }
-    .Resume .resume-container .resume-section ul li {
-      /*list-style: disc;*/ }
+
+.Resume .resume-container .resume-section {
+  width: 100%;
+  margin-bottom: 40px; }
+
+.Resume .resume-container .resume-section#Skills .skill-section {
+  width: 100%; }
+
+.Resume .resume-container .resume-section .resume-section-item {
+  margin-bottom: 20px; }
+
+.Resume .resume-container .resume-section .resume-section-item:last-child {
+  margin-bottom: 0; }
+
+.Resume .resume-container .resume-section .resume-section-item .title.flex-row {
+  margin-bottom: 20px; }
+
+.Resume .resume-container .resume-section .resume-section-item .title.flex-row .institution {
+  margin-right: 20px; }
+
+.Resume .resume-container .resume-section ul li {
+  /*list-style: disc;*/ }
 
 @media only screen and (min-width: 1025px) {
   .Resume .resume-container .resume-section {
@@ -332,14 +344,14 @@ select:-webkit-autofill:focus {
     -moz-align-items: flex-start;
     -ms-align-items: flex-start;
     align-items: flex-start; }
-    .Resume .resume-container .resume-section#Skills .resume-section-item {
-      margin-right: 20px; }
-      .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
-        margin-right: 0; }
-      .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
-        margin-right: 20px; }
-        .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
-          margin-right: 0; } }
+  .Resume .resume-container .resume-section#Skills .resume-section-item {
+    margin-right: 20px; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
+    margin-right: 0; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
+    margin-right: 20px; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
+    margin-right: 0; } }
 
 @media only screen and (max-width: 1024px) {
   .Resume .resume-container .resume-section {
@@ -361,17 +373,17 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-    .Resume .resume-container .resume-section#Skills .resume-section-item {
-      margin-bottom: 20px; }
-      .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
-        margin-bottom: 0; }
-      .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
-        margin-right: 40px; }
-        .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
-          margin-right: 0; }
-      .Resume .resume-container .resume-section#Skills .resume-section-item .title {
-        margin-top: 0; }
-    .Resume .resume-container .resume-section .resume-section-item .title {
-      margin-top: 0; }
-    .Resume .resume-container .resume-section .resume-section-item .institution {
-      margin-bottom: 10px; } }
+  .Resume .resume-container .resume-section#Skills .resume-section-item {
+    margin-bottom: 20px; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item:last-child {
+    margin-bottom: 0; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul {
+    margin-right: 40px; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item#Skillset ul:last-child {
+    margin-right: 0; }
+  .Resume .resume-container .resume-section#Skills .resume-section-item .title {
+    margin-top: 0; }
+  .Resume .resume-container .resume-section .resume-section-item .title {
+    margin-top: 0; }
+  .Resume .resume-container .resume-section .resume-section-item .institution {
+    margin-bottom: 10px; } }
