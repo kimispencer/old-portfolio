@@ -149,6 +149,9 @@
   background-size: cover;
   background-position: center; }
 
+.circle-img {
+  border-radius: 50%; }
+
 .grey {
   color: #333; }
 
