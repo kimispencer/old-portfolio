@@ -2,6 +2,8 @@ import React from 'react';
 
 import './Resume.css';
 
+const img = require('./profile.jpg');
+
 const Resume = () => (	
 	<div className="Resume">
 
@@ -14,7 +16,7 @@ const Resume = () => (
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
 						{/* change this to use local assetss once you figure out how to change webpack.config*/}
-						<img id="ProfilePic" className="circle-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAisAAAAJDVmNmFiNjQzLWU5N2EtNGRhMi1hM2M1LTE3ZTI4ZTVkNTJhYg.jpg"/>
+						<img id="ProfilePic" className="circle-img" src={img} />
 					</div>
 				</div>
 			</div>
