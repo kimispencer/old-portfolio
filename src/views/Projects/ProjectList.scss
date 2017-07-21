@@ -130,6 +130,8 @@ $project_tile_height: 350px;
 	}
 	.project-image-list {
 		.project-image {
+			border: 1px dashed red;
+			background-size: contain;
 			height: 400px;
 			width: 100%;
 			margin-top: $gutter;

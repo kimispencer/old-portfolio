@@ -38,8 +38,11 @@ export default  [
 		name: "Suited Magazine", 
 		coverImg: "http://kimispencer.com/assets/portfolio/suited/suited-00.png",
 		imgKey: 'suited',
+		projectImgs: [
+			'00.png', '01.png', '02.png'
+		],
 		siteUrl: 'http://suitedmagazine.com',
-		projectType: 'Responsive Editorial/Arts Publication website',
+		projectType: 'Responsive Publication/Editorial website',
 		projectRole: [
 			'Custom SquareSpace template design & development',
 			'Lead Front-end developer',
@@ -55,6 +58,9 @@ export default  [
 		name: "Onomie", 
 		coverImg: "http://kimispencer.com/assets/portfolio/onomie/onomie-00.png",
 		imgKey: 'onomie',
+		projectImgs: [
+			'00.png', '01.png'
+		],
 		siteUrl: 'http://onomie.com',
 		projectType: 'Responsive Ecommerce/Beauty website',
 		projectRole: [
@@ -109,7 +115,7 @@ export default  [
 		coverImg: "http://kimispencer.com/assets/portfolio/creep/echoes.jpg",
 		imgKey: 'creep',
 		projectImgs: [
-			'00.png', '01.png', '02.png'
+			'00.jpg', '01.png', '02.png'
 		],
 		siteUrl: 'http://officialcreep.com',
 		projectType: 'Official Band site',
@@ -120,12 +126,7 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.',
-		projectImgs: [
-			'http://kimispencer.com/assets/portfolio/creep/echoes.jpg',
-			'http://kimispencer.com/assets/portfolio/creep/imac.png',
-			'http://kimispencer.com/assets/portfolio/creep/ipad.png'
-		]
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
 	{
@@ -133,11 +134,14 @@ export default  [
 		name: "Plusign",  
 		coverImg: "https://unsplash.it/1210/450",
 		imgKey: 'plusign',
+		projectImgs: [
+			'00.png', '01.png', '02.png', '03.png', '04.png'
+		],
 		siteUrl: 'http://plusign.com',
-		projectType: 'Digital Agency web applications',
+		projectType: 'Generative Logo Design',
 		projectRole: [
-			'Front-end developer',
-			'Visual & UX designer',
+			'Software engineer',
+			'Visual/Typography designer',
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Photoshop, Illustrator, Java/Processing',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
@@ -148,6 +152,9 @@ export default  [
 		name: "Tom Tom Magazine",  
 		coverImg: "https://unsplash.it/1220/350",
 		imgKey: 'tomtom',
+		projectImgs: [
+			'00.png', '01.png'
+		],
 		siteUrl: 'http://tomtommag.com',
 		projectType: 'Responsive Ecommerce/Music Publication website',
 		projectRole: [
@@ -165,6 +172,9 @@ export default  [
 		name: "Live Visuals",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'live-visuals',
+		projectImgs: [
+			'00.jpg'
+		],
 		projectType: 'Live Visuals for events',
 		projectRole: [
 			'Art Director',
