@@ -16,7 +16,7 @@ const Resume = () => (
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
 						{/* change this to use local assetss once you figure out how to change webpack.config*/}
-						<img id="ProfilePic" className="circle-img" src={img} />
+						<img alt="profile" id="ProfilePic" className="circle-img" src={img} />
 					</div>
 				</div>
 			</div>
