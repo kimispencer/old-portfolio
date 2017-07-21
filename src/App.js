@@ -119,8 +119,7 @@ class App extends Component {
 			_projectNavStyle_isList: true,
 		}));
 
-console.log()
-// !!! NOTE -- use react-responsive and make this a global var
+		// !!! NOTE -- use react-responsive and make this a global var
 		let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		/* breakpoint 769px */
 		if(width > 768) {

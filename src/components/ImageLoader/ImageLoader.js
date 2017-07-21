@@ -31,12 +31,18 @@ class ImageLoader extends React.Component {
 	}
 
 	render() {
+		let img;
+		if(this.props.src.indexOf('http') > -1) {
+			img = this.props.src;
+		} else {
+			img = require(this.props.src);
+		}
 		let classes = `${this.state.loaded ? 'loaded' : null} ${this.props.className ? this.props.className : ''} image-loader bg-img`;
 		return (
-			<div className={classes} style={ {backgroundImage: 'url(' + this.props.src + ')'} }>
+			<div className={classes} style={ {backgroundImage: 'url(' + img + ')'} }>
 				<img
 					style={ {display: 'none'} }
-					src={this.props.src}
+					src={img}
 					onLoad={this.handleImageLoaded.bind(this)}
 					onError={this.handleImageErrored.bind(this)}
 					role="presentation"
