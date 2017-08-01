@@ -1,106 +1,15 @@
 import React from 'react';
-import { 
-	Route, 
-	Link 
-} from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
-
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './ProjectList.css';
-
 import data from './data';
 
 const PROJECTS = data;
-// const imgPath = './assets/';
-// PROJECTS.map((p,i) => {
-// 	if(p.imgKey) {
-// 		let file = 0;
-// 		let url = imgPath + p.imgKey + '/' + i;
-// 		console.log(url)
-// 		i++;
-// 	}
-// });
-
-// const ProjectDetail = ({match}) => {
-// 	let project = PROJECTS.filter(function (p) {
-// 	    return p.url === match.params.id;
-// 	})[0];
-// 	// console.log(project)
-// 	let style = {
-// 		backgroundImage: 'url(' + project.coverImg + ')'
-// 	}
-// 	return(
-// 		<div className="ProjectDetail">
-// 			<h3 className="title">{project.name}</h3>
-// 			<div className="project-detail-cover" style={style}></div>
-// 			<div className="text center">
-// 				<h4 className="title">Lorem Ipsum</h4>
-// 				<p>{project.intro}</p>
-// 				<div className="flex-row flex-center">
-// 					<div className="flex-col list-container">
-// 						<h4 className="title underline">Role</h4>
-// 						<ul>
-// 							<li>lead front-end engineer</li>
-// 							<li>ux design</li>
-// 						</ul>
-// 					</div>
-// 					<div className="flex-col list-container">
-// 						<h4 className="title underline">Tools</h4>
-// 						<ul>
-// 							<li>reactjs</li>
-// 							<li>es6</li>
-// 						</ul>
-// 					</div>
-// 				</div>
-// 				<p>{project.intro}</p>
-// 			</div>
-// 		</div>
-// 	);
-// }
-
-// const ProjectDetail = (props) => {	
-// 	let project = PROJECTS.filter(function (p) {
-// 	    return p.url === props.routeProps.match.params.id;
-// 	})[0];
-// 	// console.log(project)
-// 	let style = {
-// 		backgroundImage: 'url(' + project.coverImg + ')'
-// 	}
-// 	return(
-// 		<div className="ProjectDetail">
-// 			<h4 onClick={props._sayHi}>ProjectDetail hello?</h4>
-		
-// 			<h3 className="title">{project.name}</h3>
-// 			<div className="project-detail-cover" style={style}></div>
-// 			<div className="text center">
-// 				<h4 className="title">Lorem Ipsum</h4>
-// 				<p>{project.intro}</p>
-// 				<div className="flex-row flex-center">
-// 					<div className="flex-col list-container">
-// 						<h4 className="title underline">Role</h4>
-// 						<ul>
-// 							<li>lead front-end engineer</li>
-// 							<li>ux design</li>
-// 						</ul>
-// 					</div>
-// 					<div className="flex-col list-container">
-// 						<h4 className="title underline">Tools</h4>
-// 						<ul>
-// 							<li>reactjs</li>
-// 							<li>es6</li>
-// 						</ul>
-// 					</div>
-// 				</div>
-// 				<p>{project.intro}</p>
-// 			</div>
-// 		</div>
-// 	);
-// }
 
 class ProjectDetail extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-	// }
+	constructor(props) {
+		super(props);
+	}
 	componentDidMount() {
 		this._handleProjectNav();
 	}
