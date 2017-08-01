@@ -39,7 +39,7 @@ export default  [
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/suited',
 		projectImgs: [
-			'00.png', '01.png', '02.png'
+			'00.png', '01.png', '02.png', '03.png'
 		],
 		siteUrl: 'http://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
