@@ -2,8 +2,8 @@ export default  [
 	{
 		url: 'arrivals',
 		name: "The Arrivals NYC", 
-		coverImg: "http://kimispencer.com/assets/portfolio/thearrivals/thearrivals.png",
-		imgKey: 'arrivals',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/arrivals',
 		projectImgs: [
 			'00.png', '01.png'
 		],
@@ -23,7 +23,7 @@ export default  [
 	{
 		url: 'kimispencer', 
 		name: "Portfolio", 
-		coverImg: "https://unsplash.it/1205/580",
+		coverImg: "https://unsplash.it/1200/540",
 		projectType: 'ReactJS portfolio site',
 		projectRole: [
 			'Full-stack developer',
@@ -36,8 +36,8 @@ export default  [
 	{ 
 		url: 'suited', 
 		name: "Suited Magazine", 
-		coverImg: "http://kimispencer.com/assets/portfolio/suited/suited-00.png",
-		imgKey: 'suited',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/suited',
 		projectImgs: [
 			'00.png', '01.png', '02.png'
 		],
@@ -56,8 +56,8 @@ export default  [
 	{
 		url: 'onomie', 
 		name: "Onomie", 
-		coverImg: "http://kimispencer.com/assets/portfolio/onomie/onomie-00.png",
-		imgKey: 'onomie',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/onomie',
 		projectImgs: [
 			'00.png', '01.png'
 		],
@@ -77,8 +77,8 @@ export default  [
 	{
 		url: 'brainchild', 
 		name: "Brainchild.Co",  
-		coverImg: "http://kimispencer.com/assets/portfolio/brainchild/brainchild-00.png",
-		imgKey: 'brainchild',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/brainchild',
 		projectImgs: [
 			'00.png', '01.png', '02.png'
 		],
@@ -97,8 +97,8 @@ export default  [
 	{
 		url: 'bolster', 
 		name: "Bolster",  
-		coverImg: "https://unsplash.it/1214/450",
-		imgKey: 'bolster',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/bolster',
 		siteUrl: 'http://bolster.us',
 		projectType: 'AngularJS web application',
 		projectRole: [
@@ -112,8 +112,8 @@ export default  [
 	{
 		url: 'creep', 
 		name: "CREEP",  
-		coverImg: "http://kimispencer.com/assets/portfolio/creep/echoes.jpg",
-		imgKey: 'creep',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/creep',
 		projectImgs: [
 			'00.jpg', '01.png', '02.png'
 		],
@@ -132,8 +132,8 @@ export default  [
 	{
 		url: 'plusign', 
 		name: "Plusign",  
-		coverImg: "https://unsplash.it/1210/450",
-		imgKey: 'plusign',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/plusign',
 		projectImgs: [
 			'00.png', '01.png', '02.png', '03.png', '04.png'
 		],
@@ -150,8 +150,8 @@ export default  [
 	{
 		url: 'tomtom', 
 		name: "Tom Tom Magazine",  
-		coverImg: "https://unsplash.it/1220/350",
-		imgKey: 'tomtom',
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/tomtom',
 		projectImgs: [
 			'00.png', '01.png'
 		],
@@ -171,7 +171,7 @@ export default  [
 		url: 'live-visuals', 
 		name: "Live Visuals",  
 		coverImg: "https://unsplash.it/1200/540",
-		imgKey: 'live-visuals',
+		imgKey: 'projects/live-visuals',
 		projectImgs: [
 			'00.jpg'
 		],
@@ -187,7 +187,7 @@ export default  [
 	{
 		url: 'dataviz', 
 		name: "Data Visualization",  
-		coverImg: "http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-00.jpg",
+		coverImg: "https://unsplash.it/1200/540",
 		projectType: 'Data Visualization projects',
 		projectRole: [
 			'Lead Developer & Designer'

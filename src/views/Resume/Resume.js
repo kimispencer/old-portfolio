@@ -1,8 +1,7 @@
 import React from 'react';
-
 import './Resume.css';
 
-const img = require('./profile.jpg');
+const img = require('../../../public/assets/profile.jpg');
 
 const Resume = () => (	
 	<div className="Resume">
