@@ -177,7 +177,7 @@ $project_tile_height: 33.3vw;
 			position: relative;
 			&:hover {
 				.bg-img.loaded {
-					filter: blur(10px);
+					filter: blur(2px);
 					@include transition(all $transition_speed ease);
 				}
 				.text { 

@@ -3,18 +3,28 @@
 	* July 6, 2017
 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
-import './styles/reset.css';
-import './styles/typography.css';
-
-import App from './App';
+var Locations = require('./components/Locations.jsx');
 
 ReactDOM.render(
-	<App />,
-	document.getElementById('Root')
+  <Locations />,
+  document.getElementById('Root')
 );
+
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+
+// import './styles/reset.css';
+// import './styles/typography.css';
+
+// import App from './App';
+
+// ReactDOM.render(
+// 	<App />,
+// 	document.getElementById('Root')
+// );
 
 /*
 	**** how to pass Component props via a Route

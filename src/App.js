@@ -17,6 +17,7 @@ import Home from './views/Home/Home';
 import Projects from './views/Projects/Projects';
 import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
+
 // css
 import './App.css';
 

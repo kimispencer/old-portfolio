@@ -481,7 +481,7 @@ select:-webkit-autofill:focus {
     cursor: pointer;
     position: relative; }
   .project-list-item.box-style:hover .bg-img.loaded {
-    filter: blur(10px);
+    filter: blur(2px);
     -webkit-transition: all 350ms ease;
     -moz-transition: all 350ms ease;
     -ms-transition: all 350ms ease;
