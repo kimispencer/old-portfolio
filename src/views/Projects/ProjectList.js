@@ -7,9 +7,9 @@ import data from './data';
 const PROJECTS = data;
 
 class ProjectDetail extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+	// constructor(props) {
+	// 	super(props);
+	// }
 	componentDidMount() {
 		this._handleProjectNav();
 	}
