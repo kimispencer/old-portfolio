@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import ProjectStore from '../../stores/ProjectStore';
-import ProjectActions from '../../actions/ProjectActions';
+// import ProjectStore from '../../stores/ProjectStore';
+// import ProjectActions from '../../actions/ProjectActions';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import data from './data';
@@ -27,23 +27,7 @@ const ProjectListItem = (props) => {
 class Projects extends React.Component {
 	constructor() {
 		super();
-		this.state = { 
-			locations: ProjectStore.getState()
-		};
-		this._onChange = this._onChange.bind(this);
 		this._handleProjectNavClick = this._handleProjectNavClick.bind(this);
-	}
-	componentDidMount() {
-		ProjectStore.listen(this._onChange);
-		ProjectActions.fetchLocations();
-
-console.log(this.state.locations)
-	}
-	componentWillUnmount() {
-		ProjectStore.unlisten(this._onChange);
-	}
-	_onChange(state) {
-		this.setState(state);
 	}
 	_handleProjectNavClick() {
 		window.scrollTo(0, 0);
@@ -52,10 +36,6 @@ console.log(this.state.locations)
 	render() {
 		return(
 			<div className="projects">
-
-				{/*this.state.locations.map((location) => {
-					<li>{location.name}</li>
-				})*/}
 
 				{ /*props._projectNavStyle_isList 
 					? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
