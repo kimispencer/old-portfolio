@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import ProjectStore from '../../stores/Projects';
+import ProjectStore from '../../stores/ProjectStore';
+import ProjectActions from '../../actions/ProjectActions';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import data from './data';
@@ -23,52 +24,73 @@ const ProjectListItem = (props) => {
 	);
 }
 
-const Projects = (props) => {
-	const _handleProjectNavClick = () => {
-		window.scrollTo(0, 0);
-		props._handleProjectDetailLanding();
+class Projects extends React.Component {
+	constructor() {
+		super();
+		this.state = { 
+			projects: ProjectStore.getState() 
+		};
+		this._onChange = this._onChange.bind(this);
+		this._handleProjectNavClick = this._handleProjectNavClick.bind(this);
+		
+		ProjectActions.fetchLocations();
 	}
-	return(
-		<div className="projects">
+	componentDidMount() {
+		ProjectStore.listen(this._onChange);
+		// ProjectStore.fetchLocations();
+	}
+	componentWillUnmount() {
+		ProjectStore.unlisten(this._onChange);
+	}
+	_onChange(state) {
+		this.setState(state);
+	}
+	_handleProjectNavClick() {
+		window.scrollTo(0, 0);
+		this.props._handleProjectDetailLanding();
+	}
+	render() {
+		return(
+			<div className="projects">
+				{ /*props._projectNavStyle_isList 
+					? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
+						<h4 className="title center" id="PageTitle">Projects</h4>
+					</Link>
+					: null
+				*/ }
+				
+				{ this.props._projectNavStyle_isList
+					? <div className="center title monospace" onClick={this.props._toggleProjectNav} id="Menu">Menu</div>
+					: null
+				}
 
-			{ /*props._projectNavStyle_isList 
-				? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
-					<h4 className="title center" id="PageTitle">Projects</h4>
-				</Link>
-				: null
-			*/ }
-			
-			{ props._projectNavStyle_isList
-				? <div className="center title monospace" onClick={props._toggleProjectNav} id="Menu">Menu</div>
-				: null
-			}
+				{ /*<SlideExample match={props.match} _isProjectNavOpen={props._isProjectNavOpen} _toggleProjectNav={props._toggleProjectNav} /> */ }
 
-			{ /*<SlideExample match={props.match} _isProjectNavOpen={props._isProjectNavOpen} _toggleProjectNav={props._toggleProjectNav} /> */ }
+				{ this.props._isProjectNavOpen 
+					? <ul className={`project-list ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
+						{ PROJECTS.map((project, index) => 
+						<li key={index} >
+							 <Link to={this.props.match.url + '/' + project.url} >
+								<ProjectListItem 
+									project={project} 
+									handleClick={this._handleProjectNavClick} 
+									_projectNavStyle_isList={this.props._projectNavStyle_isList}/>
+							</Link>
+						</li>
+						) }
+					</ul>
+					: null
+				}
 
-			{ props._isProjectNavOpen 
-				? <ul className={`project-list ${props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
-					{ PROJECTS.map((project, index) => 
-					<li key={index} >
-						 <Link to={props.match.url + '/' + project.url} >
-							<ProjectListItem 
-								project={project} 
-								handleClick={_handleProjectNavClick} 
-								_projectNavStyle_isList={props._projectNavStyle_isList}/>
-						</Link>
-					</li>
-					) }
-				</ul>
-				: null
-			}
+				<Route path={`${this.props.match.url}/:id`} component={(routeProps, state, params) => 
+					<ProjectDetail 
+						_handleProjectDetailLanding={this.props._handleProjectDetailLanding}
+						routeProps={routeProps}
+					{...this.props} />} />
 
-			<Route path={`${props.match.url}/:id`} component={(routeProps, state, params) => 
-				<ProjectDetail 
-					_handleProjectDetailLanding={props._handleProjectDetailLanding}
-					routeProps={routeProps}
-				{...props} />} />
-
-		</div>
-	);
+			</div>
+		);
+	}
 }
 
 export default Projects;
