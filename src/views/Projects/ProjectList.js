@@ -124,7 +124,6 @@ const ProjectList = (props) => {
 		window.scrollTo(0, 0);
 		props._handleProjectDetailLanding();
 	}
-
 	return(
 		<div className="ProjectList">
 
@@ -143,7 +142,7 @@ const ProjectList = (props) => {
 			{ /*<SlideExample match={props.match} _isProjectNavOpen={props._isProjectNavOpen} _toggleProjectNav={props._toggleProjectNav} /> */ }
 
 			{ props._isProjectNavOpen 
-				? <ul className="project-list">
+				? <ul className={`project-list ${props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
 					{ PROJECTS.map((project, index) => 
 					<li key={index} >
 						 <Link to={props.match.url + '/' + project.url} >
