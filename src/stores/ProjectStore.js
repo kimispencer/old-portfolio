@@ -12,7 +12,7 @@ class ProjectStore {
 		});
 	}
 	handleUpdateLocations(locations) {
-		this.locations  = locations;
+		this.locations = locations;
 		this.errorMessage = null;
 		// return false to suppress store change event
 	}

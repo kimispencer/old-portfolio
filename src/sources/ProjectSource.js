@@ -1,4 +1,8 @@
-var mockData = [
+/*
+	* basic/fake API to get data from
+*/
+
+const mockData = [
 	{ id: 0, name: 'Abu Dhabi' },
 	{ id: 1, name: 'Berlin' },
 	{ id: 2, name: 'Bogota' },
@@ -14,18 +18,18 @@ var mockData = [
 	{ id: 12, name: 'San Francisco' }
 ];
 
-var ProjectSource = {
-  fetch: function () {
-	// returning a Promise because that is what fetch does.
-	return new Promise(function (resolve, reject) {
-	  // simulate an asynchronous action where data is fetched on
-	  // a remote server somewhere.
-	  setTimeout(function () {
-		// resolve with some mock data
-		resolve(mockData);
-	  }, 250);
-	});
-  }
+const ProjectSource = {
+	fetch: function () {
+		// returning a Promise because that is what fetch does.
+		return new Promise(function (resolve, reject) {
+			// simulate an asynchronous action where data is fetched on
+			// a remote server somewhere.
+			setTimeout(function () {
+				// resolve with some mock data
+				resolve(mockData);
+			}, 250);
+		});
+	}
 };
 
 export default ProjectSource;

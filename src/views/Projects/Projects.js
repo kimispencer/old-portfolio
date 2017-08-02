@@ -28,16 +28,16 @@ class Projects extends React.Component {
 	constructor() {
 		super();
 		this.state = { 
-			projects: ProjectStore.getState() 
+			locations: ProjectStore.getState()
 		};
 		this._onChange = this._onChange.bind(this);
 		this._handleProjectNavClick = this._handleProjectNavClick.bind(this);
-		
-		ProjectActions.fetchLocations();
 	}
 	componentDidMount() {
 		ProjectStore.listen(this._onChange);
-		// ProjectStore.fetchLocations();
+		ProjectActions.fetchLocations();
+
+console.log(this.state.locations)
 	}
 	componentWillUnmount() {
 		ProjectStore.unlisten(this._onChange);
@@ -52,6 +52,11 @@ class Projects extends React.Component {
 	render() {
 		return(
 			<div className="projects">
+
+				{/*this.state.locations.map((location) => {
+					<li>{location.name}</li>
+				})*/}
+
 				{ /*props._projectNavStyle_isList 
 					? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
 						<h4 className="title center" id="PageTitle">Projects</h4>
