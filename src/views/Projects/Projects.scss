@@ -176,9 +176,13 @@ $project_tile_height: 33.3vw;
 			cursor: pointer;
 			position: relative;
 			&:hover {
+				.bg-img.loaded {
+					filter: blur(10px);
+					@include transition(all $transition_speed ease);
+				}
 				.text { 
 					opacity: 1;
-					@include transition(all 500ms ease);
+					@include transition(all $transition_speed*1.5 ease);
 				}
 			}
 			.text {

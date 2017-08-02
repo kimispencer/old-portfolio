@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import ProjectStore from '../../stores/Projects';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import data from './data';

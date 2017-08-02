@@ -24,10 +24,8 @@ const Resume = () => (
 				</div>
 				<div className="right-col">
 					<p>Hi, I’m Kimi! I’m a front-end engineer and user experience designer based in NYC. 
-						I have over 9 years experience working in interactive technology from San Francisco startups to NYC digital agencies; 
-						and spanning industries from advertising, high-end fashion, online magazines, to music production. 
-						I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. 
-						I like making visuals for live performances, and nerding out over data visualization.</p>
+						I have over 9 years expertise working in interactive technology, from San Francisco startups to NYC digital agencies. Spanning industries from interactive advertising, high-end fashion brands, AR games for museum eduction, to online publications. 
+						I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions.</p>
 				</div>
 			</div>
 			<div className="resume-section" id="WorkExperience">

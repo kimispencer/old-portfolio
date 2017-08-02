@@ -480,12 +480,18 @@ select:-webkit-autofill:focus {
   .project-list-item.box-style {
     cursor: pointer;
     position: relative; }
+  .project-list-item.box-style:hover .bg-img.loaded {
+    filter: blur(10px);
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease; }
   .project-list-item.box-style:hover .text {
     opacity: 1;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease; }
+    -webkit-transition: all 525ms ease;
+    -moz-transition: all 525ms ease;
+    -ms-transition: all 525ms ease;
+    -o-transition: all 525ms ease; }
   .project-list-item.box-style .text {
     opacity: 0.1;
     position: absolute;
