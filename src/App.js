@@ -14,7 +14,7 @@ import ScrollBar from './components/ScrollBar/ScrollBar';
 import Shroud from './components/Shroud/Shroud';
 
 import Home from './views/Home/Home';
-import ProjectList from './views/Projects/ProjectList';
+import Projects from './views/Projects/Projects';
 import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
 // css
@@ -146,7 +146,7 @@ class App extends Component {
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
-							<ProjectList 
+							<Projects 
 								_toggleProjectNavStyle={this._toggleProjectNavStyle} 
 								_toggleProjectNavStyle_toList={this._toggleProjectNavStyle_toList}
 								_projectNavStyle_isList={this.state._projectNavStyle_isList} 

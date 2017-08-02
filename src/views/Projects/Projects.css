@@ -282,40 +282,40 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
-.ProjectList #PageTitle {
+.projects #PageTitle {
   padding-top: 20px; }
 
-.ProjectList #Menu {
+.projects #Menu {
   cursor: pointer;
   text-decoration: underline;
   padding: 0; }
 
-.ProjectList ul.project-list {
+.projects ul.project-list {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
 
-.ProjectListItem {
+.project-list-item {
   cursor: pointer;
   max-width: 100vw; }
 
-.ProjectListItem.list-style {
+.project-list-item.list-style {
   display: block;
   height: auto;
   width: auto; }
 
-.ProjectListItem.list-style .bg-img {
+.project-list-item.list-style .bg-img {
   display: none !important; }
 
-.ProjectListItem.list-style .text .project-name {
+.project-list-item.list-style .text .project-name {
   font-size: 1em; }
 
-.ProjectListItem.list-style .text .project-type {
+.project-list-item.list-style .text .project-type {
   display: none; }
 
-.ProjectListItem.box-style {
+.project-list-item.box-style {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -337,10 +337,10 @@ select:-webkit-autofill:focus {
   width: 33.3vw;
   height: 33.3vw; }
 
-.ProjectListItem.box-style .text {
+.project-list-item.box-style .text {
   text-align: center; }
 
-.ProjectDetail {
+.project-detail {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -361,14 +361,14 @@ select:-webkit-autofill:focus {
   -ms-flex-pack: center;
   margin-bottom: 20px; }
 
-.ProjectDetail img {
+.project-detail img {
   width: 100%;
   max-width: 100vw;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px; }
 
-.ProjectDetail .project-detail-cover {
+.project-detail .project-detail-cover {
   height: 600px;
   max-height: 70vh;
   width: 100vw;
@@ -377,7 +377,7 @@ select:-webkit-autofill:focus {
   background-position: 50% 50%;
   background-attachment: fixed; }
 
-.ProjectDetail .project-screenshots {
+.project-detail .project-screenshots {
   border: 1px dashed red;
   max-width: 100vw;
   /*		.desktop-aspect-ratio {
@@ -420,7 +420,7 @@ select:-webkit-autofill:focus {
 		}
 */ }
 
-.ProjectDetail .project-screenshots figure.fluidratio {
+.project-detail .project-screenshots figure.fluidratio {
   /* This element will have fluid ratio from 4:1 at 800px to 2:1 at 300px. */
   padding-top: 10%;
   height: 120px;
@@ -431,7 +431,7 @@ select:-webkit-autofill:focus {
   /* Internet Explorer 7/8 */
   background-image: url(http://voormedia.com/examples/amsterdam.jpg); }
 
-.ProjectDetail .text-container {
+.project-detail .text-container {
   /*@include border(blue);*/
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
@@ -443,20 +443,20 @@ select:-webkit-autofill:focus {
   justify-content: center;
   -ms-flex-pack: center; }
 
-.ProjectDetail .text-container .button {
+.project-detail .text-container .button {
   margin-top: 20px; }
 
-.ProjectDetail .project-image-list .project-image {
+.project-detail .project-image-list .project-image {
   background-size: contain;
   height: 400px;
   width: 100%;
   margin-top: 20px; }
 
 @media only screen and (min-width: 1025px) {
-  .ProjectList #Menu {
+  .projects #Menu {
     display: none;
     padding-top: 20px; }
-  .ProjectList ul.project-list {
+  .projects ul.project-list {
     -webkit-flex-flow: row;
     -moz-flex-flow: row;
     -ms-flex-flow: row;
@@ -470,23 +470,23 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-  .ProjectList ul.project-list.list-style {
+  .projects ul.project-list.list-style {
     padding-top: 20px; }
-  .ProjectList ul.project-list li:last-child .ProjectListItem.list-style .text .project-name {
+  .projects ul.project-list li:last-child .project-list-item.list-style .text .project-name {
     border-right: none; }
-  .ProjectListItem.list-style .text .project-name {
+  .project-list-item.list-style .text .project-name {
     border-right: 1px solid black;
     padding: 0 20px; }
-  .ProjectListItem.box-style {
+  .project-list-item.box-style {
     cursor: pointer;
     position: relative; }
-  .ProjectListItem.box-style:hover .text {
+  .project-list-item.box-style:hover .text {
     opacity: 1;
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease; }
-  .ProjectListItem.box-style .text {
+  .project-list-item.box-style .text {
     opacity: 0.1;
     position: absolute;
     top: 0;
@@ -511,16 +511,16 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-  .ProjectDetail .text-container .text#ProjectDescription {
+  .project-detail .text-container .text#ProjectDescription {
     margin-right: 20px; }
-  .ProjectDetail .text-container .text#ProjectSkillsList {
+  .project-detail .text-container .text#ProjectSkillsList {
     margin-left: 20px; } }
 
 @media only screen and (max-width: 1024px) {
-  .ProjectList #Menu {
+  .projects #Menu {
     cursor: pointer;
     text-decoration: underline; }
-  .ProjectList ul.project-list {
+  .projects ul.project-list {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -539,12 +539,12 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
-  .ProjectListItem.list-style .text {
+  .project-list-item.list-style .text {
     margin-top: 10px; }
-  .ProjectListItem.box-style {
+  .project-list-item.box-style {
     margin-bottom: 20px;
     width: 100vw;
     height: 50vh; }
-  .ProjectListItem.box-style .text {
+  .project-list-item.box-style .text {
     padding: 5px;
     margin-top: 10px; } }
