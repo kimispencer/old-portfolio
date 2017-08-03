@@ -1,8 +1,7 @@
-var alt = require('../alt');
-var LocationActions = require('../actions/LocationActions');
-// var LocationSource = require('../sources/LocationSource');
+import alt from '../Alt';
+import LocationActions from '../actions/LocationActions';
 import LocationSource from '../sources/LocationSources';
-var FavoritesStore = require('./FavoritesStore');
+import FavoritesStore from '../stores/FavoritesStore';
 
 class LocationStore {
   constructor() {

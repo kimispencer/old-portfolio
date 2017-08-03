@@ -1,4 +1,4 @@
-var alt = require('../alt');
+import alt from '../Alt';
 
 class LocationActions {
   updateLocations(locations) {
@@ -19,3 +19,4 @@ class LocationActions {
 }
 
 module.exports = alt.createActions(LocationActions);
+// export default alt.createActions(LocationActions);

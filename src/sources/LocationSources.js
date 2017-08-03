@@ -1,4 +1,5 @@
 var LocationActions = require('../actions/LocationActions');
+// import LocationActions from '../actions/LocationActions';
 
 var mockData = [
   { id: 0, name: 'Abu Dhabi' },
