@@ -453,6 +453,8 @@ select:-webkit-autofill:focus {
   margin-top: 20px; }
 
 @media only screen and (min-width: 1025px) {
+  .projects {
+    margin-top: -20px; }
   .projects #Menu {
     display: none;
     padding-top: 20px; }

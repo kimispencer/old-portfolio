@@ -19,3 +19,10 @@ html {
 		/* CSS on the component level */
 	}
 }
+@media #{$desktop} {
+	.App {
+		.main-content {
+			padding-top: $gutter;
+		}
+	}
+}

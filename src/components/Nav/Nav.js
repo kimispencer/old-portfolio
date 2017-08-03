@@ -1,20 +1,16 @@
 import React from 'react';
-import {
-	Link
-} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { isDesktop } from '../../components/Responsive/Responsive';
+import Logo from '../../../public/assets/logo.svg';
 import './Nav.css';
 
 const NavTrigger = (props) => (
-	<div className="NavTrigger" onClick={props._toggleNav}>
+	<div className="nav-trigger" onClick={props._toggleNav}>
 		<h3 className="bold">|||</h3>
 	</div>
 )
 
 const Nav = (props) => {
-	let open = props._isNavOpen ? 'open' : 'closed';
-	let cssClasses = `${open} Nav`;
-
 	const handle_navClick = () => {
 		props._toggleNav();
 		window.scrollTo(0, 0);
@@ -29,12 +25,21 @@ const Nav = (props) => {
 	return (
 		<div>
 			<NavTrigger _toggleNav={props._toggleNav} />
-			<div className={cssClasses}>
-				<ul>
-					<li><Link to="/" onClick={handle_navClick}><small className="uppercase">Home</small></Link></li>
+			{!isDesktop() &&
+				<div className="logo-container">
+					<Link to="/"><img alt="logo" id="Logo" src={Logo} /></Link>
+				</div>	
+			}	
+			<div className={`${props._isNavOpen ? 'open' : 'closed'} nav`}>
+				{isDesktop() &&
+					<div className="logo-container">
+						<Link to="/" onClick={handle_navClick}><img alt="logo" id="Logo" src={Logo} /></Link>
+					</div>	
+				}	
+				<ul className="nav-links">
 					<li><Link to="/projects" onClick={handle_navClick_Projects}><small className="uppercase">Projects</small></Link></li>
 					<li><Link to="/resume" onClick={handle_navClick}><small className="uppercase">Resume</small></Link></li>
-					{ /*<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>*/ }
+					<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>
 				</ul>
 			</div>
 		</div>

@@ -139,6 +139,7 @@ $project_tile_height: 33.3vw;
 
 @media #{$desktop} {
 	.projects {
+		margin-top: -$gutter;
 		#Menu {
 			display: none;
 			padding-top: $gutter;

@@ -1,7 +1,6 @@
 import React from 'react';
 import './Resume.css';
-
-const img = require('../../../public/assets/profile.jpg');
+import ProfilePic from '../../../public/assets/profile.jpg';
 
 const Resume = () => (	
 	<div className="Resume">
@@ -11,10 +10,9 @@ const Resume = () => (
 				<div className="left-col"></div>
 				<div className="right-col">
 					<div className="center">
-						<h2 className="bold title">KIMI SPENCER</h2>
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
-						<img alt="profile" id="ProfilePic" className="circle-img" src={img} />
+						<img alt="profile" id="ProfilePic" className="circle-img" src={ProfilePic} />
 					</div>
 				</div>
 			</div>
