@@ -168,6 +168,22 @@ export default  [
 
 	},
 	{
+		url: 'rga', 
+		name: "R/GA",  
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/rga',
+		projectImgs: [
+		],
+		projectType: 'User Experience Research, Product Development',
+		projectRole: [
+			'UX Designer',
+			'Visual Storyteller',
+		],
+		technologyUsed: 'Keynote, Photoshop, Illustrator, InDesign',
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+
+	},
+	{
 		url: 'live-visuals', 
 		name: "Live Visuals",  
 		coverImg: "https://unsplash.it/1200/540",
@@ -185,7 +201,7 @@ export default  [
 
 	},
 	{
-		url: 'dataviz', 
+		url: 'data-visualization', 
 		name: "Data Visualization",  
 		coverImg: "https://unsplash.it/1200/540",
 		projectType: 'Data Visualization projects',
@@ -206,18 +222,34 @@ export default  [
 
 	},
 	{
-		url: 'rga', 
-		name: "R/GA",  
+		url: 'computer-vision', 
+		name: "Computer Vision",  
 		coverImg: "https://unsplash.it/1200/540",
-		imgKey: 'projects/rga',
+		imgKey: 'projects/computer-vision',
 		projectImgs: [
 		],
-		projectType: 'User Experience Research, Product Development',
+		projectType: 'Computer Vision experiments',
 		projectRole: [
-			'UX Designer',
-			'Visual Storyteller',
+			'Concept & Experience Designer',
+			'Computer Programmer',
 		],
-		technologyUsed: 'Keynote, Photoshop, Illustrator, InDesign',
+		technologyUsed: 'openCV, Processing/Java',
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+
+	},
+	{
+		url: 'nltk', 
+		name: "Language Processing",  
+		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/nltk',
+		projectImgs: [
+		],
+		projectType: 'Natural Language Processing experiments',
+		projectRole: [
+			'Concept Designer',
+			'Computer Programmer',
+		],
+		technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
 		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},

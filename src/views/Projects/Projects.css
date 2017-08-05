@@ -282,6 +282,36 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
+/* new compontent */
+.hover-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.hover-image-container .bg-img {
+  -webkit-transition: opacity 1050ms ease;
+  -moz-transition: opacity 1050ms ease;
+  -ms-transition: opacity 1050ms ease;
+  -o-transition: opacity 1050ms ease;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.hover-image-container .bg-img.top-image {
+  opacity: 1; }
+
+.hover-image-container .bg-img.bottom-image {
+  opacity: 0; }
+
+.hover-image-container:hover .bg-img.top-image {
+  opacity: 0; }
+
+.hover-image-container:hover .bg-img.bottom-image {
+  opacity: 1; }
+
+.projects {
+  margin-top: -20px; }
+
 .projects #PageTitle {
   padding-top: 20px; }
 
@@ -338,7 +368,8 @@ select:-webkit-autofill:focus {
   height: 33.3vw; }
 
 .project-list-item.box-style .text {
-  text-align: center; }
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6); }
 
 .project-detail {
   display: -webkit-box;
@@ -453,8 +484,6 @@ select:-webkit-autofill:focus {
   margin-top: 20px; }
 
 @media only screen and (min-width: 1025px) {
-  .projects {
-    margin-top: -20px; }
   .projects #Menu {
     display: none;
     padding-top: 20px; }
@@ -466,14 +495,24 @@ select:-webkit-autofill:focus {
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .projects ul.project-list.list-style {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    -ms-flex-pack: center; }
-  .projects ul.project-list.list-style {
+    -ms-flex-pack: center;
+    max-width: 1200px;
+    margin: 0 auto;
     padding-top: 20px; }
+  .projects ul.project-list.list-style li {
+    margin: 5px 0; }
+  .projects ul.project-list.box-style {
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: flex-start; }
   .projects ul.project-list li:last-child .project-list-item.list-style .text .project-name {
     border-right: none; }
   .project-list-item.list-style .text .project-name {
@@ -484,10 +523,10 @@ select:-webkit-autofill:focus {
     position: relative; }
   .project-list-item.box-style:hover .bg-img.loaded {
     filter: blur(2px);
-    -webkit-transition: all 350ms ease;
-    -moz-transition: all 350ms ease;
-    -ms-transition: all 350ms ease;
-    -o-transition: all 350ms ease; }
+    -webkit-transition: all 1050ms ease;
+    -moz-transition: all 1050ms ease;
+    -ms-transition: all 1050ms ease;
+    -o-transition: all 1050ms ease; }
   .project-list-item.box-style:hover .text {
     opacity: 1;
     -webkit-transition: all 525ms ease;
@@ -495,7 +534,7 @@ select:-webkit-autofill:focus {
     -ms-transition: all 525ms ease;
     -o-transition: all 525ms ease; }
   .project-list-item.box-style .text {
-    opacity: 0.1;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -519,6 +558,8 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
+  .project-list-item.box-style .text .project-name {
+    font-weight: bold; }
   .project-detail .text-container .text#ProjectDescription {
     margin-right: 20px; }
   .project-detail .text-container .text#ProjectSkillsList {
@@ -527,7 +568,8 @@ select:-webkit-autofill:focus {
 @media only screen and (max-width: 1024px) {
   .projects #Menu {
     cursor: pointer;
-    text-decoration: underline; }
+    text-decoration: underline;
+    padding-top: 20px; }
   .projects ul.project-list {
     display: -webkit-box;
     display: -moz-box;
@@ -547,6 +589,11 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
+  .projects ul.project-list.list-style {
+    margin-bottom: 20px; }
+  .project-list-item.list-style {
+    width: 75vw;
+    text-align: center; }
   .project-list-item.list-style .text {
     margin-top: 10px; }
   .project-list-item.box-style {

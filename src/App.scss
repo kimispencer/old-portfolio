@@ -13,7 +13,7 @@ html {
 	}
 	.main-content {
 		min-height: calc(100vh - #{$footer_height} - #{$fixed_nav_height});
-		margin-top: $fixed_nav_height; //calc(#{$fixed_nav_height} + #{$gutter});
+		margin-top: calc(#{$fixed_nav_height} + #{$gutter});
 	}
 	.Footer {
 		/* CSS on the component level */
@@ -22,7 +22,6 @@ html {
 @media #{$desktop} {
 	.App {
 		.main-content {
-			padding-top: $gutter;
 		}
 	}
 }

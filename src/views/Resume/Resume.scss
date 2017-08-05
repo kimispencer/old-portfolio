@@ -1,6 +1,6 @@
 @import '../../styles/_all';
 
-.Resume {
+.resume {
 	.resume-container {
 		@include flexbox-center(column);
 		#ProfilePic {
@@ -21,7 +21,6 @@
 					margin-bottom: 0;
 				}
 				.title.flex-row {
-					margin-bottom: $gutter;
 					.institution {
 						margin-right: $gutter;
 					}
@@ -39,7 +38,7 @@
 }
 
 @media #{$desktop} {
-	.Resume {
+	.resume {
 		.resume-container {
 			.resume-section {
 				@include flexbox-center(row);
@@ -68,7 +67,7 @@
 }
 
 @media #{$tablet} {
-	.Resume {
+	.resume {
 		.resume-container {
 			.resume-section {
 				@include flexbox-center(column);

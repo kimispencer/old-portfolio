@@ -3,7 +3,37 @@
 $project_tile_width: 33.3vw;
 $project_tile_height: 33.3vw;
 
+/* new compontent */
+.hover-image-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	.bg-img {
+		@include transition(opacity $transition_speed*3 ease);
+		position: absolute;
+		top: 0;
+		left: 0;
+		&.top-image {
+			opacity: 1;
+		}
+		&.bottom-image {
+			opacity: 0
+		}
+	}
+	&:hover {
+		.bg-img {
+			&.top-image {
+				opacity: 0;
+			}
+			&.bottom-image {
+				opacity: 1;
+			}
+		}
+	}
+}
+
 .projects {
+	margin-top: -$gutter;
 	#PageTitle {
 		padding-top: $gutter;
 	}
@@ -40,6 +70,7 @@ $project_tile_height: 33.3vw;
 		height: $project_tile_height;
 		.text {
 			text-align: center;
+			background: rgba(255, 255, 255, 0.6);
 		}
 		.bg-img {
 		}
@@ -139,7 +170,6 @@ $project_tile_height: 33.3vw;
 
 @media #{$desktop} {
 	.projects {
-		margin-top: -$gutter;
 		#Menu {
 			display: none;
 			padding-top: $gutter;
@@ -147,9 +177,17 @@ $project_tile_height: 33.3vw;
 		ul.project-list {
 			@include flex-flow(row);
 			@include flex-wrap(wrap);
-			@include justify-content(center);
 			&.list-style {
+				@include justify-content(center);
+				max-width: 1200px;
+				margin: 0 auto;
 				padding-top: $gutter;
+				li {
+					margin: $gutter/4 0;
+				}
+			}
+			&.box-style {
+				@include justify-content(flex-start);
 			}
 			li {
 				&:last-child {
@@ -179,7 +217,7 @@ $project_tile_height: 33.3vw;
 			&:hover {
 				.bg-img.loaded {
 					filter: blur(2px);
-					@include transition(all $transition_speed ease);
+					@include transition(all $transition_speed*3 ease);
 				}
 				.text { 
 					opacity: 1;
@@ -187,7 +225,7 @@ $project_tile_height: 33.3vw;
 				}
 			}
 			.text {
-				opacity: 0.1;
+				opacity: 0;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -197,6 +235,9 @@ $project_tile_height: 33.3vw;
 				@include flex-flow(column);
 				@include align-items(center);
 				@include justify-content(center);
+				.project-name {
+					font-weight: bold;
+				}
 			}
 		}
 	}
@@ -218,13 +259,19 @@ $project_tile_height: 33.3vw;
 	.projects {
 		#Menu {
 			@include clickable();
+			padding-top: $gutter;
 		}
 		ul.project-list {
 			@include flexbox-center(column);
+			&.list-style {
+				margin-bottom: $gutter;
+			}
 		}
 	}
 	.project-list-item {
 		&.list-style {
+			width: 75vw;
+			text-align: center;
 			.text {
 				margin-top: $gutter/2;
 			}

@@ -1,5 +1,15 @@
 @import '../../styles/_all';
 
+.nav-header-bar {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $fixed_nav_height;
+	width: 100vw;
+	background-color: $white;
+	border-bottom: 1px solid $lightgrey;
+}
 .nav {
 	z-index: $ultimate_top;
 	@include transition(all $transition_speed ease);
@@ -31,7 +41,7 @@
 	.nav {
 		width: 100vw;
 		height: $fixed_nav_height;
-		border-bottom: 1px solid lightgrey;
+		border-bottom: 1px solid $lightgrey;
 		@include flexbox-center(row);
 		@include justify-content(space-between);
 		.nav-links {
@@ -51,7 +61,7 @@
 	.nav-trigger {
 		@include transform(rotate(90deg));
 		display: block;
-		padding: $gutter;
+		padding: $gutter/2;
 		cursor: pointer;
 		position: fixed;
 		top: 0;
@@ -68,7 +78,7 @@
 		left: 0;
 		margin: $gutter;
 		#Logo {
-			height: $gutter*1.5;
+			height: $gutter;
 		}
 	}
 	.nav {

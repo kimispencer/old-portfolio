@@ -274,7 +274,7 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
-.Contact #ContactForm {
+.contact #ContactForm {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
