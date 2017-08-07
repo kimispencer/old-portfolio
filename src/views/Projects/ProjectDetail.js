@@ -3,12 +3,12 @@ import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import data from './data';
 
+import DesktopScreenShot from '../../../public/assets/projects/onomie/00.png';
+import PhoneScreenShot from '../../../public/assets/projects/onomie/01.png';
+
 const PROJECTS = data;
 
 class ProjectDetail extends React.Component {
-	// constructor(props) {
-	// 	super(props);
-	// }
 	componentDidMount() {
 		this._handleProjectNav();
 	}
@@ -34,7 +34,8 @@ class ProjectDetail extends React.Component {
 						<p>{project.intro}</p>
 						<section className="project-screenshots">
 							{/* project.projectScreenshots.map(img, index) => <DeviceFrame /> */}
-							<DeviceFrame />
+							<DeviceFrame type="desktop" src={DesktopScreenShot} />
+							<DeviceFrame type="phone" src={PhoneScreenShot} />
 						</section>
 						<ul className="project-image-list">
 						{project.projectImgs 
