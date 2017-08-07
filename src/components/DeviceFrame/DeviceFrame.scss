@@ -65,6 +65,7 @@
 		border-radius: 3px;
 		overflow: hidden;
 		.viewport {
+			background-size: cover;
 			width: 100%;
 			height: 100%;
 		}
@@ -218,9 +219,8 @@
 /* Screenshot Hover Scroll Additions
 -------------------------------------------------------------- */
 .macbook .viewport, .iphone .viewport  {
-	transition: background-position 3s ease;
+	transition: background-position 5s ease;			// this should be based on height of image
 	background-position: 0 0;
-	/*background-size: 100% auto;*/
 	overflow: hidden;
 	cursor: pointer;
 }
