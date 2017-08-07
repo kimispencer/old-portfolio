@@ -17,22 +17,24 @@ class DeviceFrame extends React.Component {
 				</div>
 				{/* iphone */}
 				<div className="iphone">
-					<div className="iphone-top">
-						<span className="camera"></span>
-						<span className="sensor"></span>
-						<span className="speaker"></span>
-					</div>
-					<div className="iphone-screen">
-						<div className="viewport" style={ {backgroundImage: 'url(' + phone_screenshot + ')'} }></div>
-					</div>
-					<div className="buttons">
-						<span className="on-off"></span>
-						<span className="sleep"></span>
-						<span className="up"></span>
-						<span className="down"></span>
-					</div>
-					<div className="iphone-bottom">
-						<span></span>
+					<div className="content">
+						<div className="iphone-top">
+							<span className="camera"></span>
+							<span className="sensor"></span>
+							<span className="speaker"></span>
+						</div>
+						<div className="iphone-screen">
+							<div className="viewport" style={ {backgroundImage: 'url(' + phone_screenshot + ')'} }></div>
+						</div>
+						<div className="buttons">
+							<span className="on-off"></span>
+							<span className="sleep"></span>
+							<span className="up"></span>
+							<span className="down"></span>
+						</div>
+						<div className="iphone-bottom">
+							<span></span>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,3 +1,5 @@
+@import '../../styles/_all';
+
 .device-frame {
 	border: 1px dashed red;
 }
@@ -11,16 +13,19 @@
 	background: #f8f8f8;
 	padding: 15px;
 	border-radius: 50px;
-	height: 877px;
-	width: 423px;
+	width: 375px;
+	@include aspect-ratio(375, 720);
+	max-width: calc(100vw - #{$gutter}*2 - 30px - 10px);	// 15px = padding * 2, 5px = border-width * 2
 	position: relative;
-	margin: 0px auto;  
+	margin: 0 auto;  
 	// Scale so that the iPhone fits in view
 	transform: scale(.8);
 
 	.iphone-top {
-		padding: 5px 110px 40px;
-		position: relative; 
+	    width: 70%;
+	    margin: 0 auto;
+	    padding-top: 20px;
+	    padding-bottom: 20px;
 		.speaker {
 			display: block;
 			width: 70px;
@@ -44,17 +49,17 @@
 			display: block;
 			width: 15px;
 			height: 15px;
-			float: left;
+			/*float: left;*/
 			background: #333;
-			margin-top: -5px;
+			/*margin-top: -5px;*/
 			border-radius: 50%;
 		}
 	}
 	.iphone-screen {
 		background: #eee;
 		border: 1px solid #fff;
-		height: 677px;
-		width: 375px;
+		height: 75%;
+	    width: calc(100% - #{$gutter}*2);
 		margin: 0 auto;
 		border: 2px solid rgba(0,0,0,0.9);
 		border-radius: 3px;
@@ -97,20 +102,24 @@
 	}
 	.iphone-bottom {
 		padding: 10px 0 0;
+		position: absolute;
+	    bottom: 20px;
+	    left: 0;
+	    width: 100%;
 		span {
-		display: block;
-		margin: 0 auto;
-		width: 68px;
-		height: 68px;
-		background: #ccc;
-		border-radius: 50%;
-		background: linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);
-		position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 58px;
+			height: 58px;
+			background: #ccc;
+			border-radius: 50%;
+			background: linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);
+			position: relative;
 			&:after {
 				content: ""; 
 				display: block;
-				width: 60px;
-				height: 60px;
+				width: 50px;
+				height: 50px;
 				background: #fff;
 				border-radius: 50%;
 				position: absolute;
