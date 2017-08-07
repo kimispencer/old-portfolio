@@ -408,7 +408,6 @@ select:-webkit-autofill:focus {
   background-attachment: fixed; }
 
 .project-detail .project-screenshots {
-  border: 1px dashed red;
   max-width: 100vw;
   /*		.desktop-aspect-ratio {
 			@include aspect-ratio(566, 537);

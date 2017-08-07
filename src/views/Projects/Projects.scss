@@ -98,7 +98,6 @@ $project_tile_height: 33.3vw;
 		background-attachment: fixed;
 	}
 	.project-screenshots {
-		@include border(red);
 		max-width: 100vw;	
 
 /*		.desktop-aspect-ratio {
