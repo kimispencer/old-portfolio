@@ -50,21 +50,6 @@
 			border-radius: 50%;
 		}
 	}
-	.top-bar, .bottom-bar {
-		display: block;
-		width: 423px;
-		height: 15px;
-		border: {
-			left: 5px solid #BBB;
-			right: 5px solid #BBB;
-		}
-	}
-	.top-bar {
-		top: 65px;
-	}
-	.bottom-bar {
-		bottom: 65px;
-	}
 	.iphone-screen {
 		background: #eee;
 		border: 1px solid #fff;
@@ -82,7 +67,7 @@
 	.buttons {
 		.on-off, .up, .down, .sleep {
 			display: block;
-			background: #CCC;
+			background: #999;
 			position: absolute;
 			border-radius: 2px 0px 0px 2px;
 		}

@@ -46,19 +46,6 @@
   margin-top: -5px;
   border-radius: 50%; }
 
-.iphone .top-bar, .iphone .bottom-bar {
-  display: block;
-  width: 423px;
-  height: 15px;
-  border-left: 5px solid #BBB;
-  border-right: 5px solid #BBB; }
-
-.iphone .top-bar {
-  top: 65px; }
-
-.iphone .bottom-bar {
-  bottom: 65px; }
-
 .iphone .iphone-screen {
   background: #eee;
   border: 1px solid #fff;
@@ -75,7 +62,7 @@
 
 .iphone .buttons .on-off, .iphone .buttons .up, .iphone .buttons .down, .iphone .buttons .sleep {
   display: block;
-  background: #CCC;
+  background: #999;
   position: absolute;
   border-radius: 2px 0px 0px 2px; }
 

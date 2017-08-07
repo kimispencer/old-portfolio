@@ -22,7 +22,6 @@ class DeviceFrame extends React.Component {
 						<span className="sensor"></span>
 						<span className="speaker"></span>
 					</div>
-					<div className="top-bar"></div>
 					<div className="iphone-screen">
 						<div className="viewport" style={ {backgroundImage: 'url(' + phone_screenshot + ')'} }></div>
 					</div>
@@ -32,7 +31,6 @@ class DeviceFrame extends React.Component {
 						<span className="up"></span>
 						<span className="down"></span>
 					</div>
-					<div className="bottom-bar"></div>
 					<div className="iphone-bottom">
 						<span></span>
 					</div>
