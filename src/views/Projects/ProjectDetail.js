@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
+import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import data from './data';
 
 const PROJECTS = data;
@@ -28,35 +29,8 @@ class ProjectDetail extends React.Component {
 				<ImageLoader className="project-detail-cover" src={project.coverImg} />
 
 				<section className="project-screenshots">
-
-					<div className="column">
-						<figure className="fluidratio"></figure>
-					</div>
-					
-					{ /*<div className="desktop-aspect-ratio">
-						<div className="content">
-							<img src="/frames/desktop.png" />
-						</div>
-					</div>
-					
-					<div className="laptop-aspect-ratio">
-						<div className="content">
-							<img src="/frames/laptop.png" />
-						</div>
-					</div>
-					
-					<div className="tablet-aspect-ratio">
-						<div className="content">
-							<img src="/frames/tablet.png" />
-						</div>
-					</div>
-
-					<div className="phone-aspect-ratio">
-						<div className="content">
-							<img src="/frames/phone.png" />
-						</div>
-					</div> */}
-
+					{/* project.projectScreenshots.map(img, index) => <DeviceFrame /> */}
+					<DeviceFrame />
 				</section>
 
 				<section className="text-container flex-row responsive">

@@ -99,15 +99,7 @@ $project_tile_height: 33.3vw;
 	}
 	.project-screenshots {
 		@include border(red);
-		max-width: 100vw;
-
-
-		figure.fluidratio {
-			/* This element will have fluid ratio from 4:1 at 800px to 2:1 at 300px. */
-			@include fluid-ratio(800px 200px, 300px 150px);
-			background-image: url(http://voormedia.com/examples/amsterdam.jpg);
-		}	
-	
+		max-width: 100vw;	
 
 /*		.desktop-aspect-ratio {
 			@include aspect-ratio(566, 537);
