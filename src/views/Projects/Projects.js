@@ -15,6 +15,13 @@ const ProjectListItem = (props) => {
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
+			{props._projectNavStyle_isList &&
+			<div className="text monospace">
+				<h4 className="project-name">{props.project.name}</h4>
+				<p className="project-type">{props.project.projectType}</p>
+			</div>
+			}
+			{!props._projectNavStyle_isList &&
 			<div className="hover-image-container"> {/* turn this into a component later */}
 				<ImageLoader className="top-image" src={props.project.coverImg} />
 				<ImageLoader className="bottom-image" src='https://unsplash.it/1200/720'>
@@ -24,6 +31,7 @@ const ProjectListItem = (props) => {
 					</div>
 				</ImageLoader>
 			</div>
+			}
 		</div>
 	);
 }

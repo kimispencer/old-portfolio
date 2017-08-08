@@ -19,18 +19,16 @@ $project_tile_height: 33.3vw;
 		}
 		&.bottom-image {
 			opacity: 0;
-			background-image: radial-gradient(circle,rgba(0,0,0,.4) 0%,rgba(0,0,0,.65) 100%);
 		}
 	}
 	&:hover {
 		.bg-img {
 			&.top-image {
 				opacity: 0;
-			    filter: blur(2px);
+				@include transform(scale(1.3));
 			}
 			&.bottom-image {
 				opacity: 1;
-				@include transform(scale(1.3));
 			}
 		}
 	}
