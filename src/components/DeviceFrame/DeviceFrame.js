@@ -4,7 +4,7 @@ import './DeviceFrame.css';
 const DeviceFrame = (props) => {
 	return (
 		<div className="device-frame">
-			{props.type == "desktop" && 
+			{props.type === "desktop" && 
 			<div className="macbook">
 				<div className="screen">
 					<div className="viewport" style={ {backgroundImage: 'url(' + props.src + ')'} }></div>
@@ -13,7 +13,7 @@ const DeviceFrame = (props) => {
 				<div className="notch"></div>
 			</div>
 			}
-			{props.type == "phone" && 
+			{props.type === "phone" && 
 			<div className="iphone">
 				<div className="content">
 					<div className="iphone-top">
