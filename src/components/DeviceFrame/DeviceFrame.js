@@ -2,12 +2,15 @@ import React from 'react';
 import './DeviceFrame.css';
 
 const DeviceFrame = (props) => {
+	console.log(props)
+	let img;
+	(props.src.indexOf('http') > -1) ? img = props.src : img = require(`../../../public/assets/${props.imgKey}/${props.src}`);
 	return (
 		<div className="device-frame">
 			{props.type === "desktop" && 
 			<div className="macbook">
 				<div className="screen">
-					<div className="viewport" style={ {backgroundImage: 'url(' + props.src + ')'} }></div>
+					<div className="viewport" style={ {backgroundImage: 'url(' + img + ')'} }></div>
 				</div>
 				<div className="base"></div>
 				<div className="notch"></div>
@@ -22,7 +25,7 @@ const DeviceFrame = (props) => {
 						<span className="speaker"></span>
 					</div>
 					<div className="iphone-screen">
-						<div className="viewport" style={ {backgroundImage: 'url(' + props.src + ')'} }></div>
+						<div className="viewport" style={ {backgroundImage: 'url(' + img + ')'} }></div>
 					</div>
 					<div className="buttons">
 						<span className="on-off"></span>

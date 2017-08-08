@@ -426,6 +426,7 @@ select:-webkit-autofill:focus {
   margin-top: 20px; }
 
 .project-detail .project-image-list .project-image {
+  border: 1px dashed red;
   background-size: contain;
   height: 400px;
   width: 100%;

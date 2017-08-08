@@ -109,6 +109,7 @@ $project_tile_height: 33.3vw;
 	}
 	.project-image-list {
 		.project-image {
+			@include border(red);
 			background-size: contain;
 			height: 400px;
 			width: 100%;

@@ -136,7 +136,7 @@
 	* https://codepen.io/asraven/pen/obegjW/
 */
 .macbook {
-	margin: 0 auto;
+	margin: $gutter*2 auto;
 	.screen {
 		background: #000;
 		border-radius: 3% 3% 0.5% 0.5% / 5%;

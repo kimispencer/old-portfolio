@@ -3,9 +3,6 @@ import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import data from './data';
 
-import DesktopScreenShot from '../../../public/assets/projects/onomie/00.png';
-import PhoneScreenShot from '../../../public/assets/projects/onomie/01.png';
-
 const PROJECTS = data;
 
 class ProjectDetail extends React.Component {
@@ -33,11 +30,12 @@ class ProjectDetail extends React.Component {
 						<p className="title uppercase bold">project description</p>
 						<p>{project.intro}</p>
 						<section className="project-screenshots">
-
-							{/* project.projectScreenshots.map(img, index) => <DeviceFrame /> */}
-							<DeviceFrame type="desktop" src={DesktopScreenShot} />
-							<DeviceFrame type="phone" src={PhoneScreenShot} />
-
+						{project.screenShots 
+							? project.screenShots.map((img, index) => 
+								<DeviceFrame type={img.split('-')[0]} src={img} imgKey={project.imgKey} key={index} />
+							)
+							: null
+						}
 						</section>
 						<ul className="project-image-list">
 						{project.projectImgs 

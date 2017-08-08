@@ -4,8 +4,10 @@ export default  [
 		name: "The Arrivals NYC", 
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/arrivals',
+		screenShots: [
+			'desktop-00.png', 'phone-00.png'
+		],
 		projectImgs: [
-			'00.png', '01.png'
 		],
 		siteUrl: 'http://thearrivals.com',
 		projectType: 'Responsive Ecommerce/Fashion website',
@@ -38,8 +40,10 @@ export default  [
 		name: "Suited Magazine", 
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/suited',
+		screenShots: [
+			'desktop-00.png', 'desktop-01.png', 'phone-00.png'
+		],
 		projectImgs: [
-			'00.png', '01.png', '02.png', '03.png'
 		],
 		siteUrl: 'http://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
@@ -58,8 +62,10 @@ export default  [
 		name: "Onomie", 
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/onomie',
+		screenShots: [
+			'desktop-00.png', 'phone-00.png'
+		],
 		projectImgs: [
-			'00.png', '01.png'
 		],
 		siteUrl: 'http://onomie.com',
 		projectType: 'Responsive Ecommerce/Beauty website',
@@ -79,8 +85,10 @@ export default  [
 		name: "Brainchild.Co",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/brainchild',
+		screenShots: [
+			'desktop-00.png', 'phone-01.png', 'phone-02.png'
+		],
 		projectImgs: [
-			'00.png', '01.png', '02.png'
 		],
 		siteUrl: 'http://brainchild.co',
 		projectType: 'Company Portfolio website',
@@ -114,8 +122,10 @@ export default  [
 		name: "CREEP",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/creep',
+		screenShots: [
+		],
 		projectImgs: [
-			'00.jpg', '01.png', '02.png'
+			'00.jpg',
 		],
 		siteUrl: 'http://officialcreep.com',
 		projectType: 'Official Band site',
@@ -134,6 +144,8 @@ export default  [
 		name: "Plusign",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/plusign',
+		screenShots: [
+		],
 		projectImgs: [
 			'00.png', '01.png', '02.png', '03.png', '04.png'
 		],
@@ -152,8 +164,10 @@ export default  [
 		name: "Tom Tom Magazine",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/tomtom',
+		screenShots: [
+			'desktop-00.png', 'phone-00.png', 'desktop-01.png', 'phone-01.png'
+		],
 		projectImgs: [
-			'00.png', '01.png'
 		],
 		siteUrl: 'http://tomtommag.com',
 		projectType: 'Responsive Ecommerce/Music Publication website',
@@ -172,6 +186,8 @@ export default  [
 		name: "R/GA",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/rga',
+		screenShots: [
+		],
 		projectImgs: [
 		],
 		projectType: 'User Experience Research, Product Development',
@@ -188,6 +204,8 @@ export default  [
 		name: "Live Visuals",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/live-visuals',
+		screenShots: [
+		],
 		projectImgs: [
 			'00.jpg'
 		],
@@ -204,21 +222,16 @@ export default  [
 		url: 'data-visualization', 
 		name: "Data Visualization",  
 		coverImg: "https://unsplash.it/1200/540",
+		imgKey: 'projects/data-visualization',
+		projectImgs: [
+			'00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg'
+		],
 		projectType: 'Data Visualization projects',
 		projectRole: [
 			'Lead Developer & Designer'
 		],
 		technologyUsed: 'Python, Java/Processing, Natural Language Toolkit, mongoDB',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.',
-		projectImgs: [
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-01.jpg',
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-02.jpg',
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-03.jpg',
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-04.jpg',
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-05.jpg',
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-06.jpg',
-			'http://kimispencer.com/assets/portfolio/thesis/kimiSpencer_thesis-loc.jpg'
-		]
+		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
 
 	},
 	{
@@ -226,6 +239,8 @@ export default  [
 		name: "Computer Vision",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/computer-vision',
+		screenShots: [
+		],
 		projectImgs: [
 		],
 		projectType: 'Computer Vision experiments',
@@ -242,6 +257,8 @@ export default  [
 		name: "Language Processing",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/nltk',
+		screenShots: [
+		],
 		projectImgs: [
 		],
 		projectType: 'Natural Language Processing experiments',
