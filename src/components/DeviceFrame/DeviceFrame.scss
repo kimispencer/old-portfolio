@@ -219,7 +219,7 @@
 /* Screenshot Hover Scroll Additions
 -------------------------------------------------------------- */
 .macbook .viewport, .iphone .viewport  {
-	transition: background-position 5s ease;			// this should be based on height of image
+	transition: background-position 20s ease;			// this should be based on height of image
 	background-position: 0 0;
 	overflow: hidden;
 	cursor: pointer;

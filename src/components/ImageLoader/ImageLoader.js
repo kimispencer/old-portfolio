@@ -37,6 +37,7 @@ class ImageLoader extends React.Component {
 		let classes = `${this.state.loaded ? 'loaded' : null} ${this.props.className ? this.props.className : ''} image-loader bg-img`;
 		return (
 			<div className={classes} style={ {backgroundImage: 'url(' + img + ')'} }>
+				{this.props.children}
 				<img
 					style={ {display: 'none'} }
 					src={img}

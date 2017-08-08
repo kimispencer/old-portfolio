@@ -33,9 +33,11 @@ class ProjectDetail extends React.Component {
 						<p className="title uppercase bold">project description</p>
 						<p>{project.intro}</p>
 						<section className="project-screenshots">
+
 							{/* project.projectScreenshots.map(img, index) => <DeviceFrame /> */}
 							<DeviceFrame type="desktop" src={DesktopScreenShot} />
 							<DeviceFrame type="phone" src={PhoneScreenShot} />
+
 						</section>
 						<ul className="project-image-list">
 						{project.projectImgs 
@@ -59,7 +61,7 @@ class ProjectDetail extends React.Component {
 							<p className="title uppercase bold">technology used</p>
 							<p className="monospace">{project.technologyUsed}</p>
 
-							{ project.siteUrl
+							{project.siteUrl
 								? <a href={project.siteUrl} target="_blank">
 									<div className="button"><p>visit website</p></div>
 								</a>

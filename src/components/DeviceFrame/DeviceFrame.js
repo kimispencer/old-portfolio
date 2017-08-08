@@ -1,9 +1,6 @@
 import React from 'react';
 import './DeviceFrame.css';
 
-import DesktopScreenShot from '../../../public/assets/projects/onomie/00.png';
-import PhoneScreenShot from '../../../public/assets/projects/onomie/01.png';
-
 const DeviceFrame = (props) => {
 	return (
 		<div className="device-frame">

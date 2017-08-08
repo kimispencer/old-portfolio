@@ -26,7 +26,7 @@
 		color: darken($text-color, 100%);
 	}
 }
-@mixin transition ($transition) {
+@mixin transition ($transition...) {
 	-webkit-transition: $transition;  
 	-moz-transition:    $transition;
 	-ms-transition:     $transition; 
