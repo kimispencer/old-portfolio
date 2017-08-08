@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
+import ReactPlayer from 'react-player'
 import data from './data';
 
 const PROJECTS = data;
@@ -22,13 +23,22 @@ class ProjectDetail extends React.Component {
 
 		return(
 			<div className="project-detail padded-width">
-				<h3 className="title">{project.name}</h3>
+				<h3 className="title page-title serif">{project.name}</h3>
 				<ImageLoader className="project-detail-cover" src={project.coverImg} />
 
 				<section className="text-container flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
 						<p className="title uppercase bold">project description</p>
 						<p>{project.intro}</p>
+
+						<section className="project-video-list">
+						{project.projectVids 
+							? project.projectVids.map((video, index) => 
+								<ReactPlayer className="project-video" url={video} key={index} />
+							)
+							: null
+						}
+						</section>
 						<section className="project-screenshots">
 						{project.screenShots 
 							? project.screenShots.map((img, index) => 

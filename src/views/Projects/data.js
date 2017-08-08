@@ -5,7 +5,7 @@ export default  [
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/arrivals',
 		screenShots: [
-			'desktop-00.png', 'phone-00.png'
+			'desktop-00.png', 'phone-00.png', 'desktop-01.png', 'phone-01.png'
 		],
 		projectImgs: [
 		],
@@ -107,6 +107,9 @@ export default  [
 		name: "Bolster",  
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/bolster',
+		projectImgs: [
+			'wireframe-00.jpg', 'wireframe-01.jpg', 'wireframe-02.jpg'
+		],
 		siteUrl: 'http://bolster.us',
 		projectType: 'AngularJS web application',
 		projectRole: [
@@ -209,6 +212,11 @@ export default  [
 		projectImgs: [
 			'00.jpg'
 		],
+		projectVids: [
+			'https://vimeo.com/228868759',
+			'https://vimeo.com/228868875',
+			'https://vimeo.com/228868859'
+		],
 		projectType: 'Live Visuals for events',
 		projectRole: [
 			'Art Director',
@@ -243,6 +251,11 @@ export default  [
 		],
 		projectImgs: [
 		],
+		projectVids: [
+			'https://vimeo.com/17864420',
+			'https://vimeo.com/34051136',
+			'https://vimeo.com/15997540'
+		],
 		projectType: 'Computer Vision experiments',
 		projectRole: [
 			'Concept & Experience Designer',
@@ -260,6 +273,12 @@ export default  [
 		screenShots: [
 		],
 		projectImgs: [
+		],
+		projectVids: [
+			'https://vimeo.com/42182472',
+			'https://vimeo.com/41890006',
+			'https://vimeo.com/41890005',
+			'https://vimeo.com/41890004'
 		],
 		projectType: 'Natural Language Processing experiments',
 		projectRole: [

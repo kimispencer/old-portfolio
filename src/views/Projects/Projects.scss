@@ -107,6 +107,15 @@ $project_tile_height: 33.3vw;
 			margin-top: $gutter;
 		}
 	}
+	.project-video-list {
+		.project-video {
+			@include border(red);
+			margin-top: $gutter;
+			max-width: 100vw;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	.project-image-list {
 		.project-image {
 			@include border(red);

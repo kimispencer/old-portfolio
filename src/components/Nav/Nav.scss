@@ -10,6 +10,10 @@
 	background-color: $white;
 	border-bottom: 1px solid $lightgrey;
 }
+/*
+	* mobile, slide out
+	* desktop, top bar content
+*/
 .nav {
 	z-index: $ultimate_top;
 	@include transition(all $transition_speed ease);
@@ -19,10 +23,6 @@
 	left: 0;
 	.logo-container {
 		margin: $gutter/2 $gutter*1.5;
-		#Logo {
-			height: $gutter;
-			width: auto;
-		}
 	}
 	.nav-links {
 		@include flexbox();
@@ -32,6 +32,10 @@
 			letter-spacing: 0.2em;
 		}
 	}
+}
+#Logo {
+	height: 15px;
+	width: auto;
 }
 
 @media #{$desktop} {	
@@ -77,9 +81,6 @@
 		top: 0;
 		left: 0;
 		margin: $gutter;
-		#Logo {
-			height: $gutter;
-		}
 	}
 	.nav {
 		z-index: $ultimate_top;

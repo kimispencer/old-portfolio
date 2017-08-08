@@ -283,6 +283,10 @@ select:-webkit-autofill:focus {
   background-color: #ffffff;
   border-bottom: 1px solid lightgrey; }
 
+/*
+	* mobile, slide out
+	* desktop, top bar content
+*/
 .nav {
   z-index: 100;
   -webkit-transition: all 350ms ease;
@@ -295,9 +299,6 @@ select:-webkit-autofill:focus {
   left: 0; }
   .nav .logo-container {
     margin: 10px 30px; }
-    .nav .logo-container #Logo {
-      height: 20px;
-      width: auto; }
   .nav .nav-links {
     display: -webkit-box;
     display: -moz-box;
@@ -308,6 +309,10 @@ select:-webkit-autofill:focus {
       margin: 10px;
       display: inline;
       letter-spacing: 0.2em; }
+
+#Logo {
+  height: 15px;
+  width: auto; }
 
 @media only screen and (min-width: 1025px) {
   .nav-trigger {
@@ -376,8 +381,6 @@ select:-webkit-autofill:focus {
     top: 0;
     left: 0;
     margin: 20px; }
-    .logo-container #Logo {
-      height: 20px; }
   .nav {
     z-index: 100;
     height: 100vh;
