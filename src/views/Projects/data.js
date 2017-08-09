@@ -200,7 +200,7 @@ export default  [
 			`
 			<p><a href="http://plusign.com/" target="_blank">+plusign</a> is an award-winning creative studio that does branding, digital, and design.</p>
 			<br/>
-			<p>I was brought on as lead UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. My work also included creative coding projects to product generative logo designs for the brand.</p>
+			<p>I was brought on as lead UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. My work also included creative coding projects such as generative logo designs for the brand.</p>
 			`
 
 	},
