@@ -20,7 +20,16 @@ export default  [
 			'Weekly interactive site campaigns'
 		],
 		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
-		intro: 'INCLUDE SVG LOGO ANIMATION! Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p>The Arrivals is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
+			<br/>
+			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a></p>
+			<br/>
+			<p>As the lead front-end engineer and interaction designer I was individually responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+			<br/>
+			<p>Orginally built on top of jQuery/PHP, I recently led the front-end conversion into reusuable React components and transforming the site into a responsive, single page application.</p>
+			`
 	},
 	{
 		url: 'kimispencer', 
@@ -33,7 +42,10 @@ export default  [
 			'Responsive web design',
 		],
 		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, SASS/CSS3, Sketch, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p>Responsive ReactJS portoflio site. Built using React/Flux.</p>
+			`
 	},
 	{ 
 		url: 'suited', 
@@ -55,7 +67,12 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+		`
+		<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
+		<br/>
+		<p>I was brought on to be the full-stack engineer and UX designer for <a href="http://suitedmagazine.com" target="_blank">SuitedMagazine.com</a> and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the creative director to build visual mockups and interface designs.</p>
+		`
 	},
 	{
 		url: 'onomie', 
@@ -77,7 +94,12 @@ export default  [
 			'Monthly interactive site campaigns'
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
-		intro: 'INCLUDE SVG LOGO ANIMATION! Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p><a href="http://onomie.com" target="_blank">Onomie.com</a> is an intelligent beauty brand.</p>
+			<br/>
+			<p>I was brought on to lead the front-end web devleopment and interaction design.</p>
+			`
 
 	},
 	{
@@ -99,7 +121,12 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, Django, Python, Photoshop, Sketch, Git',
-		intro: 'INCLUDE ALL SVG LOGO ANIMATIONS! Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p><a href="http://brainchild.co/" target="_blank">Brainchild.co</a> is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
+			<br/>
+			<p>I was brought on during the nascent stages of The Arrivals and Onomie, building out both brand sites & experiences from launch. As well as using A/B testing and user studies to further optimize the site, and deploy interactive campaigns as well as product launches.</p>
+			`
 
 	},
 	{
@@ -117,7 +144,12 @@ export default  [
 			'Visual & UX designer',
 		],
 		technologyUsed: 'AngularJS, HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+		`
+		<p><a href="http://bolster.us/" target="_blank">Bolster.us</a> is a web application for home owners & contractors to connect and manage home remodeling projects.</p>
+		<br/>
+		<p>I was brought on to lead the UX and interaction design for the project; as such I designed and developed a user-facing public website as well as an admin site for users to log in, find their match, upload/share documents & monitor their project's progression. Built with AngularJS using modern web standards.</p>
+		`
 
 	},
 	{
@@ -139,7 +171,12 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p>CREEP is a Brooklyn based Electronic music duo formed in 2009. The duo consists of Lauren Flax and Lauren Dillard.</p>
+			<br/>
+			<p>I was asked to create a responsive site for the band to showcase new music tracks, imagery, videos and upcoming tour dates</p>
+			`
 
 	},
 	{
@@ -159,7 +196,12 @@ export default  [
 			'Visual/Typography designer',
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Photoshop, Illustrator, Java/Processing',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p><a href="http://plusign.com/" target="_blank">+plusign</a> is an award-winning creative studio that does branding, digital, and design.</p>
+			<br/>
+			<p>I was brought on as lead UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. My work also included creative coding projects to product generative logo designs for the brand.</p>
+			`
 
 	},
 	{
@@ -181,8 +223,12 @@ export default  [
 			'CMS backend',
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Ajax, PHP, Photoshop, Shopify',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
-
+		intro: 
+			`
+			<p><a href="http://tomtommag.com/" target="_blank">Tom Tom Magazine</a> is a quarterly print magazine and website based out of New York City. It is the only magazine in the world that is dedicated to female drummers.</p>
+			<br/>
+			<p>I was brought on to build out Tom Tom's ecommerce platform to leverage site visits into opportunities to sell the publication or goods related to the brand. Using the Shopify CMS I built a custom responsive template theme for the Tom Tom store.</p>
+			`
 	},
 	{
 		url: 'rga', 
@@ -199,7 +245,12 @@ export default  [
 			'Visual Storyteller',
 		],
 		technologyUsed: 'Keynote, Photoshop, Illustrator, InDesign',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p><a href="https://www.rga.com/" target="_blank">R/GA</a> is an American international advertising agency headquartered in New York</p>
+			<br/>
+			<p>I was brought on to develop detailed wireframes and collaborate in the redesign of Verizon Wireless in-store touch screen experiences. I designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points of the Verizon brand experience.</p>
+			`
 
 	},
 	{
@@ -215,7 +266,8 @@ export default  [
 		projectVids: [
 			'https://vimeo.com/228868759',
 			'https://vimeo.com/228868875',
-			'https://vimeo.com/228868859'
+			'https://vimeo.com/228868859',
+			'https://vimeo.com/228994856'
 		],
 		projectType: 'Live Visuals for events',
 		projectRole: [
@@ -223,7 +275,12 @@ export default  [
 			'Visual Designer',
 		],
 		technologyUsed: 'VDMX, Java/Processing, After Effects, Premiere, MadMapper, Cinema4D',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p>Live visuals/VJ'ing projects for live performances or events.</p>
+			<br/>
+			<p>I was asked to create visuals and immersive experiences from music performances, store openings, to fundraising events. Using VDMX as a live controller, I served as VJ for custom generated video content that was manipulated using real-time image processing or with post-production effects.</p>
+			`
 
 	},
 	{
@@ -262,7 +319,10 @@ export default  [
 			'Computer Programmer',
 		],
 		technologyUsed: 'openCV, Processing/Java',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p>Computer Vision experiments using openCV.</p>
+			`
 
 	},
 	{
@@ -286,7 +346,14 @@ export default  [
 			'Computer Programmer',
 		],
 		technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
-		intro: 'Mauris ullamcorper erat sed velit luctus semper. Praesent ornare fringilla erat id dapibus. Integer dictum nisi et finibus congue. Suspendisse mollis cursus magna, sit amet fermentum magna rhoncus in. Nam suscipit luctus purus eu posuere. Etiam accumsan porttitor nulla vitae ultricies. Duis ut facilisis risus, id ornare tellus. Pellentesque eu orci eget lectus sollicitudin facilisis vitae vel diam. Nullam viverra neque in arcu placerat molestie. Praesent fermentum, enim accumsan venenatis interdum, turpis nibh faucibus ex, et lacinia mauris magna ut diam.'
+		intro: 
+			`
+			<p>Reading and writing electronc text experiements</p>
+			<br/>
+			<p>Using Python and the NLTK (Natural Language Tool Kit) I create a script that pulled lyrics from various musicans and recreated the lyrics using n-grams and language pattern recognition.</p>
+			<br/>
+			<p>Presented in the style of late night 90's television informercials.</p>
+			`
 
 	},
 ];

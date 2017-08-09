@@ -29,7 +29,7 @@ class ProjectDetail extends React.Component {
 				<section className="text-container flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
 						<p className="title uppercase bold">project description</p>
-						<p>{project.intro}</p>
+						<p dangerouslySetInnerHTML={{ __html: project.intro }}></p>
 
 						<section className="project-video-list">
 						{project.projectVids 

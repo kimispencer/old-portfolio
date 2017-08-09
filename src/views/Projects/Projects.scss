@@ -100,9 +100,9 @@ $project_tile_height: 33.3vw;
 		background-attachment: fixed;
 	}
 	.text-container {
+	    width: 100%;
 		@include align-items(flex-start);
 		@include justify-content(center);
-
 		.button {
 			margin-top: $gutter;
 		}
@@ -236,6 +236,11 @@ $project_tile_height: 33.3vw;
 				padding: $gutter/4;
 				margin-top: $gutter/2;
 			}
+		}
+	}
+	.project-detail {
+		.text-container {
+			@include flex-flow(column-reverse !important);
 		}
 	}
 }

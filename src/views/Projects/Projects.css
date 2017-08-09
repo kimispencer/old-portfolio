@@ -412,6 +412,7 @@ select:-webkit-autofill:focus {
   background-attachment: fixed; }
 
 .project-detail .text-container {
+  width: 100%;
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
   -ms-align-items: flex-start;
@@ -545,4 +546,9 @@ select:-webkit-autofill:focus {
     height: 50vh; }
   .project-list-item.box-style .text {
     padding: 5px;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .project-detail .text-container {
+    -webkit-flex-flow: column-reverse !important;
+    -moz-flex-flow: column-reverse !important;
+    -ms-flex-flow: column-reverse !important;
+    flex-flow: column-reverse !important; } }
