@@ -551,4 +551,7 @@ select:-webkit-autofill:focus {
     -webkit-flex-flow: column-reverse !important;
     -moz-flex-flow: column-reverse !important;
     -ms-flex-flow: column-reverse !important;
-    flex-flow: column-reverse !important; } }
+    flex-flow: column-reverse !important; }
+  .project-detail .button {
+    margin-left: auto;
+    margin-right: auto; } }

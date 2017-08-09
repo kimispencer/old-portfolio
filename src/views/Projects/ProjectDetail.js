@@ -1,4 +1,5 @@
 import React from 'react';
+import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import ReactPlayer from 'react-player'
@@ -55,6 +56,11 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</ul>
+						{(!isDesktop() && project.siteUrl) &&
+							<a href={project.siteUrl} target="_blank">
+								<div className="button"><p>visit website</p></div>
+							</a>
+						}
 					</div>
 					<div className="text quarter-span" id="ProjectSkillsList">
 						<div className="flex-col">
@@ -69,11 +75,10 @@ class ProjectDetail extends React.Component {
 							<p className="title uppercase bold">technology used</p>
 							<p className="monospace">{project.technologyUsed}</p>
 
-							{project.siteUrl
-								? <a href={project.siteUrl} target="_blank">
+							{(isDesktop() && project.siteUrl) &&
+								<a href={project.siteUrl} target="_blank">
 									<div className="button"><p>visit website</p></div>
 								</a>
-								: null
 							}
 						</div>
 					</div>
