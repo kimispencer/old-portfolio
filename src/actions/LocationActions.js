@@ -19,4 +19,3 @@ class LocationActions {
 }
 
 module.exports = alt.createActions(LocationActions);
-// export default alt.createActions(LocationActions);

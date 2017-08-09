@@ -34,12 +34,12 @@ class ProjectDetail extends React.Component {
 						<section className="project-video-list">
 						{project.projectVids 
 							? project.projectVids.map((video, index) => 
-								<ReactPlayer className="project-video" url={video} key={index} />
+								<ReactPlayer className="project-video" url={video} key={index} width="100%" />
 							)
 							: null
 						}
 						</section>
-						<section className="project-screenshots">
+						<section className="project-screenshot-list">
 						{project.screenShots 
 							? project.screenShots.map((img, index) => 
 								<DeviceFrame type={img.split('-')[0]} src={img} imgKey={project.imgKey} key={index} />

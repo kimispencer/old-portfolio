@@ -5,7 +5,7 @@ export default  [
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/arrivals',
 		screenShots: [
-			'desktop-00.png', 'phone-00.png', 'desktop-01.png', 'phone-01.png'
+			'desktop-00.jpg', 'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
 		],
 		projectImgs: [
 		],
@@ -41,7 +41,7 @@ export default  [
 		coverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/suited',
 		screenShots: [
-			'desktop-00.png', 'desktop-01.png', 'phone-00.png'
+			'desktop-00.jpg', 'desktop-01.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
 		],

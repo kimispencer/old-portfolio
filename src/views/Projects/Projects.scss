@@ -107,6 +107,8 @@ $project_tile_height: 33.3vw;
 			margin-top: $gutter;
 		}
 	}
+	.project-screenshot-list {
+	}
 	.project-video-list {
 		.project-video {
 			@include border(red);
@@ -199,6 +201,8 @@ $project_tile_height: 33.3vw;
 					margin-left: $gutter;
 				}
 			}
+		}
+		.project-screenshot-list {
 		}
 	}
 }

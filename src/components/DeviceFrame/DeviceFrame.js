@@ -2,7 +2,6 @@ import React from 'react';
 import './DeviceFrame.css';
 
 const DeviceFrame = (props) => {
-	console.log(props)
 	let img;
 	(props.src.indexOf('http') > -1) ? img = props.src : img = require(`../../../public/assets/${props.imgKey}/${props.src}`);
 	return (
