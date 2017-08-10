@@ -2,12 +2,14 @@ export default  [
 	{
 		url: 'arrivals',
 		name: "The Arrivals NYC", 
-		coverImg: "https://unsplash.it/1200/540", //"bg-00.jpg", 
+		coverImg: "https://unsplash.it/1200/540",
+		testImg: 'bg-00.jpg',
 		imgKey: 'projects/arrivals',
 		screenShots: [
 			'desktop-00.jpg', 'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
 		],
 		projectImgs: [
+			'bg-00.jpg'
 		],
 		siteUrl: 'http://thearrivals.com',
 		projectType: 'Responsive Ecommerce/Fashion website',
@@ -71,7 +73,7 @@ export default  [
 		`
 		<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 		<br/>
-		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their bi-annual Fall 2016 edition <a href="http://suitedmagazine.com" target="_blank">SuitedMagazine.com</a> and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the creative director to build visual mockups and interface designs.</p>
+		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their Fall 2016 edition <a href="http://suitedmagazine.com" target="_blank">SuitedMagazine.com</a> and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to build visual mockups and interface designs.</p>
 		`
 	},
 	{
@@ -125,7 +127,9 @@ export default  [
 			`
 			<p><a href="http://brainchild.co/" target="_blank">Brainchild.co</a> is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 			<br/>
-			<p>I was brought on during the nascent stages of The Arrivals and Onomie (two brands part of the Brainchild.co collective), building out both brand's sites & experiences from launch. As well as using A/B testing and user studies to further optimize the site, and deploy interactive campaigns as well as product launches.</p>
+			<p>I was brought on during the nascent stages of The Arrivals and Onomie (two brands part of the Brainchild.co collective), building out both brand's sites & experiences from launch.</p>
+			<br/>
+			<p>Additionally, I built out the Brainchild.co site on top of a Django framework to showcase it's suite of venture investments, as well as collective of brands and on-going projects.</p>
 			`
 
 	},
@@ -307,7 +311,8 @@ export default  [
 			`
 			<p>What do popular song lyrics say about cultural moods, concerns and political issues of different times?</p>
 			<br/>
-			<p>To answer this question, I created a Python web scraping script to pull lyrics from the top Billboard charts since it's inception in the early 1900's</p>
+			<p>To answer this question, I created a Python web scraping script to pull lyrics from the top Billboard charts since it's inception in the early 1900's.</p>
+			<br/>
 			<p>Using this trove of data, I analyzed language patterns to produce detailed visualizations of popular music lyrics; examining relationships between entities (such as "I" and "you"), as well as common verbs that express relationships between those enttities (such as "love", or "hate").</p>
 			<p>Topical patterns of time also emerge, such as the use "groovy" in 70's song lyrics, as compared to the 80's/90's when references to more explicit language starts appearing.</p>
 			<br/>
