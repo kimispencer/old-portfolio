@@ -16,8 +16,13 @@
 	}
 	#SocialMediaList {
 		margin-top: $gutter*2;
+		@include flexbox-center(row);
 		li {
-			margin-top: $gutter/2;
+			margin: $gutter/2;
+			object {
+				height: $gutter*1.5;
+				width: $gutter*1.5;
+			}
 		}
 	}
 }
