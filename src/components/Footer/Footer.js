@@ -19,12 +19,12 @@ const Footer = (props) => {
 					</li>
 					<li>
 						<Link to="https://vimeo.com/kimispencer" target="_blank">
-							<img alt="Vimeo" id="Vimeo" src={Vimeo} />
+							<img alt="LinkedIn" id="LinkedIn" src={Vimeo} />
 						</Link>
 					</li>
 					<li>
 						<Link to="https://github.com/kimispencer" target="_blank">
-							<img alt="Github" id="Github" src={Github} />
+							<img alt="LinkedIn" id="LinkedIn" src={Github} />
 						</Link>
 					</li>
 				</ul>
