@@ -369,7 +369,7 @@ export default  [
 		technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
 		intro: 
 			`
-			<p>Reading and writing electronc text experiements</p>
+			<p>Reading and writing electronic text experiements</p>
 			<br/>
 			<p>Using Python and the NLTK (Natural Language Tool Kit) I create a script that pulled lyrics from various musicans and recreated the lyrics using n-grams and language pattern recognition.</p>
 			<br/>
