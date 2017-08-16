@@ -13,7 +13,10 @@ html {
 	}
 	.main-content {
 		min-height: calc(100vh - #{$footer_height} - #{$fixed_nav_height});
-		margin-top: calc(#{$fixed_nav_height} + #{$gutter});
+		margin-top: $fixed_nav_height;
+		.padded-top {
+			margin-top: calc(#{$fixed_nav_height} + #{$gutter});
+		}
 	}
 	.Footer {
 		/* CSS on the component level */

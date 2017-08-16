@@ -3,7 +3,7 @@ import './Resume.css';
 import ProfilePic from '../../../public/assets/profile.jpg';
 
 const Resume = () => (	
-	<div className="resume">
+	<div className="resume padded-top">
 
 		<div className="resume-container padded-width">
 			<div className="resume-section" id="Header">
