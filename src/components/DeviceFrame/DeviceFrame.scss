@@ -130,7 +130,13 @@
 		}
 	}
 }
-
+@media #{$phone} {
+	.iphone {
+		.iphone-bottom {
+			display: none;
+		}
+	}
+}
 /* simulate a MacBook device frame 
 	* https://codepen.io/asraven/pen/eJREQv/
 	* https://codepen.io/asraven/pen/obegjW/
