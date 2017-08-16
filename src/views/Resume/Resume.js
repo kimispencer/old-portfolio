@@ -1,18 +1,18 @@
 import React from 'react';
-
 import './Resume.css';
+import ProfilePic from '../../../public/assets/profile.jpg';
 
 const Resume = () => (	
-	<div className="Resume">
+	<div className="resume">
 
 		<div className="resume-container padded-width">
 			<div className="resume-section" id="Header">
 				<div className="left-col"></div>
 				<div className="right-col">
 					<div className="center">
-						<h2 className="bold title">KIMI SPENCER</h2>
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
+						<img alt="profile" id="ProfilePic" className="circle-img" src={ProfilePic} />
 					</div>
 				</div>
 			</div>
@@ -21,11 +21,13 @@ const Resume = () => (
 					<h4 className="bold title underline">PROFILE</h4>
 				</div>
 				<div className="right-col">
-					<p>Hi, I’m Kimi! I’m a front-end engineer and interaction designer based in NYC. 
-						I have over 9 years experience working in interactive technology from San Francisco startups to NYC digital agencies; 
-						and spanning industries from museum education, high-end fashion to music production. 
-						I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. 
-						I also have a personal passion for music videos, conceptual art, arugula & alliteration.</p>
+					<div className="resume-section-item">
+						<div className="flex-row responsive title">
+							<p>Hi, I’m Kimi! I’m a front-end engineer and user experience designer based in NYC. 
+							I have over 9 years expertise working in interactive technology, from San Francisco startups to NYC digital agencies. Spanning industries from interactive advertising, high-end fashion brands, AR games for museum eduction, to online publications. 
+							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div className="resume-section" id="WorkExperience">

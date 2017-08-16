@@ -14,7 +14,8 @@
   },
   "devDependencies": {
     "node-sass": "^4.5.0",
-    "react-scripts": "0.9.3"
+    "react-scripts": "0.9.3",
+    "url-loader": "^0.5.9"
   },
   "scripts": {
     "build-css": "node-sass src/ -o src/",

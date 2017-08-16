@@ -13,6 +13,7 @@
 	transition: all $transition_speed*2 ease;
 	&.loaded {
 		opacity: 0;
+		display: none;
 	}
 }
 .spinner,

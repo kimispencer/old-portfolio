@@ -3,6 +3,16 @@
 	* July 6, 2017
 */
 
+// import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
+// var Locations = require('./components/Locations.jsx');
+
+// ReactDOM.render(
+//   <Locations />,
+//   document.getElementById('Root')
+// );
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

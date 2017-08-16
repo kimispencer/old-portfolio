@@ -1,6 +1,9 @@
 import React, { } from 'react';
-
+import { Link } from 'react-router-dom';
 import './Footer.css';
+import LinkedIn from '../../../public/assets/logos/linkedin.svg';
+import Vimeo from '../../../public/assets/logos/vimeo.svg';
+import Github from '../../../public/assets/logos/github.svg';
 
 const Footer = (props) => {
 	return (
@@ -10,9 +13,19 @@ const Footer = (props) => {
 			<div className="flex-col">
 				<ul id="SocialMediaList">
 					<li>
-						<a href="https://www.linkedin.com/in/kimispencer" target="_blank">
-							<object data="http://kimispencer.com/assets/portfolio/logos/linkedin.svg" type="image/svg+xml"></object>
-						</a>
+						<Link to="https://www.linkedin.com/in/kimispencer" target="_blank">
+							<img alt="LinkedIn" id="LinkedIn" src={LinkedIn} />
+						</Link>
+					</li>
+					<li>
+						<Link to="https://vimeo.com/kimispencer" target="_blank">
+							<img alt="LinkedIn" id="LinkedIn" src={Vimeo} />
+						</Link>
+					</li>
+					<li>
+						<Link to="https://github.com/kimispencer" target="_blank">
+							<img alt="LinkedIn" id="LinkedIn" src={Github} />
+						</Link>
 					</li>
 				</ul>
 			</div>

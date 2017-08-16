@@ -5,7 +5,6 @@
 /* footer */
 /* colors */
 /* buttons */
-/* Calculate fluid ratio based on two dimensions (width/height) */
 /*
 	* flex rows
 */
@@ -149,6 +148,9 @@
   background-size: cover;
   background-position: center; }
 
+.circle-img {
+  border-radius: 50%; }
+
 .grey {
   color: #333; }
 
@@ -271,7 +273,7 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
-.Contact #ContactForm {
+.contact #ContactForm {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;

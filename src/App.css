@@ -5,7 +5,6 @@
 /* footer */
 /* colors */
 /* buttons */
-/* Calculate fluid ratio based on two dimensions (width/height) */
 /*
 	* flex rows
 */
@@ -149,6 +148,9 @@
   background-size: cover;
   background-position: center; }
 
+.circle-img {
+  border-radius: 50%; }
+
 .grey {
   color: #333; }
 
@@ -283,6 +285,6 @@ html {
     /* CSS on the component level */ }
   .App .main-content {
     min-height: calc(100vh - 100px - 60px);
-    margin-top: 60px; }
+    margin-top: calc(60px + 20px); }
   .App .Footer {
     /* CSS on the component level */ }

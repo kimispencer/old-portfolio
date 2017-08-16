@@ -5,7 +5,6 @@
 /* footer */
 /* colors */
 /* buttons */
-/* Calculate fluid ratio based on two dimensions (width/height) */
 /*
 	* flex rows
 */
@@ -149,6 +148,9 @@
   background-size: cover;
   background-position: center; }
 
+.circle-img {
+  border-radius: 50%; }
+
 .grey {
   color: #333; }
 
@@ -271,7 +273,21 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
-.Nav {
+.nav-header-bar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  background-color: #ffffff;
+  border-bottom: 1px solid lightgrey; }
+
+/*
+	* mobile, slide out
+	* desktop, top bar content
+*/
+.nav {
   z-index: 100;
   -webkit-transition: all 350ms ease;
   -moz-transition: all 350ms ease;
@@ -281,23 +297,27 @@ select:-webkit-autofill:focus {
   position: fixed;
   top: 0;
   left: 0; }
-  .Nav #Logo {
-    position: fixed; }
-  .Nav ul {
+  .nav .logo-container {
+    margin: 10px 30px; }
+  .nav .nav-links {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
-    .Nav ul li {
+    .nav .nav-links li {
       margin: 10px;
       display: inline;
       letter-spacing: 0.2em; }
 
+#Logo {
+  height: 15px;
+  width: auto; }
+
 @media only screen and (min-width: 1025px) {
-  .NavTrigger {
+  .nav-trigger {
     display: none; }
-  .Nav {
+  .nav {
     width: 100vw;
     height: 60px;
     border-bottom: 1px solid lightgrey;
@@ -319,15 +339,12 @@ select:-webkit-autofill:focus {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center;
-    -webkit-justify-content: flex-end;
-    -moz-justify-content: flex-end;
-    -ms-justify-content: flex-end;
-    justify-content: flex-end;
-    -ms-flex-pack: flex-end; }
-    .Nav #Logo {
-      top: 10px;
-      left: 20px; }
-    .Nav ul {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between; }
+    .nav .nav-links {
       -webkit-flex-flow: row;
       -moz-flex-flow: row;
       -ms-flex-flow: row;
@@ -339,14 +356,12 @@ select:-webkit-autofill:focus {
       -ms-flex-pack: flex-end;
       padding: 0;
       margin: 0 20px; }
-      .Nav ul li {
+      .nav .nav-links li {
         margin: 10px;
         display: inline; } }
 
 @media only screen and (max-width: 1024px) {
-  .Nav {
-    z-index: 100; }
-  .NavTrigger {
+  .nav-trigger {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -358,37 +373,40 @@ select:-webkit-autofill:focus {
     top: 0;
     right: 0;
     text-shadow: white 1px 0px 0px; }
-    .NavTrigger h1 {
+    .nav-trigger h1 {
       display: inline-block;
       margin: 0; }
-  .Nav {
+  .logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px; }
+  .nav {
+    z-index: 100;
     height: 100vh;
     width: 300px;
     max-width: 70vw;
     background-color: #030303;
     color: white; }
-    .Nav.open {
+    .nav.open {
       -webkit-transform: translate3d(0vw, 0, 0);
       -moz-transform: translate3d(0vw, 0, 0);
       -ms-transform: translate3d(0vw, 0, 0);
       -o-transform: translate3d(0vw, 0, 0); }
-    .Nav.closed {
+    .nav.closed {
       -webkit-transform: translate3d(-300px, 0, 0);
       -moz-transform: translate3d(-300px, 0, 0);
       -ms-transform: translate3d(-300px, 0, 0);
       -o-transform: translate3d(-300px, 0, 0); }
-    .Nav #Logo {
-      left: 40px;
-      bottom: 20px; }
-    .Nav ul {
+    .nav .nav-links {
       -webkit-flex-flow: column;
       -moz-flex-flow: column;
       -ms-flex-flow: column;
       flex-flow: column;
       padding: 20px;
       margin: 0; }
-      .Nav ul li {
+      .nav .nav-links li {
         margin: 10px;
         display: block; }
-        .Nav ul li p {
+        .nav .nav-links li p {
           color: white; } }
