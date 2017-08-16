@@ -13,12 +13,6 @@ class ProjectStore {
 			handleHideMenu: Actions.HIDE_MENU
 		});
 	}
-	handleShowMenu() {
-
-	}
-	handleHideMenu() {
-		
-	}
 }
 
 module.exports = alt.createStore(ProjectStore, 'ProjectStore');
