@@ -35,7 +35,7 @@ class ProjectDetail extends React.Component {
 						<section className="project-video-list">
 						{project.projectVids 
 							? project.projectVids.map((video, index) => 
-								<ReactPlayer className="project-video" url={video} key={index} width="100%" />
+								<ReactPlayer className="project-video" url={video} key={index} />
 							)
 							: null
 						}
