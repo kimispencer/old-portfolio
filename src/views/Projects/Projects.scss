@@ -207,6 +207,16 @@ $project_tile_height: 33.3vw;
 }
 
 @media #{$tablet} {
+	.hover-image-container {
+		.bg-img {
+			&.top-image {
+				opacity: 0 !important;
+			}
+			&.bottom-image {
+				opacity: 1 !important;
+			}
+		}
+	}
 	.projects {
 		#Menu {
 			@include clickable();
