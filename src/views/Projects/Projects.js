@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom';
 // import AltContainer from 'alt-container';
 // import ProjectStore from '../../stores/ProjectStore';
 // import ProjectActions from '../../actions/ProjectActions';
+import { isDesktop } from '../../components/Responsive/Responsive';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import data from './data';
@@ -24,14 +25,20 @@ const ProjectListItem = (props) => {
 			}
 			{!props._projectNavStyle_isList &&
 			<div className="hover-image-container"> {/* !!! turn this into a component later */}
-				<ImageLoader className="top-image" src={props.project.coverImg} />
-				<ImageLoader className="bottom-image" src='https://unsplash.it/1200/720'>
+				<ImageLoader className="top-image" src={props.project.heroImg} imgKey={props.project.imgKey} />
+				<ImageLoader className="bottom-image" src={props.project.hoverImg} >
 					<div className="text monospace">
 						<h4 className="project-name">{props.project.name}</h4>
 						<p className="project-type">{props.project.projectType}</p>
 					</div>
 				</ImageLoader>
 			</div>
+			}
+			{(!props._projectNavStyle_isList && !isDesktop()) && 
+				<div className="text monospace">
+					<h4 className="project-name">{props.project.name}</h4>
+					<p className="project-type">{props.project.projectType}</p>
+				</div>
 			}
 		</div>
 	);
