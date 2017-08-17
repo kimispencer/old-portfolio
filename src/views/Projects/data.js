@@ -251,7 +251,7 @@ export default  [
 		url: 'rga', 
 		name: "R/GA",  
 		hoverImg: "https://unsplash.it/1200/540",
-		tileImg: 'bg-00.jpg',
+		tileImg: 'bg-00.png',
 		imgKey: 'projects/rga',
 		screenShots: [
 		],
