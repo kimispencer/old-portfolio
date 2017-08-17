@@ -1,30 +1,72 @@
 import React from 'react';
+import * as THREE from 'three';
 import './Home.css';
 
-const Home = () => (
-	<div className="Home">
-		<div className="home-container flex-row responsive padded-width">
-			<div className="left-col">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.6 107.6" id="StarSVG">
-				    <path fill="none" stroke="black" strokeWidth="2" id="StarPath" d="M43.7,65.8L19.9,83.3c-2.9,1.9-5.1,3.2-7.9,3.2c-5.7,0-10.5-5.1-10.5-10.8
-				        c0-4.8,3.8-8.2,7.3-9.8l27.9-12L8.8,41.4c-3.8-1.6-7.3-5.1-7.3-9.8c0-5.7,5.1-10.5,10.8-10.5c2.9,0,4.8,1,7.6,3.2l23.8,17.4
-				        l-3.2-28.2c-1-6.7,3.5-12,9.8-12c6.3,0,10.8,5.1,9.8,11.7L57,41.8l23.8-17.4c2.9-2.2,5.1-3.2,7.9-3.2c5.7,0,10.5,4.8,10.5,10.5
-				        c0,5.1-3.5,8.2-7.3,9.8L63.9,53.8l27.9,12c3.8,1.6,7.3,5.1,7.3,10.1c0,5.7-5.1,10.5-10.8,10.5c-2.5,0-4.8-1.3-7.6-3.2L57,65.8
-				        l3.2,28.2c1,6.7-3.5,12-9.8,12c-6.3,0-10.8-5.1-9.8-11.7L43.7,65.8z"/>
-				</svg>
-			</div>
-			<div className="right-col">
-				<div className="">
-					<h2 className="title bold uppercase">Kimi Spencer</h2>
-					<h2 className="title monospace">Is a designer who codes.</h2>
-					<div id="MobileSVG"></div>
-					<h4 className="title monospace">
-						<li>A front-end engineer & UX designer from Brooklyn, New York</li>
-						<li>Focusing on interactive experiences & responsive web apps</li>
-					</h4>
-				</div>
-			</div>
-		</div>
-	</div>
-)
+class Home extends React.Component {
+	componentDidMount() {
+		var height = document.getElementsByClassName('home')[0].clientHeight,
+			width = document.getElementsByClassName('home')[0].clientWidth;
+
+		// 3 must haves - SCENE , CAMERA, RENDERER
+
+		var scene = new THREE.Scene(); // Creates a new scene
+
+		var camera = new THREE.PerspectiveCamera( 75, width / height, 0.1, 1000 ); // Creates a camera and passes (field of view, aspect ratio, near clipping plane, far clipping plane)
+			  camera.position.set(0, 0, 5);// moves the camera back some so we won't be inside of the cube
+			  camera.lookAt( scene.position ); // makes the camera always point toward the scene
+			  scene.add(camera);
+
+		var light = new THREE.PointLight( 0xFFFF00 );
+			  light.position.set( 10, 0, 10 );
+			  scene.add(light);
+
+		var renderer = new THREE.WebGLRenderer();
+			  renderer.setSize( width, height ); // sets size of render to the screen size
+			  document.getElementsByClassName('home')[0].appendChild( renderer.domElement); // Renders a canvas tag to the DOM
+
+		var geometry = new THREE.BoxGeometry( 2, 2, 2); // give the cube it's dimensions (width, height, depth)
+		var material = new THREE.MeshLambertMaterial( { color: 0xFF0000, wireframe: false} ); // creates material and gives it a color
+		material.wireframe = false;
+		var cube1 = new THREE.Mesh( geometry, material ); // crates the cube using the geometry and the material
+		var cube2 = new THREE.Mesh( geometry, material );
+			  cube2.position.set(5, -2, -5);
+		var cube3 = new THREE.Mesh( geometry, material );
+			  cube3.position.set(-5, -2, -5);
+
+		scene.add( cube1, cube2, cube3); // adds the cube to the scene
+
+		// Resize Three.js scene on window resize
+		window.addEventListener( 'resize', onWindowResize, false );
+
+		function onWindowResize(){
+
+			camera.aspect = width / height;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize( width, height );
+
+		}
+
+		// Render loop to display cube
+		function render() {
+			requestAnimationFrame( render ); // requestAnimationFrame will pause when the user navigates to a new tab
+			cube1.rotation.z += 0.01;
+			cube1.rotation.x += 0.01;
+			cube1.rotation.y += 0.01;  // Runs every frame giving it the animation
+
+			cube2.rotation.x += 0.01; 
+
+			cube3.rotation.y += 0.01;
+
+			renderer.render( scene, camera ); 
+		};
+
+		render();
+	}
+	render() {
+		return (
+			<div className='home' id="Home"></div>
+		);
+	}
+}
 export default Home;

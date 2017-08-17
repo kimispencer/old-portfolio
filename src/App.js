@@ -14,9 +14,10 @@ import ScrollBar from './components/ScrollBar/ScrollBar';
 import Shroud from './components/Shroud/Shroud';
 
 import Home from './views/Home/Home';
-import ProjectList from './views/Projects/ProjectList';
+import Projects from './views/Projects/Projects';
 import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
+
 // css
 import './App.css';
 
@@ -119,8 +120,7 @@ class App extends Component {
 			_projectNavStyle_isList: true,
 		}));
 
-console.log()
-// !!! NOTE -- use react-responsive and make this a global var
+		// !!! NOTE -- use react-responsive and make this a global var
 		let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 		/* breakpoint 769px */
 		if(width > 768) {
@@ -147,11 +147,11 @@ console.log()
 					<div className="main-content">
 						<Route exact path="/" component={Home}/>
 						<Route path="/projects" component={(props, state, params) => 
-							<ProjectList 
+							<Projects 
 								_toggleProjectNavStyle={this._toggleProjectNavStyle} 
 								_toggleProjectNavStyle_toList={this._toggleProjectNavStyle_toList}
 								_projectNavStyle_isList={this.state._projectNavStyle_isList} 
-								_toggleProjectNav={this._toggleProjectNav} 
+								_toggleProjectNav={this._toggleProjectNav}
 								_isProjectNavOpen={this.state._isProjectNavOpen} 
 								_handleProjectPageLanding={this._handleProjectPageLanding}
 								_handleProjectDetailLanding={this._handleProjectDetailLanding}
