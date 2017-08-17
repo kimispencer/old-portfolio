@@ -14,7 +14,7 @@
 	padding: 15px;
 	border-radius: 50px;
 	width: 375px;
-	@include aspect-ratio(375, 720);
+	@include aspect-ratio(375, 760);
 	max-width: calc(100vw - #{$gutter}*2 - 30px - 10px);	// 15px = padding * 2, 5px = border-width * 2
 	position: relative;
 	margin: 0 auto;  
@@ -103,7 +103,7 @@
 	.iphone-bottom {
 		padding: 10px 0 0;
 		position: absolute;
-	    bottom: 20px;
+	    bottom: 25px;
 	    left: 0;
 	    width: 100%;
 		span {
