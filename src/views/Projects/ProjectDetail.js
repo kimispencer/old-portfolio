@@ -7,9 +7,28 @@ import data from './data';
 
 const PROJECTS = data;
 
+function scrollTo(element, to, duration) {
+    if (duration <= 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
+}
+
 class ProjectDetail extends React.Component {
+	constructor() {
+		super();
+		this._scrollTop = this._scrollTop.bind(this);
+	}
 	componentDidMount() {
 		this._handleProjectNav();
+	}
+	_scrollTop() {
+		scrollTo(document.body, 0, 600);
 	}
 	_handleProjectNav() {
 		if(!this.props._projectNavStyle_isList) {
@@ -83,7 +102,7 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</section>
-
+				<p className="back-to-top" onClick={this._scrollTop}>^ Back To Top</p>
 			</div>
 		);
 	}
