@@ -1,7 +1,7 @@
 @import '../../styles/_all';
 
-$project_tile_width: 33.3vw;
-$project_tile_height: 33.3vw;
+$project_tile_width: 25vw;
+$project_tile_height: $project_tile_width;
 
 /* new compontent */
 .hover-image-container {
