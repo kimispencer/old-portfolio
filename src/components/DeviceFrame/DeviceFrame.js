@@ -9,7 +9,10 @@ const DeviceFrame = (props) => {
 			{props.type === "desktop" && 
 			<div className="macbook">
 				<div className="screen">
-					<div className="viewport" style={ {backgroundImage: 'url(' + img + ')'} }></div>
+					{/* <div className="viewport" style={ {backgroundImage: 'url(' + img + ')'} }></div> */}
+					<div className="viewport">
+						<img className="screenshot" src={img} />
+					</div>
 				</div>
 				<div className="base"></div>
 				<div className="notch"></div>
@@ -24,7 +27,8 @@ const DeviceFrame = (props) => {
 						<span className="speaker"></span>
 					</div>
 					<div className="iphone-screen">
-						<div className="viewport" style={ {backgroundImage: 'url(' + img + ')'} }></div>
+						{/* <div className="viewport" style={ {backgroundImage: 'url(' + img + ')'} }></div> */}
+						<img className="screenshot" src={img} />
 					</div>
 					<div className="buttons">
 						<span className="on-off"></span>
