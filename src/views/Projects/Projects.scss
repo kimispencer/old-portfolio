@@ -128,6 +128,10 @@ $project_tile_height: 33.3vw;
 			margin-top: $gutter;
 		}
 	}
+	.back-to-top {
+		margin-top: $gutter;
+		cursor: pointer;
+	}
 }
 
 @media #{$desktop} {
