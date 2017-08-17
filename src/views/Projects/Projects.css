@@ -373,7 +373,7 @@ select:-webkit-autofill:focus {
   justify-content: center;
   -ms-flex-pack: center;
   margin-bottom: 20px; }
-  .project-detail img {
+  .project-detail .project-image img {
     width: 100%;
     max-width: 100vw;
     margin-right: auto;

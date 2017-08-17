@@ -38,28 +38,28 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<div className="flex-col institution">
-								<h4 className="bold uppercase">brainchild</h4>
 								<h4 className="bold uppercase">the arrivals</h4>
 								<h4 className="bold uppercase">onomie</h4>
+								<h4 className="bold uppercase">brainchild.co</h4>
 							</div>
 							<p className="job-title monospace attribute">Lead Front-end Engineer & UX Designer — 2014 to present</p>
 						</div>
-						<p>Brainchild is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
+						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
-						<p>As the lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">TheArrivals.com</a>, <a href="http://onomie.com" target="_blank">Onomie.com</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites I was individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+						<p>Lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">TheArrivals.com</a>, <a href="http://onomie.com" target="_blank">Onomie.com</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch. Individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
 						<ul>
 							<li><p>&bull; Co-led conversion of TheArrivals.com into a ReactJS application.</p></li>
 							<li><p>&bull; Led the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
 							<li><p>&bull; Created UX/UI mockups, graphic/web designs, as well as translated mockups into code.</p></li>
 							<li><p>&bull; Assisted with back-end integration and templating.</p></li>
-							<li><p>&bull; Oversaw the launch of multiple successf`ul sites from start to finish under strict deadlines.</p></li>
+							<li><p>&bull; Oversaw the launch of multiple successful sites from start to finish under strict deadlines.</p></li>
 						</ul>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title monospace">Lead Full-stack Engineer & UX Designer - 2016 to present</p>
+							<p className="job-title monospace">Lead Full-stack Engineer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Our objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br />

@@ -82,12 +82,14 @@ $project_tile_height: 33.3vw;
 .project-detail {
 	@include flexbox-center(column);
 	margin-bottom: $gutter;
-	img {
-		width: 100%;
-		max-width: 100vw;
-		margin-right: auto;
-		margin-left: auto;
-		margin-top: $gutter;
+	.project-image {
+		img {
+			width: 100%;
+			max-width: 100vw;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: $gutter;
+		}
 	}
 	.project-detail-cover {
 		height: 600px;

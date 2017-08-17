@@ -290,6 +290,7 @@ select:-webkit-autofill:focus {
   max-width: calc(100vw - 20px*2 - 30px - 10px);
   position: relative;
   margin: 0 auto;
+  /* Scale so that the iPhone fits in view*/
   transform: scale(0.8); }
   .iphone:before {
     display: block;
@@ -326,11 +327,10 @@ select:-webkit-autofill:focus {
       display: block;
       width: 15px;
       height: 15px;
-      /*float: left;*/
       background: #333;
-      /*margin-top: -5px;*/
       border-radius: 50%; }
   .iphone .iphone-screen {
+    overflow: scroll;
     background: #eee;
     border: 1px solid #fff;
     height: 75%;
@@ -338,7 +338,7 @@ select:-webkit-autofill:focus {
     margin: 0 auto;
     border: 2px solid rgba(0, 0, 0, 0.9);
     border-radius: 3px;
-    overflow: hidden; }
+    /*overflow: hidden;*/ }
     .iphone .iphone-screen .viewport {
       background-size: cover;
       width: 100%;
@@ -472,22 +472,18 @@ select:-webkit-autofill:focus {
       /* for aspect ratio ~1:10 */
       padding-top: 10%; }
 
-/* Screenshot Hover Scroll Additions
+/* Screenshot Scroll Additions
 -------------------------------------------------------------- */
-.macbook .viewport, .iphone .viewport {
-  transition: background-position 20s ease;
-  background-position: 0 0;
-  overflow: hidden;
+.macbook .viewport, .iphone .iphone-screen {
+  overflow: scroll;
   cursor: pointer; }
-
-.macbook:hover .viewport, .iphone:hover .viewport {
-  background-position: 0 100%; }
-
-.macbook .viewport:after, .iphone .viewport:after {
-  background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0; }
+  .macbook .viewport:after, .iphone .iphone-screen:after {
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .macbook .viewport .screenshot, .iphone .iphone-screen .screenshot {
+    max-width: 100%; }
