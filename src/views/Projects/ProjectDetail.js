@@ -104,7 +104,7 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</section>
-				<p className="back-to-top" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</p>
+				<small className="back-to-top" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
 			</div>
 		);
 	}
