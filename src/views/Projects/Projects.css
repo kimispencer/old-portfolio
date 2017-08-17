@@ -513,9 +513,9 @@ select:-webkit-autofill:focus {
 
 @media only screen and (max-width: 1024px) {
   .hover-image-container .bg-img.top-image {
-    opacity: 0 !important; }
-  .hover-image-container .bg-img.bottom-image {
     opacity: 1 !important; }
+  .hover-image-container .bg-img.bottom-image {
+    opacity: 0 !important; }
   .projects #Menu {
     cursor: pointer;
     text-decoration: underline;

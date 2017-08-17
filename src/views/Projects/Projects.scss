@@ -217,10 +217,10 @@ $project_tile_height: 33.3vw;
 	.hover-image-container {
 		.bg-img {
 			&.top-image {
-				opacity: 0 !important;
+				opacity: 1 !important;
 			}
 			&.bottom-image {
-				opacity: 1 !important;
+				opacity: 0 !important;
 			}
 		}
 	}

@@ -2,7 +2,7 @@ export default  [
 	{
 		url: 'arrivals',
 		name: "The Arrivals NYC", 
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/arrivals',
 		screenShots: [
@@ -35,8 +35,9 @@ export default  [
 	{
 		url: 'kimispencer', 
 		name: "Portfolio", 
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.jpg',
+		imgKey: 'projects/portfolio',
 		projectType: 'ReactJS portfolio site',
 		projectRole: [
 			'Full-stack developer',
@@ -52,8 +53,8 @@ export default  [
 	{ 
 		url: 'suited', 
 		name: "Suited Magazine", 
-		coverImg: "https://unsplash.it/1200/540",
-		heroImg: 'bg-00.png',
+		hoverImg: "https://unsplash.it/1200/540",
+		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/suited',
 		screenShots: [
 			'desktop-00.jpg', 'desktop-01.jpg', 'phone-00.jpg'
@@ -81,7 +82,7 @@ export default  [
 	{
 		url: 'onomie', 
 		name: "Onomie", 
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/onomie',
 		heroImg: 'bg-00.png',
 		screenShots: [
@@ -111,8 +112,8 @@ export default  [
 	{
 		url: 'brainchild', 
 		name: "Brainchild.Co",  
-		coverImg: "https://unsplash.it/1200/540",
-		heroImg: 'bg-00.png',
+		hoverImg: "https://unsplash.it/1200/540",
+		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/brainchild',
 		screenShots: [
 			'desktop-00.png', 'phone-01.png', 'phone-02.png'
@@ -141,8 +142,8 @@ export default  [
 	{
 		url: 'bolster', 
 		name: "Bolster",  
-		coverImg: "https://unsplash.it/1200/540",
-		heroImg: 'bg-00.png',
+		hoverImg: "https://unsplash.it/1200/540",
+		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/bolster',
 		projectImgs: [
 			'wireframe-00.jpg', 'wireframe-01.jpg', 'wireframe-02.jpg'
@@ -165,7 +166,7 @@ export default  [
 	{
 		url: 'creep', 
 		name: "CREEP",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/creep',
 		screenShots: [
@@ -194,8 +195,8 @@ export default  [
 	{
 		url: 'plusign', 
 		name: "Plusign",  
-		coverImg: "https://unsplash.it/1200/540",
-		heroImg: 'bg-00.png',
+		hoverImg: "https://unsplash.it/1200/540",
+		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/plusign',
 		screenShots: [
 		],
@@ -220,7 +221,7 @@ export default  [
 	{
 		url: 'tomtom', 
 		name: "Tom Tom Magazine",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/tomtom',
 		screenShots: [
@@ -248,7 +249,7 @@ export default  [
 	{
 		url: 'rga', 
 		name: "R/GA",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/rga',
 		screenShots: [
@@ -277,7 +278,7 @@ export default  [
 	{
 		url: 'live-visuals', 
 		name: "Live Visuals",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.png',
 		imgKey: 'projects/live-visuals',
 		screenShots: [
@@ -309,7 +310,7 @@ export default  [
 	{
 		url: 'data-visualization', 
 		name: "Data Visualization",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/data-visualization',
 		projectImgs: [
@@ -339,7 +340,7 @@ export default  [
 	{
 		url: 'computer-vision', 
 		name: "Computer Vision",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.png',
 		imgKey: 'projects/computer-vision',
 		screenShots: [
@@ -366,7 +367,7 @@ export default  [
 	{
 		url: 'nltk', 
 		name: "Language Processing",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		heroImg: 'bg-00.png',
 		imgKey: 'projects/nltk',
 		screenShots: [
