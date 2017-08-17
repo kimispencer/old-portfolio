@@ -2,7 +2,7 @@ import React, { } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import LinkedIn from '../../../public/assets/logos/linkedin.svg';
-import Vimeo from '../../../public/assets/logos/vimeo.svg';
+// import Vimeo from '../../../public/assets/logos/vimeo.svg';
 import Github from '../../../public/assets/logos/github.svg';
 
 const Footer = (props) => {

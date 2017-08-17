@@ -23,7 +23,7 @@ const ProjectListItem = (props) => {
 			</div>
 			}
 			{!props._projectNavStyle_isList &&
-			<div className="hover-image-container"> {/* turn this into a component later */}
+			<div className="hover-image-container"> {/* !!! turn this into a component later */}
 				<ImageLoader className="top-image" src={props.project.coverImg} />
 				<ImageLoader className="bottom-image" src='https://unsplash.it/1200/720'>
 					<div className="text monospace">
@@ -42,27 +42,25 @@ class Projects extends React.Component {
 		super();
 		this._handleProjectNavClick = this._handleProjectNavClick.bind(this);
 	}
+	componentWillUpdate() {
+		if(window.location.pathname === '/projects') {
+			this.props._handleProjectPageLanding();
+		}
+	}
+	componentWillUnmount() {
+	}
 	_handleProjectNavClick() {
 		window.scrollTo(0, 0);
 		this.props._handleProjectDetailLanding();
 	}
 	render() {
-		return(
+		return (
 			<div className="projects">
 
-				{ /*props._projectNavStyle_isList 
-					? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
-						<h4 className="title center" id="PageTitle">Projects</h4>
-					</Link>
-					: null
-				*/ }
-				
 				{ this.props._projectNavStyle_isList
 					? <div className="center title monospace" onClick={this.props._toggleProjectNav} id="Menu">Menu</div>
 					: null
 				}
-
-				{ /*<SlideExample match={props.match} _isProjectNavOpen={props._isProjectNavOpen} _toggleProjectNav={props._toggleProjectNav} /> */ }
 
 				{ this.props._isProjectNavOpen 
 					? <ul className={`project-list ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
@@ -79,7 +77,6 @@ class Projects extends React.Component {
 					</ul>
 					: null
 				}
-
 				<Route path={`${this.props.match.url}/:id`} component={(routeProps, state, params) => 
 					<ProjectDetail 
 						_handleProjectDetailLanding={this.props._handleProjectDetailLanding}
