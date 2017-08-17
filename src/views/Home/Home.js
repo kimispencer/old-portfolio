@@ -40,10 +40,10 @@ class Home extends React.Component {
 
 		function onWindowResize(){
 
-			camera.aspect = width / height;
+			camera.aspect = document.getElementsByClassName('home')[0].clientWidth / document.getElementsByClassName('home')[0].clientHeight;
 			camera.updateProjectionMatrix();
 
-			renderer.setSize( width, height );
+			renderer.setSize( document.getElementsByClassName('home')[0].clientWidth, document.getElementsByClassName('home')[0].clientHeight );
 
 		}
 
