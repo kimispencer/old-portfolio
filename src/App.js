@@ -151,7 +151,8 @@ class App extends Component {
 								_toggleProjectNavStyle={this._toggleProjectNavStyle} 
 								_toggleProjectNavStyle_toList={this._toggleProjectNavStyle_toList}
 								_projectNavStyle_isList={this.state._projectNavStyle_isList} 
-								_toggleProjectNav={this._toggleProjectNav} 
+								_toggleProjectNav={this._toggleProjectNav}
+								_toggleProjectNavStyle_toBox={this._toggleProjectNavStyle_toBox}
 								_isProjectNavOpen={this.state._isProjectNavOpen} 
 								_handleProjectPageLanding={this._handleProjectPageLanding}
 								_handleProjectDetailLanding={this._handleProjectDetailLanding}

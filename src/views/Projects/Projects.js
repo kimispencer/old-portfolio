@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-// import AltContainer from 'alt-container';
-// import ProjectStore from '../../stores/ProjectStore';
-// import ProjectActions from '../../actions/ProjectActions';
+import AltContainer from 'alt-container';
+import ProjectStore from '../../stores/ProjectStore';
+import ProjectActions from '../../actions/ProjectActions';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import data from './data';
@@ -23,7 +23,7 @@ const ProjectListItem = (props) => {
 			</div>
 			}
 			{!props._projectNavStyle_isList &&
-			<div className="hover-image-container"> {/* turn this into a component later */}
+			<div className="hover-image-container"> {/* !!! turn this into a component later */}
 				<ImageLoader className="top-image" src={props.project.coverImg} />
 				<ImageLoader className="bottom-image" src='https://unsplash.it/1200/720'>
 					<div className="text monospace">
@@ -42,51 +42,56 @@ class Projects extends React.Component {
 		super();
 		this._handleProjectNavClick = this._handleProjectNavClick.bind(this);
 	}
+	// componentDidMount() {
+	// 	// console.log(this.props.location.pathname)
+	// 	if(this.props.location.pathname == '/projects') {
+	// 		// console.log('box style!')
+	// 		ProjectActions.showBoxMenu();
+	// 	}
+	// }
+	componentWillUnmount() {
+	}
 	_handleProjectNavClick() {
 		window.scrollTo(0, 0);
 		this.props._handleProjectDetailLanding();
+		// console.log('list style')
+        // ProjectActions.hideBoxMenu();
 	}
 	render() {
 		return(
-			<div className="projects">
+			<AltContainer store={ProjectStore} render={(props) => {
+				return (
+					<div className="projects">
 
-				{ /*props._projectNavStyle_isList 
-					? <Link to={props.match.url} onClick={props._handleProjectPageLanding}>
-						<h4 className="title center" id="PageTitle">Projects</h4>
-					</Link>
-					: null
-				*/ }
-				
-				{ this.props._projectNavStyle_isList
-					? <div className="center title monospace" onClick={this.props._toggleProjectNav} id="Menu">Menu</div>
-					: null
-				}
+						{ this.props._projectNavStyle_isList
+							? <div className="center title monospace" onClick={this.props._toggleProjectNav} id="Menu">Menu</div>
+							: null
+						}
 
-				{ /*<SlideExample match={props.match} _isProjectNavOpen={props._isProjectNavOpen} _toggleProjectNav={props._toggleProjectNav} /> */ }
+						{ this.props._isProjectNavOpen 
+							? <ul className={`project-list ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
+								{ PROJECTS.map((project, index) => 
+								<li key={index} >
+									 <Link to={this.props.match.url + '/' + project.url} >
+										<ProjectListItem 
+											project={project} 
+											handleClick={this._handleProjectNavClick} 
+											_projectNavStyle_isList={this.props._projectNavStyle_isList}/>
+									</Link>
+								</li>
+								) }
+							</ul>
+							: null
+						}
+						<Route path={`${this.props.match.url}/:id`} component={(routeProps, state, params) => 
+							<ProjectDetail 
+								_handleProjectDetailLanding={this.props._handleProjectDetailLanding}
+								routeProps={routeProps}
+							{...this.props} />} />
 
-				{ this.props._isProjectNavOpen 
-					? <ul className={`project-list ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
-						{ PROJECTS.map((project, index) => 
-						<li key={index} >
-							 <Link to={this.props.match.url + '/' + project.url} >
-								<ProjectListItem 
-									project={project} 
-									handleClick={this._handleProjectNavClick} 
-									_projectNavStyle_isList={this.props._projectNavStyle_isList}/>
-							</Link>
-						</li>
-						) }
-					</ul>
-					: null
-				}
-
-				<Route path={`${this.props.match.url}/:id`} component={(routeProps, state, params) => 
-					<ProjectDetail 
-						_handleProjectDetailLanding={this.props._handleProjectDetailLanding}
-						routeProps={routeProps}
-					{...this.props} />} />
-
-			</div>
+					</div>
+				);
+			}} />
 		);
 	}
 }
