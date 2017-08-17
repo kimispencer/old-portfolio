@@ -129,7 +129,8 @@ $project_tile_height: 33.3vw;
 		}
 	}
 	.back-to-top {
-		margin-top: $gutter;
+		margin-top: $gutter*4;
+		margin-bottom: $gutter;
 		cursor: pointer;
 	}
 }

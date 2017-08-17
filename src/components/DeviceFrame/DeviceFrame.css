@@ -304,7 +304,7 @@ select:-webkit-autofill:focus {
   display: block;
   content: "";
   width: 100%;
-  padding-top: 202.66667%; }
+  padding-top: 177.86667%; }
 
 .iphone > .content {
   position: absolute;
@@ -389,9 +389,8 @@ select:-webkit-autofill:focus {
   border-radius: 0px 2px 2px 0px; }
 
 .iphone .iphone-bottom {
-  padding: 10px 0 0;
+  padding: 12px 0 0;
   position: absolute;
-  bottom: 25px;
   left: 0;
   width: 100%; }
 
