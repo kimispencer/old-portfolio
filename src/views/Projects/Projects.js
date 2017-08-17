@@ -32,13 +32,13 @@ const ProjectListItem = (props) => {
 						<p className="project-type">{props.project.projectType}</p>
 					</div>
 				</ImageLoader>
-				{!isDesktop() && 
-					<div className="text monospace">
-						<h4 className="project-name">{props.project.name}</h4>
-						<p className="project-type">{props.project.projectType}</p>
-					</div>
-				}
 			</div>
+			}
+			{(!props._projectNavStyle_isList && !isDesktop()) && 
+				<div className="text monospace">
+					<h4 className="project-name">{props.project.name}</h4>
+					<p className="project-type">{props.project.projectType}</p>
+				</div>
 			}
 		</div>
 	);

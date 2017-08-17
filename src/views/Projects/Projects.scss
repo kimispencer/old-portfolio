@@ -249,8 +249,8 @@ $project_tile_height: 33.3vw;
 			width: 100vw;
 			height: 50vh;
 			.text {
-				padding: $gutter/4;
-				margin-top: $gutter/2;
+				margin-top: $gutter;
+				margin-bottom: $gutter;
 			}
 		}
 	}

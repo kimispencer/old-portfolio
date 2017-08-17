@@ -60,7 +60,7 @@ export default  [
 			'desktop-00.jpg', 'desktop-01.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
-			'magazine-00.jpg', 'magazine-01.jpg'
+			'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
 		],
 		siteUrl: 'http://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
@@ -368,7 +368,7 @@ export default  [
 		url: 'nltk', 
 		name: "Language Processing",  
 		hoverImg: "https://unsplash.it/1200/540",
-		heroImg: 'bg-00.png',
+		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/nltk',
 		screenShots: [
 		],
