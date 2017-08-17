@@ -132,6 +132,10 @@ $project_tile_height: $project_tile_width;
 		margin-top: $gutter*4;
 		margin-bottom: $gutter;
 		cursor: pointer;
+		@include flexbox-center(column);
+		#Triangle {
+			margin-bottom: $gutter/2;
+		}
 	}
 }
 

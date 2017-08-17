@@ -26,7 +26,7 @@ export default  [
 			`
 			<p>The Arrivals is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
 			<br/>
-			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a></p>
+			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a> from launch to today.</p>
 			<br/>
 			<p>As the lead front-end engineer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 			<br/>
@@ -75,9 +75,9 @@ export default  [
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
 		intro: 
 		`
-		<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
+		<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 		<br/>
-		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their Fall 2016 edition <a href="http://suitedmagazine.com" target="_blank">SuitedMagazine.com</a> and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to build visual mockups and interface designs.</p>
+		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their Fall 2016 edition of SUITED magazine and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to translate the print publication brand into a digital experience.</p>
 		`
 	},
 	{
@@ -106,7 +106,7 @@ export default  [
 			`
 			<p>Onomie is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
 			<br/>
-			<p>I was brought on to lead the front-end web devleopment and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out for a competitive market by featuring interactive trials and science backed beauty products.</p>
+			<p>I was brought on to lead the front-end web devleopment and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
 			`
 
 	},

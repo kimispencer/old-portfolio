@@ -2,6 +2,7 @@ import React from 'react';
 import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
+import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
 
@@ -103,7 +104,7 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</section>
-				<p className="back-to-top" onClick={this._scrollTop}>^ Back To Top</p>
+				<p className="back-to-top" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</p>
 			</div>
 		);
 	}

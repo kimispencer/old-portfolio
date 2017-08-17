@@ -440,7 +440,28 @@ select:-webkit-autofill:focus {
 .project-detail .back-to-top {
   margin-top: 80px;
   margin-bottom: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  -moz-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+.project-detail .back-to-top #Triangle {
+  margin-bottom: 10px; }
 
 @media only screen and (min-width: 1025px) {
   .projects #Menu {
