@@ -3,11 +3,6 @@ import * as THREE from 'three';
 import './Home.css';
 
 class Home extends React.Component {
-
-	constructor(props) {
-		super(props);
-	}
-
 	componentDidMount() {
 		var height = document.getElementsByClassName('home')[0].clientHeight,
 			width = document.getElementsByClassName('home')[0].clientWidth;
