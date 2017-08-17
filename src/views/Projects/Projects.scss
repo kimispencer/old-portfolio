@@ -128,6 +128,14 @@ $project_tile_height: $project_tile_width;
 			margin-top: $gutter;
 		}
 	}
+	.project-pdf-list {
+		border: 1px dashed red;
+		margin-top: $gutter;
+		.pdf-viewer {
+			width: 100%;
+			height: 500px;
+		}
+	}
 	.back-to-top {
 		margin-top: $gutter*4;
 		margin-bottom: $gutter;

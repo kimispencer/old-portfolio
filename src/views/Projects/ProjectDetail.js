@@ -6,6 +6,9 @@ import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
 
+// import PDF from '../../../public/assets/projects/rga/highline_user_study.pdf';
+import PDF2 from '../../../public/assets/projects/rga/uniqlo.pdf';
+
 const PROJECTS = data;
 
 function scrollTo(element, to, duration) {
@@ -77,6 +80,14 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</ul>
+						<section className="project-pdf-list">
+							{project.projectPDFs
+								?	project.projectPDFs.map((pdf, index) =>
+									<embed className="pdf-viewer" src={PDF2} width="100%" key={index} />
+								)
+								: null
+							}
+							</section>
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">
 								<div className="button"><p>visit website</p></div>
