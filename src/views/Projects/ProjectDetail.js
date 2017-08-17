@@ -44,7 +44,7 @@ class ProjectDetail extends React.Component {
 		return(
 			<div className="project-detail padded-width">
 				<h3 className="title page-title serif">{project.name}</h3>
-				<ImageLoader className="project-detail-cover" src={project.coverImg} />
+				<ImageLoader className="project-detail-cover" src={project.heroImg} imgKey={project.imgKey} />
 
 				<section className="text-container flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
