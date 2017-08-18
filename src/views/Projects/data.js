@@ -164,6 +164,7 @@ export default  [
 		`
 
 	},
+	/*
 	{
 		url: 'creep', 
 		name: "CREEP",  
@@ -193,6 +194,7 @@ export default  [
 			`
 
 	},
+	*/
 	{
 		url: 'plusign', 
 		name: "Plusign",  
