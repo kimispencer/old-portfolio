@@ -6,8 +6,9 @@ import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
 
-// import PDF from '../../../public/assets/projects/rga/highline_user_study.pdf';
+import PDF1 from '../../../public/assets/projects/rga/highline_user_study.pdf';
 import PDF2 from '../../../public/assets/projects/rga/uniqlo.pdf';
+const PDFS = [PDF1, PDF2];
 
 const PROJECTS = data;
 
@@ -83,11 +84,11 @@ class ProjectDetail extends React.Component {
 						<section className="project-pdf-list">
 							{project.projectPDFs
 								?	project.projectPDFs.map((pdf, index) =>
-									<embed className="pdf-viewer" src={PDF2} width="100%" key={index} />
+									<embed className="pdf-viewer" src={PDFS[index]} width="100%" key={index} />
 								)
 								: null
 							}
-							</section>
+						</section>
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">
 								<div className="button"><p>visit website</p></div>
