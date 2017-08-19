@@ -45,7 +45,17 @@ class ProjectDetail extends React.Component {
 		let project = PROJECTS.filter(function (p) {
 		    return p.url === match;
 		})[0];
-
+		// const embeds = async Promise => {
+		// 	project.projectPDFs.map(async (pdf, index) => {
+		// 		// const pdfPath = await import(pdf);
+		// 		// console.log(pdf)
+		// 	    // return (<embed className="pdf-viewer" src={pdfPath} width="100%" key={index} />);
+		// 	});
+		// }
+		// const embeds = async Promise.all(project.projectPDFs.map(async (pdf, index) => {
+		// 	const pdfPath = await import(pdf);
+		//     return (<embed className="pdf-viewer" src={pdfPath} width="100%" key={index} />);
+		// }));
 		return(
 			<div className="project-detail padded-width">
 				<h3 className="title page-title serif">{project.name}</h3>
@@ -65,6 +75,7 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</section>
+
 						<section className="project-screenshot-list">
 						{project.screenShots 
 							? project.screenShots.map((img, index) => 
@@ -73,6 +84,7 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</section>
+
 						<ul className="project-image-list">
 						{project.projectImgs 
 							? project.projectImgs.map((img, index) => 
@@ -81,6 +93,7 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</ul>
+						{/* !!! use Promises... figure out later */}
 						<section className="project-pdf-list">
 							{project.projectPDFs
 								?	project.projectPDFs.map((pdf, index) =>
@@ -89,6 +102,7 @@ class ProjectDetail extends React.Component {
 								: null
 							}
 						</section>
+
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">
 								<div className="button"><p>visit website</p></div>
