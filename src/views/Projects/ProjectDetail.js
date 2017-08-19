@@ -2,8 +2,13 @@ import React from 'react';
 import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
+import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
+
+import PDF1 from '../../../public/assets/projects/rga/highline_user_study.pdf';
+import PDF2 from '../../../public/assets/projects/rga/uniqlo.pdf';
+const PDFS = [PDF1, PDF2];
 
 const PROJECTS = data;
 
@@ -40,11 +45,22 @@ class ProjectDetail extends React.Component {
 		let project = PROJECTS.filter(function (p) {
 		    return p.url === match;
 		})[0];
-
+		// const embeds = async Promise => {
+		// 	project.projectPDFs.map(async (pdf, index) => {
+		// 		// const pdfPath = await import(pdf);
+		// 		// console.log(pdf)
+		// 	    // return (<embed className="pdf-viewer" src={pdfPath} width="100%" key={index} />);
+		// 	});
+		// }
+		// const embeds = async Promise.all(project.projectPDFs.map(async (pdf, index) => {
+		// 	const pdfPath = await import(pdf);
+		//     return (<embed className="pdf-viewer" src={pdfPath} width="100%" key={index} />);
+		// }));
 		return(
 			<div className="project-detail padded-width">
 				<h3 className="title page-title serif">{project.name}</h3>
-				<ImageLoader className="project-detail-cover" src={project.heroImg} imgKey={project.imgKey} />
+				{/*<ImageLoader className="project-detail-cover" src={project.heroImg} imgKey={project.imgKey} />*/}
+				<ImageLoader className="project-detail-cover" src={project.hoverImg} />
 
 				<section className="text-container flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
@@ -59,6 +75,7 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</section>
+
 						<section className="project-screenshot-list">
 						{project.screenShots 
 							? project.screenShots.map((img, index) => 
@@ -67,6 +84,7 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</section>
+
 						<ul className="project-image-list">
 						{project.projectImgs 
 							? project.projectImgs.map((img, index) => 
@@ -75,6 +93,16 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</ul>
+						{/* !!! use Promises... figure out later */}
+						<section className="project-pdf-list">
+							{project.projectPDFs
+								?	project.projectPDFs.map((pdf, index) =>
+									<embed className="pdf-viewer" src={PDFS[index]} width="100%" key={index} />
+								)
+								: null
+							}
+						</section>
+
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">
 								<div className="button"><p>visit website</p></div>
@@ -102,7 +130,7 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</section>
-				<p className="back-to-top" onClick={this._scrollTop}>^ Back To Top</p>
+				<small className="back-to-top" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
 			</div>
 		);
 	}

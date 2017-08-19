@@ -25,7 +25,7 @@ const ProjectListItem = (props) => {
 			}
 			{!props._projectNavStyle_isList &&
 			<div className="hover-image-container"> {/* !!! turn this into a component later */}
-				<ImageLoader className="top-image" src={props.project.heroImg} imgKey={props.project.imgKey} />
+				<ImageLoader className="top-image" src={props.project.tileImg} imgKey={props.project.imgKey} />
 				<ImageLoader className="bottom-image" src={props.project.hoverImg} >
 					<div className="text monospace">
 						<h4 className="project-name">{props.project.name}</h4>
