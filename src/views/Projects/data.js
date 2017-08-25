@@ -2,14 +2,14 @@ export default  [
 	{
 		url: 'arrivals',
 		name: "The Arrivals NYC", 
-		coverImg: "https://unsplash.it/1200/540",
-		testImg: 'bg-00.jpg',
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/arrivals',
 		screenShots: [
 			'desktop-00.jpg', 'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
 		],
 		projectImgs: [
-			'bg-00.jpg'
+			'cover-00.jpg'
 		],
 		siteUrl: 'http://thearrivals.com',
 		projectType: 'Responsive Ecommerce/Fashion website',
@@ -26,7 +26,7 @@ export default  [
 			`
 			<p>The Arrivals is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
 			<br/>
-			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a></p>
+			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a> from launch to today.</p>
 			<br/>
 			<p>As the lead front-end engineer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 			<br/>
@@ -36,7 +36,9 @@ export default  [
 	{
 		url: 'kimispencer', 
 		name: "Portfolio", 
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
+		imgKey: 'projects/portfolio',
 		projectType: 'ReactJS portfolio site',
 		projectRole: [
 			'Full-stack developer',
@@ -52,12 +54,14 @@ export default  [
 	{ 
 		url: 'suited', 
 		name: "Suited Magazine", 
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/suited',
 		screenShots: [
-			'desktop-00.jpg', 'desktop-01.jpg', 'phone-00.jpg'
+			'desktop-00.jpg', 'desktop-03.jpg','desktop-01.jpg', 'phone-01.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
+			'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
 		],
 		siteUrl: 'http://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
@@ -71,20 +75,22 @@ export default  [
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
 		intro: 
 		`
-		<p>SUITED is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
+		<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 		<br/>
-		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their Fall 2016 edition <a href="http://suitedmagazine.com" target="_blank">SuitedMagazine.com</a> and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to build visual mockups and interface designs.</p>
+		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their Fall 2016 edition of SUITED magazine and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to translate the print publication brand into a digital experience.</p>
 		`
 	},
 	{
 		url: 'onomie', 
 		name: "Onomie", 
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
 		imgKey: 'projects/onomie',
+		tileImg: 'bg-00.jpg',
 		screenShots: [
 			'desktop-00.png', 'phone-00.png'
 		],
 		projectImgs: [
+			'products-00.png', 'products-01.png'
 		],
 		siteUrl: 'http://onomie.com',
 		projectType: 'Responsive Ecommerce/Beauty website',
@@ -100,14 +106,15 @@ export default  [
 			`
 			<p>Onomie is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
 			<br/>
-			<p>I was brought on to lead the front-end web devleopment and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out for a competitive market by featuring interactive trials and science backed beauty products.</p>
+			<p>I was brought on to lead the front-end web devleopment and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
 			`
 
 	},
 	{
 		url: 'brainchild', 
 		name: "Brainchild.Co",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/brainchild',
 		screenShots: [
 			'desktop-00.png', 'phone-01.png', 'phone-02.png'
@@ -136,7 +143,8 @@ export default  [
 	{
 		url: 'bolster', 
 		name: "Bolster",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/bolster',
 		projectImgs: [
 			'wireframe-00.jpg', 'wireframe-01.jpg', 'wireframe-02.jpg'
@@ -156,15 +164,18 @@ export default  [
 		`
 
 	},
+	/*
 	{
 		url: 'creep', 
 		name: "CREEP",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/creep',
 		screenShots: [
+			'desktop-00.png', 'phone-00.png'
 		],
 		projectImgs: [
-			'00.jpg',
+			'echoes.jpg'
 		],
 		siteUrl: 'http://officialcreep.com',
 		projectType: 'Official Band site',
@@ -183,15 +194,17 @@ export default  [
 			`
 
 	},
+	*/
 	{
 		url: 'plusign', 
 		name: "Plusign",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/plusign',
 		screenShots: [
 		],
 		projectImgs: [
-			'00.png', '01.png', '02.png', '03.png', '04.png'
+			'logo-00.png', 'logo-01.png', 'logo-02.png', 'logo-03.png', 'logo-04.png'
 		],
 		siteUrl: 'http://plusign.com',
 		projectType: 'Generative Logo Design',
@@ -211,12 +224,14 @@ export default  [
 	{
 		url: 'tomtom', 
 		name: "Tom Tom Magazine",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/tomtom',
 		screenShots: [
 			'desktop-00.png', 'phone-00.png', 'desktop-01.png', 'phone-01.png'
 		],
 		projectImgs: [
+			'logo-00.jpg', 'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
 		],
 		siteUrl: 'http://tomtommag.com',
 		projectType: 'Responsive Ecommerce/Music Publication website',
@@ -237,11 +252,16 @@ export default  [
 	{
 		url: 'rga', 
 		name: "R/GA",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.png',
 		imgKey: 'projects/rga',
 		screenShots: [
 		],
 		projectImgs: [
+			// 'dataviz-01.jpg', 'dataviz-02.jpg', 'dataviz-02b.jpg', 'dataviz-03.jpg', 'dataviz-04.jpg'
+		],
+		projectPDFs: [
+			'highline_user_study.pdf', 'uniqlo.pdf'
 		],
 		projectType: 'User Experience Research, Product Development',
 		projectRole: [
@@ -265,12 +285,13 @@ export default  [
 	{
 		url: 'live-visuals', 
 		name: "Live Visuals",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.png',
 		imgKey: 'projects/live-visuals',
 		screenShots: [
 		],
 		projectImgs: [
-			'00.jpg'
+			'brooklyn-bowl.jpg'
 		],
 		projectVids: [
 			'https://vimeo.com/228868759',
@@ -296,7 +317,8 @@ export default  [
 	{
 		url: 'data-visualization', 
 		name: "Data Visualization",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/data-visualization',
 		projectImgs: [
 			'00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg'
@@ -325,7 +347,8 @@ export default  [
 	{
 		url: 'computer-vision', 
 		name: "Computer Vision",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.png',
 		imgKey: 'projects/computer-vision',
 		screenShots: [
 		],
@@ -351,7 +374,8 @@ export default  [
 	{
 		url: 'nltk', 
 		name: "Language Processing",  
-		coverImg: "https://unsplash.it/1200/540",
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/nltk',
 		screenShots: [
 		],
