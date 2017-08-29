@@ -7,7 +7,7 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <canvas ref="canvas" id="Canvas" />
+            <canvas id="Canvas" />
         );
     }
 }

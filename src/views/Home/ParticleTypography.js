@@ -1,38 +1,34 @@
 import Ball from './Ball';
 import utils from './utils';
-
 export default class ParticleTypography {
 	/**
 	* Setup DOM references and event listeners
+
 	*/
 	constructor(canvas) {
-		this.canvas = canvas;
-		this.ctx = this.canvas.getContext('2d');
-		this.w = window.innerWidth;
-		this.h = window.innerHeight;
+		this.canvas 					= canvas;
+		this.ctx 						= this.canvas.getContext('2d');
 
-		this.ctx.canvas.width  = this.w;
-		this.ctx.canvas.height = this.h;
-		this.utils             = window.utils;
-	    this.requestAnimationFrame = window.requestAnimationFrame.bind(window);
+		this.utils 						= window.utils;
+	    this.requestAnimationFrame		= window.requestAnimationFrame.bind(window);
 
-		this.mouse     = this.utils.captureMouse(this.canvas);
-		this.mouseBall = new Ball(100, 'transparent');
+		this.mouse 						= this.utils.captureMouse(this.canvas);
+		this.mouseBall 					= new Ball(100, 'transparent');
 
-		this.image       = new Image();
-		this.imageSrc    = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3640/leila-jade.v3.png";
-		this.imagePixels = [];
+		this.image       				= new Image();
+		this.imageSrc   				= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3640/leila-jade.v3.png";
+		this.imagePixels 				= [];
 
-		this.particles    = [];
-		this.hueTopRange  = 280;
-		this.hueBotRange  = 200;
-		this.hueOffset    = 60;
+		this.particles    				= [];
+		this.hueTopRange 				= 280;
+		this.hueBotRange 				= 200;
+		this.hueOffset   				= 60;
 
 		// Set particle size based on screensize
 		this.particleSize = 0;
-		if (this.w > 1200){
+		if (this.utils.screenSize().width > 1200){
 			this.particleSize = 8;
-		} else if (this.w > 900) {
+		} else if (this.utils.screenSize().width > 900) {
 			this.particleSize = 6;
 		} else {
 			this.particleSize = 4;
@@ -51,8 +47,8 @@ export default class ParticleTypography {
 	*/
     _init() {
 		// Set Canvas size to fullscreen
-		this.ctx.canvas.width  = this.w;
-		this.ctx.canvas.height = this.h;
+		this.ctx.canvas.width  = this.utils.screenSize().width;
+		this.ctx.canvas.height = this.utils.screenSize().height;
 
 		// Environment events
 		// w.addEventListener('resize', () => this._onWindowResize());
@@ -62,12 +58,13 @@ export default class ParticleTypography {
 		// https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image
 		this.image.crossOrigin = "Anonymous";
 		this.image.src         = this.imageSrc;
+
 		// this.image.addEventListener('load', () => this._drawImage());
 		this.image.onload = () => {
-			this.ctx.drawImage(this.image, 100, 100);
+			this.ctx.drawImage(this.image, 100, 100);			// !!! why do I need this to get pixel data?
 			this._drawImage();
 		}
-
+		// start the animation
 		this._animate();
     }
 
@@ -79,8 +76,8 @@ export default class ParticleTypography {
 		let analysisCanvas  = document.createElement('canvas'),
 		    analysisContext = analysisCanvas.getContext('2d');
 
-		analysisCanvas.width  = this.w;
-		analysisCanvas.height = this.h;
+		analysisCanvas.width  = this.utils.screenSize().width;
+		analysisCanvas.height = this.utils.screenSize().height;
 
 		// Get image proportions
 		let ratio       = this.image.width / this.image.height,
@@ -117,9 +114,10 @@ export default class ParticleTypography {
 	_getPixelData(canvas, context) {
 		// Get canvas pixel data
 		let imageData = this.ctx.getImageData(0, 0, this.ctx.canvas.width, this.ctx.canvas.height),
-		pixels    = imageData.data,
-		x         = 0,
-		y         = 0;
+			pixels    = imageData.data,
+			x         = 0,
+			y         = 0;
+
 		// Iterate over canvas pixels
 		for (let offset = 0; offset < pixels.length; offset += 4){
 			let r = pixels[offset],
@@ -129,8 +127,8 @@ export default class ParticleTypography {
 
 			// Skip transparent or all-white pixels
 			if (a > 0 && !(r === 255 && g === 255 && b === 255)){
-				let x = (offset / 4) % canvas.width,
-				y = Math.floor(Math.floor(offset / canvas.width) / 4);
+				let x = (offset / 4) % this.ctx.canvas.width,
+				y = Math.floor(Math.floor(offset / this.ctx.canvas.width) / 4);
 
 				if((x && x % this.particleSize == 0) && (y && y % this.particleSize == 0)){
 					this.imagePixels.push({ 
@@ -141,7 +139,6 @@ export default class ParticleTypography {
 				}
 			}
 		}
-		// Generate particles
 		this._generateParticles(this.imagePixels);
 	}
 	/**
@@ -158,6 +155,7 @@ export default class ParticleTypography {
 
 			particle.x = particle.targetX = pixels[i].x;
 			particle.y = particle.targetY = pixels[i].y;
+// console.log(particle.x + ', ' + particle.y)
 
 			this.particles.push(particle);
 		}
@@ -193,11 +191,11 @@ export default class ParticleTypography {
 	_drawParticles(particle) {
 		// Get distance to target
 		let dx = (particle.targetX - particle.x),
-		dy = (particle.targetY - particle.y),
+			dy = (particle.targetY - particle.y),
 
-		// Calculate acceleration (distance * spring)
-		ax = dx * this.spring,
-		ay = dy * this.spring;
+			// Calculate acceleration (distance * spring)
+			ax = dx * this.spring,
+			ay = dy * this.spring;
 
 		particle.range = (this.image.height - particle.y);
 
@@ -230,6 +228,7 @@ export default class ParticleTypography {
 		// Clear canvas every frame
 		this.ctx.fillStyle = '#111';
 		// this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.width);
+		this.ctx.fillRect(0, 0, 500, 200);
 
 		// Animate stuff...
 		if (this.particles){
