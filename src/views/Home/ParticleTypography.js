@@ -25,15 +25,18 @@ export default class ParticleTypography {
 		this.hueBotRange 				= 200;
 		this.hueOffset   				= 60;
 
+		this.positionOffset				= 4;
+		this.particleSize 				= 3;
+
 		// Set particle size based on screensize
-		this.particleSize = 0;
-		if (this.utils.screenSize().width > 1200){
-			this.particleSize = 8;
-		} else if (this.utils.screenSize().width > 900) {
-			this.particleSize = 6;
-		} else {
-			this.particleSize = 4;
-		}
+		// this.particleSize = 0;
+		// if (this.utils.screenSize().width > 1200){
+		// 	this.particleSize = 6;
+		// } else if (this.utils.screenSize().width > 900) {
+		// 	this.particleSize = 4;
+		// } else {
+		// 	this.particleSize = 2;
+		// }
 
 		// Environment Physics
 		this.spring   = 0.1;
@@ -118,16 +121,16 @@ export default class ParticleTypography {
 			y         = 0;
 
 		// Iterate over canvas pixels
-		for (let offset = 0; offset < pixels.length; offset += 4){
-			let r = pixels[offset],
-			g = pixels[offset + 1],
-			b = pixels[offset + 2],
-			a = pixels[offset + 3];
+		for (let index = 0; index < pixels.length; index += this.positionOffset){
+			let r = pixels[index],
+			g = pixels[index + 1],
+			b = pixels[index + 2],
+			a = pixels[index + 3];
 
 			// Skip transparent or all-white pixels
 			if (a > 0 && !(r === 255 && g === 255 && b === 255)){
-				let x = (offset / 4) % this.ctx.canvas.width,
-				y = Math.floor(Math.floor(offset / this.ctx.canvas.width) / 4);
+				let x = (index / this.positionOffset) % this.ctx.canvas.width,
+					y = Math.floor(Math.floor(index / this.ctx.canvas.width) / this.positionOffset);
 
 				if((x && x % this.particleSize == 0) && (y && y % this.particleSize == 0)){
 					this.imagePixels.push({ 
@@ -172,8 +175,8 @@ export default class ParticleTypography {
 
 		if (dist < min_dist){
 			let angle = Math.atan2( dy, dx ),
-			tx    = this.mouseBall.x + Math.cos(angle) * min_dist,
-			ty    = this.mouseBall.y + Math.sin(angle) * min_dist;
+				tx    = this.mouseBall.x + Math.cos(angle) * min_dist,
+				ty    = this.mouseBall.y + Math.sin(angle) * min_dist;
 
 			particle.vx += (tx - particle.x) * this.spring;
 			particle.vy += (ty - particle.y) * this.spring;
@@ -198,9 +201,11 @@ export default class ParticleTypography {
 		particle.range = (this.image.height - particle.y);
 
 		// Set hue based on Y coordinate (vertical)
-		let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
+		// let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
+		// particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
 
-		particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
+		// white hue
+		particle.color = 'hsla(360, 100%, 100%, 1)';
 
 		// Calculate velocity (acceleration + distance)
 		particle.vx += ax;
