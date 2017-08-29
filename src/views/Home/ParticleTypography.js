@@ -4,8 +4,7 @@ import TestImage from '../../../public/assets/test.png';
 
 export default class ParticleTypography {
 	/**
-	* Setup DOM references and event listeners
-
+		* Setup DOM references and event listeners
 	*/
 	constructor(canvas) {
 		this.canvas 					= canvas;
@@ -45,7 +44,7 @@ export default class ParticleTypography {
 	}
 
 	/**
-	* Initialize canvas and image
+		* Initialize canvas and image
 	*/
     _init() {
 		// Set Canvas size to fullscreen
@@ -69,7 +68,7 @@ export default class ParticleTypography {
     }
 
 	/**
-	* Draw image to canvas (in-memory)
+		* Draw image to canvas (in-memory)
 	*/
 	_drawImage() {
 		// Create in-memory canvas to get image pixels
@@ -105,11 +104,11 @@ export default class ParticleTypography {
     }
 
 	/**
-	* Create image pixel map with x, y, and color properties
-	* for individual pixels
-	*
-	* @param {Object} canvas - Canvas element
-	* @param {Object} context - 2D canvas context
+		* Create image pixel map with x, y, and color properties
+		* for individual pixels
+		*
+		* @param {Object} canvas - Canvas element
+		* @param {Object} context - 2D canvas context
 	*/
 	_getPixelData(canvas, context) {
 		// Get canvas pixel data
@@ -142,9 +141,9 @@ export default class ParticleTypography {
 		this._generateParticles(this.imagePixels);
 	}
 	/**
-	* Generate particles
-	*
-	* @param {Array} pixels - Canvas pixel coordinates
+		* Generate particles
+		*
+		* @param {Array} pixels - Canvas pixel coordinates
 	*/
 	_generateParticles(pixels) {
 		for (let i = 0; i < pixels.length; i++){
@@ -161,9 +160,9 @@ export default class ParticleTypography {
 		return this.particles;
     }
 	/**
-	* Collision detection between mouse and particles
-	*
-	 * @param {Object} particle - Instance 2D Ball context
+		* Collision detection between mouse and particles
+		*
+		* @param {Object} particle - Instance 2D Ball context
 	*/
 	_collisionDetection(particle) {
 		let dx   = particle.x - this.mouseBall.x,
@@ -183,9 +182,9 @@ export default class ParticleTypography {
 		return particle;
 	}
 	/**
-	* Draw particles
-	*
-	* @param {Object} particle - Instance 2D Ball context
+		* Draw particles
+		*
+		* @param {Object} particle - Instance 2D Ball context
 	*/
 	_drawParticles(particle) {
 		// Get distance to target
@@ -218,7 +217,7 @@ export default class ParticleTypography {
 		particle.draw(this.ctx);
 	}
 	/**
-	* Animation loop
+		* Animation loop
 	*/
 	_animate() {
 		// Call request animation frame recursively
@@ -237,7 +236,7 @@ export default class ParticleTypography {
 		}
     }
 	/** 
-	* Mouse move callback
+		* Mouse move callback
 	*/
 	_onMouseMove() {
 		// Set mouseBall to mouse coordinates
