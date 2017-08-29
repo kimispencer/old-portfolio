@@ -117,35 +117,38 @@ export default class ParticleTypography {
 	_getPixelData(canvas, context) {
 		// Get canvas pixel data
 		let imageData = this.ctx.getImageData(0, 0, this.ctx.canvas.width, this.ctx.canvas.height),
-			pixels    = imageData.data,
-			x         = 0,
-			y         = 0;
-			// Iterate over canvas pixels
-			for (let offset = 0; offset < pixels.length; offset += 4){
-				let r = pixels[offset],
-				g = pixels[offset + 1],
-				b = pixels[offset + 2],
-				a = pixels[offset + 3];
+		pixels    = imageData.data,
+		x         = 0,
+		y         = 0;
+		// Iterate over canvas pixels
+		for (let offset = 0; offset < pixels.length; offset += 4){
+			let r = pixels[offset],
+			g = pixels[offset + 1],
+			b = pixels[offset + 2],
+			a = pixels[offset + 3];
 
-				// Skip transparent or all-white pixels
-				if (a > 0 && !(r === 255 && g === 255 && b === 255)){
-					let x = (offset / 4) % canvas.width,
-					y = Math.floor(Math.floor(offset / canvas.width) / 4);
+			// Skip transparent or all-white pixels
+			if (a > 0 && !(r === 255 && g === 255 && b === 255)){
+				let x = (offset / 4) % canvas.width,
+				y = Math.floor(Math.floor(offset / canvas.width) / 4);
 
-					if((x && x % this.particleSize == 0) && (y && y % this.particleSize == 0)){
-						this.imagePixels.push({ 
-							x: x, 
-							y: y, 
-							color: 'rgba('+ r + ', ' + g + ', ' + b + ', ' + a + ')'
-						});
-					}
+				if((x && x % this.particleSize == 0) && (y && y % this.particleSize == 0)){
+					this.imagePixels.push({ 
+						x: x, 
+						y: y, 
+						color: 'rgba('+ r + ', ' + g + ', ' + b + ', ' + a + ')'
+					});
 				}
 			}
-			// Generate particles
-			this._generateParticles(this.imagePixels);
 		}
-
-
+		// Generate particles
+		this._generateParticles(this.imagePixels);
+	}
+	/**
+	* Generate particles
+	*
+	* @param {Array} pixels - Canvas pixel coordinates
+	*/
 	_generateParticles(pixels) {
 		for (let i = 0; i < pixels.length; i++){
 			let particle = new Ball(
@@ -160,29 +163,27 @@ export default class ParticleTypography {
 		}
 		return this.particles;
     }
-	_animate() {
-		// Call request animation frame recursively
-		this.requestAnimationFrame(this._animate.bind(this), this.canvas);
-
-		// Clear canvas every frame
-		this.ctx.fillStyle = '#111';
-		this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.width);
-
-		// Animate stuff...
-		if (this.particles){
-			// for (var i = 0; i < this.particles.length; i++){
-			// 	this._collisionDetection(this.particles[i]);
-			// 	this._drawParticles(this.particles[i]);
-			// }
-		}
-    }
 	/**
 	* Collision detection between mouse and particles
 	*
 	 * @param {Object} particle - Instance 2D Ball context
 	*/
 	_collisionDetection(particle) {
-		console.log('_collisionDetection')
+		let dx   = particle.x - this.mouseBall.x,
+			dy   = particle.y - this.mouseBall.y,
+			dist = Math.sqrt( ( dx * dx ) + ( dy * dy ) ),
+			min_dist = particle.radius + this.mouseBall.radius;
+
+		if (dist < min_dist){
+			let angle = Math.atan2( dy, dx ),
+			tx    = this.mouseBall.x + Math.cos(angle) * min_dist,
+			ty    = this.mouseBall.y + Math.sin(angle) * min_dist;
+
+			particle.vx += (tx - particle.x) * this.spring;
+			particle.vy += (ty - particle.y) * this.spring;
+		}
+
+		return particle;
 	}
 	/**
 	* Draw particles
@@ -190,9 +191,60 @@ export default class ParticleTypography {
 	* @param {Object} particle - Instance 2D Ball context
 	*/
 	_drawParticles(particle) {
-		console.log('_drawParticles')
+		// Get distance to target
+		let dx = (particle.targetX - particle.x),
+		dy = (particle.targetY - particle.y),
+
+		// Calculate acceleration (distance * spring)
+		ax = dx * this.spring,
+		ay = dy * this.spring;
+
+		particle.range = (this.image.height - particle.y);
+
+		// Set hue based on Y coordinate (vertical)
+		let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
+
+		particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
+
+		// Calculate velocity (acceleration + distance)
+		particle.vx += ax;
+		particle.vy += ay;
+
+		// Apply friction (velocity * friction)
+		particle.vx *= this.friction;
+		particle.vy *= this.friction;
+
+		// Add velocity to positioning
+		particle.x += particle.vx;
+		particle.y += particle.vy;
+
+		particle.draw(this.ctx);
 	}
+	/**
+	* Animation loop
+	*/
+	_animate() {
+		// Call request animation frame recursively
+		this.requestAnimationFrame(this._animate.bind(this), this.canvas);
+
+		// Clear canvas every frame
+		this.ctx.fillStyle = '#111';
+		// this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.width);
+
+		// Animate stuff...
+		if (this.particles){
+			for (var i = 0; i < this.particles.length; i++){
+				this._collisionDetection(this.particles[i]);
+				this._drawParticles(this.particles[i]);
+			}
+		}
+    }
+	/** 
+	* Mouse move callback
+	*/
 	_onMouseMove() {
-    	// console.log('_onMouseMove')
+		// Set mouseBall to mouse coordinates
+		this.mouseBall.x = this.mouse.x;
+		this.mouseBall.y = this.mouse.y;
     }
 }
