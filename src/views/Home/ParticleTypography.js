@@ -1,5 +1,7 @@
 import Ball from './Ball';
 import utils from './utils';
+import TestImage from '../../../public/assets/test.png';
+
 export default class ParticleTypography {
 	/**
 	* Setup DOM references and event listeners
@@ -16,7 +18,7 @@ export default class ParticleTypography {
 		this.mouseBall 					= new Ball(100, 'transparent');
 
 		this.image       				= new Image();
-		this.imageSrc   				= "https://s3-us-west-2.amazonaws.com/s.cdpn.io/3640/leila-jade.v3.png";
+		this.imageSrc   				=  TestImage; //"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3640/leila-jade.v3.png";;
 		this.imagePixels 				= [];
 
 		this.particles    				= [];
@@ -59,6 +61,8 @@ export default class ParticleTypography {
 		this.image.crossOrigin = "Anonymous";
 		this.image.src         = this.imageSrc;
 		this.image.addEventListener('load', () => this._drawImage());
+		// debugging
+		// this.ctx.drawImage(this.image, 100, 100);
 
 		// start the animation
 		this._animate();
@@ -222,7 +226,7 @@ export default class ParticleTypography {
 
 		// Clear canvas every frame
 		this.ctx.fillStyle = '#111';
-		this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.width);
+		this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
 
 		// Animate stuff...
 		if (this.particles){
