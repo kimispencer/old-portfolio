@@ -2,6 +2,7 @@ import React from 'react';
 import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
+import TextContainer from '../../components/TextContainer/TextContainer';
 import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
@@ -62,7 +63,7 @@ class ProjectDetail extends React.Component {
 				{/*<ImageLoader className="project-detail-cover" src={project.heroImg} imgKey={project.imgKey} />*/}
 				<ImageLoader className="project-detail-cover" src={project.hoverImg} />
 
-				<section className="text-container flex-row responsive">
+				<TextContainer className="flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
 						<p className="title uppercase bold">project description</p>
 						<p dangerouslySetInnerHTML={{ __html: project.intro }}></p>
@@ -129,7 +130,7 @@ class ProjectDetail extends React.Component {
 							}
 						</div>
 					</div>
-				</section>
+				</TextContainer>
 				<small className="back-to-top" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
 			</div>
 		);

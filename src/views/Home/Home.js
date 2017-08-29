@@ -1,5 +1,6 @@
 import React from 'react';
 import ParticleTypography from './ParticleTypography';
+import TextContainer from '../../components/TextContainer/TextContainer';
 import './Home.css';
 
 class Home extends React.Component {
@@ -10,9 +11,9 @@ class Home extends React.Component {
 		return (
 			<div className="home">
 				<canvas id="Canvas" />
-				<div>
+				<TextContainer>
 					<p>hi, i'm kimi. i am awesome.</p>
-				</div>
+				</TextContainer>
 			</div>
 		);
 	}

@@ -6,6 +6,9 @@
 	#Canvas {
 		border: 1px dashed red;
 	}
+	.text-container {
+		@include flexbox-center(column);
+	}
 }
 
 @media #{$desktop} {
