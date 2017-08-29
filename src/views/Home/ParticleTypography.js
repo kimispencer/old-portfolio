@@ -58,12 +58,8 @@ export default class ParticleTypography {
 		// https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image
 		this.image.crossOrigin = "Anonymous";
 		this.image.src         = this.imageSrc;
+		this.image.addEventListener('load', () => this._drawImage());
 
-		// this.image.addEventListener('load', () => this._drawImage());
-		this.image.onload = () => {
-			this.ctx.drawImage(this.image, 100, 100);			// !!! why do I need this to get pixel data?
-			this._drawImage();
-		}
 		// start the animation
 		this._animate();
     }
@@ -113,7 +109,7 @@ export default class ParticleTypography {
 	*/
 	_getPixelData(canvas, context) {
 		// Get canvas pixel data
-		let imageData = this.ctx.getImageData(0, 0, this.ctx.canvas.width, this.ctx.canvas.height),
+		let imageData = context.getImageData(0, 0, this.ctx.canvas.width, this.ctx.canvas.height),
 			pixels    = imageData.data,
 			x         = 0,
 			y         = 0;
@@ -155,7 +151,6 @@ export default class ParticleTypography {
 
 			particle.x = particle.targetX = pixels[i].x;
 			particle.y = particle.targetY = pixels[i].y;
-// console.log(particle.x + ', ' + particle.y)
 
 			this.particles.push(particle);
 		}
@@ -227,8 +222,7 @@ export default class ParticleTypography {
 
 		// Clear canvas every frame
 		this.ctx.fillStyle = '#111';
-		// this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.width);
-		this.ctx.fillRect(0, 0, 500, 200);
+		this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.width);
 
 		// Animate stuff...
 		if (this.particles){
