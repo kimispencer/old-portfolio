@@ -30,7 +30,7 @@ class Home extends React.Component {
 				</svg>
 
 				<TextContainer>
-					<h4 className="monospace">Hi, I'm Kimi. I'm an engineer/designer.</h4>
+					<h4 className="monospace">Hi, I'm Kimi. I'm an engineer & designer.</h4>
 				</TextContainer>
 
 				<canvas id="Canvas" />
