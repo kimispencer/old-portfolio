@@ -14,7 +14,7 @@ export default class ParticleTypography {
 	    this.requestAnimationFrame		= window.requestAnimationFrame.bind(window);
 
 		this.mouse 						= this.utils.captureMouse(this.canvas);
-		this.mouseBall 					= new Ball(100, 'transparent');
+		this.mouseBall 					= new Ball(40, 'transparent');
 
 		this.image       				= new Image();
 		this.imageSrc   				=  TestImage; //"https://s3-us-west-2.amazonaws.com/s.cdpn.io/3640/leila-jade.v3.png";;
@@ -25,8 +25,8 @@ export default class ParticleTypography {
 		this.hueBotRange 				= 200;
 		this.hueOffset   				= 60;
 
-		this.particleSize				= 1;
-		this.step 						= 2;
+		this.particleSize				= 2;
+		this.step 						= 3;
 
 		// Set particle size based on screensize
 		// this.particleSize = 0;
@@ -159,13 +159,85 @@ export default class ParticleTypography {
 				this.particleSize, // size
 				pixels[i].color,  // color
 			);
+			particle.x = Math.random() * (this.ctx.canvas.width - 0) + 0;
+			particle.y = Math.random() * (this.ctx.canvas.height - 0) + 0;
 
-			particle.x = particle.targetX = pixels[i].x;
-			particle.y = particle.targetY = pixels[i].y;
+			particle.targetX = pixels[i].x;
+			particle.targetY = pixels[i].y;
 
 			this.particles.push(particle);
 		}
 		return this.particles;
+    }
+	/**
+		* Draw particles
+		*
+		* @param {Object} particle - Instance 2D Ball context
+	*/
+	_drawParticles(particle) {
+		// particle.range = (this.image.height - particle.y);
+		// Set hue based on Y coordinate (vertical)
+		// let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
+		// particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
+
+		// white hue
+		particle.color = 'hsla(360, 100%, 100%, 1)';
+		// black hue
+		// particle.color = 'hsla(0, 0%, 0%, 1)';
+
+		particle.draw(this.ctx);
+	}
+	_updateParticles(particle) {
+		// Get distance to target
+		let dx = (particle.targetX - particle.x),
+			dy = (particle.targetY - particle.y);
+
+		// Calculate acceleration (distance * spring)
+		particle.ax += dx * this.spring;
+		particle.ay += dy * this.spring;
+
+		// Calculate velocity (acceleration + distance)
+		particle.vx += particle.ax;
+		particle.vy += particle.ay;
+
+		// Apply friction (velocity * friction)
+		particle.vx *= this.friction;
+		particle.vy *= this.friction;
+
+		// Add velocity to positioning
+		particle.x += particle.vx;
+		particle.y += particle.vy;
+
+		// clear out acceleration each cycle
+		particle.ax *= 0;
+		particle.ay *= 0;
+	}
+	/**
+		* Animation loop
+	*/
+	_animate() {
+		// Call request animation frame recursively
+		this.requestAnimationFrame(this._animate.bind(this), this.canvas);
+
+		// Clear canvas every frame
+		this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
+
+		// Animate stuff...
+		if (this.particles){
+			for (var i = 0; i < this.particles.length; i++){
+				this._collisionDetection(this.particles[i]);
+				this._updateParticles(this.particles[i]);
+				this._drawParticles(this.particles[i]);
+			}
+		}
+    }
+	/** 
+		* Mouse move callback
+	*/
+	_onMouseMove() {
+		// Set mouseBall to mouse coordinates
+		this.mouseBall.x = this.mouse.x;
+		this.mouseBall.y = this.mouse.y;
     }
 	/**
 		* Collision detection between mouse and particles
@@ -183,77 +255,8 @@ export default class ParticleTypography {
 				tx    = this.mouseBall.x + Math.cos(angle) * min_dist,
 				ty    = this.mouseBall.y + Math.sin(angle) * min_dist;
 
-			particle.vx += (tx - particle.x) * this.spring;
-			particle.vy += (ty - particle.y) * this.spring;
+			particle.vx += (tx - particle.targetX) * this.spring;
+			particle.vy += (ty - particle.targetY) * this.spring;
 		}
-
-		return particle;
 	}
-	/**
-		* Draw particles
-		*
-		* @param {Object} particle - Instance 2D Ball context
-	*/
-	_drawParticles(particle) {
-		// Get distance to target
-		let dx = (particle.targetX - particle.x),
-			dy = (particle.targetY - particle.y),
-
-			// Calculate acceleration (distance * spring)
-			ax = dx * this.spring,
-			ay = dy * this.spring;
-
-		particle.range = (this.image.height - particle.y);
-
-		// Set hue based on Y coordinate (vertical)
-		// let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
-		// particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
-
-		// white hue
-		particle.color = 'hsla(360, 100%, 100%, 1)';
-		// black hue
-		// particle.color = 'hsla(0, 0%, 0%, 1)';
-
-		// Calculate velocity (acceleration + distance)
-		particle.vx += ax;
-		particle.vy += ay;
-
-		// Apply friction (velocity * friction)
-		particle.vx *= this.friction;
-		particle.vy *= this.friction;
-
-		// Add velocity to positioning
-		particle.x += particle.vx;
-		particle.y += particle.vy;
-
-		particle.draw(this.ctx);
-	}
-	/**
-		* Animation loop
-	*/
-	_animate() {
-		// Call request animation frame recursively
-		this.requestAnimationFrame(this._animate.bind(this), this.canvas);
-
-		// Clear canvas every frame
-		// this.ctx.fillStyle = '#fff';
-		// this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
-		this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
-
-		// Animate stuff...
-		if (this.particles){
-			for (var i = 0; i < this.particles.length; i++){
-				this._collisionDetection(this.particles[i]);
-				this._drawParticles(this.particles[i]);
-			}
-		}
-    }
-	/** 
-		* Mouse move callback
-	*/
-	_onMouseMove() {
-		// Set mouseBall to mouse coordinates
-		this.mouseBall.x = this.mouse.x;
-		this.mouseBall.y = this.mouse.y;
-    }
 }

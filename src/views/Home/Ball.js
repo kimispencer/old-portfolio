@@ -10,16 +10,18 @@ export default class Ball {
 		this.y         = 0;
 		this.vx        = 0;
 		this.vy        = 0;
+		this.ax		   = 0;
+		this.ay		   = 0;
 		this.color     = color || "#ff0000";
 		this.radius    = radius || 1;
-		this.rotation  = 0;
-		this.scaleX    = 1;
-		this.scaleY    = 1;
-		this.lineWidth = 0;
-		this.image     = image || null;
-		this.opacity   = 1;
-		this.isHSLA    = isHSLA || false;
-		this.isShadow  = isShadow || false;
+		// this.rotation  = 0;
+		// this.scaleX    = 1;
+		// this.scaleY    = 1;
+		// this.lineWidth = 0;
+		// this.image     = image || null;
+		// this.opacity   = 1;
+		// this.isHSLA    = isHSLA || false;
+		// this.isShadow  = isShadow || false;
 	}
 	/**
 	* Draw
@@ -27,7 +29,7 @@ export default class Ball {
 	*/
 	draw(context, utils){
 		context.fillStyle = this.color;
-		context.fillRect(this.x, this.y, this.radius, this.radius);
+		context.fillRect(this.x-this.radius/2, this.y-this.radius/2, this.radius, this.radius);
 		// context.save();
 		// context.translate(this.x, this.y);
 		// context.rotate(this.rotation);
