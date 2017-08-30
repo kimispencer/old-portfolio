@@ -1,6 +1,6 @@
 import Ball from './Ball';
 import utils from './utils';
-import TestImage from '../../../public/assets/kimi.png';
+import TestImage from '../../../public/assets/icons/triangle.svg';
 
 export default class ParticleTypography {
 	/**
@@ -26,7 +26,7 @@ export default class ParticleTypography {
 		this.hueOffset   				= 60;
 
 		this.particleSize				= 2;
-		this.step 						= 3;
+		this.step 						= 4;
 
 		// Set particle size based on screensize
 		// this.particleSize = 0;
@@ -51,8 +51,9 @@ export default class ParticleTypography {
 	*/
     _init() {
 		// Set Canvas size to fullscreen
-		this.ctx.canvas.width  = 600 > this.utils.screenSize().width ? this.utils.screenSize().width : 600; //this.utils.screenSize().width;
-		this.ctx.canvas.height = 300; //this.utils.screenSize().height;
+		let w = 300;
+		this.ctx.canvas.width  = w > this.utils.screenSize().width ? this.utils.screenSize().width : w; //this.utils.screenSize().width;
+		this.ctx.canvas.height = w/2; //this.utils.screenSize().height;
 
 		// Environment events
 		// w.addEventListener('resize', () => this._onWindowResize());

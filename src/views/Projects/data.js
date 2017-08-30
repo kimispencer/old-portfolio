@@ -403,4 +403,23 @@ export default  [
 			`
 
 	},
+	/*
+	{
+		url: 'particles',
+		name: 'Particle Systems',
+		hoverImg: "https://unsplash.it/1200/540",
+		tileImg: 'bg-00.png',
+		imgKey: 'projects/particles',
+		projectType: 'Particle System experiments',
+		projectRole: [
+			'Concept Designer',
+			'Computer Programmer',
+		],
+		technologyUsed: 'Javascript',
+		intro: 
+			`
+			<p>Particle Systems</p>
+			`		
+	}
+	*/
 ];

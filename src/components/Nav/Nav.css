@@ -280,6 +280,21 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
+@keyframes background-zoom {
+  0% {
+    background-size: 100%; }
+  100% {
+    background-size: 110%; } }
+
+@keyframes draw-svg {
+  to {
+    stroke-dashoffset: 0;
+    /*fill-opacity: 1;*/ } }
+
+@keyframes fill-svg {
+  to {
+    fill-opacity: 1; } }
+
 .nav-header-bar {
   z-index: 100;
   position: fixed;

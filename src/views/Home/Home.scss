@@ -3,28 +3,41 @@
 .home {
 	min-height: calc(100vh - #{$fixed_nav_height});
 	@include flexbox-center(column);
-
-	/*background-image: url('http://clementgirault.com/projets/codepen/text.jpg');*/
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	animation: background-zoom 4s forwards;
+	background-size: cover;
 
 	#Canvas {
-		margin-bottom: $gutter*2;
+		margin-top: $gutter;
+	}
+
+	/* SVG animation */
+	.svg-obj {
+	  margin-bottom: $gutter;
+      max-width: 100vw;
+	}
+
+	.path {
+		fill: white;
+		fill-opacity: 0;
+		stroke: white;
+		stroke-width: 4;
+		stroke-linecap: round;
+
+		stroke-dasharray: 860;
+		stroke-dashoffset: 860;
+		/*animation: draw-svg 2s linear forwards;*/
+		animation: fill-svg 4s forwards;
 	}
 	.text-container {
 		color: $white;
+		text-align: center;
 	}
 }
 
 @media #{$desktop} {
-}
-
-@media #{$tablet} {
-}
-
-@keyframes background-zoom {
-	0% {background-size: 100%;}
-	100% {background-size: 105%;}
+	.home {
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		animation: background-zoom 4s forwards;
+	}
 }
