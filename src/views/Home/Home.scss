@@ -2,9 +2,10 @@
 
 .home {
 	min-height: calc(100vh - #{$fixed_nav_height});
-	/*background: pink;*/
+	@include flexbox-center(column);
 	#Canvas {
 		border: 1px dashed red;
+		margin-bottom: $gutter*2;
 	}
 	.text-container {
 		@include flexbox-center(column);
