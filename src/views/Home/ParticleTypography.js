@@ -1,6 +1,6 @@
 import Ball from './Ball';
 import utils from './utils';
-import TestImage from '../../../public/assets/test.png';
+import TestImage from '../../../public/assets/kimi.png';
 
 export default class ParticleTypography {
 	/**
@@ -25,7 +25,7 @@ export default class ParticleTypography {
 		this.hueBotRange 				= 200;
 		this.hueOffset   				= 60;
 
-		this.offset						= 1; // space between particles
+		this.step 						= 5;
 		this.particleSize				= 4;
 
 		// Set particle size based on screensize
@@ -121,7 +121,7 @@ export default class ParticleTypography {
 			y         = 0;
 
 		// Iterate over canvas pixels
-		for (let index = 0; index < pixels.length; index += this.offset){
+		for (let index = 0; index < pixels.length; index += 4){
 			let r = pixels[index],
 			g = pixels[index + 1],
 			b = pixels[index + 2],
@@ -151,7 +151,7 @@ export default class ParticleTypography {
 	_generateParticles(pixels) {
 		for (let i = 0; i < pixels.length; i++){
 			let particle = new Ball(
-				this.particleSize / 2, // size
+				this.particleSize, // size
 				pixels[i].color,  // color
 			);
 
@@ -201,13 +201,13 @@ export default class ParticleTypography {
 		particle.range = (this.image.height - particle.y);
 
 		// Set hue based on Y coordinate (vertical)
-		// let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
-		// particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
+		let hue = ( ( particle.range * (this.hueTopRange - this.hueBotRange) ) / ( this.image.height) ) + this.hueOffset;
+		particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
 
 		// white hue
 		// particle.color = 'hsla(360, 100%, 100%, 1)';
 		// black hue
-		particle.color = 'hsla(0, 0%, 0%, 1)';
+		// particle.color = 'hsla(0, 0%, 0%, 1)';
 
 		// Calculate velocity (acceleration + distance)
 		particle.vx += ax;

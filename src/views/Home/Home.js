@@ -12,7 +12,7 @@ class Home extends React.Component {
 			<div className="home">
 				<canvas id="Canvas" />
 				<TextContainer>
-					<p>hi, i'm kimi. i am awesome.</p>
+					<h4 className="monospace">Hi, I'm Kimi. I am awesome a engineer/designer.</h4>
 				</TextContainer>
 			</div>
 		);
