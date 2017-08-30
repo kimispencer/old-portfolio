@@ -11,7 +11,7 @@ export default class Ball {
 		this.vx        = 0;
 		this.vy        = 0;
 		this.color     = color || "#ff0000";
-		this.radius    = radius || 40;
+		this.radius    = radius || 1;
 		this.rotation  = 0;
 		this.scaleX    = 1;
 		this.scaleY    = 1;
@@ -26,44 +26,46 @@ export default class Ball {
 	* @param (2DContext) context - Canvas context
 	*/
 	draw(context, utils){
-		context.save();
-		context.translate(this.x, this.y);
-		context.rotate(this.rotation);
-		context.scale(this.scaleX, this.scaleY);
-		context.lineWidth = this.lineWidth;
+		context.fillStyle = this.color;
+		context.fillRect(this.x, this.y, this.radius, this.radius);
+		// context.save();
+		// context.translate(this.x, this.y);
+		// context.rotate(this.rotation);
+		// context.scale(this.scaleX, this.scaleY);
+		// context.lineWidth = this.lineWidth;
 
-		// If image was passed in
-		if (this.image) {
-				var ballWidth = this.radius * 2;
-				var imageHeight = ballWidth * (this.image.height / this.image.width);
-				context.globalAlpha = this.opacity;
-				context.drawImage(this.image, 0 - (this.radius), 0 - (imageHeight / 2), this.radius * 2, imageHeight);
-				context.fillStyle = "rgba(255, 255, 255, 0)";
-			} else {
-				if (utils && !this.isHSLA){
-					context.fillStyle = utils.colorToRGB(this.color, this.opacity);
-				} else {
-					context.fillStyle = this.color;
-				}
-			}
+		// // If image was passed in
+		// if (this.image) {
+		// 		var ballWidth = this.radius * 2;
+		// 		var imageHeight = ballWidth * (this.image.height / this.image.width);
+		// 		context.globalAlpha = this.opacity;
+		// 		context.drawImage(this.image, 0 - (this.radius), 0 - (imageHeight / 2), this.radius * 2, imageHeight);
+		// 		context.fillStyle = "rgba(255, 255, 255, 0)";
+		// 	} else {
+		// 		if (utils && !this.isHSLA){
+		// 			context.fillStyle = utils.colorToRGB(this.color, this.opacity);
+		// 		} else {
+		// 			context.fillStyle = this.color;
+		// 		}
+		// 	}
 
-			if (this.isShadow) {  
-			context.shadowColor = this.color;
-			context.shadowBlur = this.isShadow;
-			context.shadowOffsetX = 0;
-			context.shadowOffsetY = 0;
-		}
+		// 	if (this.isShadow) {  
+		// 	context.shadowColor = this.color;
+		// 	context.shadowBlur = this.isShadow;
+		// 	context.shadowOffsetX = 0;
+		// 	context.shadowOffsetY = 0;
+		// }
 
-		context.beginPath();
-		// x, y, radius, start_angle, end_angle, anti-clockwise
-		context.arc(0, 0, this.radius, 0, (Math.PI * 2), true);
+		// context.beginPath();
+		// // x, y, radius, start_angle, end_angle, anti-clockwise
+		// context.arc(0, 0, this.radius, 0, (Math.PI * 2), true);
 
-		context.closePath();
-		context.fill();
-		if (this.lineWidth > 0) {
-			context.stroke();
-		}
-		context.restore();
+		// context.closePath();
+		// context.fill();
+		// if (this.lineWidth > 0) {
+		// 	context.stroke();
+		// }
+		// context.restore();
 
 	}
 

@@ -26,7 +26,7 @@ export default class ParticleTypography {
 		this.hueOffset   				= 60;
 
 		this.particleSize				= 1;
-		this.step 						= 3;
+		this.step 						= 2;
 
 		// Set particle size based on screensize
 		// this.particleSize = 0;
