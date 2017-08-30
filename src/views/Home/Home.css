@@ -299,28 +299,21 @@ select:-webkit-autofill:focus {
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center; }
+  -ms-flex-pack: center;
+  /*background-image: url('http://clementgirault.com/projets/codepen/text.jpg');*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  animation: background-zoom 4s forwards; }
 
 .home #Canvas {
-  border: 1px dashed red;
   margin-bottom: 40px; }
 
 .home .text-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: column;
-  -moz-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center; }
+  color: #ffffff; }
+
+@keyframes background-zoom {
+  0% {
+    background-size: 100%; }
+  100% {
+    background-size: 105%; } }

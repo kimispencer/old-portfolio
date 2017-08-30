@@ -1,6 +1,7 @@
 import React from 'react';
 import ParticleTypography from './ParticleTypography';
 import TextContainer from '../../components/TextContainer/TextContainer';
+import BgImg from '../../../public/assets/bg.png';
 import './Home.css';
 
 class Home extends React.Component {
@@ -8,11 +9,14 @@ class Home extends React.Component {
 		new ParticleTypography(document.getElementById('Canvas'));
 	}
 	render() {
+		let styles = {
+			backgroundImage: `url(${BgImg})`
+		}
 		return (
-			<div className="home">
+			<div className="home" style={styles}>
 				<canvas id="Canvas" />
 				<TextContainer>
-					<h4 className="monospace">Hi, I'm Kimi. I am awesome a engineer/designer.</h4>
+					<h4 className="monospace">Hi, I'm Kimi. I an engineer/designer.</h4>
 				</TextContainer>
 			</div>
 		);

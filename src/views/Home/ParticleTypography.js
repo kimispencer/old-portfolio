@@ -25,8 +25,8 @@ export default class ParticleTypography {
 		this.hueBotRange 				= 200;
 		this.hueOffset   				= 60;
 
-		this.particleSize				= 2;
-		this.step 						= 2;
+		this.particleSize				= 1;
+		this.step 						= 3;
 
 		// Set particle size based on screensize
 		// this.particleSize = 0;
@@ -51,7 +51,7 @@ export default class ParticleTypography {
 	*/
     _init() {
 		// Set Canvas size to fullscreen
-		this.ctx.canvas.width  = 500 > this.utils.screenSize().width ? this.utils.screenSize().width : 500; //this.utils.screenSize().width;
+		this.ctx.canvas.width  = 600 > this.utils.screenSize().width ? this.utils.screenSize().width : 600; //this.utils.screenSize().width;
 		this.ctx.canvas.height = 300; //this.utils.screenSize().height;
 
 		// Environment events
@@ -130,8 +130,12 @@ export default class ParticleTypography {
 			// Skip transparent or all-white pixels
 			if (a > 0 && !(r === 255 && g === 255 && b === 255)){
 				let x = (index / 4) % this.ctx.canvas.width,
-					// y = Math.floor(Math.floor(index / this.ctx.canvas.width) / 4);
 					y = Math.floor((index / 4) / this.ctx.canvas.width);
+
+				// 
+		        if (x % this.step || y % this.step) {
+		            continue;
+		        }
 
 				if((x && x % this.particleSize == 0) && (y && y % this.particleSize == 0)){
 					this.imagePixels.push({ 
@@ -150,7 +154,7 @@ export default class ParticleTypography {
 		* @param {Array} pixels - Canvas pixel coordinates
 	*/
 	_generateParticles(pixels) {
-		for (let i = 0; i < pixels.length; i += this.step){
+		for (let i = 0; i < pixels.length; i++){
 			let particle = new Ball(
 				this.particleSize, // size
 				pixels[i].color,  // color
@@ -206,9 +210,9 @@ export default class ParticleTypography {
 		// particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
 
 		// white hue
-		// particle.color = 'hsla(360, 100%, 100%, 1)';
+		particle.color = 'hsla(360, 100%, 100%, 1)';
 		// black hue
-		particle.color = 'hsla(0, 0%, 0%, 1)';
+		// particle.color = 'hsla(0, 0%, 0%, 1)';
 
 		// Calculate velocity (acceleration + distance)
 		particle.vx += ax;

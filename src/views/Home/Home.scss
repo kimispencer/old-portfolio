@@ -3,12 +3,18 @@
 .home {
 	min-height: calc(100vh - #{$fixed_nav_height});
 	@include flexbox-center(column);
+
+	/*background-image: url('http://clementgirault.com/projets/codepen/text.jpg');*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	animation: background-zoom 4s forwards;
+
 	#Canvas {
-		border: 1px dashed red;
 		margin-bottom: $gutter*2;
 	}
 	.text-container {
-		@include flexbox-center(column);
+		color: $white;
 	}
 }
 
@@ -16,4 +22,9 @@
 }
 
 @media #{$tablet} {
+}
+
+@keyframes background-zoom {
+	0% {background-size: 100%;}
+	100% {background-size: 105%;}
 }
