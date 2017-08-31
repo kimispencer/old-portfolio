@@ -7,7 +7,7 @@ import './Home.css';
 
 class Home extends React.Component {
 	componentDidMount() {
-		new ParticleTypography(document.getElementById('Canvas'));
+		// new ParticleTypography(document.getElementById('Canvas'));
 	}
 	render() {
 		let styles = {
@@ -51,7 +51,7 @@ class Home extends React.Component {
 					{/* <h4 className="monospace">Hi, I'm Kimi. I'm an engineer & designer.</h4> */}
 				</TextContainer>
 
-				<canvas id="Canvas" />
+				{/*<canvas id="Canvas" />*/}
 
 			</div>
 		);
