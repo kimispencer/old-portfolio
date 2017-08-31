@@ -37,10 +37,10 @@ const Nav = (props) => {
 					</div>	
 				}	
 				<ul className="nav-links">
-					<li><Link to="/projects" onClick={handle_navClick_Projects}><small className="uppercase">Projects</small></Link></li>
-					<li><Link to="/resume" onClick={handle_navClick}><small className="uppercase">Resume</small></Link></li>
-					<li><Link to="/playground" onClick={handle_navClick}><small className="uppercase">Playground</small></Link></li>
-					{/*<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>*/}
+					<li className="link-text"><Link to="/projects" onClick={handle_navClick_Projects}><small className="uppercase">Projects</small></Link></li>
+					<li className="link-text"><Link to="/resume" onClick={handle_navClick}><small className="uppercase">Resume</small></Link></li>
+					<li className="link-text"><Link to="/playground" onClick={handle_navClick}><small className="uppercase">Playground</small></Link></li>
+					{/*<li className="link-text"><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>*/}
 				</ul>
 			</div>
 		</div>

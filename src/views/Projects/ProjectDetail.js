@@ -34,7 +34,7 @@ class ProjectDetail extends React.Component {
 		this._handleProjectNav();
 	}
 	_scrollTop() {
-		scrollTo(document.body, 0, 600);
+		scrollTo(document.body, 0, 750);
 	}
 	_handleProjectNav() {
 		if(!this.props._projectNavStyle_isList) {
@@ -131,7 +131,7 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</TextContainer>
-				<small className="back-to-top" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
+				<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
 			</div>
 		);
 	}
