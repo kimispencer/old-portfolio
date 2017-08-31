@@ -1,3 +1,4 @@
+/* background image zoom */
 @keyframes background-zoom {
 	0% {
 		background-size: 100%;
@@ -7,13 +8,30 @@
 	}
 }
 
+/* draw svg outline */
 @keyframes draw-svg {
 	to {
 		stroke-dashoffset: 0;
-		/*fill-opacity: 1;*/
 	}
 }
 
+/* fill svg */
 @keyframes fill-svg {
 	to { fill-opacity: 1; }
+}
+
+/* fade in  + slight pulse */
+@keyframes fade-in { 
+	0% {
+		opacity: 0;
+		transform: scale(.1);
+	}
+
+	85% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

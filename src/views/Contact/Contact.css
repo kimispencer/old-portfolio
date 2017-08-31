@@ -280,20 +280,33 @@ select:-webkit-autofill:focus {
   form {
     width: 100%; } }
 
+/* background image zoom */
 @keyframes background-zoom {
   0% {
     background-size: 100%; }
   100% {
     background-size: 110%; } }
 
+/* draw svg outline */
 @keyframes draw-svg {
   to {
-    stroke-dashoffset: 0;
-    /*fill-opacity: 1;*/ } }
+    stroke-dashoffset: 0; } }
 
+/* fill svg */
 @keyframes fill-svg {
   to {
     fill-opacity: 1; } }
+
+/* fade in  + slight pulse */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.1); }
+  85% {
+    opacity: 1;
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
 
 .contact #ContactForm {
   -webkit-justify-content: center;
