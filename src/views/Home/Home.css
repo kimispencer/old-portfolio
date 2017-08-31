@@ -346,9 +346,9 @@ select:-webkit-autofill:focus {
   stroke: white;
   stroke-width: 4;
   stroke-linecap: round;
-  stroke-dasharray: 860;
-  stroke-dashoffset: 860;
-  animation: 2s linear 0s draw-svg forwards; }
+  stroke-dasharray: 1260;
+  stroke-dashoffset: 1260;
+  animation: 3s linear 0s draw-svg forwards; }
 
 .home #BottomSVG {
   position: absolute;

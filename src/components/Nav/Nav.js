@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { isDesktop } from '../../components/Responsive/Responsive';
-import Logo from '../../../public/assets/kimi.svg';
+import Logo from '../../../public/assets/kimi2.svg';
 import './Nav.css';
 
 const NavTrigger = (props) => (
@@ -39,6 +39,7 @@ const Nav = (props) => {
 				<ul className="nav-links">
 					<li><Link to="/projects" onClick={handle_navClick_Projects}><small className="uppercase">Projects</small></Link></li>
 					<li><Link to="/resume" onClick={handle_navClick}><small className="uppercase">Resume</small></Link></li>
+					<li><Link to="/playground" onClick={handle_navClick}><small className="uppercase">Playground</small></Link></li>
 					{/*<li><Link to="/contact" onClick={handle_navClick}><small className="uppercase">Contact</small></Link></li>*/}
 				</ul>
 			</div>

@@ -52,8 +52,8 @@ export default class ParticleTypography {
     _init() {
 		// Set Canvas size to fullscreen
 		let w = 300;
-		this.ctx.canvas.width  = w > this.utils.screenSize().width ? this.utils.screenSize().width : w; //this.utils.screenSize().width;
-		this.ctx.canvas.height = w/2; //this.utils.screenSize().height;
+		this.ctx.canvas.width  = this.utils.screenSize().width;; //w > this.utils.screenSize().width ? this.utils.screenSize().width : w;
+		this.ctx.canvas.height = this.utils.screenSize().height; //w/2; 
 
 		// Environment events
 		// w.addEventListener('resize', () => this._onWindowResize());
