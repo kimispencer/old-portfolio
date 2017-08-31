@@ -1,6 +1,7 @@
 import React from 'react';
 import ParticleTypography from './ParticleTypography';
 import TextContainer from '../../components/TextContainer/TextContainer';
+import TextAnimation from '../../components/TextAnimation/TextAnimation';
 import BgImg from '../../../public/assets/bg.png';
 import './Home.css';
 
@@ -30,7 +31,8 @@ class Home extends React.Component {
 				</svg>
 
 				<TextContainer>
-					<h4 className="monospace">Hi, I'm Kimi. I'm an engineer & designer.</h4>
+					<TextAnimation />
+					{/* <h4 className="monospace">Hi, I'm Kimi. I'm an engineer & designer.</h4> */}
 				</TextContainer>
 
 				<canvas id="Canvas" />
