@@ -371,38 +371,38 @@ export default  [
 			`
 
 	},
-	{
-		url: 'nltk', 
-		name: "Language Processing",  
-		hoverImg: "https://unsplash.it/1200/540",
-		tileImg: 'bg-00.jpg',
-		imgKey: 'projects/nltk',
-		screenShots: [
-		],
-		projectImgs: [
-		],
-		projectVids: [
-			'https://vimeo.com/42182472',
-			'https://vimeo.com/41890006',
-			'https://vimeo.com/41890005',
-			'https://vimeo.com/41890004'
-		],
-		projectType: 'Natural Language Processing experiments',
-		projectRole: [
-			'Concept Designer',
-			'Computer Programmer',
-		],
-		technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
-		intro: 
-			`
-			<p>Reading and writing electronic text experiements</p>
-			<br/>
-			<p>Using Python and the NLTK (Natural Language Tool Kit) I create a script that pulled lyrics from various musicans and recreated the lyrics using n-grams and language pattern recognition.</p>
-			<br/>
-			<p>Presented in the style of late night 90's television informercials.</p>
-			`
+	// {
+	// 	url: 'nltk', 
+	// 	name: "Language Processing",  
+	// 	hoverImg: "https://unsplash.it/1200/540",
+	// 	tileImg: 'bg-00.jpg',
+	// 	imgKey: 'projects/nltk',
+	// 	screenShots: [
+	// 	],
+	// 	projectImgs: [
+	// 	],
+	// 	projectVids: [
+	// 		'https://vimeo.com/42182472',
+	// 		'https://vimeo.com/41890006',
+	// 		'https://vimeo.com/41890005',
+	// 		'https://vimeo.com/41890004'
+	// 	],
+	// 	projectType: 'Natural Language Processing experiments',
+	// 	projectRole: [
+	// 		'Concept Designer',
+	// 		'Computer Programmer',
+	// 	],
+	// 	technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
+	// 	intro: 
+	// 		`
+	// 		<p>Reading and writing electronic text experiements</p>
+	// 		<br/>
+	// 		<p>Using Python and the NLTK (Natural Language Tool Kit) I create a script that pulled lyrics from various musicans and recreated the lyrics using n-grams and language pattern recognition.</p>
+	// 		<br/>
+	// 		<p>Presented in the style of late night 90's television informercials.</p>
+	// 		`
 
-	},
+	// },
 	/*
 	{
 		url: 'particles',
