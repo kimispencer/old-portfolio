@@ -2,6 +2,12 @@
 
 .device-frame {
 	border: 1px dashed red;
+	&.bounce {
+		border-color: green;
+		.screenshot {
+			animation: bounce-y 1.5s ease-in forwards;			
+		}
+	}
 }
 
 /* simulate a iPhone device frame 
