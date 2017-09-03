@@ -80,7 +80,7 @@ class ProjectDetail extends React.Component {
 						<section className="project-screenshot-list">
 						{project.screenShots 
 							? project.screenShots.map((img, index) => 
-								<DeviceFrame type={img.split('-')[0]} src={img} imgKey={project.imgKey} key={index} />
+								<DeviceFrame className={index === 0 ? 'can-bounce' : ''} type={img.split('-')[0]} src={img} imgKey={project.imgKey} key={index} />
 							)
 							: null
 						}

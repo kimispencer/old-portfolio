@@ -5,18 +5,33 @@ class DeviceFrame extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			bounce: false
+			inViewport: false
 		}
-		this._scrollBounce = this._scrollBounce.bind(this);
+		this._isElementInViewport = this._isElementInViewport.bind(this);
+		this._handleScroll = this._handleScroll.bind(this);
 	}
-	_scrollBounce() {
-		this.setState({ bounce: !this.state.bounce });
+	componentDidMount() {
+		window.addEventListener('scroll', this._handleScroll);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this._handleScroll);
+	}
+	_isElementInViewport (el) {
+		var rect = el[0].getBoundingClientRect();
+		var height = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+		return (rect.top>-1 && rect.bottom <= height);
+	}
+	_handleScroll() {
+		if(this._isElementInViewport(document.getElementsByClassName('device-frame'))) {
+			this.setState({ inViewport: true });
+		}
 	}
 	render() {
 		let img = (this.props.src.indexOf('http') > -1) ? img = this.props.src : img = require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 		return (
-			<div className={`device-frame ${this.state.bounce ? 'bounce' : ''}`}>
-				<p onClick={this._scrollBounce}>click me</p>
+			<div className={`device-frame ${this.props.className} ${this.state.inViewport ? 'in-viewport' : ''}`}>
 				{this.props.type === "desktop" && 
 				<div className="macbook">
 					<div className="screen">
