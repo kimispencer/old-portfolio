@@ -4,7 +4,8 @@
 	min-height: calc(100vh - #{$fixed_nav_height});
 	@include flexbox-center(column);
 	background-size: cover;
-
+    background-position: center;
+    
 	#Canvas {
 		margin-top: $gutter;
 	}
