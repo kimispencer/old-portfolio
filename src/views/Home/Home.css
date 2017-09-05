@@ -417,11 +417,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   justify-content: center;
   -ms-flex-pack: center;
   background-size: cover;
-  background-position: center;
-  /* SVG animation */ }
-
-.home #Canvas {
-  margin-top: 20px; }
+  background-position: center; }
 
 .home .svg-container {
   position: relative; }
@@ -450,6 +446,9 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
 .home .text-container {
   color: #ffffff;
   text-align: center; }
+
+.home .text-container .link-text {
+  margin-top: 40px; }
 
 @media only screen and (min-width: 1025px) {
   .home {

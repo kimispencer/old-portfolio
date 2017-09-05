@@ -6,11 +6,6 @@
 	background-size: cover;
     background-position: center;
     
-	#Canvas {
-		margin-top: $gutter;
-	}
-
-	/* SVG animation */
 	.svg-container {
 		position: relative;
 	}
@@ -41,6 +36,9 @@
 	.text-container {
 		color: $white;
 		text-align: center;
+		.link-text {
+			margin-top: $gutter*2;
+		}
 	}
 }
 
