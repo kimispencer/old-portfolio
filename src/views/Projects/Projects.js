@@ -1,8 +1,5 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-// import AltContainer from 'alt-container';
-// import ProjectStore from '../../stores/ProjectStore';
-// import ProjectActions from '../../actions/ProjectActions';
 import { isDesktop } from '../../components/Responsive/Responsive';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';

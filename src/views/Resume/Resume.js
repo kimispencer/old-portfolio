@@ -157,10 +157,6 @@ const Resume = () => (
 								<li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, Premiere)</li>
 								<li>Sketch</li>
 								<li>VDMX</li>
-								{/*
-								<li>Cinema4D</li>
-								<li>Rhino</li>
-								*/}
 							</ul>
 						</div>
 					</div>
