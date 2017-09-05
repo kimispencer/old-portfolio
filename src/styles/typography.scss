@@ -43,7 +43,7 @@ h4 {font-size: 1.414em;}
 small, .font_small {font-size: 0.707em;}
 
 .serif {
-	font-family: "Tiempos Headline",serif;
+	font-family: "ITC Garamond Book Condensed";//"Tiempos Headline",serif;
 }
 
 .monospace {
@@ -92,4 +92,7 @@ h1, h2, h3, h4, p, small, .title {
 }
 .underline {
 	text-decoration: underline;
+}
+.link-text {
+	letter-spacing: 0.2em;
 }

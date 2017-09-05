@@ -1,7 +1,11 @@
 @import '../../styles/_all';
 
-.device-frame {
-	border: 1px dashed red;
+.device-frame.can-bounce {
+	&.in-viewport {
+		.screenshot {
+			animation: bounce-y 2.5s ease-in-out;			
+		}
+	}
 }
 
 /* simulate a iPhone device frame 

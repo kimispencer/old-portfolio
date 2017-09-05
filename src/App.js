@@ -17,6 +17,7 @@ import Home from './views/Home/Home';
 import Projects from './views/Projects/Projects';
 import Resume from './views/Resume/Resume';
 import Contact from './views/Contact/Contact';
+import Playground from './views/Playground/Playground';
 
 // css
 import './App.css';
@@ -157,6 +158,7 @@ class App extends Component {
 								_handleProjectDetailLanding={this._handleProjectDetailLanding}
 							{...props} />} />
 						<Route path="/resume" component={Resume}/>
+						<Route path="/playground" component={Playground}/>
 						<Route path="/contact" component={Contact}/>
 					</div>
 					<Shroud handleClick={this._toggleNav} _isNavOpen={this.state._isNavOpen} />

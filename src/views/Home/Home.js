@@ -1,71 +1,97 @@
 import React from 'react';
-import * as THREE from 'three';
+// import ParticleTypography from './ParticleTypography';
+import TextContainer from '../../components/TextContainer/TextContainer';
+import TextAnimation from '../../components/TextAnimation/TextAnimation';
+import BgImg from '../../../public/assets/bg.png';
+
 import './Home.css';
 
 class Home extends React.Component {
 	componentDidMount() {
-		var height = document.getElementsByClassName('home')[0].clientHeight,
-			width = document.getElementsByClassName('home')[0].clientWidth;
-
-		// 3 must haves - SCENE , CAMERA, RENDERER
-
-		var scene = new THREE.Scene(); // Creates a new scene
-
-		var camera = new THREE.PerspectiveCamera( 75, width / height, 0.1, 1000 ); // Creates a camera and passes (field of view, aspect ratio, near clipping plane, far clipping plane)
-			  camera.position.set(0, 0, 5);// moves the camera back some so we won't be inside of the cube
-			  camera.lookAt( scene.position ); // makes the camera always point toward the scene
-			  scene.add(camera);
-
-		var light = new THREE.PointLight( 0xFFFF00 );
-			  light.position.set( 10, 0, 10 );
-			  scene.add(light);
-
-		var renderer = new THREE.WebGLRenderer();
-			  renderer.setSize( width, height ); // sets size of render to the screen size
-			  document.getElementsByClassName('home')[0].appendChild( renderer.domElement); // Renders a canvas tag to the DOM
-
-		var geometry = new THREE.BoxGeometry( 2, 2, 2); // give the cube it's dimensions (width, height, depth)
-		var material = new THREE.MeshLambertMaterial( { color: 0xFF0000, wireframe: false} ); // creates material and gives it a color
-		material.wireframe = false;
-		var cube1 = new THREE.Mesh( geometry, material ); // crates the cube using the geometry and the material
-		var cube2 = new THREE.Mesh( geometry, material );
-			  cube2.position.set(5, -2, -5);
-		var cube3 = new THREE.Mesh( geometry, material );
-			  cube3.position.set(-5, -2, -5);
-
-		scene.add( cube1, cube2, cube3); // adds the cube to the scene
-
-		// Resize Three.js scene on window resize
-		window.addEventListener( 'resize', onWindowResize, false );
-
-		function onWindowResize(){
-
-			camera.aspect = document.getElementsByClassName('home')[0].clientWidth / document.getElementsByClassName('home')[0].clientHeight;
-			camera.updateProjectionMatrix();
-
-			renderer.setSize( document.getElementsByClassName('home')[0].clientWidth, document.getElementsByClassName('home')[0].clientHeight );
-
-		}
-
-		// Render loop to display cube
-		function render() {
-			requestAnimationFrame( render ); // requestAnimationFrame will pause when the user navigates to a new tab
-			cube1.rotation.z += 0.01;
-			cube1.rotation.x += 0.01;
-			cube1.rotation.y += 0.01;  // Runs every frame giving it the animation
-
-			cube2.rotation.x += 0.01; 
-
-			cube3.rotation.y += 0.01;
-
-			renderer.render( scene, camera ); 
-		};
-
-		render();
+		// new ParticleTypography(document.getElementById('Canvas'));
 	}
 	render() {
+		let styles = {
+			backgroundImage: `url(${BgImg})`
+		}
 		return (
-			<div className='home' id="Home"></div>
+			<div className="home" style={styles}>
+				<div className="svg-container">
+				{/* 		
+					<svg id="TopSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
+						 viewBox="0 0 702.9 232.3">
+					<g>
+						<path className="path" d="M133.1,63.1c7.9,3.4,14.5,8.6,19.6,15.5c4.3,5.9,7,12,7.9,18.2c1,6.2,1.4,16.4,1.4,30.6v92.9h-42.2v-96.3
+							c0-8.5-1.4-15.4-4.3-20.6c-3.7-7.4-10.8-11-21.3-11c-10.8,0-19.1,3.7-24.7,11c-5.6,7.3-8.4,17.7-8.4,31.3v85.7H19.8V7.3h41.3v75.4
+							c6-9.2,12.9-15.6,20.7-19.2S98,58,106.6,58C116.4,58,125.2,59.7,133.1,63.1z"/>
+						<path className="path" d="M304,65.4c11,4.9,20.1,12.7,27.3,23.4c6.5,9.4,10.7,20.3,12.6,32.7c1.1,7.3,1.6,17.7,1.4,31.4H230.1
+							c0.6,15.9,6.2,27,16.5,33.4c6.3,4,13.9,5.9,22.8,5.9c9.4,0,17.1-2.4,23-7.3c3.2-2.6,6-6.2,8.5-10.9h42.2
+							c-1.1,9.4-6.2,18.9-15.3,28.6c-14.2,15.4-34,23.1-59.5,23.1c-21,0-39.6-6.5-55.7-19.5c-16.1-13-24.1-34.1-24.1-63.3
+							c0-27.4,7.3-48.4,21.8-63C224.8,65.3,243.6,58,266.8,58C280.6,58,293,60.5,304,65.4z M242.2,101.2c-5.8,6-9.5,14.2-11,24.5h71.2
+							c-0.8-11-4.4-19.3-11-25c-6.6-5.7-14.8-8.5-24.5-8.5C256.2,92.1,248,95.1,242.2,101.2z"/>
+						<path className="path" d="M408.4,220.4h-41.3V6.5h41.3V220.4z"/>
+						<path className="path" d="M490.9,220.4h-41.3V6.5h41.3V220.4z"/>
+						<path className="path" d="M663.1,201c-13.3,16.5-33.6,24.7-60.8,24.7c-27.2,0-47.4-8.2-60.8-24.7c-13.3-16.5-20-36.3-20-59.5
+							c0-22.8,6.7-42.6,20-59.3c13.3-16.7,33.6-25.1,60.8-25.1c27.2,0,47.4,8.4,60.8,25.1c13.3,16.7,20,36.5,20,59.3
+							C683.1,164.7,676.5,184.5,663.1,201z M630,178.2c6.5-8.6,9.7-20.8,9.7-36.6s-3.2-28-9.7-36.6c-6.5-8.5-15.8-12.8-27.9-12.8
+							c-12.1,0-21.4,4.3-27.9,12.8s-9.8,20.7-9.8,36.6s3.3,28.1,9.8,36.6s15.8,12.9,27.9,12.9C614.3,191.1,623.6,186.8,630,178.2z"/>
+					</g>
+					</svg>
+					<svg id="BottomSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
+						 viewBox="0 0 702.9 232.3">
+					<g>
+						<path className="path" d="M133.1,63.1c7.9,3.4,14.5,8.6,19.6,15.5c4.3,5.9,7,12,7.9,18.2c1,6.2,1.4,16.4,1.4,30.6v92.9h-42.2v-96.3
+							c0-8.5-1.4-15.4-4.3-20.6c-3.7-7.4-10.8-11-21.3-11c-10.8,0-19.1,3.7-24.7,11c-5.6,7.3-8.4,17.7-8.4,31.3v85.7H19.8V7.3h41.3v75.4
+							c6-9.2,12.9-15.6,20.7-19.2S98,58,106.6,58C116.4,58,125.2,59.7,133.1,63.1z"/>
+						<path className="path" d="M304,65.4c11,4.9,20.1,12.7,27.3,23.4c6.5,9.4,10.7,20.3,12.6,32.7c1.1,7.3,1.6,17.7,1.4,31.4H230.1
+							c0.6,15.9,6.2,27,16.5,33.4c6.3,4,13.9,5.9,22.8,5.9c9.4,0,17.1-2.4,23-7.3c3.2-2.6,6-6.2,8.5-10.9h42.2
+							c-1.1,9.4-6.2,18.9-15.3,28.6c-14.2,15.4-34,23.1-59.5,23.1c-21,0-39.6-6.5-55.7-19.5c-16.1-13-24.1-34.1-24.1-63.3
+							c0-27.4,7.3-48.4,21.8-63C224.8,65.3,243.6,58,266.8,58C280.6,58,293,60.5,304,65.4z M242.2,101.2c-5.8,6-9.5,14.2-11,24.5h71.2
+							c-0.8-11-4.4-19.3-11-25c-6.6-5.7-14.8-8.5-24.5-8.5C256.2,92.1,248,95.1,242.2,101.2z"/>
+						<path className="path" d="M408.4,220.4h-41.3V6.5h41.3V220.4z"/>
+						<path className="path" d="M490.9,220.4h-41.3V6.5h41.3V220.4z"/>
+						<path className="path" d="M663.1,201c-13.3,16.5-33.6,24.7-60.8,24.7c-27.2,0-47.4-8.2-60.8-24.7c-13.3-16.5-20-36.3-20-59.5
+							c0-22.8,6.7-42.6,20-59.3c13.3-16.7,33.6-25.1,60.8-25.1c27.2,0,47.4,8.4,60.8,25.1c13.3,16.7,20,36.5,20,59.3
+							C683.1,164.7,676.5,184.5,663.1,201z M630,178.2c6.5-8.6,9.7-20.8,9.7-36.6s-3.2-28-9.7-36.6c-6.5-8.5-15.8-12.8-27.9-12.8
+							c-12.1,0-21.4,4.3-27.9,12.8s-9.8,20.7-9.8,36.6s3.3,28.1,9.8,36.6s15.8,12.9,27.9,12.9C614.3,191.1,623.6,186.8,630,178.2z"/>
+					</g>
+					</svg>
+				*/}
+					<svg id="TopSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
+						 viewBox="0 0 600 169">
+					<g>
+						<path className="path" d="M166.7,24.5v64.4l30.1-31.3H225l-32.8,31.9l36.5,55h-28.9l-23.9-38.8l-9.2,8.9v29.9h-23.9v-120H166.7z"/>
+						<path className="path" d="M237.7,44.2V24.5h23.9v19.7H237.7z M261.6,57.6v86.9h-23.9V57.6H261.6z"/>
+						<path className="path" d="M303.6,57.6v11.8h0.3c3.1-4.5,6.9-8,11.3-10.4c4.4-2.5,9.5-3.7,15.2-3.7c5.5,0,10.5,1.1,15,3.2c4.5,2.1,8,5.9,10.3,11.3
+							c2.6-3.8,6.1-7.2,10.5-10.1c4.4-2.9,9.7-4.4,15.7-4.4c4.6,0,8.8,0.6,12.8,1.7c3.9,1.1,7.3,2.9,10.1,5.4c2.8,2.5,5,5.7,6.6,9.7
+							c1.6,4,2.4,8.8,2.4,14.4v58.1H390V95.3c0-2.9-0.1-5.7-0.3-8.2c-0.2-2.6-0.8-4.8-1.8-6.7c-1-1.9-2.5-3.4-4.5-4.5
+							c-2-1.1-4.6-1.7-8-1.7c-3.4,0-6.1,0.6-8.2,1.9c-2.1,1.3-3.7,3-4.9,5c-1.2,2.1-2,4.4-2.4,7.1c-0.4,2.6-0.6,5.3-0.6,8v48.4h-23.9
+							V95.8c0-2.6-0.1-5.1-0.2-7.6s-0.6-4.8-1.4-7c-0.8-2.1-2.2-3.8-4.2-5.1c-2-1.3-4.8-1.9-8.7-1.9c-1.1,0-2.6,0.3-4.5,0.8
+							c-1.8,0.5-3.6,1.5-5.4,2.9c-1.7,1.4-3.2,3.4-4.5,6c-1.2,2.6-1.8,6.1-1.8,10.3v50.4h-23.9V57.6H303.6z"/>
+						<path className="path" d="M433.3,44.2V24.5h23.9v19.7H433.3z M457.2,57.6v86.9h-23.9V57.6H457.2z"/>
+					</g>
+					</svg>
+					<svg id="BottomSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
+						 viewBox="0 0 600 169">
+					<g>
+						<path className="path" d="M166.7,24.5v64.4l30.1-31.3H225l-32.8,31.9l36.5,55h-28.9l-23.9-38.8l-9.2,8.9v29.9h-23.9v-120H166.7z"/>
+						<path className="path" d="M237.7,44.2V24.5h23.9v19.7H237.7z M261.6,57.6v86.9h-23.9V57.6H261.6z"/>
+						<path className="path" d="M303.6,57.6v11.8h0.3c3.1-4.5,6.9-8,11.3-10.4c4.4-2.5,9.5-3.7,15.2-3.7c5.5,0,10.5,1.1,15,3.2c4.5,2.1,8,5.9,10.3,11.3
+							c2.6-3.8,6.1-7.2,10.5-10.1c4.4-2.9,9.7-4.4,15.7-4.4c4.6,0,8.8,0.6,12.8,1.7c3.9,1.1,7.3,2.9,10.1,5.4c2.8,2.5,5,5.7,6.6,9.7
+							c1.6,4,2.4,8.8,2.4,14.4v58.1H390V95.3c0-2.9-0.1-5.7-0.3-8.2c-0.2-2.6-0.8-4.8-1.8-6.7c-1-1.9-2.5-3.4-4.5-4.5
+							c-2-1.1-4.6-1.7-8-1.7c-3.4,0-6.1,0.6-8.2,1.9c-2.1,1.3-3.7,3-4.9,5c-1.2,2.1-2,4.4-2.4,7.1c-0.4,2.6-0.6,5.3-0.6,8v48.4h-23.9
+							V95.8c0-2.6-0.1-5.1-0.2-7.6s-0.6-4.8-1.4-7c-0.8-2.1-2.2-3.8-4.2-5.1c-2-1.3-4.8-1.9-8.7-1.9c-1.1,0-2.6,0.3-4.5,0.8
+							c-1.8,0.5-3.6,1.5-5.4,2.9c-1.7,1.4-3.2,3.4-4.5,6c-1.2,2.6-1.8,6.1-1.8,10.3v50.4h-23.9V57.6H303.6z"/>
+						<path className="path" d="M433.3,44.2V24.5h23.9v19.7H433.3z M457.2,57.6v86.9h-23.9V57.6H457.2z"/>
+					</g>
+					</svg>
+				</div>
+
+				<TextContainer>
+					<TextAnimation />
+					{/* <h4 className="monospace">Hi, I'm Kimi. I'm an engineer & designer.</h4> */}
+				</TextContainer>
+			</div>
 		);
 	}
 }
