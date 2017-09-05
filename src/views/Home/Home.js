@@ -2,7 +2,7 @@ import React from 'react';
 // import ParticleTypography from './ParticleTypography';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import TextAnimation from '../../components/TextAnimation/TextAnimation';
-import BgImg from '../../../public/assets/bg.png';
+import BgImg from '../../../public/assets/5636876254_4cec1b7648_b.jpg';
 
 import './Home.css';
 

@@ -320,12 +320,15 @@ select:-webkit-autofill:focus {
   0% {
     transform: translateY(0px); }
   50% {
-    transform: translateY(-75px); }
+    transform: translateY(-15%); }
   100% {
     transform: translateY(0px); } }
 
-.device-frame.can-bounce.in-viewport .screenshot {
-  animation: bounce-y 2.5s ease-in-out; }
+.device-frame.can-bounce.in-viewport .macbook .screenshot {
+  animation: bounce-y 4.5s ease-in-out; }
+
+.device-frame.can-bounce.in-viewport .iphone .screenshot {
+  animation: bounce-y 6s ease-in-out; }
 
 /* simulate a iPhone device frame 
 	* https://codepen.io/havardob/pen/KzoOMB
