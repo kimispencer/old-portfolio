@@ -1,12 +1,16 @@
 @import '../../styles/_all';
 
+.device-frame {
+	border: 1px dashed grey;
+}
+
 .device-frame.can-bounce {
 	&.in-viewport {
 		.macbook .screenshot {
 			animation: bounce-y 4.5s ease-in-out;			
 		}
 		.iphone .screenshot {
-			animation: bounce-y 6s ease-in-out;
+			animation: bounce-y 7s ease-in-out;
 		}
 	}
 }

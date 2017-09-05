@@ -324,11 +324,14 @@ select:-webkit-autofill:focus {
   100% {
     transform: translateY(0px); } }
 
+.device-frame {
+  border: 1px dashed grey; }
+
 .device-frame.can-bounce.in-viewport .macbook .screenshot {
   animation: bounce-y 4.5s ease-in-out; }
 
 .device-frame.can-bounce.in-viewport .iphone .screenshot {
-  animation: bounce-y 6s ease-in-out; }
+  animation: bounce-y 7s ease-in-out; }
 
 /* simulate a iPhone device frame 
 	* https://codepen.io/havardob/pen/KzoOMB
