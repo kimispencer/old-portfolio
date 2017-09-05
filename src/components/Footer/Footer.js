@@ -17,13 +17,6 @@ const Footer = (props) => {
 							<img alt="LinkedIn" id="LinkedIn" src={LinkedIn} />
 						</Link>
 					</li>
-					{/*
-					<li>
-						<Link to="https://vimeo.com/kimispencer" target="_blank">
-							<img alt="LinkedIn" id="LinkedIn" src={Vimeo} />
-						</Link>
-					</li>
-					*/}
 					<li>
 						<Link to="https://github.com/kimispencer" target="_blank">
 							<img alt="LinkedIn" id="LinkedIn" src={Github} />

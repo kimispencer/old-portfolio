@@ -1,24 +1,8 @@
-@import '_all';
-@import '_modular-scale'; /* !!! not using modular scale */
-
-$ms-base: 1em;
-$ms-ratio: $golden;
-
-@font-face {
-	font-family: 'Roboto';
-	src: url('./fonts/roboto/Roboto-Regular.ttf');
-}
-@font-face {
-	font-family: 'RobotoBold';
-	src: url('./fonts/roboto/Roboto-Bold.ttf');
-}
-
 html {font-size: 1em;}
 
 body {
 	background-color: white;
-	/*font-family: Roboto, Helvetica, Arial, Sans-Serif;*/
-	font-family: Karla,sans-serif;
+	font-family: Karla, Helvetica, sans-serif;
 	font-weight: 400;
 	line-height: 1.45;
 	color: #333;
@@ -43,7 +27,7 @@ h4 {font-size: 1.414em;}
 small, .font_small {font-size: 0.707em;}
 
 .serif {
-	font-family: "ITC Garamond Book Condensed";//"Tiempos Headline",serif;
+	font-family: ITC Garamond Book Condensed;
 }
 
 .monospace {
@@ -87,8 +71,7 @@ h1, h2, h3, h4, p, small, .title {
 	text-transform: uppercase;
 }
 .bold {
-	/*font-weight: bold;*/
-	font-family: 'RobotoBold';
+	font-weight: bold;
 }
 .underline {
 	text-decoration: underline;

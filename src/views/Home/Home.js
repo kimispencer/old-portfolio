@@ -44,7 +44,7 @@ class Home extends React.Component {
 				</div>
 
 				<TextContainer>
-					<TextAnimation />
+					<TextAnimation text={"Hi, I'm Kimi. I'm an engineer & designer."} />
 				</TextContainer>
 			</div>
 		);
