@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { isDesktop } from '../../components/Responsive/Responsive';
-import Logo from '../../../public/assets/logo.svg';
+import Logo from '../../../public/assets/logos/kimi.svg';
 import './Nav.css';
 
 const NavTrigger = (props) => (
