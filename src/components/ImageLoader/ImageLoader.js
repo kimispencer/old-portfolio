@@ -1,8 +1,3 @@
-/*
-	1. should take URL for image source
-	2. should hold CSS spinner animation
-*/
-
 import React from 'react';
 import './ImageLoader.css';
 
