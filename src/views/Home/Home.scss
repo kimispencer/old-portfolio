@@ -54,3 +54,8 @@
 		animation: background-zoom 4s forwards;
 	}
 }
+@media #{$phone} {
+	.home {
+	    background-position-x: 100%;
+	}
+}
