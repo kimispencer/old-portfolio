@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import TextAnimation from '../../components/TextAnimation/TextAnimation';
 import BgImg from '../../../public/assets/homepage/cool-pool-pineapple_4460x4460.jpg';

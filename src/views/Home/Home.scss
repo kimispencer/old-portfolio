@@ -5,7 +5,9 @@
 	@include flexbox-center(column);
 	background-size: cover;
     background-position: center;
-    
+    background-color: #BDC3C7;
+	transition: background $transition_speed*2 ease;
+
 	.svg-container {
 		position: relative;
 	}
