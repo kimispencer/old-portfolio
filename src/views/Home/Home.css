@@ -469,7 +469,3 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     background-repeat: no-repeat;
     background-position: center bottom;
     animation: background-zoom 4s forwards; } }
-
-@media only screen and (max-width: 640px) {
-  .home .hero {
-    background-position-x: 100%; } }
