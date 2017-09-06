@@ -81,6 +81,7 @@ $project_tile_height: $project_tile_width;
 }
 .project-detail {
 	@include flexbox-center(column);
+	@include justify-content(flex-start);
 	margin-bottom: $gutter;
 	.project-image {
 		img {
@@ -158,7 +159,7 @@ $project_tile_height: $project_tile_width;
 			@include flex-wrap(wrap);
 			&.list-style {
 				@include justify-content(center);
-				max-width: 1200px;
+			    max-width: 900px;
 				margin: 0 auto;
 				padding-top: $gutter;
 				li {
