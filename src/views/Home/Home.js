@@ -8,6 +8,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
+				<div className="opaque"></div>
 				<ImageLoader className="hero" imgKey={'homepage'} src={'pool-floaty-fun_4460x4460.jpg'} />
 				<div className="svg-container">		
 					<svg id="TopSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
