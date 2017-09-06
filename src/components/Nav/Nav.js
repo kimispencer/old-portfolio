@@ -13,13 +13,11 @@ const NavTrigger = (props) => (
 const Nav = (props) => {
 	const handle_navClick = () => {
 		props._toggleNav();
-		window.scrollTo(0, 0);
 	}
 	const handle_navClick_Projects = () => {
 		props._toggleNav();
 		if(!props._isProjectNavOpen) props._toggleProjectNav();
 		props._toggleProjectNavStyle_toBox();
-		window.scrollTo(0, 0);
 	}
 
 	return (

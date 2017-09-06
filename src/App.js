@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 // libraries
 import smoothScroll from 'smoothscroll';
+import ScrollToTopRoute from './components/ScrollToTopRoute/ScrollToTopRoute';
 
 // components
 import Nav from './components/Nav/Nav';
@@ -146,8 +147,8 @@ class App extends Component {
 						_toggleProjectNav={this._toggleProjectNav} 
 						_toggleProjectNavStyle_toBox={this._toggleProjectNavStyle_toBox} />
 					<div className="main-content">
-						<Route exact path="/" component={Home}/>
-						<Route path="/projects" component={(props, state, params) => 
+						<ScrollToTopRoute exact path="/" component={Home}/>
+						<ScrollToTopRoute path="/projects" component={(props, state, params) => 
 							<Projects 
 								_toggleProjectNavStyle={this._toggleProjectNavStyle} 
 								_toggleProjectNavStyle_toList={this._toggleProjectNavStyle_toList}
@@ -157,9 +158,9 @@ class App extends Component {
 								_handleProjectPageLanding={this._handleProjectPageLanding}
 								_handleProjectDetailLanding={this._handleProjectDetailLanding}
 							{...props} />} />
-						<Route path="/resume" component={Resume}/>
-						<Route path="/playground" component={Playground}/>
-						<Route path="/contact" component={Contact}/>
+						<ScrollToTopRoute path="/resume" component={Resume}/>
+						<ScrollToTopRoute path="/playground" component={Playground}/>
+						<ScrollToTopRoute path="/contact" component={Contact}/>
 					</div>
 					<Shroud handleClick={this._toggleNav} _isNavOpen={this.state._isNavOpen} />
 					<Footer />
