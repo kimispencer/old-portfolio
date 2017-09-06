@@ -582,11 +582,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
       -ms-justify-content: center;
       justify-content: center;
       -ms-flex-pack: center;
-<<<<<<< HEAD
-      max-width: 1200px;
-=======
       max-width: 900px;
->>>>>>> SAFE
       margin: 0 auto;
       padding-top: 20px; }
       .projects ul.project-list.list-style li {
