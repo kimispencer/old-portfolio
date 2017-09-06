@@ -8,9 +8,10 @@ const TextAnimation = (props) => {
 		letters[index] = `<span class="fade-in-letter">${letter}</span>`;
 	});
 	let html = letters.join('');
+
 	return (
-		<div className={`${props.className} text-animation`}>
-			<h4 className="monospace" dangerouslySetInnerHTML={{ __html: html }}></h4>
+		<div id={props.id} className={`${props.className} text-animation`}>
+			<h4 className="fade-letter-container" dangerouslySetInnerHTML={{ __html: html }}></h4>
 		</div>
 	);
 }

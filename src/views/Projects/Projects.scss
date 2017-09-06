@@ -217,6 +217,12 @@ $project_tile_height: $project_tile_width;
 				}
 				&#ProjectSkillsList {
 					margin-left: $gutter;
+					.project-roles {
+						p {
+						    padding-left: 1.2em;
+						    text-indent: -1.2em;
+						}
+					}
 				}
 			}
 		}

@@ -1,8 +1,8 @@
 import React from 'react';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import TextAnimation from '../../components/TextAnimation/TextAnimation';
-// import BgImg from '../../../public/assets/homepage/cool-pool-pineapple_4460x4460.jpg';
-import BgImg from '../../../public/assets/homepage/window-iced-over_4460x4460.jpg';
+import BgImg from '../../../public/assets/homepage/cool-pool-pineapple_4460x4460.jpg';
+// import BgImg from '../../../public/assets/homepage/window-iced-over_4460x4460.jpg';
 import './Home.css';
 
 class Home extends React.Component {
@@ -44,9 +44,9 @@ class Home extends React.Component {
 				</div>
 
 				<TextContainer>
-					<TextAnimation text={"Hi, I'm Kimi. I'm an engineer & designer."} />
+					<TextAnimation className="monospace" text="Hi, I'm Kimi. I'm an engineer & designer." />
 					<a href="/projects">
-						<p className="link-text uppercase">show me more</p>
+						<TextAnimation id="ShowMeMore" className="link-text uppercase" text="show me more" />
 					</a>
 				</TextContainer>
 			</div>

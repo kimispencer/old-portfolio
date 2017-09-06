@@ -448,7 +448,11 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   text-align: center; }
 
 .home .text-container .link-text {
-  margin-top: 40px; }
+  margin-top: 10px;
+  display: inline-block; }
+
+.home .text-container .link-text:hover {
+  border-bottom: 1px solid #ffffff; }
 
 @media only screen and (min-width: 1025px) {
   .home {

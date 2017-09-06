@@ -115,10 +115,12 @@ class ProjectDetail extends React.Component {
 							<p className="title uppercase bold">project type</p>
 							<p className="monospace">{project.projectType}</p>
 
-							<p className="title uppercase bold">project role</p>
-							{project.projectRole.map((role, index) =>
-								<p className="monospace" key={index} >* {role}</p>
-							)}
+							<div className="project-roles">
+								<p className="title uppercase bold">project role</p>
+								{project.projectRole.map((role, index) =>
+									<p className="monospace" key={index} >* {role}</p>
+								)}
+							</div>
 
 							<p className="title uppercase bold">technology used</p>
 							<p className="monospace">{project.technologyUsed}</p>

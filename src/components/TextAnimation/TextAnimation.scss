@@ -12,4 +12,11 @@
 			animation-delay: $i * 50ms;
 		}
 	}
+	&#ShowMeMore {
+		.fade-in-letter {
+			animation-delay: 3.5s;
+			animation-duration: 2s;
+			font-size: 14px;
+		}
+	}
 }
