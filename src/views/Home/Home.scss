@@ -21,7 +21,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-color: rgba(0,0,0,0.1);
+		background-color: rgba(0,0,0,0.2);
 	}
 
 	.svg-container {
@@ -57,22 +57,22 @@
 		.link-text {
 			margin-top: $gutter/2;
 			display: inline-block;
-			&:hover {
-				text-decoration: underline; 
-			}
+			text-decoration: underline; 
 		}
 	}
 }
 
 @media #{$desktop} {
-	.home .hero {
-		background-size: 100%;
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		animation: background-zoom 4s forwards;
+	.home {
+		.hero {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			animation: background-zoom 4s forwards;
+		}
 	}
 }
 @media #{$phone} {
-	.home .hero {
+	.home {
 	}
 }

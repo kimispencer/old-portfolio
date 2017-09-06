@@ -11,7 +11,7 @@ const TextAnimation = (props) => {
 
 	return (
 		<div id={props.id} className={`${props.className} text-animation`}>
-			<h4 className="fade-letter-container" dangerouslySetInnerHTML={{ __html: html }}></h4>
+			<p className="fade-letter-container" dangerouslySetInnerHTML={{ __html: html }}></p>
 		</div>
 	);
 }

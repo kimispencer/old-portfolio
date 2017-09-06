@@ -42,7 +42,7 @@ class Home extends React.Component {
 				</div>
 
 				<TextContainer>
-					<TextAnimation className="monospace" text="Hi, I'm Kimi. I'm an engineer & designer." />
+					<TextAnimation className="subtitle" text="Hi, I'm Kimi. I'm an engineer & designer." />
 					<a href="/projects">
 						<TextAnimation id="ShowMeMore" className="link-text uppercase" text="show me more" />
 					</a>
