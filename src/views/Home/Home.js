@@ -2,17 +2,13 @@ import React from 'react';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import TextAnimation from '../../components/TextAnimation/TextAnimation';
-import BgImg from '../../../public/assets/homepage/cool-pool-pineapple_4460x4460.jpg';
-// import BgImg from '../../../public/assets/homepage/window-iced-over_4460x4460.jpg';
 import './Home.css';
 
 class Home extends React.Component {
 	render() {
-		let styles = {
-			backgroundImage: `url(${BgImg})`
-		}
 		return (
-			<div className="home" style={styles}>
+			<div className="home">
+				<ImageLoader className="hero" imgKey={'homepage'} src={'pool-floaty-fun_4460x4460.jpg'} />
 				<div className="svg-container">		
 					<svg id="TopSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
 						 viewBox="0 0 600 169">

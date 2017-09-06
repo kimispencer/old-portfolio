@@ -3,10 +3,18 @@
 .home {
 	min-height: calc(100vh - #{$fixed_nav_height});
 	@include flexbox-center(column);
-	background-size: cover;
-    background-position: center;
-    background-color: #BDC3C7;
-	transition: background $transition_speed*2 ease;
+	position: relative;
+
+	.hero {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		background-position: center;
+		transition: background $transition_speed*2 ease;
+	}
 
 	.svg-container {
 		position: relative;
@@ -49,7 +57,7 @@
 }
 
 @media #{$desktop} {
-	.home {
+	.home .hero {
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center bottom;
@@ -57,7 +65,7 @@
 	}
 }
 @media #{$phone} {
-	.home {
+	.home .hero {
 	    background-position-x: 100%;
 	}
 }

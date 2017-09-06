@@ -416,9 +416,16 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  position: relative; }
+
+.home .hero {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-size: cover;
   background-position: center;
-  background-color: #BDC3C7;
   transition: background 700ms ease; }
 
 .home .svg-container {
@@ -457,12 +464,12 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   border-bottom: 1px solid #ffffff; }
 
 @media only screen and (min-width: 1025px) {
-  .home {
+  .home .hero {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
     animation: background-zoom 4s forwards; } }
 
 @media only screen and (max-width: 640px) {
-  .home {
+  .home .hero {
     background-position-x: 100%; } }
