@@ -7,7 +7,7 @@ class DeviceFrame extends React.Component {
 		this.state = {
 			inViewport: false
 		}
-		this._isElementInViewport = this._isElementInViewport.bind(this);
+		this._isElementInView = this._isElementInView.bind(this);
 		this._handleScroll = this._handleScroll.bind(this);
 	}
 	componentDidMount() {
@@ -16,15 +16,16 @@ class DeviceFrame extends React.Component {
 	componentWillUnmount() {
 		window.removeEventListener('scroll', this._handleScroll);
 	}
-	_isElementInViewport (el) {
+	_isElementInView (el) {
 		var rect = el[0].getBoundingClientRect();
 		var height = window.innerHeight
 			|| document.documentElement.clientHeight
 			|| document.body.clientHeight;
-		return (rect.top>-1 && rect.bottom <= height);
+		// return (rect.top>-1 && rect.bottom <= height);	// is in viewport
+		return (rect.top + rect.height/2 < height);			// is 1/2 way above fold
 	}
 	_handleScroll() {
-		if(this._isElementInViewport(document.getElementsByClassName('device-frame'))) {
+		if(this._isElementInView(document.getElementsByClassName('device-frame'))) {
 			this.setState({ inViewport: true });
 		}
 	}
