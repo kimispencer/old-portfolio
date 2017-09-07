@@ -554,7 +554,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   margin-right: auto; }
 
 .project-detail .project-image-list .project-image {
-  background-size: contain;
+  background-size: cover;
   height: 400px;
   width: 100%;
   margin-top: 20px; }
@@ -662,7 +662,9 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     margin-left: 20px; }
   .project-detail .text-container .text#ProjectSkillsList .project-roles p {
     padding-left: 1.2em;
-    text-indent: -1.2em; } }
+    text-indent: -1.2em; }
+  .project-detail .project-image-list .project-image {
+    background-size: contain; } }
 
 @media only screen and (max-width: 1024px) {
   .hover-image-container .bg-img.top-image {
