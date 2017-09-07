@@ -1,7 +1,10 @@
 @import '../../styles/_all';
 
 .device-frame {
-	border: 1px dashed grey;
+	margin: 0 auto;  
+	.macbook {
+		margin-bottom: $gutter*3; // account for macbook body
+	}
 }
 
 .device-frame.can-bounce {
@@ -27,9 +30,9 @@
 	@include aspect-ratio(375, 667);
 	max-width: calc(100vw - #{$gutter}*2 - 30px - 10px);	// 15px = padding * 2, 5px = border-width * 2
 	position: relative;
-	margin: 0 auto;  
 	/* Scale so that the iPhone fits in view*/
-	transform: scale(.8);
+	/*transform: scale(.8);*/
+	margin: $gutter*2 auto;
 
 	.iphone-top {
 	    width: 70%;
