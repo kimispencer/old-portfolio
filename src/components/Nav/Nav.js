@@ -6,7 +6,7 @@ import './Nav.css';
 
 const NavTrigger = (props) => (
 	<div className="nav-trigger" onClick={props._toggleNav}>
-		<h3 className="bold">|||</h3>
+		<h3>|||</h3>
 	</div>
 )
 
