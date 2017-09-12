@@ -9,7 +9,13 @@ import data from './data';
 
 import PDF1 from '../../../public/assets/projects/rga/highline_user_study.pdf';
 import PDF2 from '../../../public/assets/projects/rga/uniqlo.pdf';
-const PDFS = [PDF1, PDF2];
+import PDF3 from '../../../public/assets/projects/arrivals/wireframes.pdf';
+
+const PDF_data = {
+	highline_user_study: PDF1,
+	uniqlo_pitch: PDF2,
+	arrivals_wireframes: PDF3
+}
 
 const PROJECTS = data;
 
@@ -19,7 +25,7 @@ function scrollTo(element, to, duration) {
     var perTick = difference / duration * 10;
 
     setTimeout(function() {
-        element.scrollTop = element.scrollTop + perTick;
+        element.scrollTop += perTick;
         if (element.scrollTop === to) return;
         scrollTo(element, to, duration - 10);
     }, 10);
@@ -67,19 +73,39 @@ class ProjectDetail extends React.Component {
 						<p className="title uppercase bold">project description</p>
 						<p dangerouslySetInnerHTML={{ __html: project.intro }}></p>
 
-						<section className="project-video-list">
-						{project.projectVids 
-							? project.projectVids.map((video, index) => 
-								<ReactPlayer className="project-video" id={`ProjectVideo${index}`} url={video} key={index} width="100%" />
+						<section className="project-html-list">
+						{project.projectHtml 
+							? project.projectHtml.map((html, index) => 
+								<span dangerouslySetInnerHTML={{ __html: html }} key={index}></span>
 							)
 							: null
 						}
 						</section>
 
+
 						<section className="project-screenshot-list">
 						{project.screenShots 
 							? project.screenShots.map((img, index) => 
 								<DeviceFrame className={index === 0 ? 'can-bounce' : ''} type={img.split('-')[0]} src={img} imgKey={project.imgKey} key={index} />
+							)
+							: null
+						}
+						</section>
+
+						{/* !!! use Promises... figure out later */}
+						<section className="project-pdf-list">
+							{project.projectPDFs
+								?	project.projectPDFs.map((pdf, index) =>
+									<embed className="pdf-viewer" src={PDF_data[pdf]} width="100%" key={index} />
+								)
+								: null
+							}
+						</section>
+
+						<section className="project-video-list">
+						{project.projectVids 
+							? project.projectVids.map((video, index) => 
+								<ReactPlayer className="project-video" id={`ProjectVideo${index}`} url={video} key={index} width="100%" />
 							)
 							: null
 						}
@@ -93,15 +119,6 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</ul>
-						{/* !!! use Promises... figure out later */}
-						<section className="project-pdf-list">
-							{project.projectPDFs
-								?	project.projectPDFs.map((pdf, index) =>
-									<embed className="pdf-viewer" src={PDFS[index]} width="100%" key={index} />
-								)
-								: null
-							}
-						</section>
 
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">

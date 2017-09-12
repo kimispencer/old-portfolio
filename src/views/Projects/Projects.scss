@@ -132,6 +132,17 @@ $project_tile_height: $project_tile_width;
 		.pdf-viewer {
 			width: 100%;
 			height: 500px;
+			background-color: $lightgrey;
+			border-bottom: 2px solid $black;
+		}
+	}
+	.project-html-list {
+		.icon-row {
+			@include flexbox-center(row);
+			margin-top: $gutter*2;
+			svg {
+				margin: 0 $gutter/2;
+			}
 		}
 	}
 	.back-to-top {
