@@ -28,7 +28,8 @@
 	border-radius: 50px;
 	width: 375px;
 	@include aspect-ratio(375, 667);
-	max-width: calc(100vw - #{$gutter}*2 - 30px - 10px);	// 15px = padding * 2, 5px = border-width * 2
+	max-width: calc(100vw - #{$gutter}*5 - 30px - 10px);	// 15px = padding * 2, 5px = border-width * 2
+	min-height: 420px;
 	position: relative;
 	/* Scale so that the iPhone fits in view*/
 	/*transform: scale(.8);*/
@@ -70,7 +71,7 @@
 		overflow: scroll;
 		background: #eee;
 		border: 1px solid #fff;
-		height: 75%;
+		height: 72%;
 	    width: calc(100% - #{$gutter}*2);
 		margin: 0 auto;
 		border: 2px solid rgba(0,0,0,0.9);

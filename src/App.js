@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
-  Route
+  BrowserRouter as Router
 } from 'react-router-dom';
 // libraries
 import smoothScroll from 'smoothscroll';

@@ -41,11 +41,11 @@
     -moz-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column; }
-  .flex-row.responsive .half-span {
-    height: 50%;
-    width: 100%; }
-  .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
-    width: 100%; } }
+    .flex-row.responsive .half-span {
+      height: 50%;
+      width: 100%; }
+    .flex-row.responsive .third-span, .flex-row.responsive .two-third-span, .flex-row.responsive .quarter-span, .flex-row.responsive .three-quarter-span {
+      width: 100%; } }
 
 /*
 	* flex cols
@@ -156,33 +156,29 @@
 
 form {
   max-width: calc(100vw - 40px); }
-
-form input, form textarea {
-  color: #3c3c3c;
-  background-color: #fbfbfb;
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-
-form input, form textarea {
-  border: 2px solid black;
-  /*		border: 0;
+  form input, form textarea {
+    color: #3c3c3c;
+    background-color: #fbfbfb;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+  form input, form textarea {
+    border: 2px solid black;
+    /*		border: 0;
 		outline: 0;
 		background: transparent;
 		border-bottom: 3px solid black;*/ }
-
-form textarea {
-  width: 100%;
-  height: 150px;
-  line-height: 150%;
-  resize: vertical; }
-
-form button[type='submit'], form .button {
-  width: 100%; }
+  form textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical; }
+  form button[type='submit'], form .button {
+    width: 100%; }
 
 /* buttons */
 .button, button[type='submit'] {
@@ -220,44 +216,41 @@ form button[type='submit'], form .button {
   -moz-transition: all 350ms ease;
   -ms-transition: all 350ms ease;
   -o-transition: all 350ms ease; }
-
-.button:hover, button[type='submit']:hover {
-  background-color: white;
-  color: black; }
-
-.button.transparent, button[type='submit'].transparent {
-  background-color: transparent;
-  color: black;
-  cursor: pointer;
-  text-decoration: underline;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  padding: 13.33333px;
-  cursor: pointer;
-  text-decoration: underline;
-  border: 2px solid black;
-  text-decoration: none;
-  text-transform: uppercase; }
-
-.button.transparent:hover, button[type='submit'].transparent:hover {
-  background-color: rgba(255, 255, 255, 0);
-  color: black; }
+  .button:hover, button[type='submit']:hover {
+    background-color: white;
+    color: black; }
+  .button.transparent, button[type='submit'].transparent {
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 13.33333px;
+    cursor: pointer;
+    text-decoration: underline;
+    border: 2px solid black;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .button.transparent:hover, button[type='submit'].transparent:hover {
+      background-color: rgba(255, 255, 255, 0);
+      color: black; }
 
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
@@ -324,6 +317,81 @@ select:-webkit-autofill:focus {
   100% {
     transform: translateY(0px); } }
 
+/* gears rotation */
+@keyframes rotate-right {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes rotate-left {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.gears-icon.animated path {
+  animation-name: rotate-left;
+  animation-duration: 15.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%; }
+  .gears-icon.animated path.big-gear {
+    animation-name: rotate-right; }
+
+/* flashing lightbulb */
+@keyframes flash {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.lightbulb-icon.animated path.light {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite; }
+
+/* scribbling feather */
+@keyframes scribble {
+  0% {
+    transform: rotate(-10deg); }
+  5% {
+    transform: rotate(5deg); }
+  50% {
+    transform: rotate(-5deg); }
+  75% {
+    transform: rotate(5deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.pencil-icon.animated path {
+  animation-name: scribble;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 0% 0%; }
+
+/* paint dots */
+.paint-icon.animated .paint-dot {
+  /*animation-name: flash;*/
+  animation-iteration-count: infinite; }
+  .paint-icon.animated .paint-dot[data-index="0"] {
+    animation-duration: 1s; }
+  .paint-icon.animated .paint-dot[data-index="1"] {
+    animation-duration: 3s; }
+  .paint-icon.animated .paint-dot[data-index="2"] {
+    animation-duration: 9s; }
+
+/* ruler & pen */
+@keyframes pen {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(10px, 0); } }
+
+.ruler-icon.animated .pen {
+  animation-name: pen;
+  animation-iteration-count: infinite;
+  animation-duration: 2s; }
+
 html {
   font-size: 1em; }
 
@@ -359,9 +427,8 @@ small, .font_small {
 
 .monospace {
   font-family: monospace; }
-
-.monospace p {
-  font-size: 1.1em; }
+  .monospace p {
+    font-size: 1.1em; }
 
 p.monospace {
   font-size: 1.1em; }
@@ -420,57 +487,49 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   justify-content: center;
   -ms-flex-pack: center;
   position: relative; }
-
-.home .hero {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: cover;
-  background-position: center;
-  transition: background 700ms ease; }
-
-.home .opaque {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2); }
-
-.home .svg-container {
-  position: relative; }
-
-.home .svg-obj {
-  margin-bottom: 20px;
-  max-width: 100vw; }
-
-.home #TopSVG .path {
-  fill-opacity: 0;
-  stroke: white;
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-dasharray: 1260;
-  stroke-dashoffset: 1260;
-  animation: 3s linear 0s draw-svg forwards; }
-
-.home #BottomSVG {
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill-opacity: 0;
-  fill: white;
-  animation: 1s linear 2s fill-svg forwards; }
-
-.home .text-container {
-  color: #ffffff;
-  text-align: center; }
-
-.home .text-container .link-text {
-  margin-top: 10px;
-  display: inline-block;
-  text-decoration: underline; }
+  .home .hero {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background 700ms ease; }
+  .home .opaque {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2); }
+  .home .svg-container {
+    position: relative; }
+  .home .svg-obj {
+    margin-bottom: 20px;
+    max-width: 100vw; }
+  .home #TopSVG .path {
+    fill-opacity: 0;
+    stroke: white;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 1260;
+    stroke-dashoffset: 1260;
+    animation: 3s linear 0s draw-svg forwards; }
+  .home #BottomSVG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill-opacity: 0;
+    fill: white;
+    animation: 1s linear 2s fill-svg forwards; }
+  .home .text-container {
+    color: #ffffff;
+    text-align: center; }
+    .home .text-container .link-text {
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: underline; }
 
 @media only screen and (min-width: 1025px) {
   .home .hero {

@@ -30,7 +30,7 @@ class DeviceFrame extends React.Component {
 		}
 	}
 	render() {
-		let img = (this.props.src.indexOf('http') > -1) ? img = this.props.src : img = require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
+		let img = (this.props.src.indexOf('http') > -1) ? this.props.src : require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 		return (
 			<div className={`device-frame ${this.props.className} ${this.state.inViewport ? 'in-viewport' : ''}`}>
 				{this.props.type === "desktop" && 
