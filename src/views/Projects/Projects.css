@@ -567,7 +567,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
 
 .project-list-item.box-style .text {
   text-align: center;
-  background: rgba(255, 255, 255, 0.6); }
+  background: rgba(255, 255, 255, 0.8); }
 
 .project-detail {
   display: -webkit-box;

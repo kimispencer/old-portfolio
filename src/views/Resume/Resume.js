@@ -112,14 +112,14 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">nyu, tisch school of the arts</h4>
 							<p className="monospace">M.P.S - Interactive Technology & Design</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p>ITP is a two-year graduate program located in the Tisch School of the Arts whose mission is to explore the imaginative use of communications technologies — how they might augment, improve, and bring delight and art into people's lives.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">uc berkeley</h4>
-							<p className="monospace">B.A. Political Science</p>
+							<p className="monospace">B.A. - Political Science, Minor - Middle Eastern Studies</p>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra velit a convallis pellentesque. Nullam congue enim lorem. Cras ut varius ante. Cras et nibh augue. Etiam dapibus tincidunt ullamcorper. Donec in mollis diam. Nunc imperdiet elementum leo.</p>
+						<p>Politial Science major with a focus on the use of emergent, mobile technologies in the advanvement of democractic movements. Conducted reserarch on the use of mobile technology in the Arab world as a conduit for democractic expression, and dissent against theocractic or autocratic governments.</p>
 					</div>
 				</div>
 			</div>

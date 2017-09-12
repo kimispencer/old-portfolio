@@ -7,14 +7,20 @@ import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
 
-import PDF1 from '../../../public/assets/projects/rga/highline_user_study.pdf';
-import PDF2 from '../../../public/assets/projects/rga/uniqlo.pdf';
-import PDF3 from '../../../public/assets/projects/arrivals/wireframes.pdf';
+import HighlinePDF from '../../../public/assets/projects/rga/highline_user_study.pdf';
+import UniqloPDF from '../../../public/assets/projects/rga/uniqlo.pdf';
+import ArrivalsWireframesPDF from '../../../public/assets/projects/arrivals/wireframes.pdf';
+import ThesisPDF from '../../../public/assets/projects/data-visualization/thesis.pdf';
+import BolsterPDF from '../../../public/assets/projects/bolster/bolster.pdf';
+import BolsterSitemapPDF from '../../../public/assets/projects/bolster/bolster-sitemap.pdf';
 
 const PDF_data = {
-	highline_user_study: PDF1,
-	uniqlo_pitch: PDF2,
-	arrivals_wireframes: PDF3
+	highline_user_study: HighlinePDF,
+	uniqlo_pitch: UniqloPDF,
+	arrivals_wireframes: ArrivalsWireframesPDF,
+	thesis: ThesisPDF,
+	bolster: BolsterPDF,
+	bolster_sitemap: BolsterSitemapPDF
 }
 
 const PROJECTS = data;
@@ -81,7 +87,6 @@ class ProjectDetail extends React.Component {
 							: null
 						}
 						</section>
-
 
 						<section className="project-screenshot-list">
 						{project.screenShots 
