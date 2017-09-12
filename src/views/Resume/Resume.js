@@ -119,7 +119,7 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">uc berkeley</h4>
 							<p className="monospace">B.A. - Political Science, Minor - Middle Eastern Studies</p>
 						</div>
-						<p>Politial Science major with a focus on the use of emergent, mobile technologies in the advanvement of democractic movements. Conducted reserarch on the use of mobile technology in the Arab world as a conduit for democractic expression, and dissent against theocractic or autocratic governments.</p>
+						<p>Politial Science major with a focus on the use of emergent, mobile technologies in the advancement of democractic movements. Conducted reserarch on the use of cellular devices in the Arab world as a conduit for democractic expression, and dissent against theocractic or autocratic governments.</p>
 					</div>
 				</div>
 			</div>
