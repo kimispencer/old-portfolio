@@ -19,7 +19,7 @@ const Footer = (props) => {
 					</li>
 					<li>
 						<Link to="https://github.com/kimispencer" target="_blank">
-							<img alt="LinkedIn" id="LinkedIn" src={Github} />
+							<img alt="Github" id="Github" src={Github} />
 						</Link>
 					</li>
 				</ul>
