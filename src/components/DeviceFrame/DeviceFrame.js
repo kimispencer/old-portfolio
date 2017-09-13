@@ -37,7 +37,7 @@ class DeviceFrame extends React.Component {
 				<div className="macbook">
 					<div className="screen">
 						<div className="viewport">
-							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isImage={true} />
+							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isBg={false} />
 						</div>
 					</div>
 					<div className="base"></div>
@@ -53,7 +53,7 @@ class DeviceFrame extends React.Component {
 							<span className="speaker"></span>
 						</div>
 						<div className="iphone-screen">
-							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isImage={true} />
+							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isBg={false} />
 						</div>
 						<div className="buttons">
 							<span className="on-off"></span>

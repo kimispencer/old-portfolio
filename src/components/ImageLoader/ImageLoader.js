@@ -29,21 +29,40 @@ class ImageLoader extends React.Component {
 		let img;
 		(this.props.src.indexOf('http') > -1) ? img = this.props.src : img = require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 
-		let classes = `${this.state.loaded ? 'loaded' : null} ${this.props.className ? this.props.className : ''} image-loader bg-img`;
 		return (
-			<div>
-				{this.props.children}
-				<img
-					src={img}
-					className={classes}
-					onLoad={this.handleImageLoaded.bind(this)}
-					onError={this.handleImageErrored.bind(this)}
-					role="presentation"
-				/>
-				<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
-					<div className="spinner"></div>
+			<div className="image-loader-container">
+			{this.props.isBg == false &&
+				<div className={`${this.state.loaded ? 'loaded' : null} image-loader`}>
+					{this.props.children}
+					<img
+						src={img}
+						className={`${this.props.className ? this.props.className : ''}`}
+						onLoad={this.handleImageLoaded.bind(this)}
+						onError={this.handleImageErrored.bind(this)}
+						role="presentation"
+					/>
+					<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
+						<div className="spinner"></div>
+					</div>
+					{/*this.state.imageStatus*/}
 				</div>
-				{/*this.state.imageStatus*/}
+			}
+			{this.props.isBg !== false &&
+				<div className={`${this.props.className ? this.props.className : ''} ${this.state.loaded ? 'loaded' : null} image-loader bg-img`} style={ {backgroundImage: 'url(' + img + ')'} }>
+					{this.props.children}
+					<img
+						style={ {display: 'none'} }
+						src={img}
+						onLoad={this.handleImageLoaded.bind(this)}
+						onError={this.handleImageErrored.bind(this)}
+						role="presentation"
+					/>
+					<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
+						<div className="spinner"></div>
+					</div>
+					{/*this.state.imageStatus*/}
+				</div>
+			}
 			</div>
 		);
 	}
