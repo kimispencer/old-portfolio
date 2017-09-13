@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
@@ -54,10 +55,17 @@ class ProjectDetail extends React.Component {
 		}
 	}
 	render() {
+		let projectIndex = null;
 		let match = this.props.routeProps.match.params.id;
-		let project = PROJECTS.filter(function (p) {
-		    return p.url === match;
+		let project = PROJECTS.filter(function (p, i) {
+			if(p.url === match) {
+				projectIndex = i;
+			    return p;
+			}
 		})[0];
+		let prevLink = PROJECTS[projectIndex-1] ? PROJECTS[projectIndex-1].url : null;
+		let nextLink = PROJECTS[projectIndex+1] ? PROJECTS[projectIndex+1].url : null;
+
 		// const embeds = async Promise => {
 		// 	project.projectPDFs.map(async (pdf, index) => {
 		// 		// const pdfPath = await import(pdf);
@@ -156,10 +164,18 @@ class ProjectDetail extends React.Component {
 				</TextContainer>
 				<div className="prev-next-navigation">
 					<div className="prev">
-						<p>prev</p>
+						{prevLink &&
+						<Link to={`${this.props.match.url}/${prevLink}`} onClick={this.props._handleProjectNavClick}>
+							<p className="uppercase">prev</p>
+						</Link>
+						}
 					</div>
 					<div className="next">
-						<p>next</p>
+						{nextLink &&
+						<Link to={`${this.props.match.url}/${nextLink}`} onClick={this.props._handleProjectNavClick}>
+							<p className="uppercase">next</p>
+						</Link>
+						}
 					</div>
 				</div>
 				<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>

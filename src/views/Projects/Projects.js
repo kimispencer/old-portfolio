@@ -84,6 +84,7 @@ class Projects extends React.Component {
 				<Route path={`${this.props.match.url}/:id`} component={(routeProps, state, params) => 
 					<ProjectDetail 
 						_handleProjectDetailLanding={this.props._handleProjectDetailLanding}
+						_handleProjectNavClick={this._handleProjectNavClick}
 						routeProps={routeProps}
 					{...this.props} />} />
 
