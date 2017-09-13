@@ -31,11 +31,11 @@ class ImageLoader extends React.Component {
 
 		let classes = `${this.state.loaded ? 'loaded' : null} ${this.props.className ? this.props.className : ''} image-loader bg-img`;
 		return (
-			<div className={classes} style={ {backgroundImage: 'url(' + img + ')'} }>
+			<div>
 				{this.props.children}
 				<img
-					style={ {display: 'none'} }
 					src={img}
+					className={classes}
 					onLoad={this.handleImageLoaded.bind(this)}
 					onError={this.handleImageErrored.bind(this)}
 					role="presentation"

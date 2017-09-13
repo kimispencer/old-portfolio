@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageLoader from '../ImageLoader/ImageLoader';
 import './DeviceFrame.css';
 
 class DeviceFrame extends React.Component {
@@ -30,14 +31,13 @@ class DeviceFrame extends React.Component {
 		}
 	}
 	render() {
-		let img = (this.props.src.indexOf('http') > -1) ? this.props.src : require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 		return (
 			<div className={`device-frame ${this.props.className} ${this.state.inViewport ? 'in-viewport' : ''}`}>
 				{this.props.type === "desktop" && 
 				<div className="macbook">
 					<div className="screen">
 						<div className="viewport">
-							<img className="screenshot" src={img} role="presentation" />
+							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isImage={true} />
 						</div>
 					</div>
 					<div className="base"></div>
@@ -53,7 +53,7 @@ class DeviceFrame extends React.Component {
 							<span className="speaker"></span>
 						</div>
 						<div className="iphone-screen">
-							<img className="screenshot" src={img} role="presentation" />
+							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isImage={true} />
 						</div>
 						<div className="buttons">
 							<span className="on-off"></span>
