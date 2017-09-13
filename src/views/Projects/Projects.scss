@@ -4,17 +4,6 @@ $project_tile_width: 25vw;
 $project_tile_height: $project_tile_width;
 
 /* breakout into new component */
-.prev-next-navigation {
-	@include flexbox-center(row);
-	width: 100%;
-	@include justify-content(space-between);
-	margin-top: $gutter*2;
-	.prev, .next {
-		cursor: pointer;
-	}
-}
-
-/* breakout into new component */
 .hover-image-container {
 	position: relative;
 	width: 100%;
@@ -157,9 +146,18 @@ $project_tile_height: $project_tile_width;
 			}
 		}
 	}
+	.prev-next-navigation {
+		@include flexbox-center(row);
+		@include justify-content(space-between);
+		width: 100%;
+		margin-top: $gutter*2;
+		margin-bottom: $gutter*2;
+		.prev, .next {
+			cursor: pointer;
+		}
+	}
 	.back-to-top {
-		margin-top: $gutter*4;
-		margin-bottom: $gutter;
+		margin-top: $gutter*2;
 		cursor: pointer;
 		@include flexbox-center(column);
 		#Triangle {

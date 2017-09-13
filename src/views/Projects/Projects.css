@@ -479,37 +479,6 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   letter-spacing: 0.2em; }
 
 /* breakout into new component */
-.prev-next-navigation {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row;
-  -moz-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  width: 100%;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between;
-  margin-top: 40px; }
-
-.prev-next-navigation .prev, .prev-next-navigation .next {
-  cursor: pointer; }
-
-/* breakout into new component */
 .hover-image-container {
   position: relative;
   width: 100%;
@@ -703,9 +672,39 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
 .project-detail .project-html-list .icon-row svg {
   margin: 0 10px; }
 
+.project-detail .prev-next-navigation {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+.project-detail .prev-next-navigation .prev, .project-detail .prev-next-navigation .next {
+  cursor: pointer; }
+
 .project-detail .back-to-top {
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin-top: 40px;
   cursor: pointer;
   display: -webkit-box;
   display: -moz-box;
