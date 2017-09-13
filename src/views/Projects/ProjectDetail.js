@@ -77,11 +77,10 @@ class ProjectDetail extends React.Component {
 		// 	const pdfPath = await import(pdf);
 		//     return (<embed className="pdf-viewer" src={pdfPath} width="100%" key={index} />);
 		// }));
+		
 		return(
 			<div className="project-detail padded-width">
 				<h3 className="title page-title serif">{project.name}</h3>
-				{/*<ImageLoader className="project-detail-cover" src={project.heroImg} imgKey={project.imgKey} />*/}
-
 				<TextContainer className="flex-row responsive">
 					<div className="text three-quarter-span" id="ProjectDescription">
 						<p className="title uppercase bold">project description</p>

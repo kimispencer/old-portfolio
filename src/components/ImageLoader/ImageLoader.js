@@ -26,8 +26,7 @@ class ImageLoader extends React.Component {
 	}
 
 	render() {
-		let img;
-		(this.props.src.indexOf('http') > -1) ? img = this.props.src : img = require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
+		let img = (this.props.src.indexOf('http') > -1) ? this.props.src : require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 
 		return (
 			<div className="image-loader-container">
@@ -35,13 +34,14 @@ class ImageLoader extends React.Component {
 				<div className={`${this.state.loaded ? 'loaded' : null} image-loader`}>
 					{this.props.children}
 					<img
+						style={ {display: `${this.state.loaded ? 'block' : 'none'}` } }
 						src={img}
 						className={`${this.props.className ? this.props.className : ''}`}
 						onLoad={this.handleImageLoaded.bind(this)}
 						onError={this.handleImageErrored.bind(this)}
 						role="presentation"
 					/>
-					<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
+					<div className="spinner-container">
 						<div className="spinner"></div>
 					</div>
 					{/*this.state.imageStatus*/}
@@ -57,7 +57,7 @@ class ImageLoader extends React.Component {
 						onError={this.handleImageErrored.bind(this)}
 						role="presentation"
 					/>
-					<div className={`${this.state.loaded ? 'loaded' : null} spinner-container`}>
+					<div className="spinner-container">
 						<div className="spinner"></div>
 					</div>
 					{/*this.state.imageStatus*/}

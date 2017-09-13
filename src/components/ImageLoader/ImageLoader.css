@@ -507,7 +507,11 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   justify-content: center;
   -ms-flex-pack: center; }
 
-.spinner-container {
+.image-loader.loaded .spinner-container {
+  opacity: 0;
+  display: none; }
+
+.image-loader .spinner-container {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -532,17 +536,12 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   background: white;
   transition: all 700ms ease; }
 
-.spinner-container.loaded {
-  opacity: 0;
-  display: none; }
-
-.spinner,
-.spinner:after {
+.image-loader .spinner, .image-loader .spinner:after {
   border-radius: 50%;
   width: 50px;
   height: 50px; }
 
-.spinner {
+.image-loader .spinner {
   margin: 0px auto;
   border-top: 5px solid #333;
   border-right: 5px solid rgba(255, 255, 255, 0);
