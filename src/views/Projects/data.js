@@ -274,7 +274,7 @@ export default  [
 		screenShots: [
 		],
 		projectImgs: [
-			'dataviz-01.jpg', 'dataviz-02.jpg', 'dataviz-02b.jpg', 'dataviz-03.jpg', 'dataviz-04.jpg'
+			// 'dataviz-01.jpg', 'dataviz-02.jpg', 'dataviz-02b.jpg', 'dataviz-03.jpg', 'dataviz-04.jpg'
 		],
 		projectPDFs: [
 			'highline_user_study', 'uniqlo_pitch'
