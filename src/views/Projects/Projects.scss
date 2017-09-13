@@ -3,7 +3,19 @@
 $project_tile_width: 25vw;
 $project_tile_height: $project_tile_width;
 
-/* new compontent */
+/* new component */
+.prev-next-navigation {
+	border: 1px dashed red;
+	@include flexbox-center(row);
+	width: 100%;
+	@include justify-content(space-between);
+	margin-top: $gutter*2;
+	.prev, .next {
+		cursor: pointer;
+	}
+}
+
+/* new component */
 .hover-image-container {
 	position: relative;
 	width: 100%;

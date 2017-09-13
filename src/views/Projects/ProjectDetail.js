@@ -154,6 +154,14 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</TextContainer>
+				<div className="prev-next-navigation">
+					<div className="prev">
+						<p>prev</p>
+					</div>
+					<div className="next">
+						<p>next</p>
+					</div>
+				</div>
 				<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
 			</div>
 		);
