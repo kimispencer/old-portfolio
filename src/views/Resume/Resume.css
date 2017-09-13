@@ -485,7 +485,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center; }
-  .resume .resume-container #ProfilePic {
+  .resume .resume-container .profile-pic {
     height: 200px;
     margin-top: 40px; }
   .resume .resume-container .resume-section {

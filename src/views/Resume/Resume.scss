@@ -3,7 +3,7 @@
 .resume {
 	.resume-container {
 		@include flexbox-center(column);
-		#ProfilePic {
+		.profile-pic {
 			height: 200px;
 			margin-top: $gutter*2;
 		}

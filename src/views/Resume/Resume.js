@@ -1,6 +1,7 @@
 import React from 'react';
+import ImageLoader from '../../components/ImageLoader/ImageLoader';
+import ProfilePic from '../../../public/assets/resume/profile.jpg';
 import './Resume.css';
-import ProfilePic from '../../../public/assets/profile.jpg';
 
 const Resume = () => (	
 	<div className="resume padded-top">
@@ -12,7 +13,7 @@ const Resume = () => (
 					<div className="center">
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
-						<img alt="profile" id="ProfilePic" className="circle-img" src={ProfilePic} />
+						<ImageLoader className="circle-img profile-pic" src="profile.jpg" imgKey="resume" isBg={false} />
 					</div>
 				</div>
 			</div>
