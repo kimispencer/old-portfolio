@@ -161,22 +161,24 @@ class ProjectDetail extends React.Component {
 						</div>
 					</div>
 				</TextContainer>
-				<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
-				<div className="prev-next-navigation">
-					<div className="prev">
-						{prevLink &&
-						<Link to={`${this.props.match.url}/${prevLink}`} onClick={this.props._handleProjectNavClick}>
-							<p className="uppercase">prev</p>
-						</Link>
-						}
+				<div className="bottom-navigation">
+					<div className="prev-next-navigation">
+						<div className="prev">
+							{prevLink &&
+							<Link to={`${this.props.match.url}/${prevLink}`} onClick={this.props._handleProjectNavClick}>
+								<p className="uppercase">prev</p>
+							</Link>
+							}
+						</div>
+						<div className="next">
+							{nextLink &&
+							<Link to={`${this.props.match.url}/${nextLink}`} onClick={this.props._handleProjectNavClick}>
+								<p className="uppercase">next</p>
+							</Link>
+							}
+						</div>
 					</div>
-					<div className="next">
-						{nextLink &&
-						<Link to={`${this.props.match.url}/${nextLink}`} onClick={this.props._handleProjectNavClick}>
-							<p className="uppercase">next</p>
-						</Link>
-						}
-					</div>
+					<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
 				</div>
 			</div>
 		);
