@@ -240,7 +240,8 @@
 -------------------------------------------------------------- */
 .macbook .viewport, .iphone .iphone-screen  {
 	overflow: scroll;
-	cursor: pointer;
+	/*cursor: pointer;*/
+	cursor:url(../../../public/assets/icons/scroll-icon.png) 25 25, pointer;
 	&:after {
 		background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
 		bottom: 0;
