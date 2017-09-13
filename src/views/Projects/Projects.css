@@ -854,4 +854,6 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     flex-flow: column-reverse !important; }
   .project-detail .button {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+  .project-detail .project-html-list .icon-row {
+    /*@include flex-flow(column);*/ } }
