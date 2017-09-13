@@ -10,7 +10,9 @@
 	&.loaded {
 		.spinner-container {
 			opacity: 0;
-			display: none;
+			visibility: hidden;
+			transition: opacity 600ms, visibility 600ms;
+			height: 0;
 		}
 	}
 	.spinner-container {
@@ -18,6 +20,7 @@
 		height: 100%;
 		width: 100%;
 		opacity: 1;
+		visibility: visible;
 		background: $white;
 		transition: all $transition_speed*2 ease;
 	}
