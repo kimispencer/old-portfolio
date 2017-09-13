@@ -1,9 +1,5 @@
 @import '../../styles/_all';
 
-.image-loader-container {
-	height: 100%;
-	width: 100%;
-}
 .image-loader {
 	z-index: -1;
 	height: 100%;
@@ -22,7 +18,7 @@
 		height: 100%;
 		width: 100%;
 		opacity: 1;
-		background: white;
+		background: $white;
 		transition: all $transition_speed*2 ease;
 	}
 	.spinner, .spinner:after {

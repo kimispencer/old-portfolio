@@ -28,11 +28,10 @@ class ImageLoader extends React.Component {
 	render() {
 		let img = (this.props.src.indexOf('http') > -1) ? this.props.src : require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 
-		return (
-			<div className="image-loader-container">
-			{this.props.isBg == false &&
+		if(this.props.isBg == false) {
+			return (
 				<div className={`${this.state.loaded ? 'loaded' : null} image-loader`}>
-					{this.props.children}
+					{this.state.loaded ? this.props.children : null}
 					<img
 						style={ {display: `${this.state.loaded ? 'block' : 'none'}` } }
 						src={img}
@@ -46,10 +45,11 @@ class ImageLoader extends React.Component {
 					</div>
 					{/*this.state.imageStatus*/}
 				</div>
-			}
-			{this.props.isBg !== false &&
+			);
+		} else {
+			return (
 				<div className={`${this.props.className ? this.props.className : ''} ${this.state.loaded ? 'loaded' : null} image-loader bg-img`} style={ {backgroundImage: 'url(' + img + ')'} }>
-					{this.props.children}
+					{this.state.loaded ? this.props.children : null}
 					<img
 						style={ {display: 'none'} }
 						src={img}
@@ -62,9 +62,8 @@ class ImageLoader extends React.Component {
 					</div>
 					{/*this.state.imageStatus*/}
 				</div>
-			}
-			</div>
-		);
+			);
+		}
 	}
 }
 export default ImageLoader;
