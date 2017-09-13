@@ -466,10 +466,6 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
 .link-text {
   letter-spacing: 0.2em; }
 
-.image-loader-container {
-  height: 100%;
-  width: 100%; }
-
 .image-loader {
   z-index: -1;
   height: 100%;
@@ -518,7 +514,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     height: 100%;
     width: 100%;
     opacity: 1;
-    background: white;
+    background: #ffffff;
     transition: all 700ms ease; }
   .image-loader .spinner, .image-loader .spinner:after {
     border-radius: 50%;
