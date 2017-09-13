@@ -13,7 +13,7 @@ const Resume = () => (
 					<div className="center">
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
-						<ImageLoader className="circle-img profile-pic" src="profile.jpg" imgKey="resume" isBg={false} />
+						<ImageLoader className="circle-img profile-pic" src="profile.jpg" imgKey="resume" isBg={false} alt="Profile Pic" />
 					</div>
 				</div>
 			</div>

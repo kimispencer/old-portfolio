@@ -8,7 +8,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
-				<ImageLoader className="hero" imgKey={'homepage'} src={'cool-pool-pineapple_4460x4460.jpg'}>
+				<ImageLoader className="hero" imgKey={'homepage'} src={'cool-pool-pineapple_4460x4460.jpg'} alt="Hero Image">
 					<div className="svg-container">		
 						<svg id="TopSVG" className="svg-obj" width="600" version="1.1" x="0px" y="0px"
 							 viewBox="0 0 600 169">

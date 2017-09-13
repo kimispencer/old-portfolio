@@ -126,7 +126,7 @@ class ProjectDetail extends React.Component {
 						<ul className="project-image-list">
 						{project.projectImgs 
 							? project.projectImgs.map((img, index) => 
-								<ImageLoader className="project-image" src={img} imgKey={project.imgKey} key={index} />
+								<ImageLoader className="project-image" src={img} imgKey={project.imgKey} key={index} alt={`Project Detail Image -- ${project.imgKey}/${img}`} />
 							)
 							: null
 						}

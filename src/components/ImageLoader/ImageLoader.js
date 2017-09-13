@@ -39,6 +39,7 @@ class ImageLoader extends React.Component {
 						onLoad={this.handleImageLoaded.bind(this)}
 						onError={this.handleImageErrored.bind(this)}
 						role="presentation"
+						alt={this.props.alt}
 					/>
 					<div className="spinner-container">
 						<div className="spinner"></div>
@@ -56,6 +57,7 @@ class ImageLoader extends React.Component {
 						onLoad={this.handleImageLoaded.bind(this)}
 						onError={this.handleImageErrored.bind(this)}
 						role="presentation"
+						alt={this.props.alt}
 					/>
 					<div className="spinner-container">
 						<div className="spinner"></div>
