@@ -171,6 +171,19 @@ $project_tile_height: $project_tile_width;
 		margin-bottom: $gutter*2;
 		.prev, .next {
 			cursor: pointer;
+			.text-arrow-container {
+				@include flexbox-center(row);
+			}
+			.arrow-icon {
+				width: 24px;
+				height: 24px;
+				&#RightArrow {
+					margin-left: $gutter/2;
+				}
+				&#LeftArrow {
+					margin-right: $gutter/2;
+				}
+			}
 		}
 	}
 	.back-to-top {

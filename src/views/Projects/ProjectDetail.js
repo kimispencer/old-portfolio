@@ -4,6 +4,8 @@ import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import TextContainer from '../../components/TextContainer/TextContainer';
+import RightArrow from '../../../public/assets/icons/right-arrow.svg';
+import LeftArrow from '../../../public/assets/icons/left-arrow.svg';
 import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
@@ -170,14 +172,14 @@ class ProjectDetail extends React.Component {
 						<div className="prev">
 							{prevLink &&
 							<Link to={`${this.props.match.url}/${prevLink}`} onClick={this.props._handleProjectNavClick}>
-								<p className="uppercase">prev</p>
+								<p className="uppercase text-arrow-container"><img className="arrow-icon" alt="Prev Arrow" id="LeftArrow" src={LeftArrow} /> prev</p>
 							</Link>
 							}
 						</div>
 						<div className="next">
 							{nextLink &&
 							<Link to={`${this.props.match.url}/${nextLink}`} onClick={this.props._handleProjectNavClick}>
-								<p className="uppercase">next</p>
+								<p className="uppercase text-arrow-container">next <img className="arrow-icon" alt="Next Arrow" id="RightArrow" src={RightArrow} /></p>
 							</Link>
 							}
 						</div>
