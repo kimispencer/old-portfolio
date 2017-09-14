@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import TextAnimation from '../../components/TextAnimation/TextAnimation';
@@ -39,13 +40,12 @@ class Home extends React.Component {
 						</g>
 						</svg>
 					</div>
-
-					<TextContainer>
-						<TextAnimation className="subtitle" text="Hi, I'm Kimi. I'm an engineer & designer." />
-						<a href="/projects">
-							<TextAnimation id="ShowMeMore" className="link-text uppercase" text="show me more" />
-						</a>
-					</TextContainer>
+					<Link to="/projects">
+						<TextContainer>
+							<TextAnimation className="subtitle" text="Hi, I'm Kimi. I'm an engineer & designer." />
+								<TextAnimation id="ShowMeMore" className="link-text uppercase" text="show me more" />
+						</TextContainer>
+					</Link>
 				</ImageLoader>
 			</div>
 		);
