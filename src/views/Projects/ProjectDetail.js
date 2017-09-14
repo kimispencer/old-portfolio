@@ -56,15 +56,19 @@ class ProjectDetail extends React.Component {
 	}
 	render() {
 		let projectIndex = null;
-		let match = this.props.routeProps.match.params.id;
+		const length = PROJECTS.length;
+		const match = this.props.routeProps.match.params.id;
 		let project = PROJECTS.filter(function (p, i) {
 			if(p.url === match) {
 				projectIndex = i;
 			    return p;
 			}
 		})[0];
-		let prevLink = PROJECTS[projectIndex-1] ? PROJECTS[projectIndex-1].url : null;
-		let nextLink = PROJECTS[projectIndex+1] ? PROJECTS[projectIndex+1].url : null;
+        const previous = (projectIndex + length - 1) % length;
+        const next = (projectIndex + 1) % length;
+
+		const prevLink = PROJECTS[previous] ? PROJECTS[previous].url : null;
+		const nextLink = PROJECTS[next] ? PROJECTS[next].url : null;
 
 		// const embeds = async Promise => {
 		// 	project.projectPDFs.map(async (pdf, index) => {
