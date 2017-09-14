@@ -61,26 +61,28 @@ class Projects extends React.Component {
 		return (
 			<div className="projects">
 
-				{ this.props._projectNavStyle_isList
-					? <div className="center title monospace" onClick={this.props._toggleProjectNav} id="Menu">Menu</div>
-					: null
-				}
+				<div className={`projects-nav ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
+					{ this.props._projectNavStyle_isList
+						? <div className="center title monospace" onClick={this.props._toggleProjectNav} id="Menu">Menu</div>
+						: null
+					}
+					{ this.props._isProjectNavOpen 
+						? <ul className={`project-list ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
+							{ PROJECTS.map((project, index) => 
+							<li key={index} >
+								 <Link to={this.props.match.url + '/' + project.url} >
+									<ProjectListItem 
+										project={project} 
+										handleClick={this._handleProjectNavClick} 
+										_projectNavStyle_isList={this.props._projectNavStyle_isList}/>
+								</Link>
+							</li>
+							) }
+						</ul>
+						: null
+					}
+				</div>
 
-				{ this.props._isProjectNavOpen 
-					? <ul className={`project-list ${this.props._projectNavStyle_isList ? 'list-style' : 'box-style'}`}>
-						{ PROJECTS.map((project, index) => 
-						<li key={index} >
-							 <Link to={this.props.match.url + '/' + project.url} >
-								<ProjectListItem 
-									project={project} 
-									handleClick={this._handleProjectNavClick} 
-									_projectNavStyle_isList={this.props._projectNavStyle_isList}/>
-							</Link>
-						</li>
-						) }
-					</ul>
-					: null
-				}
 				<Route path={`${this.props.match.url}/:id`} component={(routeProps, state, params) => 
 					<ProjectDetail 
 						_handleProjectDetailLanding={this.props._handleProjectDetailLanding}

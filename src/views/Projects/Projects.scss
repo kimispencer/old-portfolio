@@ -36,16 +36,27 @@ $project_tile_height: $project_tile_width;
 
 /* projects */
 .projects {
-	#PageTitle {
+}
+.projects-nav {
+	&.list-style {
+		z-index: 10;
 		padding-top: $gutter;
+		padding-bottom: $gutter;
+		position: fixed;
+		top: $fixed_nav_height;
+		left: 0;
+		width: 100%;
+		max-width: none;
+		background: $white;
+		border-bottom: 1px solid $lightgrey;
 	}
 	#Menu {
 		@include clickable();
 		padding: 0;
 	}
-	ul.project-list {
-		@include flexbox();
-	}
+}
+.project-list {
+	@include flexbox();
 }
 .project-list-item {
 	cursor: pointer;
@@ -84,6 +95,9 @@ $project_tile_height: $project_tile_width;
 	@include flexbox-center(column);
 	@include justify-content(flex-start);
 	margin-bottom: $gutter;
+	#PageTitle {
+		padding-top: $gutter;
+	}
 	.project-image {
 		img {
 			width: 100%;
@@ -172,8 +186,7 @@ $project_tile_height: $project_tile_width;
 @media #{$desktop} {
 	.projects {
 		#Menu {
-			/*display: none;*/
-			padding-top: $gutter;
+			display: none;
 		}
 		ul.project-list {
 			@include flex-flow(row);
@@ -182,7 +195,6 @@ $project_tile_height: $project_tile_width;
 				@include justify-content(center);
 			    max-width: 900px;
 				margin: 0 auto;
-				padding-top: $gutter;
 				li {
 					margin: $gutter/4 0;
 				}
@@ -232,6 +244,7 @@ $project_tile_height: $project_tile_width;
 		}
 	}
 	.project-detail {
+		margin-top: 150px;
 		.text-container {
 			.text {
 				&#ProjectDescription {
@@ -272,7 +285,6 @@ $project_tile_height: $project_tile_width;
 	.projects {
 		#Menu {
 			@include clickable();
-			padding-top: $gutter;
 		}
 		ul.project-list {
 			@include flexbox-center(column);
@@ -300,6 +312,7 @@ $project_tile_height: $project_tile_width;
 		}
 	}
 	.project-detail {
+		margin-top: 120px;
 		.text-container {
 			@include flex-flow(column-reverse !important);
 		}
