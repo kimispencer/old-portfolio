@@ -33,7 +33,7 @@ form {
 	width: auto;
 	max-width: $button_width;
 	@include transition(all $transition_speed ease);
-	&.transparent {
+	&.secondary {
 		@include button(rgba(0,0,0,0), black);
 	}
 }

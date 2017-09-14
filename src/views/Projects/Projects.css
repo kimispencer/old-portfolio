@@ -225,7 +225,7 @@ form button[type='submit'], form .button {
   background-color: white;
   color: black; }
 
-.button.transparent, button[type='submit'].transparent {
+.button.secondary, button[type='submit'].secondary {
   background-color: transparent;
   color: black;
   cursor: pointer;
@@ -255,7 +255,7 @@ form button[type='submit'], form .button {
   text-decoration: none;
   text-transform: uppercase; }
 
-.button.transparent:hover, button[type='submit'].transparent:hover {
+.button.secondary:hover, button[type='submit'].secondary:hover {
   background-color: rgba(255, 255, 255, 0);
   color: black; }
 
@@ -899,4 +899,6 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     margin-left: auto;
     margin-right: auto; }
   .project-detail .project-html-list .icon-row {
-    /*@include flex-flow(column);*/ } }
+    /*@include flex-flow(column);*/ }
+  .project-detail .prev-next-navigation {
+    margin-top: 80px; } }

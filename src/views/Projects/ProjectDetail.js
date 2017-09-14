@@ -140,7 +140,7 @@ class ProjectDetail extends React.Component {
 
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">
-								<div className="button"><p>visit website</p></div>
+								<div className="button secondary"><p>visit website</p></div>
 							</a>
 						}
 					</div>
@@ -161,7 +161,7 @@ class ProjectDetail extends React.Component {
 
 							{(isDesktop() && project.siteUrl) &&
 								<a href={project.siteUrl} target="_blank">
-									<div className="button"><p>visit website</p></div>
+									<div className="button secondary"><p>visit website</p></div>
 								</a>
 							}
 						</div>
