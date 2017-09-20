@@ -184,7 +184,7 @@ class ProjectDetail extends React.Component {
 							}
 						</div>
 					</div>
-					<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
+					{/*<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>*/}
 				</div>
 			</div>
 		);
