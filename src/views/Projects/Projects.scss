@@ -146,9 +146,8 @@ $project_tile_height: $project_tile_width;
 		margin-top: $gutter;
 		@include flexbox-center(column);
 		.pdf-viewer {
-			width: auto;
 			max-width: calc(100vw + #{$gutter}*2);
-			height: auto;
+			min-height: 300px;
 			margin-bottom: $gutter/2;
 			background-color: $lightgrey;
 			border-bottom: 2px solid $black;

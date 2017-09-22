@@ -673,9 +673,8 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   -ms-flex-pack: center; }
 
 .project-detail .project-pdf-list .pdf-viewer {
-  width: auto;
   max-width: calc(100vw + 20px*2);
-  height: auto;
+  min-height: 300px;
   margin-bottom: 10px;
   background-color: lightgrey;
   border-bottom: 2px solid #000; }
