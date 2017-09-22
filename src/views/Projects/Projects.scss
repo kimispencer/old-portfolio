@@ -145,7 +145,6 @@ $project_tile_height: $project_tile_width;
 	.project-pdf-list {
 		margin-top: $gutter;
 		@include flexbox-center(column);
-		border: 1px dashed red;
 		.pdf-viewer {
 			width: auto;
 			max-width: 100vw;
@@ -287,6 +286,12 @@ $project_tile_height: $project_tile_width;
 		.project-image-list {
 			.project-image {
 				background-size: contain;
+			}
+		}
+		.project-pdf-list {
+			.pdf-viewer {
+				width: 100%;
+				height: 500px;
 			}
 		}
 	}
