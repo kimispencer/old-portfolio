@@ -670,10 +670,12 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center; }
+  -ms-flex-pack: center;
+  border: 1px dashed red; }
 
 .project-detail .project-pdf-list .pdf-viewer {
   width: auto;
+  max-width: 100vw;
   height: auto;
   margin-bottom: 10px;
   background-color: lightgrey;
