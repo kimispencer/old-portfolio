@@ -674,7 +674,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
 
 .project-detail .project-pdf-list .pdf-viewer {
   width: auto;
-  max-width: 100vw;
+  max-width: calc(100vw + 20px*2);
   height: auto;
   margin-bottom: 10px;
   background-color: lightgrey;
