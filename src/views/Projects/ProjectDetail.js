@@ -114,7 +114,7 @@ class ProjectDetail extends React.Component {
 						<section className="project-pdf-list">
 							{project.projectPDFs
 								?	project.projectPDFs.map((pdf, index) =>
-									<embed className="pdf-viewer" src={PDF_data[pdf]} width="100%" key={index} />
+<iframe className="pdf-viewer" src="https://docs.google.com/presentation/d/e/2PACX-1vSEqqQ2A0crM5dGs-ff1JUnzd66eV2IPAYUfAMrjjh558fKON_TCXUzqqPQSOclvE3PIiB-feG615Tt/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1067" height="829" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 								)
 								: null
 							}
