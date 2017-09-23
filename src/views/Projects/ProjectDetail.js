@@ -25,6 +25,15 @@ const PDF_data = {
 	bolster: BolsterPDF,
 	bolster_sitemap: BolsterSitemapPDF
 }
+/* clean this up to be apart of data.json */
+const PDF_names = {
+	highline_user_study: "Highline user study PDF",
+	uniqlo_pitch: "Uniqlo user studies PDF",
+	arrivals_wireframes: "Arrivals Responsive wireframes PDF",
+	thesis: "Language of Music presentation PDF",
+	bolster: "Bolsteruser flow wireframes PDF",
+	bolster_sitemap: "Bolster sitemape PDF"
+}
 
 const PROJECTS = data;
 
@@ -128,7 +137,7 @@ class ProjectDetail extends React.Component {
 							<section className="project-pdf-list">
 								{project.projectPDFs
 									?	project.projectPDFs.map((pdf, index) =>
-											<a className="underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{pdf}</a>
+											<a className="underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{PDF_names[pdf]}</a>
 									)
 									: null
 								}
