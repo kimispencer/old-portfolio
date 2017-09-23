@@ -18,12 +18,12 @@ import BolsterPDF from '../../../public/assets/projects/bolster/bolster.pdf';
 import BolsterSitemapPDF from '../../../public/assets/projects/bolster/bolster-sitemap.pdf';
 
 const PDF_data = {
-	highline_user_study: HighlinePDF,
-	uniqlo_pitch: UniqloPDF,
-	arrivals_wireframes: ArrivalsWireframesPDF,
-	thesis: ThesisPDF,
-	bolster: BolsterPDF,
-	bolster_sitemap: BolsterSitemapPDF
+	highline_user_study: 'https://docs.google.com/presentation/d/e/2PACX-1vSBLWnJ7j5YSHGTOH05TEXetXfA5AgBYg2oazxmBILEbwPE1PrZXzMVNTTajffqyJs6hV8JKWCm2CAl/embed?start=false&loop=false&delayms=3000', //HighlinePDF,
+	uniqlo_pitch: 'https://docs.google.com/presentation/d/e/2PACX-1vQYsB-snAT80AkoRhKP8r9HKFpFixHxbVppySxVTazhUldtUS_1ze04MVcZerYm5paPFLVyZec17imH/embed?start=false&loop=false&delayms=3000'//UniqloPDF,
+	// arrivals_wireframes: ArrivalsWireframesPDF,
+	// thesis: ThesisPDF,
+	// bolster: BolsterPDF,
+	// bolster_sitemap: BolsterSitemapPDF
 }
 
 const PROJECTS = data;
@@ -114,7 +114,7 @@ class ProjectDetail extends React.Component {
 						<section className="project-pdf-list">
 							{project.projectPDFs
 								?	project.projectPDFs.map((pdf, index) =>
-<iframe className="pdf-viewer" src="https://docs.google.com/presentation/d/e/2PACX-1vSEqqQ2A0crM5dGs-ff1JUnzd66eV2IPAYUfAMrjjh558fKON_TCXUzqqPQSOclvE3PIiB-feG615Tt/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1067" height="829" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe className="pdf-viewer" src={PDF_data[pdf]} frameborder="0" width="100%" height="auto" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 								)
 								: null
 							}
