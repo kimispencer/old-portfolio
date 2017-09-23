@@ -6,7 +6,7 @@ import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import RightArrow from '../../../public/assets/icons/right-arrow.svg';
 import LeftArrow from '../../../public/assets/icons/left-arrow.svg';
-import Triangle from '../../../public/assets/icons/triangle.svg';
+// import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
 
@@ -18,12 +18,12 @@ import BolsterPDF from '../../../public/assets/projects/bolster/bolster.pdf';
 import BolsterSitemapPDF from '../../../public/assets/projects/bolster/bolster-sitemap.pdf';
 
 const PDF_data = {
-	highline_user_study: 'https://docs.google.com/presentation/d/e/2PACX-1vSBLWnJ7j5YSHGTOH05TEXetXfA5AgBYg2oazxmBILEbwPE1PrZXzMVNTTajffqyJs6hV8JKWCm2CAl/embed?start=false&loop=false&delayms=3000', //HighlinePDF,
-	uniqlo_pitch: 'https://docs.google.com/presentation/d/e/2PACX-1vQYsB-snAT80AkoRhKP8r9HKFpFixHxbVppySxVTazhUldtUS_1ze04MVcZerYm5paPFLVyZec17imH/embed?start=false&loop=false&delayms=3000'//UniqloPDF,
-	// arrivals_wireframes: ArrivalsWireframesPDF,
-	// thesis: ThesisPDF,
-	// bolster: BolsterPDF,
-	// bolster_sitemap: BolsterSitemapPDF
+	highline_user_study: HighlinePDF,
+	uniqlo_pitch: UniqloPDF,
+	arrivals_wireframes: ArrivalsWireframesPDF,
+	thesis: ThesisPDF,
+	bolster: BolsterPDF,
+	bolster_sitemap: BolsterSitemapPDF
 }
 
 const PROJECTS = data;
@@ -110,15 +110,30 @@ class ProjectDetail extends React.Component {
 						}
 						</section>
 
-						{/* !!! use Promises... figure out later */}
-						<section className="project-pdf-list">
-							{project.projectPDFs
-								?	project.projectPDFs.map((pdf, index) =>
-<iframe className="pdf-viewer" src={PDF_data[pdf]} frameborder="0" width="100%" height="auto" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-								)
-								: null
-							}
-						</section>
+						{/* 
+							*!!! use Promises... figure out later 
+							* really should be is iOS (user agent string)
+						*/}
+						{isDesktop() &&
+							<section className="project-pdf-list">
+								{project.projectPDFs
+									?	project.projectPDFs.map((pdf, index) =>
+											<embed className="pdf-viewer" src={PDF_data[pdf]} width="100%" key={index} />
+									)
+									: null
+								}
+							</section>
+						}
+						{!isDesktop() &&
+							<section className="project-pdf-list">
+								{project.projectPDFs
+									?	project.projectPDFs.map((pdf, index) =>
+											<a className="underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{pdf}</a>
+									)
+									: null
+								}
+							</section>
+						}
 
 						<section className="project-video-list">
 						{project.projectVids 

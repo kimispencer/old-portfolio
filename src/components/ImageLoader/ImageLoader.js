@@ -28,7 +28,7 @@ class ImageLoader extends React.Component {
 	render() {
 		let img = (this.props.src.indexOf('http') > -1) ? this.props.src : require(`../../../public/assets/${this.props.imgKey}/${this.props.src}`);
 
-		if(this.props.isBg == false) {
+		if(this.props.isBg === false) {
 			return (
 				<div className={`${this.state.loaded ? 'loaded' : null} image-loader`}>
 					{this.state.loaded ? this.props.children : null}
