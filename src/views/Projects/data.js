@@ -53,7 +53,7 @@ export default  [
 			`
 			<p>Custom designed and developed portfolio site. Built with ReactJS.</p>
 			<br/>
-			<p>To demonstrate my experience and work as a responsive designer and engineer I designed a responsive portfolio site that would showcase my skills from CSS3 animations to creating custom React UI components. Such as the DeviceFrame component which allows users to scroll & explore resposnive demos of previous sites I have built.</p>
+			<p>To demonstrate my experience and work as a responsive designer and engineer I designed a responsive portfolio site that would showcase my skills from CSS3 animations to creating custom React UI components. Such as the DeviceFrame component which allows users to scroll & explore responsive demos of previous sites I have built.</p>
 			`
 	},
 	{ 
