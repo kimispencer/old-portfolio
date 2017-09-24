@@ -32,7 +32,7 @@ const PDF_names = {
 	uniqlo_pitch: "Uniqlo user studies PDF",
 	arrivals_wireframes: "Arrivals Responsive wireframes PDF",
 	thesis: "Language of Music presentation PDF",
-	bolster: "Bolsteruser flow wireframes PDF",
+	bolster: "Bolster application wireframes PDF",
 	bolster_sitemap: "Bolster sitemap PDF"
 }
 
