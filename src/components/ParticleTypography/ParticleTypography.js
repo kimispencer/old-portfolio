@@ -51,9 +51,9 @@ export default class ParticleTypography {
 	*/
     _init() {
 		// Set Canvas size to fullscreen
-		let w = 300;
-		this.ctx.canvas.width  = this.utils.screenSize().width;; //w > this.utils.screenSize().width ? this.utils.screenSize().width : w;
-		this.ctx.canvas.height = this.utils.screenSize().height; //w/2; 
+		let w = 500;
+		this.ctx.canvas.width  = w > this.utils.screenSize().width ? this.utils.screenSize().width : w;
+		this.ctx.canvas.height = w/2; 
 
 		// Environment events
 		// w.addEventListener('resize', () => this._onWindowResize());
@@ -182,9 +182,9 @@ export default class ParticleTypography {
 		// particle.color = 'hsla(' + hue + ', 88%, 63%, 1.00)';
 
 		// white hue
-		particle.color = 'hsla(360, 100%, 100%, 1)';
+		// particle.color = 'hsla(360, 100%, 100%, 1)';
 		// black hue
-		// particle.color = 'hsla(0, 0%, 0%, 1)';
+		particle.color = 'hsla(0, 0%, 0%, 1)';
 
 		particle.draw(this.ctx);
 	}

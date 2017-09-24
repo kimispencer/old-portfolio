@@ -7,6 +7,8 @@
     width: 100%;
 	height: 100%;
 	@include flexbox-center(column);
+	#Canvas {
+	}
 /*	#ContactForm {
 		@include justify-content(center);	
 		margin-top: $gutter;

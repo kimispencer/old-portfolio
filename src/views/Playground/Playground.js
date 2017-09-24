@@ -1,5 +1,5 @@
 import React from 'react';
-import ParticleTypography from './ParticleTypography';
+import ParticleTypography from '../../components/ParticleTypography/ParticleTypography';
 import './Playground.css';
 
 class Playground extends React.Component {
