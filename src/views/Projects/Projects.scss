@@ -350,6 +350,14 @@ $project_tile_height: $project_tile_width;
 				/*@include flex-flow(column);*/
 			}
 		}
+		.project-pdf-list {
+			.pdf-link {
+				margin-bottom: $gutter;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
 		.prev-next-navigation {
 		}
 	}
