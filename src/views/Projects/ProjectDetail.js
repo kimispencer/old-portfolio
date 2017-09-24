@@ -138,7 +138,7 @@ class ProjectDetail extends React.Component {
 							<section className="project-pdf-list">
 								{project.projectPDFs
 									?	project.projectPDFs.map((pdf, index) =>
-										<div className="pdf-link">
+										<div className="pdf-link" key={index}>
 											<img alt="PDF Icon" className="icon" src={PDFIcon} />
 											<a className="underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{PDF_names[pdf]}</a>
 										</div>
