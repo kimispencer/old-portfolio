@@ -17,7 +17,7 @@ export default  class Contact extends React.Component {
             <div className="contact">
                 <div className="text center">
                     <h3 className="title bold">Let's make cool things together!</h3>
-                    <a href="mailto:kimispencer@gmail.com"><h4 className="monospace underline" id="Hello">hello@kimispencer.com</h4></a>
+                    <a href="mailto:hello@kimispencer.com"><h4 className="monospace underline" id="Hello">hello@kimispencer.com</h4></a>
                 </div>
                 {isDesktop() &&
                     <canvas id="Canvas" />
