@@ -1,4 +1,5 @@
 import React from 'react';
+import { isDesktop } from '../../components/Responsive/Responsive';
 import { Link } from 'react-router-dom';
 import LinkedIn from '../../../public/assets/logos/linkedin.svg';
 import Github from '../../../public/assets/logos/github.svg';
@@ -17,7 +18,9 @@ export default  class Contact extends React.Component {
                     <a href="mailto:kimispencer@gmail.com"><h4 className="monospace underline" id="Hello">hello@kimispencer.com</h4></a>
                     <h4 className="monospace">Brooklyn, NY</h4>
                 </div>
-                <canvas id="Canvas" />
+                {isDesktop() &&
+                    <canvas id="Canvas" />
+                }
                 {/*
                 <div id="ContactForm" className="flex-center flex-col">
                     <form>
