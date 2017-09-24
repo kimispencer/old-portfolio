@@ -672,6 +672,11 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   justify-content: center;
   -ms-flex-pack: center; }
 
+.project-detail .project-pdf-list .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px; }
+
 .project-detail .project-pdf-list .pdf-viewer {
   max-width: calc(100vw + 20px*2);
   min-height: 300px;
@@ -926,6 +931,11 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     margin-right: auto; }
   .project-detail .project-html-list .icon-row {
     /*@include flex-flow(column);*/ }
+  .project-detail .project-pdf-list {
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start; }
   .project-detail .project-pdf-list .pdf-link {
     margin-bottom: 20px; }
   .project-detail .project-pdf-list .pdf-link:last-child {

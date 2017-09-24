@@ -6,6 +6,7 @@ import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import TextContainer from '../../components/TextContainer/TextContainer';
 import RightArrow from '../../../public/assets/icons/right-arrow.svg';
 import LeftArrow from '../../../public/assets/icons/left-arrow.svg';
+import PDFIcon from '../../../public/assets/icons/pdf.svg';
 // import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
@@ -137,7 +138,10 @@ class ProjectDetail extends React.Component {
 							<section className="project-pdf-list">
 								{project.projectPDFs
 									?	project.projectPDFs.map((pdf, index) =>
-											<a className="pdf-link underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{PDF_names[pdf]}</a>
+										<div className="pdf-link">
+											<img alt="PDF Icon" className="icon" src={PDFIcon} />
+											<a className="underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{PDF_names[pdf]}</a>
+										</div>
 									)
 									: null
 								}

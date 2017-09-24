@@ -145,6 +145,11 @@ $project_tile_height: $project_tile_width;
 	.project-pdf-list {
 		margin-top: $gutter;
 		@include flexbox-center(column);
+		.icon {
+			width: $gutter*2;
+			height: $gutter*2;
+			margin-right: $gutter/2;
+		}
 		.pdf-viewer {
 			max-width: calc(100vw + #{$gutter}*2);
 			min-height: 300px;
@@ -351,6 +356,7 @@ $project_tile_height: $project_tile_width;
 			}
 		}
 		.project-pdf-list {
+			@include align-items(flex-start);
 			.pdf-link {
 				margin-bottom: $gutter;
 				&:last-child {
