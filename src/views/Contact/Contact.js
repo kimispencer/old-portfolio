@@ -8,7 +8,9 @@ import './Contact.css';
 
 export default  class Contact extends React.Component {
     componentDidMount() {
-        new ParticleTypography(document.getElementById('Canvas'));
+        if(isDesktop()) {
+            new ParticleTypography(document.getElementById('Canvas'));            
+        }
     }
     render() {
         return (
