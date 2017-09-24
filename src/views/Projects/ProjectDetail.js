@@ -33,7 +33,7 @@ const PDF_names = {
 	arrivals_wireframes: "Arrivals Responsive wireframes PDF",
 	thesis: "Language of Music presentation PDF",
 	bolster: "Bolsteruser flow wireframes PDF",
-	bolster_sitemap: "Bolster sitemape PDF"
+	bolster_sitemap: "Bolster sitemap PDF"
 }
 
 const PROJECTS = data;
