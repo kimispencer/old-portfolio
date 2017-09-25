@@ -40,7 +40,7 @@ class Home extends React.Component {
 						</g>
 						</svg>
 					</div>
-					<Link to="/projects">
+					<Link to="/projects" onClick={this.props._handleProjectPageLanding}>
 						<TextContainer>
 							<TextAnimation className="subtitle" text="Hi, I'm Kimi. I'm an engineer & designer." />
 								<TextAnimation id="ShowMeMore" className="link-text uppercase" text="show me more" />

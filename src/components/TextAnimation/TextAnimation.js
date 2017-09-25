@@ -6,6 +6,7 @@ const TextAnimation = (props) => {
 	let letters = copy.split('');
 	letters.map((letter, index) => {
 		letters[index] = `<span class="fade-in-letter">${letter}</span>`;
+		return letters[index];
 	});
 	let html = letters.join('');
 

@@ -4,7 +4,10 @@ import { isDesktop } from '../../components/Responsive/Responsive';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import DeviceFrame from '../../components/DeviceFrame/DeviceFrame';
 import TextContainer from '../../components/TextContainer/TextContainer';
-import Triangle from '../../../public/assets/icons/triangle.svg';
+import RightArrow from '../../../public/assets/icons/right-arrow.svg';
+import LeftArrow from '../../../public/assets/icons/left-arrow.svg';
+import PDFIcon from '../../../public/assets/icons/pdf.svg';
+// import Triangle from '../../../public/assets/icons/triangle.svg';
 import ReactPlayer from 'react-player'
 import data from './data';
 
@@ -22,6 +25,15 @@ const PDF_data = {
 	thesis: ThesisPDF,
 	bolster: BolsterPDF,
 	bolster_sitemap: BolsterSitemapPDF
+}
+/* clean this up to be apart of data.json */
+const PDF_names = {
+	highline_user_study: "Highline user study PDF",
+	uniqlo_pitch: "Uniqlo user studies PDF",
+	arrivals_wireframes: "Arrivals Responsive wireframes PDF",
+	thesis: "Language of Music presentation PDF",
+	bolster: "Bolster application wireframes PDF",
+	bolster_sitemap: "Bolster sitemap PDF"
 }
 
 const PROJECTS = data;
@@ -56,15 +68,19 @@ class ProjectDetail extends React.Component {
 	}
 	render() {
 		let projectIndex = null;
-		let match = this.props.routeProps.match.params.id;
+		const length = PROJECTS.length;
+		const match = this.props.routeProps.match.params.id;
 		let project = PROJECTS.filter(function (p, i) {
 			if(p.url === match) {
 				projectIndex = i;
 			    return p;
 			}
 		})[0];
-		let prevLink = PROJECTS[projectIndex-1] ? PROJECTS[projectIndex-1].url : null;
-		let nextLink = PROJECTS[projectIndex+1] ? PROJECTS[projectIndex+1].url : null;
+        const previous = (projectIndex + length - 1) % length;
+        const next = (projectIndex + 1) % length;
+
+		const prevLink = PROJECTS[previous] ? PROJECTS[previous].url : null;
+		const nextLink = PROJECTS[next] ? PROJECTS[next].url : null;
 
 		// const embeds = async Promise => {
 		// 	project.projectPDFs.map(async (pdf, index) => {
@@ -104,15 +120,33 @@ class ProjectDetail extends React.Component {
 						}
 						</section>
 
-						{/* !!! use Promises... figure out later */}
-						<section className="project-pdf-list">
-							{project.projectPDFs
-								?	project.projectPDFs.map((pdf, index) =>
-									<embed className="pdf-viewer" src={PDF_data[pdf]} width="100%" key={index} />
-								)
-								: null
-							}
-						</section>
+						{/* 
+							*!!! use Promises... figure out later 
+							* really should be is iOS (user agent string)
+						*/}
+						{isDesktop() &&
+							<section className="project-pdf-list">
+								{project.projectPDFs
+									?	project.projectPDFs.map((pdf, index) =>
+											<embed className="pdf-viewer" src={PDF_data[pdf]} width="100%" key={index} />
+									)
+									: null
+								}
+							</section>
+						}
+						{!isDesktop() &&
+							<section className="project-pdf-list">
+								{project.projectPDFs
+									?	project.projectPDFs.map((pdf, index) =>
+										<div className="pdf-link" key={index}>
+											<img alt="PDF Icon" className="icon" src={PDFIcon} />
+											<a className="underline" href={`http://kimispencer.com/${PDF_data[pdf]}`} target="_blank">{PDF_names[pdf]}</a>
+										</div>
+									)
+									: null
+								}
+							</section>
+						}
 
 						<section className="project-video-list">
 						{project.projectVids 
@@ -134,7 +168,7 @@ class ProjectDetail extends React.Component {
 
 						{(!isDesktop() && project.siteUrl) &&
 							<a href={project.siteUrl} target="_blank">
-								<div className="button"><p>visit website</p></div>
+								<div className="button secondary"><p>visit website</p></div>
 							</a>
 						}
 					</div>
@@ -155,7 +189,7 @@ class ProjectDetail extends React.Component {
 
 							{(isDesktop() && project.siteUrl) &&
 								<a href={project.siteUrl} target="_blank">
-									<div className="button"><p>visit website</p></div>
+									<div className="button secondary"><p>visit website</p></div>
 								</a>
 							}
 						</div>
@@ -166,19 +200,19 @@ class ProjectDetail extends React.Component {
 						<div className="prev">
 							{prevLink &&
 							<Link to={`${this.props.match.url}/${prevLink}`} onClick={this.props._handleProjectNavClick}>
-								<p className="uppercase">prev</p>
+								<p className="uppercase text-arrow-container"><img className="arrow-icon" alt="Prev Arrow" id="LeftArrow" src={LeftArrow} /> prev</p>
 							</Link>
 							}
 						</div>
 						<div className="next">
 							{nextLink &&
 							<Link to={`${this.props.match.url}/${nextLink}`} onClick={this.props._handleProjectNavClick}>
-								<p className="uppercase">next</p>
+								<p className="uppercase text-arrow-container">next <img className="arrow-icon" alt="Next Arrow" id="RightArrow" src={RightArrow} /></p>
 							</Link>
 							}
 						</div>
 					</div>
-					<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>
+					{/*<small className="back-to-top link-text uppercase" onClick={this._scrollTop}><img alt="BackToTop" id="Triangle" src={Triangle} />Back Top</small>*/}
 				</div>
 			</div>
 		);

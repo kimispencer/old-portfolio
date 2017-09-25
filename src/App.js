@@ -146,7 +146,10 @@ class App extends Component {
 						_toggleProjectNav={this._toggleProjectNav} 
 						_toggleProjectNavStyle_toBox={this._toggleProjectNavStyle_toBox} />
 					<div className="main-content">
-						<ScrollToTopRoute exact path="/" component={Home}/>
+						<ScrollToTopRoute exact path="/" component={(props, state, params) => 
+							<Home
+								_handleProjectPageLanding={this._handleProjectPageLanding}
+							{...props} />} />
 						<ScrollToTopRoute path="/projects" component={(props, state, params) => 
 							<Projects 
 								_toggleProjectNavStyle={this._toggleProjectNavStyle} 

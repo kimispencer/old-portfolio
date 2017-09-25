@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageLoader from '../../components/ImageLoader/ImageLoader';
+// import ImageLoader from '../../components/ImageLoader/ImageLoader';
 import ProfilePic from '../../../public/assets/resume/profile.jpg';
 import './Resume.css';
 

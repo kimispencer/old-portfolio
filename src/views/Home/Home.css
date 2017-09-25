@@ -225,7 +225,7 @@ form button[type='submit'], form .button {
   background-color: white;
   color: black; }
 
-.button.transparent, button[type='submit'].transparent {
+.button.secondary, button[type='submit'].secondary {
   background-color: transparent;
   color: black;
   cursor: pointer;
@@ -255,7 +255,7 @@ form button[type='submit'], form .button {
   text-decoration: none;
   text-transform: uppercase; }
 
-.button.transparent:hover, button[type='submit'].transparent:hover {
+.button.secondary:hover, button[type='submit'].secondary:hover {
   background-color: rgba(255, 255, 255, 0);
   color: black; }
 
@@ -479,7 +479,11 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   letter-spacing: 0.2em; }
 
 .home {
-  min-height: calc(100vh - 60px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -497,8 +501,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center;
-  position: relative; }
+  -ms-flex-pack: center; }
 
 .home .hero {
   height: 100%;

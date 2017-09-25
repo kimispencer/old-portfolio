@@ -8,7 +8,7 @@ import Github from '../../../public/assets/logos/github.svg';
 const Footer = (props) => {
 	return (
 		<div className="Footer">
-			<a href="mailto:kimispencer@gmail.com"><h4 className="monospace underline center" id="Hello">hello@kimispencer.com</h4></a>
+			<a href="mailto:hello@kimispencer.com"><h4 className="monospace underline center" id="Hello">hello@kimispencer.com</h4></a>
 
 			<div className="flex-col">
 				<ul id="SocialMediaList">

@@ -219,7 +219,7 @@ form {
   .button:hover, button[type='submit']:hover {
     background-color: white;
     color: black; }
-  .button.transparent, button[type='submit'].transparent {
+  .button.secondary, button[type='submit'].secondary {
     background-color: transparent;
     color: black;
     cursor: pointer;
@@ -248,7 +248,7 @@ form {
     border: 2px solid black;
     text-decoration: none;
     text-transform: uppercase; }
-    .button.transparent:hover, button[type='submit'].transparent:hover {
+    .button.secondary:hover, button[type='submit'].secondary:hover {
       background-color: rgba(255, 255, 255, 0);
       color: black; }
 

@@ -36,16 +36,27 @@ $project_tile_height: $project_tile_width;
 
 /* projects */
 .projects {
-	#PageTitle {
+}
+.projects-nav {
+	&.list-style {
+		z-index: 10;
 		padding-top: $gutter;
+		padding-bottom: $gutter;
+		position: fixed;
+		top: $fixed_nav_height;
+		left: 0;
+		width: 100%;
+		max-width: none;
+		background: $ghostwhite;
+		border-bottom: 1px solid $lightgrey;
 	}
 	#Menu {
 		@include clickable();
 		padding: 0;
 	}
-	ul.project-list {
-		@include flexbox();
-	}
+}
+.project-list {
+	@include flexbox();
 }
 .project-list-item {
 	cursor: pointer;
@@ -84,6 +95,9 @@ $project_tile_height: $project_tile_width;
 	@include flexbox-center(column);
 	@include justify-content(flex-start);
 	margin-bottom: $gutter;
+	#PageTitle {
+		padding-top: $gutter;
+	}
 	.project-image {
 		img {
 			width: 100%;
@@ -130,11 +144,21 @@ $project_tile_height: $project_tile_width;
 	}
 	.project-pdf-list {
 		margin-top: $gutter;
+		@include flexbox-center(column);
+		.icon {
+			width: $gutter*2;
+			height: $gutter*2;
+			margin-right: $gutter/2;
+		}
 		.pdf-viewer {
-			width: 100%;
-			height: 500px;
+			max-width: calc(100vw + #{$gutter}*2);
+			min-height: 300px;
+			margin-bottom: $gutter/2;
 			background-color: $lightgrey;
 			border-bottom: 2px solid $black;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 	.project-html-list {
@@ -153,10 +177,24 @@ $project_tile_height: $project_tile_width;
 		@include flexbox-center(row);
 		@include justify-content(space-between);
 		width: 100%;
-		margin-top: $gutter*2;
+		margin-top: $gutter*4;
+		/*margin-top: $gutter*2;*/
 		margin-bottom: $gutter*2;
 		.prev, .next {
 			cursor: pointer;
+			.text-arrow-container {
+				@include flexbox-center(row);
+			}
+			.arrow-icon {
+				width: 24px;
+				height: 24px;
+				&#RightArrow {
+					margin-left: $gutter/2;
+				}
+				&#LeftArrow {
+					margin-right: $gutter/2;
+				}
+			}
 		}
 	}
 	.back-to-top {
@@ -172,8 +210,7 @@ $project_tile_height: $project_tile_width;
 @media #{$desktop} {
 	.projects {
 		#Menu {
-			/*display: none;*/
-			padding-top: $gutter;
+			display: none;
 		}
 		ul.project-list {
 			@include flex-flow(row);
@@ -182,7 +219,6 @@ $project_tile_height: $project_tile_width;
 				@include justify-content(center);
 			    max-width: 900px;
 				margin: 0 auto;
-				padding-top: $gutter;
 				li {
 					margin: $gutter/4 0;
 				}
@@ -232,6 +268,7 @@ $project_tile_height: $project_tile_width;
 		}
 	}
 	.project-detail {
+		margin-top: 150px;
 		.text-container {
 			.text {
 				&#ProjectDescription {
@@ -255,6 +292,12 @@ $project_tile_height: $project_tile_width;
 				background-size: contain;
 			}
 		}
+		.project-pdf-list {
+			.pdf-viewer {
+				width: 100%;
+				height: 500px;
+			}
+		}
 	}
 }
 
@@ -272,7 +315,6 @@ $project_tile_height: $project_tile_width;
 	.projects {
 		#Menu {
 			@include clickable();
-			padding-top: $gutter;
 		}
 		ul.project-list {
 			@include flexbox-center(column);
@@ -300,6 +342,7 @@ $project_tile_height: $project_tile_width;
 		}
 	}
 	.project-detail {
+		margin-top: 120px;
 		.text-container {
 			@include flex-flow(column-reverse !important);
 		}
@@ -311,6 +354,17 @@ $project_tile_height: $project_tile_width;
 			.icon-row {
 				/*@include flex-flow(column);*/
 			}
+		}
+		.project-pdf-list {
+			@include align-items(flex-start);
+			.pdf-link {
+				margin-bottom: $gutter;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.prev-next-navigation {
 		}
 	}
 }
