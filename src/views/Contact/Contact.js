@@ -1,8 +1,5 @@
 import React from 'react';
 import { isDesktop } from '../../components/Responsive/Responsive';
-import { Link } from 'react-router-dom';
-import LinkedIn from '../../../public/assets/logos/linkedin.svg';
-import Github from '../../../public/assets/logos/github.svg';
 import ParticleTypography from '../../components/ParticleTypography/ParticleTypography';
 import './Contact.css';
 

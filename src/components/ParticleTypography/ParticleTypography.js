@@ -94,8 +94,8 @@ export default class ParticleTypography {
 		}
 
 		// Scale image down so there's some padding
-		imageHeight = imageHeight * 0.9;
-		imageWidth  = imageWidth * 0.9;
+		imageHeight *= 0.9;
+		imageWidth  *= 0.9;
 
 		let verticalCenter   = (this.ctx.canvas.height - imageHeight) / 2,
 		    horizontalCenter = (this.ctx.canvas.width - imageWidth) / 2;
@@ -138,7 +138,7 @@ export default class ParticleTypography {
 		            continue;
 		        }
 
-				if((x && x % this.particleSize == 0) && (y && y % this.particleSize == 0)){
+				if((x && x % this.particleSize === 0) && (y && y % this.particleSize === 0)){
 					this.imagePixels.push({ 
 						x: x, 
 						y: y, 
