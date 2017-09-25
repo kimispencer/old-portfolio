@@ -492,7 +492,7 @@ html {
 
 .App .main-content {
   position: relative;
-  min-height: calc(100vh - 100px - 60px);
+  min-height: calc(100vh - 60px);
   margin-top: 60px; }
 
 .App .main-content .padded-top {
