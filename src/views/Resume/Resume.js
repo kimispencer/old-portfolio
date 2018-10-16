@@ -3,7 +3,7 @@ import React from 'react';
 import ProfilePic from '../../../public/assets/resume/profile.jpg';
 import './Resume.css';
 
-const Resume = () => (	
+const Resume = () => (
 	<div className="resume padded-top">
 
 		<div className="resume-container padded-width">
@@ -25,8 +25,8 @@ const Resume = () => (
 				<div className="right-col">
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
-							<p>Hi, I’m Kimi!<br/><br/>I’m a front-end engineer, and user experience + interaction designer based in NYC. 
-							I have over 9 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum eduction, to high-end fashion. 
+							<p>Hi, I’m Kimi!<br/><br/>I’m a front-end engineer, and user experience + interaction designer.
+							I have over 8 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum eduction, to high-end fashion.
 							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music.</p>
 						</div>
 					</div>
@@ -40,11 +40,27 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<div className="flex-col institution">
+								<h4 className="bold uppercase">lumi</h4>
+							</div>
+							<p className="job-title monospace attribute">Front-end Engineer — 2017 to present</p>
+						</div>
+						<p>Lumi makes custom manufacturing as scalable as the web.</p>
+						<br />
+						<p>Front-end engineer responsible for creating a reusable UI component library and implementation on the customer facing <a href="https://www.lumi.com/" target="_blank">Lumi.com</a> site, as well as Lumi’s internal team dashboard for managing custom packaging designs, manufacturing and distribution.</p>
+						<br />
+						<ul>
+							<li><p>&bull; Created a UI component library to standardize style guidelines across platforms and improve code efficiency and reusability.</p></li>
+							<li><p>&bull; Conversion of a legacy React/ES6/Immutable front-end into Purescript; a strongly typed functional programming language that compiles to Javascript.</p></li>
+						</ul>
+					</div>
+					<div className="resume-section-item">
+						<div className="flex-row responsive title">
+							<div className="flex-col institution">
 								<h4 className="bold uppercase">the arrivals</h4>
 								<h4 className="bold uppercase">onomie</h4>
 								<h4 className="bold uppercase">brainchild.co</h4>
 							</div>
-							<p className="job-title monospace attribute">Lead Front-end Engineer & UX Designer — 2014 to present</p>
+							<p className="job-title monospace attribute">Lead Front-end Engineer & UX Designer — 2014 to 2017</p>
 						</div>
 						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
