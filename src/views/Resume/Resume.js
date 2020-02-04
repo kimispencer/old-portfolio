@@ -42,7 +42,7 @@ const Resume = () => (
 							<div className="flex-col institution">
 								<h4 className="bold uppercase">lumi</h4>
 							</div>
-							<p className="job-title monospace attribute">Front-end Engineer — 2017 to present</p>
+							<p className="job-title monospace attribute">Senior Software Engineer — 2017 to present</p>
 						</div>
 						<p>Lumi makes custom manufacturing as scalable as the web.</p>
 						<br />
@@ -137,7 +137,7 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">uc berkeley</h4>
 							<p className="monospace">B.A. - Political Science, Minor - Middle Eastern Studies</p>
 						</div>
-						<p>Politial Science major with a focus on the use of emergent, mobile technologies in the advancement of democractic movements. Conducted reserarch on the use of cellular devices in the Arab world as a conduit for democractic expression, and dissent against theocractic or autocratic governments.</p>
+						<p>Politial Science major with a focus on the use of emergent, mobile technologies in the advancement of democractic movements.</p>
 					</div>
 				</div>
 			</div>
