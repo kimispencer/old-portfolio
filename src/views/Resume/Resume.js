@@ -151,27 +151,27 @@ const Resume = () => (
 							<h4 className="title bold uppercase">professional skillset</h4>
 							<div className="flex-row">
 								<ul>
+									<li>Purescript & Haskell</li>
+									<li>Javascript/ES6/ES7</li>
 									<li>HTML5</li>
 									<li>CSS3/SASS/LESS</li>
-									<li>Javascript/ES6</li>
-									<li>Webpack</li>
+									<li>NPM & Webpack</li>
 									<li>Git</li>
-									<li>UX Design</li>
 								</ul>
 								<ul>
-									<li>Javascript frameworks (ReactJS, AngularJS)</li>
+									<li>ReactJS</li>
 									<li>Python</li>
 									<li>PHP</li>
-									<li>Processing/Java</li>
-									<li>Wordpress, Squarespace</li>
+									<li>Wordpress & Squarespace</li>
 									<li>Data Visualization</li>
+									<li>UX Design</li>
 								</ul>
 							</div>
 						</div>
 						<div className="flex-col resume-section-item third-span" id="Tools">
 							<h4 className="title bold uppercase">tools</h4>
 							<ul>
-								<li>Sublime</li>
+								<li>Atom & Sublime</li>
 								<li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, Premiere)</li>
 								<li>Sketch</li>
 								<li>VDMX</li>
