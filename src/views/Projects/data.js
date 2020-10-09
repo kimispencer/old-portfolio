@@ -1,5 +1,28 @@
 export default  [
 	{
+		url: 'lumi', 
+		name: "Lumi", 
+		tileImg: 'bg-00.png',
+		heroImg: 'bg-01.png',
+		imgKey: 'projects/lumi',
+		screenShots: [
+			'desktop-00.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png', 'desktop-04.png'
+		],
+		siteUrl: 'http://lumi.com',
+		projectType: 'UI component libarary + multiple user facing Dashboard Apps',
+		projectRole: [
+			'Front-end engineer',
+			'Responsive web design',
+		],
+		technologyUsed: 'PureScript, React, Haskell, Git',
+		intro: 
+			`
+			<p>Lumi helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
+			</br>
+			<p>The front-end of Lumi is built on a React framework with PureScript (a strongly-typed functional programming language). Our backend is built with Haskell and Postgres. We also build internal tools such as our <a href="https://lumihq.github.io/purescript-lumi-components" target="_blank">UI component</a> library to maintain cohesiveness across our user interfaces and visual design, and open sourced to the public.</p>
+			`
+	},
+	{
 		url: 'arrivals',
 		name: "The Arrivals NYC", 
 		tileImg: 'bg-00.jpg',
@@ -34,26 +57,6 @@ export default  [
 			<p>As the lead front-end engineer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 			<br/>
 			<p>Orginally built on top of a LAMP stack using jQuery/PHP for the front-end, I recently led the front-end conversion into reusuable React components and transforming the site into a responsive, single page application.</p>
-			`
-	},
-	{
-		url: 'kimispencer', 
-		name: "Portfolio", 
-		tileImg: 'bg-00.jpg',
-		heroImg: 'bg-01.jpg',
-		imgKey: 'projects/portfolio',
-		projectType: 'ReactJS portfolio site',
-		projectRole: [
-			'Full-stack developer',
-			'Visual & UX designer',
-			'Responsive web design',
-		],
-		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, SASS/CSS3, Sketch, Git',
-		intro: 
-			`
-			<p>Custom designed and developed portfolio site. Built with ReactJS.</p>
-			<br/>
-			<p>To demonstrate my experience and work as a responsive designer and engineer I designed a responsive portfolio site that would showcase my skills from CSS3 animations to creating custom React UI components. Such as the DeviceFrame component which allows users to scroll & explore responsive demos of previous sites I have built.</p>
 			`
 	},
 	{ 
