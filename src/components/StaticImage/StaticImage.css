@@ -478,24 +478,15 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
 .link-text {
   letter-spacing: 0.2em; }
 
-.Shroud {
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: opacity 350ms ease; }
+.static-image-container {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  width: 100%; }
 
-.Shroud.show {
-  opacity: 1; }
-
-.Shroud.hide {
-  opacity: 0;
-  z-index: -999999; }
-
-@media only screen and (min-width: 1025px) {
-  .Shroud {
-    display: none !important;
-    z-index: 1; } }
+.static-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover; }

@@ -13,13 +13,18 @@ export default  [
 		projectRole: [
 			'Front-end engineer',
 			'Responsive web design',
+			'UI component library',
+			'Open source libraries & frameworks',
+			'Strongly typed functional programming languages'
 		],
 		technologyUsed: 'PureScript, React, Haskell, Git',
 		intro: 
 			`
 			<p>Lumi helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
 			</br>
-			<p>The front-end of Lumi is built on a React framework with PureScript (a strongly-typed functional programming language). Our backend is built with Haskell and Postgres. We also build internal tools such as our <a href="https://lumihq.github.io/purescript-lumi-components" target="_blank">UI component</a> library to maintain cohesiveness across our user interfaces and visual design, and open sourced to the public.</p>
+			<p>Contributed to the migration of Lumi's web applications into Purescript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic">open source library</a> binding Purescript to React. Our backend is built with Haskell and Postgres.</p>
+			</br>
+			<p>Developed and designed a <a href="https://lumihq.github.io/purescript-lumi-components" target="_blank">UI component</a> library to maintain cohesiveness across our various app user interfaces and visual design, also open sourced to the public.</p>
 			`
 	},
 	{

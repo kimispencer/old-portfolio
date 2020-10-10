@@ -6,6 +6,8 @@
 // const Desktop = ({ children }) => <Responsive minWidth={10245} children={children} values={process.env.ssr ? {width: 1280} : {}}/>;
 
 const isDesktop = () => window.innerWidth >= 1024;
+const isTablet = () => window.innerWidth >= 641 || window.innerWidth <= 1024;
+const isPhone = () => window.innderWidth <= 640;
 
-export { isDesktop };
+export { isDesktop, isTablet, isPhone };
 // export { Desktop, Mobile, Tablet, isDesktop };

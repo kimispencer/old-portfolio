@@ -1,0 +1,16 @@
+@import '../../styles/_all';
+
+.static-image-container {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    width: 100%;
+}
+
+.static-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}

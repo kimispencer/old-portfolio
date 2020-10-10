@@ -42,7 +42,7 @@ const Resume = () => (
 							<div className="flex-col institution">
 								<h4 className="bold uppercase">lumi</h4>
 							</div>
-							<p className="job-title monospace attribute">Senior Software Engineer — 2017 to present</p>
+							<p className="job-title monospace attribute">Software Engineer — 2017 to present</p>
 						</div>
 						<p>Lumi makes custom manufacturing as scalable as the web.</p>
 						<br />
@@ -60,7 +60,7 @@ const Resume = () => (
 								<h4 className="bold uppercase">onomie</h4>
 								<h4 className="bold uppercase">brainchild.co</h4>
 							</div>
-							<p className="job-title monospace attribute">Lead Front-end Engineer & UX Designer — 2014 to 2017</p>
+							<p className="job-title monospace attribute">Front-end Engineer & UX Designer — 2014 to 2017</p>
 						</div>
 						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
@@ -77,7 +77,7 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title monospace">Lead Full-stack Engineer & UX Designer - 2016 to 2017</p>
+							<p className="job-title monospace">Full-stack Engineer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br />

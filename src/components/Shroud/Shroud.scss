@@ -8,19 +8,21 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	transition: all $transition_speed ease;
+	transition: opacity $transition_speed ease;
 	&.show {
 		opacity: 1;
-		display: block;
+		// display: block;
 	}
 	&.hide {
 		opacity: 0;
-		display: none;
+		// display: none;
+		z-index: -999999;
 	}
 }
 
 @media #{$desktop} {
 	.Shroud {
 		display: none !important;
+		z-index: 1;
 	}
 }

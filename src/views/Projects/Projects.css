@@ -226,7 +226,7 @@ form button[type='submit'], form .button {
   color: black; }
 
 .button.secondary, button[type='submit'].secondary {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: black;
   cursor: pointer;
   text-decoration: underline;
@@ -485,6 +485,10 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   height: 100%;
   overflow: hidden; }
 
+.hover-image-container .text-bg {
+  background: white;
+  opacity: 0.7; }
+
 .hover-image-container .bg-img {
   -webkit-transition: opacity 400ms ease-in-out, transform 500ms ease-in-out;
   -moz-transition: opacity 400ms ease-in-out, transform 500ms ease-in-out;
@@ -575,9 +579,8 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   width: 25vw;
   height: 25vw; }
 
-.project-list-item.box-style .text {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.8); }
+.project-list-item.box-style .bg-img {
+  text-align: center; }
 
 .project-detail {
   display: -webkit-box;
@@ -887,24 +890,14 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     cursor: pointer;
     text-decoration: underline; }
   .projects ul.project-list {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column;
-    -moz-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center; }
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .projects ul.project-list.list-style {
     margin-bottom: 20px; }
   .project-list-item.list-style {
@@ -914,7 +907,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     margin-top: 10px; }
   .project-list-item.box-style {
     margin-bottom: 20px;
-    width: 100vw;
+    width: 50vw;
     height: 50vh; }
   .project-list-item.box-style .text {
     margin-top: 20px;
@@ -940,3 +933,10 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     margin-bottom: 20px; }
   .project-detail .project-pdf-list .pdf-link:last-child {
     margin-bottom: 0; } }
+
+@media only screen and (max-width: 640px) {
+  .project-list-item.box-style {
+    width: 100vw; }
+  .project-list-item.box-style .text {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0 20px; } }

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import { isDesktop } from '../../components/Responsive/Responsive';
+import { isDesktop, isTablet } from '../../components/Responsive/Responsive';
 import ProjectDetail from './ProjectDetail';
 import ImageLoader from '../../components/ImageLoader/ImageLoader';
+import StaticImage from '../../components/StaticImage/StaticImage';
 import data from './data';
 import './Projects.css';
 
@@ -14,17 +15,11 @@ const ProjectListItem = (props) => {
 
 	return (
 		<div className={classes} onClick={props.handleClick} >
-			{props._projectNavStyle_isList &&
-			<div className="text monospace">
-				<h4 className="project-name">{props.project.name}</h4>
-				<p className="project-type">{props.project.projectType}</p>
-			</div>
-			}
-			{!props._projectNavStyle_isList &&
+			{(!props._projectNavStyle_isList && isDesktop() || isTablet()) &&
 			<div className="hover-image-container"> {/* !!! turn this into a component later */}
 				<ImageLoader className="top-image" src={props.project.tileImg} imgKey={props.project.imgKey} />
 				<ImageLoader className="bottom-image" src={props.project.heroImg} imgKey={props.project.imgKey} >
-					<div className="text monospace">
+					<div className="text monospace text-bg">
 						<h4 className="project-name">{props.project.name}</h4>
 						<p className="project-type">{props.project.projectType}</p>
 					</div>
@@ -32,10 +27,18 @@ const ProjectListItem = (props) => {
 			</div>
 			}
 			{(!props._projectNavStyle_isList && !isDesktop()) && 
-				<div className="text monospace">
-					<h4 className="project-name">{props.project.name}</h4>
-					<p className="project-type">{props.project.projectType}</p>
+				<div className="static-image-container">
+					<StaticImage src={props.project.tileImg} imgKey={props.project.imgKey} />
+					<div className="text monospace">
+						<h4 className="project-name">{props.project.name}</h4>
+						<p className="project-type">{props.project.projectType}</p>
+					</div>
 				</div>
+			}
+			{(props._projectNavStyle_isList && isDesktop()) &&
+					<div className="text monospace">
+						<p className="project-name">{props.project.name}</p>
+					</div>
 			}
 		</div>
 	);

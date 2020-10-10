@@ -220,7 +220,7 @@ form {
     background-color: white;
     color: black; }
   .button.secondary, button[type='submit'].secondary {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     color: black;
     cursor: pointer;
     text-decoration: underline;
