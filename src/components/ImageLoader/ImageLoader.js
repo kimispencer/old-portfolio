@@ -30,8 +30,7 @@ class ImageLoader extends React.Component {
 
 		if(this.props.isBg === false) {
 			return (
-				<div className={`${this.state.loaded ? 'loaded' : null} image-loader`}>
-					{ this.props.children }
+				<div className={`${this.state.loaded ? 'loaded' : 'not-loaded'} image-loader`}>
 					<img
 						style={ {display: `${this.state.loaded ? 'block' : 'none'}` } }
 						src={img}
@@ -41,26 +40,32 @@ class ImageLoader extends React.Component {
 						role="presentation"
 						alt={this.props.alt}
 					/>
-					{ this.state.loaded ?
+					{ !this.state.loaded ?
 						<div className="spinner-container">
 							<div className="spinner"></div>
 						</div>
-						: null
+						: this.props.children
 					}
-					{/*this.state.imageStatus*/}
+					{/* { this.state.imageStatus } */}
 				</div>
 			);
 		} else {
 			return (
-				<div className={`${this.props.className ? this.props.className : ''} ${this.state.loaded ? 'loaded' : null} image-loader bg-img`} style={ {backgroundImage: 'url(' + img + ')'} }>
-					{ this.props.children }
-					{ this.state.loaded ?
+				<div className={`${this.props.className ? this.props.className : ''} ${this.state.loaded ? 'loaded' : 'not-loaded'} image-loader bg-img`} style={ {backgroundImage: 'url(' + img + ')'} }>
+					<img
+						style={ {display: 'none'} }
+						src={img}
+						onLoad={this.handleImageLoaded.bind(this)}
+						onError={this.handleImageErrored.bind(this)}
+						alt={this.props.alt}
+					/>
+					{ !this.state.loaded ?
 						<div className="spinner-container">
 							<div className="spinner"></div>
 						</div>
-						: null
+						: this.props.children 
 					}
-					{/*this.state.imageStatus*/}
+					{/* { this.state.imageStatus } */}
 				</div>
 			);
 		}

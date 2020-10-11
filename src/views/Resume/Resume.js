@@ -77,11 +77,11 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title monospace">Full-stack Engineer & UX Designer - 2016 to 2017</p>
+							<p className="job-title monospace">Lead Engineer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br />
-						<p>Full-stack engineer and UX designer for SUITEDs Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
+						<p>Lead engineer and UX designer for SUITEDs Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">

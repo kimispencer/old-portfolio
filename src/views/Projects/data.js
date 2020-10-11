@@ -22,7 +22,7 @@ export default  [
 			`
 			<p>Lumi helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
 			</br>
-			<p>Contributed to the migration of Lumi's web applications into Purescript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic">open source library</a> binding Purescript to React. Our backend is built with Haskell and Postgres.</p>
+			<p>Contributed to the migration of Lumi's web applications into Purescript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic" target="_blank">open source library</a> binding Purescript to React. Our backend is built with Haskell and Postgres.</p>
 			</br>
 			<p>Developed and designed a <a href="https://lumihq.github.io/purescript-lumi-components" target="_blank">UI component</a> library to maintain cohesiveness across our various app user interfaces and visual design, also open sourced to the public.</p>
 			`
