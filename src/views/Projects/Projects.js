@@ -35,7 +35,7 @@ const ProjectListItem = (props) => {
 					</div>
 				</div>
 			}
-			{(props._projectNavStyle_isList && isDesktop()) &&
+			{(props._projectNavStyle_isList) &&
 					<div className="text monospace">
 						<p className="project-name">{props.project.name}</p>
 					</div>

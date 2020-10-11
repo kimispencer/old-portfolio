@@ -855,7 +855,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     .projects ul.project-list.list-style {
       margin-bottom: 20px; }
   .project-list-item.list-style {
-    width: 75vw;
+    width: 100vw;
     text-align: center; }
     .project-list-item.list-style .text {
       margin-top: 10px; }

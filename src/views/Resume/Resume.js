@@ -20,12 +20,12 @@ const Resume = () => (
 			</div>
 			<div className="resume-section" id="Profile">
 				<div className="left-col">
-					<h4 className="bold title underline">PROFILE</h4>
+					<h4 className="bold title">PROFILE</h4>
 				</div>
 				<div className="right-col">
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
-							<p>Hi, I’m Kimi!<br/><br/>I’m a front-end engineer, and user experience + interaction designer.
+							<p>Hi, I’m Kimi!<br/><br/>I’m a software engineer, and user experience + interaction designer.
 							I have over 8 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum eduction, to high-end fashion.
 							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music.</p>
 						</div>
@@ -34,7 +34,7 @@ const Resume = () => (
 			</div>
 			<div className="resume-section" id="WorkExperience">
 				<div className="left-col">
-					<h4 className="bold title underline">WORK EXPERIENCE</h4>
+					<h4 className="bold title">WORK EXPERIENCE</h4>
 				</div>
 				<div className="right-col">
 					<div className="resume-section-item">
@@ -122,7 +122,7 @@ const Resume = () => (
 			</div>
 			<div className="resume-section" id="Education">
 				<div className="left-col">
-					<h4 className="bold title underline">EDUCATION</h4>
+					<h4 className="bold title">EDUCATION</h4>
 				</div>
 				<div className="right-col">
 					<div className="resume-section-item">
@@ -143,7 +143,7 @@ const Resume = () => (
 			</div>
 			<div className="resume-section" id="Skills">
 				<div className="left-col">
-					<h4 className="bold title underline">TECHNICAL EXPERTISE</h4>
+					<h4 className="bold title">TECHNICAL EXPERTISE</h4>
 				</div>
 				<div className="right-col">
 					<div className="flex-row responsive">

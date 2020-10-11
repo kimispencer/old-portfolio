@@ -1,4 +1,4 @@
-@import '../../styles/_all';
+	@import '../../styles/_all';
 
 $project_tile_width: 25vw;
 $project_tile_height: $project_tile_width;
@@ -332,7 +332,7 @@ $project_tile_height: $project_tile_width;
 	}
 	.project-list-item {
 		&.list-style {
-			width: 75vw;
+			width: 100vw;
 			text-align: center;
 			.text {
 				margin-top: $gutter/2;
