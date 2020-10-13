@@ -46,7 +46,7 @@ const Resume = () => (
 						</div>
 						<p>Lumi makes custom manufacturing as scalable as the web.</p>
 						<br />
-						<p>Front-end engineer responsible for creating a reusable UI component library and implementation on the customer facing <a href="https://www.lumi.com/" target="_blank">Lumi.com</a> site, as well as Lumi’s internal team dashboard for managing custom packaging designs, manufacturing and distribution.</p>
+						<p>Software engineer responsible for creating a reusable UI component library and implementation on the customer facing <a href="https://www.lumi.com/" target="_blank">Lumi.com</a> site, as well as Lumi’s internal team dashboard for managing custom packaging designs, manufacturing and distribution.</p>
 						<br />
 						<ul>
 							<li><p>&bull; Created a UI component library to standardize style guidelines across platforms and improve code efficiency and reusability.</p></li>

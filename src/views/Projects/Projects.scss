@@ -309,6 +309,7 @@ $project_tile_height: $project_tile_width;
 
 @media #{$tablet} {
 	.hover-image-container {
+		height: auto;
 		.bg-img {
 			&.top-image {
 				opacity: 1 !important;

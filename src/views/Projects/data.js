@@ -11,9 +11,8 @@ export default  [
 		siteUrl: 'http://lumi.com',
 		projectType: 'UI component libarary + multiple user facing Dashboard Apps',
 		projectRole: [
-			'Front-end engineer',
-			'Responsive web design',
-			'UI component library',
+			'Software engineer',
+			'UI component library developer & designer',
 			'Open source libraries & frameworks',
 			'Strongly typed functional programming languages'
 		],
