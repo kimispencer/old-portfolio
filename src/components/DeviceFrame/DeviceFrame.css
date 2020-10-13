@@ -471,12 +471,6 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   .device-frame .macbook {
     margin-bottom: 60px; }
 
-.device-frame.can-bounce.in-viewport .macbook .screenshot {
-  animation: bounce-y 4.5s ease-in-out; }
-
-.device-frame.can-bounce.in-viewport .iphone .screenshot {
-  animation: bounce-y 7s ease-in-out; }
-
 /* simulate a iPhone device frame 
 	* https://codepen.io/havardob/pen/KzoOMB
 */

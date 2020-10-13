@@ -16,7 +16,7 @@ export default  [
 			'Open source libraries & frameworks',
 			'Strongly typed functional programming languages'
 		],
-		technologyUsed: 'PureScript, React, Haskell, Git',
+		technologyUsed: 'PureScript, React, Emotion/Styled Components, Haskell, Git, Figma/Sketch',
 		intro: 
 			`
 			<p>Lumi helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
