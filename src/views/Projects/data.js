@@ -70,7 +70,7 @@ export default  [
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/suited',
 		screenShots: [
-			'phone-01.jpg', 'desktop-03.jpg', 'phone-00.jpg', 'desktop-00.jpg'
+			'desktop-03.jpg', 'phone-00.jpg', 'desktop-00.jpg'
 		],
 		projectImgs: [
 			'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'

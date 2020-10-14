@@ -31,6 +31,12 @@ class ImageLoader extends React.Component {
 		if(this.props.isBg === false) {
 			return (
 				<div className={`${this.state.loaded ? 'loaded' : 'not-loaded'} image-loader`}>
+					{ !this.state.loaded ?
+						<div className="spinner-container">
+							<div className="spinner"></div>
+						</div>
+						: this.props.children
+					}
 					<img
 						style={ {display: `${this.state.loaded ? 'block' : 'none'}` } }
 						src={img}
@@ -40,12 +46,6 @@ class ImageLoader extends React.Component {
 						role="presentation"
 						alt={this.props.alt}
 					/>
-					{ !this.state.loaded ?
-						<div className="spinner-container">
-							<div className="spinner"></div>
-						</div>
-						: this.props.children
-					}
 					{/* { this.state.imageStatus } */}
 				</div>
 			);
