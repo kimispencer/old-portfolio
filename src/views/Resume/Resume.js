@@ -60,11 +60,11 @@ const Resume = () => (
 								<h4 className="bold uppercase">onomie</h4>
 								<h4 className="bold uppercase">brainchild.co</h4>
 							</div>
-							<p className="job-title monospace attribute">Front-end Engineer & UX Designer — 2014 to 2017</p>
+							<p className="job-title monospace attribute">Front-end Developer & UX Designer — 2014 to 2017</p>
 						</div>
 						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br />
-						<p>Lead front-end engineer and interaction designer for the <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch. Individually responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+						<p>Front-end developer and interaction designer for the <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch. Responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
 						<ul>
 							<li><p>&bull; Co-led conversion of <a href="http://thearrivals.com" target="_blank">thearrivals.com</a> into a ReactJS application.</p></li>
@@ -77,11 +77,11 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title monospace">Lead Engineer & UX Designer - 2016 to 2017</p>
+							<p className="job-title monospace">Web Developer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br />
-						<p>Lead engineer and UX designer for SUITEDs Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
+						<p>Web developer and UX designer for SUITEDs Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">

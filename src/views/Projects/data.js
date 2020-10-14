@@ -2,7 +2,7 @@ export default  [
 	{
 		url: 'lumi', 
 		name: "Lumi", 
-		tileImg: 'bg-00.png',
+		tileImg: 'packaging-00.jpg',
 		heroImg: 'bg-01.png',
 		imgKey: 'projects/lumi',
 		screenShots: [
