@@ -8,6 +8,9 @@ export default  [
 		screenShots: [
 			'desktop-00.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png', 'desktop-04.png'
 		],
+		projectImgs: [
+			'packaging-00.jpg', 'packaging-01.png', 'packaging-02.jpg', 'packaging-03.jpg', 'packaging-04.jpg', 'packaging-05.jpg', 'packaging-06.png', 'packaging-07.png'
+		],
 		siteUrl: 'http://lumi.com',
 		projectType: 'UI component libarary + multiple user facing Dashboard Apps',
 		projectRole: [
