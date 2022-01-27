@@ -1,7 +1,50 @@
 export default  [
+	{ url: "architecture"
+	, name: "Architecture"
+	, tileImg: "exterior-folly-01.jpg"
+	, heroImg: "exploded-axon.jpg"
+	, imgKey: "projects/architecture"
+	, screenShots: []
+	, projectImgs:
+			[ "exterior-folly-00.jpg"
+			, "exterior-folly-01.jpg"
+			, "exploded-axon.jpg"
+			, "roof-plan.jpg"
+			, "floor-plan.jpg"
+			, "elevation.jpg"
+			, "section-00.jpg"
+			, "site-plan.jpg"
+			]
+	, siteUrl: ""
+	, projectType: "Architecture + Spatial design"
+	, projectRole: []
+	, technologyUsed: "Rhino, Illustrator, Photoshop"
+	, intro: "lorem ipsum"
+	},
+	// {
+	// 	url: 'lumi',
+	// 	name: "Lumi",
+	// 	tileImg: 'exploded-axon.jpg',
+	// 	heroImg: 'exploded-axon.jpg',
+	// 	imgKey: 'projects/architecture',
+	// 	screenShots: [
+	// 	],
+	// 	projectImgs: [
+	// 	],
+	// 	projectImgs: [
+	// 	],
+	// 	siteUrl: '',
+	// 	projectType: 'lorem ipsum',
+	// 	projectRole: [
+	// 	],
+	// 	technologyUsed: '',
+	// 	intro:
+	// 		`
+	// 		`
+	// },
 	{
-		url: 'lumi', 
-		name: "Lumi", 
+		url: 'lumi',
+		name: "Lumi",
 		tileImg: 'packaging-00.jpg',
 		heroImg: 'bg-01.png',
 		imgKey: 'projects/lumi',
@@ -20,7 +63,7 @@ export default  [
 			'Strongly typed functional programming languages'
 		],
 		technologyUsed: 'PureScript, React, Emotion/Styled Components, Haskell, Git, Figma/Sketch',
-		intro: 
+		intro:
 			`
 			<p>Lumi helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
 			</br>
@@ -31,7 +74,7 @@ export default  [
 	},
 	{
 		url: 'arrivals',
-		name: "The Arrivals NYC", 
+		name: "The Arrivals NYC",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/arrivals',
@@ -55,20 +98,20 @@ export default  [
 			'Bi-Weekly interactive site campaigns'
 		],
 		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
-		intro: 
+		intro:
 			`
 			<p>The Arrivals is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
 			<br/>
 			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a> from launch to today.</p>
 			<br/>
-			<p>As the lead front-end engineer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+			<p>As the lead front-end developer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 			<br/>
 			<p>Orginally built on top of a LAMP stack using jQuery/PHP for the front-end, I recently led the front-end conversion into reusuable React components and transforming the site into a responsive, single page application.</p>
 			`
 	},
-	{ 
-		url: 'suited', 
-		name: "Suited Magazine", 
+	{
+		url: 'suited',
+		name: "Suited Magazine",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/suited',
@@ -88,7 +131,7 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
-		intro: 
+		intro:
 		`
 		<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 		<br/>
@@ -96,7 +139,7 @@ export default  [
 		`
 	},
 	{
-		url: 'onomie', 
+		url: 'onomie',
 		name: "Onomie",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.jpg',
@@ -117,17 +160,17 @@ export default  [
 			'Monthly interactive site campaigns'
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
-		intro: 
+		intro:
 			`
 			<p>Onomie is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
 			<br/>
-			<p>I was brought on to lead the front-end web devleopment and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
+			<p>I was brought on to lead the front-end web development and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
 			`
 
 	},
 	{
-		url: 'brainchild', 
-		name: "Brainchild.Co",  
+		url: 'brainchild',
+		name: "Brainchild.Co",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/brainchild',
@@ -155,7 +198,7 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, Django, Python, Photoshop, Sketch, Git',
-		intro: 
+		intro:
 			`
 			<p><a href="http://brainchild.co/" target="_blank">Brainchild.co</a> is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 			<br/>
@@ -164,8 +207,8 @@ export default  [
 
 	},
 	{
-		url: 'bolster', 
-		name: "Bolster",  
+		url: 'bolster',
+		name: "Bolster",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/bolster',
@@ -182,7 +225,7 @@ export default  [
 			'Visual & UX designer',
 		],
 		technologyUsed: 'AngularJS, HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, Git',
-		intro: 
+		intro:
 		`
 		<p><a href="http://bolster.us/" target="_blank">Bolster.us</a> is a web application for home owners & contractors to connect and manage home remodeling projects.</p>
 		<br/>
@@ -192,8 +235,8 @@ export default  [
 	},
 	/*
 	{
-		url: 'creep', 
-		name: "CREEP",  
+		url: 'creep',
+		name: "CREEP",
 		hoverImg: "https://unsplash.it/1200/540",
 		tileImg: 'bg-00.jpg',
 		imgKey: 'projects/creep',
@@ -212,7 +255,7 @@ export default  [
 			'CMS backend integration',
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, mongoDB, Git',
-		intro: 
+		intro:
 			`
 			<p>CREEP is a Brooklyn based Electronic music duo consisting of Lauren Flax and Lauren Dillard.</p>
 			<br/>
@@ -222,8 +265,8 @@ export default  [
 	},
 	*/
 	{
-		url: 'plusign', 
-		name: "Plusign",  
+		url: 'plusign',
+		name: "Plusign",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.png',
 		imgKey: 'projects/plusign',
@@ -239,7 +282,7 @@ export default  [
 			'Visual/Typography designer',
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Photoshop, Illustrator, Java/Processing',
-		intro: 
+		intro:
 			`
 			<p><a href="http://plusign.com/" target="_blank">+plusign</a> is an award-winning creative studio that does branding, digital, and design.</p>
 			<br/>
@@ -248,8 +291,8 @@ export default  [
 
 	},
 	{
-		url: 'tomtom', 
-		name: "Tom Tom Magazine",  
+		url: 'tomtom',
+		name: "Tom Tom Magazine",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/tomtom',
@@ -268,7 +311,7 @@ export default  [
 			'CMS backend',
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Ajax, PHP, Photoshop, Shopify',
-		intro: 
+		intro:
 			`
 			<p><a href="http://tomtommag.com/" target="_blank">Tom Tom Magazine</a> is a quarterly print magazine and website based out of New York City. It is the only magazine in the world that is dedicated to female drummers.</p>
 			<br/>
@@ -276,8 +319,8 @@ export default  [
 			`
 	},
 	{
-		url: 'rga', 
-		name: "R/GA",  
+		url: 'rga',
+		name: "R/GA",
 		tileImg: 'bg-00.png',
 		heroImg: 'bg-00.png',
 		imgKey: 'projects/rga',
@@ -296,7 +339,7 @@ export default  [
 			'Visual Storyteller',
 		],
 		technologyUsed: 'Java/Processing, Keynote, Photoshop, Illustrator, InDesign, AfterEffects, Premiere',
-		intro: 
+		intro:
 			`
 			<p><a href="https://www.rga.com/" target="_blank">R/GA</a> is an American international advertising agency headquartered in New York</p>
 			<br/>
@@ -309,8 +352,8 @@ export default  [
 
 	},
 	{
-		url: 'live-visuals', 
-		name: "Live Visuals",  
+		url: 'live-visuals',
+		name: "Live Visuals",
 		tileImg: 'bg-00.png',
 		heroImg: 'bg-01.png',
 		imgKey: 'projects/live-visuals',
@@ -337,7 +380,7 @@ export default  [
 			'VJ'
 		],
 		technologyUsed: 'VDMX, Java/Processing, After Effects, Premiere, MadMapper, Cinema4D',
-		intro: 
+		intro:
 			`
 			<p>Live visuals/VJ'ing projects for live performances or events.</p>
 			<br/>
@@ -346,8 +389,8 @@ export default  [
 
 	},
 	{
-		url: 'data-visualization', 
-		name: "Data Visualization",  
+		url: 'data-visualization',
+		name: "Data Visualization",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/data-visualization',
@@ -365,7 +408,7 @@ export default  [
 			'Natural Language Processing',
 		],
 		technologyUsed: 'Python, Java/Processing, Natural Language Toolkit, mongoDB',
-		intro: 
+		intro:
 			`
 			<p>What do popular song lyrics say about cultural moods, concerns and political issues of different times?</p>
 			<br/>
@@ -379,8 +422,8 @@ export default  [
 
 	},
 	{
-		url: 'computer-vision', 
-		name: "Computer Vision",  
+		url: 'computer-vision',
+		name: "Computer Vision",
 		tileImg: 'bg-00.jpg',
 		heroImg: 'bg-00.jpg',
 		imgKey: 'projects/computer-vision',
@@ -404,15 +447,15 @@ export default  [
 			'Computer Programmer',
 		],
 		technologyUsed: 'openCV, Processing/Java',
-		intro: 
+		intro:
 			`
 			<p>Computer Vision experiments using openCV.</p>
 			`
 
 	},
 	// {
-	// 	url: 'nltk', 
-	// 	name: "Language Processing",  
+	// 	url: 'nltk',
+	// 	name: "Language Processing",
 	// 	hoverImg: "https://unsplash.it/1200/540",
 	// 	tileImg: 'bg-00.jpg',
 	// 	imgKey: 'projects/nltk',
@@ -432,7 +475,7 @@ export default  [
 	// 		'Computer Programmer',
 	// 	],
 	// 	technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
-	// 	intro: 
+	// 	intro:
 	// 		`
 	// 		<p>Reading and writing electronic text experiements</p>
 	// 		<br/>
@@ -455,10 +498,10 @@ export default  [
 			'Computer Programmer',
 		],
 		technologyUsed: 'Javascript',
-		intro: 
+		intro:
 			`
 			<p>Particle Systems</p>
-			`		
+			`
 	}
 	*/
 ];

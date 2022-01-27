@@ -215,6 +215,7 @@ $project_tile_height: $project_tile_width;
 
 @media #{$desktop} {
 	.projects {
+		border: 1px dashed red;
 		#Menu {
 			display: none;
 		}
@@ -231,6 +232,7 @@ $project_tile_height: $project_tile_width;
 			}
 			&.box-style {
 				@include justify-content(flex-start);
+				width: 100vw;
 			}
 			li {
 				&:last-child {
@@ -248,8 +250,8 @@ $project_tile_height: $project_tile_width;
 	.project-list-item {
 		&.list-style {
 			.text {
-				.project-name { 
-					border-right: 1px solid black; 
+				.project-name {
+					border-right: 1px solid black;
 					padding: 0 $gutter;
 				}
 			}

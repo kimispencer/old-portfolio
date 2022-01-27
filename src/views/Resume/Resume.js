@@ -26,7 +26,7 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<p>Hi, I’m Kimi!<br/><br/>I’m a software engineer, and user experience + interaction designer.
-							I have over 8 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum eduction, to high-end fashion.
+							I have over 10 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum education, to high-end fashion.
 							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music.</p>
 						</div>
 					</div>
@@ -44,12 +44,15 @@ const Resume = () => (
 							</div>
 							<p className="job-title monospace attribute">Software Engineer — 2017 to present</p>
 						</div>
-						<p>Lumi makes custom manufacturing as scalable as the web.</p>
+						<p><a href="https://www.lumi.com/" target="_blank">Lumi</a> makes custom manufacturing as scalable as the web.</p>
 						<br />
-						<p>Software engineer responsible for creating a reusable UI component library and implementation on the customer facing <a href="https://www.lumi.com/" target="_blank">Lumi.com</a> site, as well as Lumi’s internal team dashboard for managing custom packaging designs, manufacturing and distribution.</p>
+						<p>Software engineer responsible for creating a reusable <a href="https://lumihq.github.io/purescript-lumi-components/#/" target="_blank">UI component library</a>, as well as the design and front-end implementation of Lumi’s internal suite of applications for managing custom packaging designs, manufacturing and distribution for clients, vendors and design experts.</p>
+						<br/>
+						<p>Worked closely with product team and head of design to create our modular user-interface component library and develop user interfaces when introducing new features.</p>
 						<br />
 						<ul>
-							<li><p>&bull; Created a UI component library to standardize style guidelines across platforms and improve code efficiency and reusability.</p></li>
+							<li><p>&bull; Designed and developed front-end user experiences across Lumi applications.</p></li>
+							<li><p>&bull; Created a UI component library of modular styled components and standardized style guidelines across platforms, as well as improve code efficiency and reusability.</p></li>
 							<li><p>&bull; Conversion of a legacy React/ES6/Immutable front-end into Purescript; a strongly typed functional programming language that compiles to Javascript.</p></li>
 						</ul>
 					</div>
@@ -63,8 +66,10 @@ const Resume = () => (
 							<p className="job-title monospace attribute">Front-end Developer & UX Designer — 2014 to 2017</p>
 						</div>
 						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
+						<br/>
+						<p>Primary front-end developer and designer for <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, an architecturally inspired outerwear company. Translating marketing needs and campaigns into a highly polished user experience for <a href="http://thearrivals.com" target="_blank">thearrivals.com</a>. Additionally, front-end developer and interaction designer for the <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch.</p>
 						<br />
-						<p>Front-end developer and interaction designer for the <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch. Responsible for the creation and implementation of all front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+						<p>Responsible for the creation and implementation of front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
 						<ul>
 							<li><p>&bull; Co-led conversion of <a href="http://thearrivals.com" target="_blank">thearrivals.com</a> into a ReactJS application.</p></li>
