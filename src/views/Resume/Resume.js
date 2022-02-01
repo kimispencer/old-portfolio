@@ -13,6 +13,7 @@ const Resume = () => (
 					<div className="center">
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
+						<p className="monospace uppercase">San Francisco, CA</p>
 						<img alt="profile" className="circle-img profile-pic" src={ProfilePic} />
 						{/*<ImageLoader className="circle-img profile-pic" src="profile.jpg" imgKey="resume" isBg={false} alt="Profile Pic" />*/}
 					</div>
@@ -67,12 +68,12 @@ const Resume = () => (
 						</div>
 						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br/>
-						<p>Primary front-end developer and designer for <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, an architecturally inspired outerwear company. Translating marketing needs and campaigns into a highly polished user experience for <a href="http://thearrivals.com" target="_blank">thearrivals.com</a>. Additionally, front-end developer and interaction designer for the <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch.</p>
+						<p>Primary front-end developer and designer for <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, an architecturally inspired outerwear company. Translating marketing needs and campaigns into a highly polished user experience for thearrivals.com. Additionally, front-end developer and interaction designer for the <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch.</p>
 						<br />
 						<p>Responsible for the creation and implementation of front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developing monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
 						<ul>
-							<li><p>&bull; Co-led conversion of <a href="http://thearrivals.com" target="_blank">thearrivals.com</a> into a ReactJS application.</p></li>
+							<li><p>&bull; Co-led conversion of The Arrivals site into a ReactJS application.</p></li>
 							<li><p>&bull; Led the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
 							<li><p>&bull; Created UX/UI mockups, graphic/web designs, as well as translated mockups into code.</p></li>
 							<li><p>&bull; Assisted with back-end integration and templating.</p></li>
@@ -114,14 +115,14 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">r/ga</h4>
 							<p className="job-title monospace">Experience Design Intern - 2011</p>
 						</div>
-						<p><a href="http://rga.com" target="_blank">RGA.com</a> is a full service digital agency in the connected age.<br/><br/>Developed detailed wireframes and collaborated in the redesign of Verizon Wireless in-store touch screen experiences. Designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points of the Verizon brand experience.</p>
+						<p><a href="http://rga.com" target="_blank">RGA</a> is a full service digital agency in the connected age.<br/><br/>Developed detailed wireframes and collaborated in the redesign of Verizon Wireless in-store touch screen experiences. Designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points of the Verizon brand experience.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">guide by cell</h4>
 							<p className="job-title monospace">Project Manager & Web/Graphic Designer - 2008 to 2010</p>
 						</div>
-						<p><a href="http://guidebycell.com/" target="_blank">Guide by Cell</a> develops mobile engagement solutions to support audiotours, games and other location based interactions for museums and other cultural institutions.<br/><br/>Designed, user tested, and launched interactive mobile applications and media content for over 300 museums and exhibitions. Participated in the development of Ghosts of a Chance, the first Augmented Reality Game (ARG) played at the Smithsonian Museum of American Art. Created wireframes, developed mobile games and location-based narratives.</p>
+						<p><a href="http://guidebycell.com/" target="_blank">Guide by Cell</a> develops mobile engagement solutions to support audio tours, games and other location based interactions for museums and other cultural institutions.<br/><br/>Designed, user tested, and launched interactive mobile applications and media content for over 300 museums and exhibitions. Participated in the development of Ghosts of a Chance, the first Augmented Reality Game (ARG) played at the Smithsonian Museum of American Art. Created wireframes, developed mobile games and location-based narratives.</p>
 					</div>
 				</div>
 			</div>
