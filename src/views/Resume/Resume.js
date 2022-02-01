@@ -25,9 +25,9 @@ const Resume = () => (
 				<div className="right-col">
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
-							<p>Hi, I’m Kimi!<br/><br/>I’m a software engineer, and user experience + interaction designer.
+							<p>Hi, I’m Kimi!<br/><br/>I’m a senior front-end software engineer, and user experience + interaction designer.
 							I have over 10 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum education, to high-end fashion.
-							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music.</p>
+							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music, and am currently pursuing my interests in architecture & spatial design culminating in a VR experience.</p>
 						</div>
 					</div>
 				</div>
@@ -42,7 +42,7 @@ const Resume = () => (
 							<div className="flex-col institution">
 								<h4 className="bold uppercase">lumi</h4>
 							</div>
-							<p className="job-title monospace attribute">Software Engineer — 2017 to present</p>
+							<p className="job-title monospace attribute">Senior Software Engineer — 2017 to 2021</p>
 						</div>
 						<p><a href="https://www.lumi.com/" target="_blank">Lumi</a> makes custom manufacturing as scalable as the web.</p>
 						<br />
@@ -69,7 +69,7 @@ const Resume = () => (
 						<br/>
 						<p>Primary front-end developer and designer for <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, an architecturally inspired outerwear company. Translating marketing needs and campaigns into a highly polished user experience for <a href="http://thearrivals.com" target="_blank">thearrivals.com</a>. Additionally, front-end developer and interaction designer for the <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch.</p>
 						<br />
-						<p>Responsible for the creation and implementation of front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developling monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+						<p>Responsible for the creation and implementation of front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developing monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
 						<ul>
 							<li><p>&bull; Co-led conversion of <a href="http://thearrivals.com" target="_blank">thearrivals.com</a> into a ReactJS application.</p></li>
@@ -82,11 +82,11 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title monospace">Web Developer & UX Designer - 2016 to 2017</p>
+							<p className="job-title monospace">Sofware Engineer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br />
-						<p>Web developer and UX designer for SUITEDs Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
+						<p>Web developer and UX designer for SUITED Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
@@ -100,14 +100,14 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">10x management</h4>
 							<p className="job-title monospace">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
-						<p><a href="https://www.10xmanagement.com/" target="_blank">10x Management</a> was born from a simple premise: "Find the best contract tech talent and match them with the world's most amazing companies." That was the concept in 2011, when two successful talent managers from the music industry teamed up with a brilliant software engineer to create the world’s first tech talent agency. 10x helps match the best contract tech talent with ground-breaking companies, with new talent and companies joining our community every day.<br/><br/>A member of 10x's first class of tech talent in 2012. Freelance UX designer and front-end developer.</p>
+						<p><a href="https://www.10xmanagement.com/" target="_blank">10x Management</a> was born from a simple premise: "Find the best contract tech talent and match them with the world's most amazing companies."<br/><br/>A member of 10x's first class of tech talent in 2012. Freelance UX designer and front-end developer.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">+plusign</h4>
 							<p className="job-title monospace">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
-						<p> <a href="http://plusign.com" target="_blank">+plusign</a> is an award-winning creative studio that does branding, digital, and design.<br/><br/>UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts.</p>
+						<p> <a href="http://plusign.com" target="_blank">+plusign</a> is an award-winning creative studio that does branding, digital, and design.<br/><br/>UX designer and front-end web developer for multiple client projects spanning real-estate, beauty, and the arts. Project work also included creative coding projects such as generative logo designs for the brand.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
@@ -121,7 +121,7 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">guide by cell</h4>
 							<p className="job-title monospace">Project Manager & Web/Graphic Designer - 2008 to 2010</p>
 						</div>
-						<p><a href="http://guidebycell.com/" target="_blank">Guide by Cell</a> develops mobile engagement solutions to support audiotours, games and other location based interactions for museums and other cultural institutions.<br/><br/>Designed, user tested, and launched interactive mobile applications and media content for over 300 museums and exhibitions. Participated in the development of <a href="http://www.ghostsofachance.com/" target="_blank">Ghosts of a Chance</a> the first Augmented Reality Game (ARG) played at the Smithsonian Museum of American Art. Created wireframes, developed mobile games and location-based narratives.</p>
+						<p><a href="http://guidebycell.com/" target="_blank">Guide by Cell</a> develops mobile engagement solutions to support audiotours, games and other location based interactions for museums and other cultural institutions.<br/><br/>Designed, user tested, and launched interactive mobile applications and media content for over 300 museums and exhibitions. Participated in the development of Ghosts of a Chance, the first Augmented Reality Game (ARG) played at the Smithsonian Museum of American Art. Created wireframes, developed mobile games and location-based narratives.</p>
 					</div>
 				</div>
 			</div>
@@ -160,13 +160,13 @@ const Resume = () => (
 									<li>Javascript/ES6/ES7</li>
 									<li>HTML5</li>
 									<li>CSS3/SASS/LESS</li>
-									<li>NPM & Webpack</li>
+									<li>CSS preprocessors & inline CSS</li>
 									<li>Git</li>
 								</ul>
 								<ul>
 									<li>ReactJS</li>
 									<li>Python</li>
-									<li>PHP</li>
+									<li>NPM & Webpack</li>
 									<li>Wordpress & Squarespace</li>
 									<li>Data Visualization</li>
 									<li>UX Design</li>
@@ -176,10 +176,11 @@ const Resume = () => (
 						<div className="flex-col resume-section-item third-span" id="Tools">
 							<h4 className="title bold uppercase">tools</h4>
 							<ul>
-								<li>Atom & Sublime</li>
+								<li>Visual Studio Code</li>
 								<li>Adobe Creative Suite (Photoshop, Illustrator, InDesign, Premiere)</li>
-								<li>Sketch</li>
-								<li>VDMX</li>
+								<li>Figma, Sketch</li>
+								<li>Rhino</li>
+								<li>Cinema4D, VDMX</li>
 							</ul>
 						</div>
 					</div>
