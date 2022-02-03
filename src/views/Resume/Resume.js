@@ -66,11 +66,11 @@ const Resume = () => (
 								<h4 className="bold uppercase">onomie</h4>
 								<h4 className="bold uppercase">brainchild.co</h4>
 							</div>
-							<p className="job-title monospace attribute">Front-end Developer & UX Designer — 2014 to 2017</p>
+							<p className="job-title monospace attribute">Front-end Engineer & UX Designer — 2014 to 2017</p>
 						</div>
 						<p>Brainchild.co is a collection of engineers, operators and designers working on projects spanning from fashion, beauty to health care.</p>
 						<br/>
-						<p>Primary front-end developer and designer for <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, an architecturally inspired outerwear company. Translating marketing needs and campaigns into a highly polished user experience for thearrivals.com. Additionally, front-end developer and interaction designer for the <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch.</p>
+						<p>Primary front-end engineer and designer for <a href="http://thearrivals.com" target="_blank">The Arrivals</a>, an architecturally inspired outerwear company. Translating marketing needs and campaigns into a highly polished user experience for thearrivals.com. Additionally, front-end developer and interaction designer for the <a href="http://onomie.com" target="_blank">Onomie</a>, and <a href="http://brainchild.co" target="_blank">Brainchild.co</a> brand sites since launch.</p>
 						<br />
 						<p>Responsible for the creation and implementation of front-end code and interface design for each brand’s respective responsive, cross-platform e-commerce web app. As well as designing and developing monthly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 						<br />
@@ -85,7 +85,7 @@ const Resume = () => (
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">suited magazine</h4>
-							<p className="job-title monospace">Sofware Engineer & UX Designer - 2016 to 2017</p>
+							<p className="job-title monospace">Software Engineer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 						<br/>
@@ -146,17 +146,17 @@ const Resume = () => (
 				<div className="right-col">
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
-							<h4 className="bold uppercase institution">nyu, tisch school of the arts</h4>
-							<p className="monospace">M.P.S - Interactive Technology & Design</p>
+							<h4 className="bold uppercase institution">nyu, tisch</h4>
+							<p className="monospace">Masters in Interactive Technology & Design - 2010 to 2012</p>
 						</div>
 						<p>ITP is a two-year graduate program located in the Tisch School of the Arts whose mission is to explore the imaginative use of communications technologies — how they might augment, improve, and bring delight and art into people's lives.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">uc berkeley</h4>
-							<p className="monospace">B.A. - Political Science, Minor - Middle Eastern Studies</p>
+							<p className="monospace">BA in Political Science - 2003 to 2007</p>
 						</div>
-						<p>Politial Science major with a focus on the use of emergent, mobile technologies in the advancement of democractic movements.</p>
+						<p>Political Science major with a focus on the use of emergent, mobile technologies in the advancement of democratic movements.</p>
 					</div>
 				</div>
 			</div>
