@@ -48,7 +48,7 @@ export default  [
 		siteUrl: 'http://lumi.com',
 		projectType: 'UI component libarary + multiple user facing Dashboard Apps',
 		projectRole: [
-			'Software engineer',
+			'Senior Software engineer',
 			'UI component library developer & designer',
 			'Open source libraries & frameworks',
 			'Strongly typed functional programming languages'
@@ -58,7 +58,7 @@ export default  [
 			`
 			<p><a href="http://lumi.com" target="_blank">Lumi</a> helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
 			</br>
-			<p>Contributed to the migration of Lumi's web applications into Purescript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic" target="_blank">open source library</a> binding Purescript to React. Our backend is built with Haskell and Postgres.</p>
+			<p>Contributed to the migration of Lumi's web applications into PureScript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic" target="_blank">open source library</a> binding PureScript to React. Our backend is built with Haskell and Postgres.</p>
 			</br>
 			<p>Developed and designed a <a href="https://lumihq.github.io/purescript-lumi-components" target="_blank">UI component</a> library to maintain cohesiveness across our various app user interfaces and visual design, also open sourced to the public.</p>
 			`
@@ -79,9 +79,9 @@ export default  [
 			'arrivals_wireframes'
 		],
 		siteUrl: 'http://thearrivals.com',
-		projectType: 'Responsive Ecommerce/Fashion website',
+		projectType: 'Responsive E-commerce/Fashion website',
 		projectRole: [
-			'Lead Front-end developer',
+			'Lead Front-end engineer',
 			'Lead UX designer',
 			'Code conversion into ReactJS & ES6',
 			'Responsive web design',
@@ -95,9 +95,9 @@ export default  [
 			<br/>
 			<p>I was brought on to lead the responsive front-end development and UX design of thearrivals.com from launch to today.</p>
 			<br/>
-			<p>As the lead front-end developer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
+			<p>As the lead front-end engineer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developing bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 			<br/>
-			<p>Orginally built on top of a LAMP stack using jQuery/PHP for the front-end, I led the front-end conversion into reusuable React components and transforming the site into a responsive, single page application.</p>
+			<p>Originally built on top of a LAMP stack using jQuery/PHP for the front-end, I led the front-end conversion into reusable React components and transforming the site into a responsive, single page application.</p>
 			`
 	},
 	{
@@ -115,18 +115,18 @@ export default  [
 		siteUrl: 'http://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
 		projectRole: [
-			'Custom SquareSpace template design & development',
-			'Lead Front-end developer',
+			'Lead Software engineer',
 			'Lead UX designer',
 			'Responsive web design',
-			'CMS backend integration',
+			'Custom SquareSpace template design & development',
+			'CMS backend integration'
 		],
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
 		intro:
 		`
 		<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 		<br/>
-		<p>I joined the team as lead developer and UX designer for the premier launch of the online edition of their Fall 2016 edition of SUITED magazine and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to translate the print publication brand into a digital experience.</p>
+		<p>I joined the team as the primary software engineer and UX designer for the premier launch of the online edition of their Fall 2016 edition of SUITED magazine and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to translate the print publication brand into a digital experience.</p>
 		`
 	},
 	{
@@ -142,9 +142,9 @@ export default  [
 			 'products-03.jpg', 'products-00.png', 'products-01.png','products-04.jpg', 'products-09.jpg', 'products-05.jpg', 'products-06.jpg', 'products-07.jpg', 'products-08.jpg'
 		],
 		siteUrl: 'http://onomie.com',
-		projectType: 'Responsive Ecommerce/Beauty website',
+		projectType: 'Responsive E-commerce/Beauty website',
 		projectRole: [
-			'Lead Front-end developer',
+			'Lead Front-end engineer',
 			'Lead UX designer',
 			'Responsive web design',
 			'CMS backend integration',
@@ -213,7 +213,7 @@ export default  [
 		projectType: 'AngularJS web application',
 		projectRole: [
 			'Front-end developer',
-			'Visual & UX designer',
+			'Visual & UX designer'
 		],
 		technologyUsed: 'AngularJS, HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, Git',
 		intro:
@@ -269,8 +269,9 @@ export default  [
 		siteUrl: 'http://plusign.com',
 		projectType: 'Generative Logo Design',
 		projectRole: [
-			'Software engineer',
-			'Visual/Typography designer',
+			'Front-end developer',
+			'UX designer',
+			'Visual/Typography designer'
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Photoshop, Illustrator, Java/Processing',
 		intro:
@@ -294,19 +295,19 @@ export default  [
 			'logo-00.jpg', 'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
 		],
 		siteUrl: 'http://tomtommag.com',
-		projectType: 'Responsive Ecommerce/Music Publication website',
+		projectType: 'Responsive E-commerce/Music Publication website',
 		projectRole: [
+			'Front-end developer',
+			'UX designer',
 			'Custom Shopify template design & development',
-			'Front-end development',
-			'UX design',
-			'CMS backend',
+			'CMS backend'
 		],
 		technologyUsed: 'HTML5, CSS3, jQUERY, Ajax, PHP, Photoshop, Shopify',
 		intro:
 			`
 			<p><a href="http://tomtommag.com/" target="_blank">Tom Tom Magazine</a> is a quarterly print magazine and website based out of New York City. It is the only magazine in the world that is dedicated to female drummers.</p>
 			<br/>
-			<p>I was hired to build out Tom Tom's ecommerce platform to leverage site visits into opportunities to sell the publication or goods related to the brand. Using the Shopify CMS I built a custom responsive template theme for the Tom Tom store.</p>
+			<p>I was hired to build out Tom Tom's e-commerce platform to leverage site visits into opportunities to sell the publication or goods related to the brand. Using the Shopify CMS I built a custom responsive template theme for the Tom Tom store.</p>
 			`
 	},
 	{
@@ -406,7 +407,7 @@ export default  [
 			<br/>
 			<p>To answer this question, I created a Python web scraping script to pull lyrics from the top Billboard charts since it's inception in the early 1900's.</p>
 			<br/>
-			<p>Using this trove of data, I analyzed language patterns to produce detailed visualizations of popular music lyrics; examining relationships between entities (such as "I" and "you"), as well as common verbs that express relationships between those enttities (such as "love", or "hate").</p>
+			<p>Using this trove of data, I analyzed language patterns to produce detailed visualizations of popular music lyrics; examining relationships between entities (such as "I" and "you"), as well as common verbs that express relationships between those entities (such as "love", or "hate").</p>
 			<p>Topical patterns of time also emerge, such as the use "groovy" in 70's song lyrics, as compared to the 80's/90's when references to more explicit language starts appearing.</p>
 			<br/>
 			<p>Tagging geolocation data to songs, patterns of Western domination of the charts -- with notable bursts appearing from Sweden and the United States -- also appear.</p>
@@ -436,7 +437,7 @@ export default  [
 		projectType: 'Computer Vision experiments',
 		projectRole: [
 			'Concept & Experience Designer',
-			'Computer Programmer',
+			'Computer Programmer'
 		],
 		technologyUsed: 'openCV, Processing/Java',
 		intro:
@@ -469,9 +470,9 @@ export default  [
 	// 	technologyUsed: 'Python, NLTK (Natural Language Took Kit)',
 	// 	intro:
 	// 		`
-	// 		<p>Reading and writing electronic text experiements</p>
+	// 		<p>Reading and writing electronic text experiments</p>
 	// 		<br/>
-	// 		<p>Using Python and the NLTK (Natural Language Tool Kit) I create a script that pulled lyrics from various musicans and recreated the lyrics using n-grams and language pattern recognition.</p>
+	// 		<p>Using Python and the NLTK (Natural Language Tool Kit) I create a script that pulled lyrics from various musicians and recreated the lyrics using n-grams and language pattern recognition.</p>
 	// 		<br/>
 	// 		<p>Presented in the style of late night 90's television informercials.</p>
 	// 		`
