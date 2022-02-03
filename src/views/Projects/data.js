@@ -56,7 +56,7 @@ export default  [
 		technologyUsed: 'PureScript, React, Emotion/Styled Components, Haskell, Git, Figma/Sketch',
 		intro:
 			`
-			<p>Lumi helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
+			<p><a href="http://lumi.com" target="_blank">Lumi</a> helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
 			</br>
 			<p>Contributed to the migration of Lumi's web applications into Purescript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic" target="_blank">open source library</a> binding Purescript to React. Our backend is built with Haskell and Postgres.</p>
 			</br>
@@ -91,13 +91,13 @@ export default  [
 		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro:
 			`
-			<p>The Arrivals is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
+			<p><a href="http://thearrivals.com" target="_blank">The Arrivals</a> is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
 			<br/>
-			<p>I was brought on to lead the responsive front-end development and UX design of <a href="thearrivals.com" target="_blank">TheArrivals.com.</a> from launch to today.</p>
+			<p>I was brought on to lead the responsive front-end development and UX design of thearrivals.com from launch to today.</p>
 			<br/>
 			<p>As the lead front-end developer and interaction designer I was responsible for the creation and implementation of all front-end code and interface design for a responsive, cross-platform e-commerce web app. As well as designing and developling bi-weekly interactive campaigns, supporting multiple product launches, and improving the site interface based on A/B studies.</p>
 			<br/>
-			<p>Orginally built on top of a LAMP stack using jQuery/PHP for the front-end, I recently led the front-end conversion into reusuable React components and transforming the site into a responsive, single page application.</p>
+			<p>Orginally built on top of a LAMP stack using jQuery/PHP for the front-end, I led the front-end conversion into reusuable React components and transforming the site into a responsive, single page application.</p>
 			`
 	},
 	{
@@ -153,9 +153,9 @@ export default  [
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro:
 			`
-			<p>Onomie is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
+			<p><a href="http://onomie.com" target="_blank">Onomie</a> is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
 			<br/>
-			<p>I was brought on to lead the front-end web development and interaction design for <a href="http://onomie.com" target="_blank">Onomie.com</a> to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
+			<p>I was brought on to lead the front-end web development and interaction design for onomie.com to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
 			`
 
 	}
@@ -315,6 +315,7 @@ export default  [
 		tileImg: 'bg-00.png',
 		heroImg: 'bg-00.png',
 		imgKey: 'projects/rga',
+		siteUrl: 'http://rga.com',
 		screenShots: [
 		],
 		projectImgs: [
@@ -373,7 +374,7 @@ export default  [
 		technologyUsed: 'VDMX, Java/Processing, After Effects, Premiere, MadMapper, Cinema4D',
 		intro:
 			`
-			<p>Live visuals/VJ'ing projects for live performances or events.</p>
+			<p>Live visuals and VJ'ing projects for live performances & events.</p>
 			<br/>
 			<p>I was asked to create visuals and immersive experiences from music performances, store openings, to fundraising events. Using VDMX as a live controller, I served as VJ for custom generated video content that was manipulated using real-time image processing or with post-production effects.</p>
 			`

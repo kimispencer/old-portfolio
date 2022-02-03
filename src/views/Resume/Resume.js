@@ -28,6 +28,8 @@ const Resume = () => (
 						<div className="flex-row responsive title">
 							<p>Hi, I’m Kimi!<br/><br/>I’m a senior front-end software engineer, and user experience + interaction designer.
 							I have over 10 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum education, to high-end fashion.
+							<br/>
+							<br/>
 							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music, and am currently pursuing my interests in architecture & spatial design culminating in a VR experience.</p>
 						</div>
 					</div>
@@ -102,6 +104,13 @@ const Resume = () => (
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
+							<h4 className="bold uppercase institution">Tom Tom Magazine</h4>
+							<p className="job-title monospace">UX Designer & Front-end Developer - 2013</p>
+						</div>
+						<p><a href="https://www.tomtommag.com/" target="_blank">Tom Tom Magazine</a> is a quarterly print magazine and website based out of New York City. Built & designed Tom Tom’s e-commerce platform to leverage site visits into opportunities to sell the publication or goods related to the brand. Using the Shopify CMS created a custom responsive template theme for the Tom Tom store.</p>
+					</div>
+					<div className="resume-section-item">
+						<div className="flex-row responsive title">
 							<h4 className="bold uppercase institution">10x management</h4>
 							<p className="job-title monospace">UX Designer & Front-end Developer - 2012 to 2013</p>
 						</div>
@@ -172,7 +181,7 @@ const Resume = () => (
 									<li>ReactJS</li>
 									<li>Python</li>
 									<li>NPM & Webpack</li>
-									<li>Wordpress & Squarespace</li>
+									<li>Squarespace & Shopify</li>
 									<li>Data Visualization</li>
 									<li>UX Design</li>
 								</ul>
