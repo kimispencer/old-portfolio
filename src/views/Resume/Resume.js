@@ -54,7 +54,7 @@ const Resume = () => (
 						<ul>
 							<li><p>&bull; Designed and developed front-end user experiences across Lumi applications.</p></li>
 							<li><p>&bull; Created a UI component library of modular styled components and standardized style guidelines across platforms, as well as improve code efficiency and reusability.</p></li>
-							<li><p>&bull; Conversion of a legacy React/ES6/Immutable front-end into Purescript; a strongly typed functional programming language that compiles to Javascript.</p></li>
+							<li><p>&bull; Conversion of a legacy React/ES6/Immutable front-end into PureScript; a strongly typed functional programming language that compiles to JavaScript.</p></li>
 						</ul>
 					</div>
 					<div className="resume-section-item">
@@ -74,7 +74,7 @@ const Resume = () => (
 						<br />
 						<ul>
 							<li><p>&bull; Co-led conversion of The Arrivals site into a ReactJS application.</p></li>
-							<li><p>&bull; Led the implementation of HTML5, CSS3, client-side Javascript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
+							<li><p>&bull; Led the implementation of HTML5, CSS3, client-side JavaScript, CSS pre-processing platforms (LESS/SASS), JS task-runners, Git version control.</p></li>
 							<li><p>&bull; Created UX/UI mockups, graphic/web designs, as well as translated mockups into code.</p></li>
 							<li><p>&bull; Assisted with back-end integration and templating.</p></li>
 							<li><p>&bull; Oversaw the launch of multiple successful sites from start to finish under strict deadlines.</p></li>
@@ -86,8 +86,12 @@ const Resume = () => (
 							<p className="job-title monospace">Sofware Engineer & UX Designer - 2016 to 2017</p>
 						</div>
 						<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
-						<br />
-						<p>Web developer and UX designer for SUITED Magazine; created a customized CMS driven template design built on top of the Squarespace developer platform. Worked one-on-one with the creative director to translate the print publication into a branded online experience; built visual mockups and interface designs.</p>
+						<br/>
+						<ul>
+							<li><p>&bull; Created a customized CMS driven template design built on top of the Squarespace developer platform.</p></li>
+							<li><p>&bull; Worked one-on-one with the creative director to translate the print publication into a branded online experience.</p></li>
+							<li><p>&bull; Built visual mockups and interface designs.</p></li>
+						</ul>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
@@ -115,7 +119,7 @@ const Resume = () => (
 							<h4 className="bold uppercase institution">r/ga</h4>
 							<p className="job-title monospace">Experience Design Intern - 2011</p>
 						</div>
-						<p><a href="http://rga.com" target="_blank">RGA</a> is a full service digital agency in the connected age.<br/><br/>Developed detailed wireframes and collaborated in the redesign of Verizon Wireless in-store touch screen experiences. Designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points of the Verizon brand experience.</p>
+						<p><a href="http://rga.com" target="_blank">RGA</a> is a full service digital agency in the connected age.<br/><br/>Developed detailed wireframes and collaborated in the redesign of Verizon Wireless in-store touch screen experiences. Designed and rapidly prototyped a mobile application for MasterCard’s and the High Line Park of NYC’s Priceless Cities campaign. Created user journeys, as well as filmed and edited corresponding concept videos. Participated in the R/GA Data Visualization Incubator. Mined, analyzed and programmed a series of information graphics of Verizon’s service networks for the creative team to better understand customer flows and touch points for the Verizon brand experience.</p>
 					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
@@ -157,8 +161,8 @@ const Resume = () => (
 							<h4 className="title bold uppercase">professional skillset</h4>
 							<div className="flex-row">
 								<ul>
-									<li>Purescript & Haskell</li>
-									<li>Javascript/ES6/ES7</li>
+									<li>PureScript & TypeScript</li>
+									<li>JavaScript/ES6/ES7</li>
 									<li>HTML5</li>
 									<li>CSS3/SASS/LESS</li>
 									<li>CSS preprocessors & inline CSS</li>
