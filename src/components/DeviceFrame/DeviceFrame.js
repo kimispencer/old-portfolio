@@ -33,7 +33,7 @@ class DeviceFrame extends React.Component {
 	render() {
 		return (
 			<div className={`device-frame ${this.props.className} ${this.state.inViewport ? 'in-viewport' : ''}`}>
-				{this.props.type === "desktop" && 
+				{this.props.type === "desktop" &&
 				<div className="macbook">
 					<div className="screen">
 						<div className="viewport">
@@ -44,7 +44,7 @@ class DeviceFrame extends React.Component {
 					<div className="notch"></div>
 				</div>
 				}
-				{this.props.type === "phone" && 
+				{this.props.type === "phone" &&
 				<div className="iphone">
 					<div className="content">
 						<div className="iphone-top">
@@ -55,15 +55,15 @@ class DeviceFrame extends React.Component {
 						<div className="iphone-screen">
 							<ImageLoader className="screenshot" src={this.props.src} imgKey={this.props.imgKey} isBg={false} />
 						</div>
-						<div className="buttons">
+						{/* <div className="buttons">
 							<span className="on-off"></span>
 							<span className="sleep"></span>
 							<span className="up"></span>
 							<span className="down"></span>
-						</div>
-						<div className="iphone-bottom">
+						</div> */}
+						{/* <div className="iphone-bottom">
 							<span></span>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			}

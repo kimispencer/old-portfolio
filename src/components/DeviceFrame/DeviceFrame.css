@@ -471,7 +471,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   .device-frame .macbook {
     margin-bottom: 60px; }
 
-/* simulate a iPhone device frame 
+/* simulate a iPhone device frame
 	* https://codepen.io/havardob/pen/KzoOMB
 */
 .iphone {
@@ -483,7 +483,8 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
   width: 375px;
   position: relative;
   max-width: calc(100vw - 20px*5 - 30px - 10px);
-  min-height: 420px;
+  min-height: 500px;
+  height: 800px;
   position: relative;
   /* Scale so that the iPhone fits in view*/
   /*transform: scale(.8);*/
@@ -529,7 +530,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     overflow: scroll;
     background: #eee;
     border: 1px solid #fff;
-    height: 72%;
+    height: 80%;
     width: calc(100% - 20px*2);
     margin: 0 auto;
     border: 2px solid rgba(0, 0, 0, 0.9);
@@ -588,10 +589,14 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
         top: 4px; }
 
 @media only screen and (max-width: 640px) {
-  .iphone .iphone-bottom {
-    display: none; } }
+  .iphone {
+    height: 500px; }
+    .iphone .iphone-screen {
+      height: 75%; }
+    .iphone .iphone-bottom {
+      display: none; } }
 
-/* simulate a MacBook device frame 
+/* simulate a MacBook device frame
 	* https://codepen.io/asraven/pen/eJREQv/
 	* https://codepen.io/asraven/pen/obegjW/
 */

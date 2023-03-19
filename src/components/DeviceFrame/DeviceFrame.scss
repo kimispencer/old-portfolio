@@ -1,7 +1,7 @@
 @import '../../styles/_all';
 
 .device-frame {
-	margin: 0 auto;  
+	margin: 0 auto;
 	.macbook {
 		margin-bottom: $gutter*3; // account for macbook body
 	}
@@ -10,14 +10,14 @@
 // .device-frame.can-bounce {
 // 	&.in-viewport {
 // 		.macbook .screenshot {
-// 			animation: bounce-y 4.5s ease-in-out;			
+// 			animation: bounce-y 4.5s ease-in-out;
 // 		}
 // 		.iphone .screenshot {
 // 			animation: bounce-y 7s ease-in-out;
 // 		}
 // 	}
 // }
-/* simulate a iPhone device frame 
+/* simulate a iPhone device frame
 	* https://codepen.io/havardob/pen/KzoOMB
 */
 .iphone {
@@ -29,7 +29,8 @@
 	width: 375px;
 	@include aspect-ratio(375, 667);
 	max-width: calc(100vw - #{$gutter}*5 - 30px - 10px);	// 15px = padding * 2, 5px = border-width * 2
-	min-height: 420px;
+	min-height: 500px;
+	height: 800px;
 	position: relative;
 	/* Scale so that the iPhone fits in view*/
 	/*transform: scale(.8);*/
@@ -71,8 +72,8 @@
 		overflow: scroll;
 		background: #eee;
 		border: 1px solid #fff;
-		height: 72%;
-	    width: calc(100% - #{$gutter}*2);
+		height: 80%;
+	  width: calc(100% - #{$gutter}*2);
 		margin: 0 auto;
 		border: 2px solid rgba(0,0,0,0.9);
 		border-radius: 3px;
@@ -110,7 +111,7 @@
 		.sleep {
 			left: auto;
 			right: -10px;
-			top: 170px;    
+			top: 170px;
 			border-radius: 0px 2px 2px 0px;
 		}
 	}
@@ -129,7 +130,7 @@
 			background: linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);
 			position: relative;
 			&:after {
-				content: ""; 
+				content: "";
 				display: block;
 				width: 50px;
 				height: 50px;
@@ -144,12 +145,16 @@
 }
 @media #{$phone} {
 	.iphone {
+		height: 500px;
+		.iphone-screen {
+			height: 75%;
+		}
 		.iphone-bottom {
 			display: none;
 		}
 	}
 }
-/* simulate a MacBook device frame 
+/* simulate a MacBook device frame
 	* https://codepen.io/asraven/pen/eJREQv/
 	* https://codepen.io/asraven/pen/obegjW/
 */
@@ -235,6 +240,7 @@
 		}
 	}
 }
+
 /* Screenshot Scroll Additions
 -------------------------------------------------------------- */
 .macbook .viewport, .iphone .iphone-screen  {
