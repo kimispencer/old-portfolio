@@ -4,14 +4,14 @@ import './ImageLoader.css';
 class ImageLoader extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { 
+		this.state = {
 			imageStatus: 'loading',
 			loaded: false
 		};
 	}
- 
+
 	handleImageLoaded() {
-		this.setState({ 
+		this.setState({
 			imageStatus: 'loaded',
 			loaded: true
 		});
@@ -19,7 +19,7 @@ class ImageLoader extends React.Component {
 	}
 
 	handleImageErrored() {
-		this.setState({ 
+		this.setState({
 			imageStatus: 'failed to load',
 			loaded: false
 		 });
@@ -51,7 +51,7 @@ class ImageLoader extends React.Component {
 			);
 		} else {
 			return (
-				<div className={`${this.props.className ? this.props.className : ''} ${this.state.loaded ? 'loaded' : 'not-loaded'} image-loader bg-img`} style={ {backgroundImage: 'url(' + img + ')'} }>
+				<div className={`${this.props.className ? this.props.className : ''} ${this.state.loaded ? 'loaded' : 'not-loaded'} image-loader bg-img`} style={ {backgroundImage: 'url(' + img + ')'} } >
 					<img
 						style={ {display: 'none'} }
 						src={img}
@@ -63,7 +63,7 @@ class ImageLoader extends React.Component {
 						<div className="spinner-container">
 							<div className="spinner"></div>
 						</div>
-						: this.props.children 
+						: this.props.children
 					}
 					{/* { this.state.imageStatus } */}
 				</div>

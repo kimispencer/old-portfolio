@@ -6,8 +6,8 @@
 	z-index: -1;
 	height: 100%;
 	width: 100%;
-	img { 
-		opacity: 0; 
+	img {
+		opacity: 0;
 		transition: opacity 5s;
 	}
 	&.bg-img {
@@ -29,6 +29,7 @@
 	.spinner-container {
 		@include flexbox-center(column);
 		height: 100%;
+		min-height: 200px;
 		width: 100%;
 		opacity: 0.5;
 		visibility: visible;

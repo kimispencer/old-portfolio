@@ -524,6 +524,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     justify-content: center;
     -ms-flex-pack: center;
     height: 100%;
+    min-height: 200px;
     width: 100%;
     opacity: 0.5;
     visibility: visible;
