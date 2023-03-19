@@ -142,8 +142,8 @@ $project_tile_height: $project_tile_width;
 	}
 	.project-image-list {
 		.project-image {
-			background-size: cover; //contain;
-			height: 400px;
+			background-size: contain;
+			// height: 400px;
 			width: 100%;
 			margin-top: $gutter;
 		}

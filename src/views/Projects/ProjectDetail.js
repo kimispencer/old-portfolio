@@ -93,7 +93,7 @@ class ProjectDetail extends React.Component {
 		// 	const pdfPath = await import(pdf);
 		//     return (<embed className="pdf-viewer" src={pdfPath} width="100%" key={index} />);
 		// }));
-		
+
 		return(
 			<div className="project-detail padded-width">
 				<h3 className="title page-title serif">{project.name}</h3>
@@ -103,8 +103,8 @@ class ProjectDetail extends React.Component {
 						<p dangerouslySetInnerHTML={{ __html: project.intro }}></p>
 
 						<section className="project-html-list">
-						{project.projectHtml 
-							? project.projectHtml.map((html, index) => 
+						{project.projectHtml
+							? project.projectHtml.map((html, index) =>
 								<span dangerouslySetInnerHTML={{ __html: html }} key={index}></span>
 							)
 							: null
@@ -112,16 +112,16 @@ class ProjectDetail extends React.Component {
 						</section>
 
 						<section className="project-screenshot-list">
-						{project.screenShots 
-							? project.screenShots.map((img, index) => 
+						{project.screenShots
+							? project.screenShots.map((img, index) =>
 								<DeviceFrame className={index === 0 ? 'can-bounce' : ''} type={img.split('-')[0]} src={img} imgKey={project.imgKey} key={index} />
 							)
 							: null
 						}
 						</section>
 
-						{/* 
-							*!!! use Promises... figure out later 
+						{/*
+							*!!! use Promises... figure out later
 							* really should be is iOS (user agent string)
 						*/}
 						{isDesktop() &&
@@ -149,8 +149,8 @@ class ProjectDetail extends React.Component {
 						}
 
 						<section className="project-video-list">
-						{project.projectVids 
-							? project.projectVids.map((video, index) => 
+						{project.projectVids
+							? project.projectVids.map((video, index) =>
 								<ReactPlayer className="project-video" id={`ProjectVideo${index}`} url={video} key={index} width="100%" />
 							)
 							: null
@@ -158,9 +158,9 @@ class ProjectDetail extends React.Component {
 						</section>
 
 						<ul className="project-image-list">
-						{project.projectImgs 
-							? project.projectImgs.map((img, index) => 
-								<ImageLoader className="project-image" src={img} imgKey={project.imgKey} key={index} alt={`Project Detail Image -- ${project.imgKey}/${img}`} />
+						{project.projectImgs
+							? project.projectImgs.map((img, index) =>
+								<ImageLoader className="project-image" src={img} imgKey={project.imgKey} key={index} alt={`Project Detail Image -- ${project.imgKey}/${img}`} isBg={false} />
 							)
 							: null
 						}

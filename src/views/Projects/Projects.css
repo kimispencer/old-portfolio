@@ -618,8 +618,7 @@ h1.center, h2.center, h3.center, h4.center, p.center, small.center, .title.cente
     margin-left: auto;
     margin-right: auto; }
   .project-detail .project-image-list .project-image {
-    background-size: cover;
-    height: 400px;
+    background-size: contain;
     width: 100%;
     margin-top: 20px; }
   .project-detail .project-pdf-list {

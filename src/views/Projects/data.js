@@ -1,4 +1,26 @@
 export default  [
+	{
+		url: 'smarty',
+		name: "Smarty AI",
+		tileImg: 'smarty-logo.jpg',
+		heroImg: 'smarty-bg.png',
+		imgKey: 'projects/smarty',
+		screenShots: [
+			'desktop-00.jpg', 'desktop-smarty-auto-schedule.jpg', 'desktop-smarty-date-picker.jpg'
+		],
+		projectImgs: [
+			'color-palette.jpg'
+		],
+		siteUrl: 'https://www.smarty.ai/',
+		projectType: 'Product design for web app + Chrome extension',
+		projectRole: [
+			'Lead Product Designer',
+			'UI design',
+			'UX research & design'
+		],
+		technologyUsed: 'Figma',
+		intro: `<p>Lorem ipsum </p>`
+	},
 	{ url: "architecture"
 	, name: "Architecture"
 	, tileImg: "exterior-folly-01.jpg"
@@ -40,13 +62,13 @@ export default  [
 		heroImg: 'bg-01.png',
 		imgKey: 'projects/lumi',
 		screenShots: [
-			'desktop-00.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png', 'desktop-04.png'
+			'phone-00.png', 'phone-01.png', 'phone-02.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png'
 		],
 		projectImgs: [
-			'packaging-00.jpg', 'packaging-01.png', 'packaging-02.jpg', 'packaging-03.jpg', 'packaging-04.jpg', 'packaging-05.jpg', 'packaging-06.png', 'packaging-07.png'
+			'typography.png', 'colors.png', 'table-component.png', 'packaging-00.jpg', 'packaging-01.png', 'packaging-02.jpg', 'packaging-03.jpg', 'packaging-04.jpg', 'packaging-05.jpg', 'packaging-06.png', 'packaging-07.png'
 		],
-		siteUrl: 'http://lumi.com',
-		projectType: 'UI component libarary + multiple user facing Dashboard Apps',
+		siteUrl: 'https://lumi.com',
+		projectType: 'UI component libarary + Dashboard Apps',
 		projectRole: [
 			'Senior Software engineer',
 			'UI component library developer & designer',
@@ -56,7 +78,7 @@ export default  [
 		technologyUsed: 'PureScript, React, Emotion/Styled Components, Haskell, Git, Figma/Sketch',
 		intro:
 			`
-			<p><a href="http://lumi.com" target="_blank">Lumi</a> helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
+			<p><a href="https://lumi.com" target="_blank">Lumi</a> helps e-commerce companies produce custom packaging and handle supply chain logistics, with the goal of making custom manufacturing as scalable as the web.</p>
 			</br>
 			<p>Contributed to the migration of Lumi's web applications into PureScript, a strongly-typed functional programming language, on top of a React framework. Published as an <a href="https://github.com/lumihq/purescript-react-basic" target="_blank">open source library</a> binding PureScript to React. Our backend is built with Haskell and Postgres.</p>
 			</br>
@@ -73,12 +95,12 @@ export default  [
 			'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
 		],
 		projectImgs: [
-			'cover-16.jpg', 'cover-10.jpg', 'cover-13.jpg', 'cover-00.jpg', 'cover-17.jpg', 'cover-01.jpg', 'cover-12.gif', 'cover-02.jpg', 'cover-03.jpg', 'cover-04.jpg', 'cover-11.gif', 'cover-05.jpg', 'cover-14.jpg', 'cover-06.jpg', 'cover-07.jpg', 'cover-08.jpg', 'cover-09.jpg'
+			'cover-16.jpg', 'cover-10.jpg', 'cover-13.jpg', 'cover-00.jpg', 'cover-17.jpg', 'cover-01.jpg', 'cover-02.jpg', 'cover-03.jpg', 'cover-04.jpg', 'cover-05.jpg', 'cover-14.jpg', 'cover-06.jpg', 'cover-07.jpg', 'cover-08.jpg', 'cover-09.jpg'
 		],
 		projectPDFs: [
 			'arrivals_wireframes'
 		],
-		siteUrl: 'http://thearrivals.com',
+		siteUrl: 'https://thearrivals.com',
 		projectType: 'Responsive E-commerce/Fashion website',
 		projectRole: [
 			'Lead Front-end engineer',
@@ -91,7 +113,7 @@ export default  [
 		technologyUsed: 'ReactJS, ES6, Webpack, HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro:
 			`
-			<p><a href="http://thearrivals.com" target="_blank">The Arrivals</a> is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
+			<p><a href="https://thearrivals.com" target="_blank">The Arrivals</a> is a NYC based fashion line focusing on classic, architecturally-inspired garments crafted to last a lifetime and exclusively available online.</p>
 			<br/>
 			<p>I was brought on to lead the responsive front-end development and UX design of thearrivals.com from launch to today.</p>
 			<br/>
@@ -112,7 +134,7 @@ export default  [
 		projectImgs: [
 			'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
 		],
-		siteUrl: 'http://suitedmagazine.com',
+		siteUrl: 'https://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
 		projectRole: [
 			'Lead Software engineer',
@@ -124,7 +146,7 @@ export default  [
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, SquareSpace, Git',
 		intro:
 		`
-		<p><a href="http://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
+		<p><a href="https://suitedmagazine.com" target="_blank">SUITED</a> is a biannual fashion and art publication with a singular mission in mind: to celebrate those who have found what they are well-suited for. Their objective is to showcase independent thinkers passionate about creating work that is at once inspired, influential, and timeless.</p>
 		<br/>
 		<p>I joined the team as the primary software engineer and UX designer for the premier launch of the online edition of their Fall 2016 edition of SUITED magazine and created a customized CMS driven template design built on top of the Squarespace developer platform. I collaborated one-on-one with the Creative Director & Editor-in-Chief to translate the print publication brand into a digital experience.</p>
 		`
@@ -141,7 +163,7 @@ export default  [
 		projectImgs: [
 			 'products-03.jpg', 'products-00.png', 'products-01.png','products-04.jpg', 'products-09.jpg', 'products-05.jpg', 'products-06.jpg', 'products-07.jpg', 'products-08.jpg'
 		],
-		siteUrl: 'http://onomie.com',
+		siteUrl: 'https://onomie.com',
 		projectType: 'Responsive E-commerce/Beauty website',
 		projectRole: [
 			'Lead Front-end engineer',
@@ -153,7 +175,7 @@ export default  [
 		technologyUsed: 'HTML5, LESS/CSS3, jQUERY, Gulp, Ajax, PHP, Photoshop, Sketch, Git',
 		intro:
 			`
-			<p><a href="http://onomie.com" target="_blank">Onomie</a> is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
+			<p><a href="https://onomie.com" target="_blank">Onomie</a> is a direct-to-consumer cosmetics brand that is a cross between skincare and makeup.</p>
 			<br/>
 			<p>I was brought on to lead the front-end web development and interaction design for onomie.com to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
 			`
@@ -209,7 +231,7 @@ export default  [
 		projectPDFs: [
 			'bolster', 'bolster_sitemap'
 		],
-		siteUrl: 'http://bolster.us',
+		siteUrl: 'https://bolster.us',
 		projectType: 'AngularJS web application',
 		projectRole: [
 			'Front-end developer',
@@ -218,7 +240,7 @@ export default  [
 		technologyUsed: 'AngularJS, HTML5, LESS/CSS3, jQUERY, Grunt, Ajax, PHP, Photoshop, Git',
 		intro:
 		`
-		<p><a href="http://bolster.us/" target="_blank">Bolster.us</a> is a web application for home owners & contractors to connect and manage home remodeling projects.</p>
+		<p><a href="https://bolster.us/" target="_blank">Bolster.us</a> is a web application for home owners & contractors to connect and manage home remodeling projects.</p>
 		<br/>
 		<p>I was brought on to lead  UX and interaction design for the project; as such I designed and developed a user-facing public website as well as an admin site for users to log in, find their match, upload/share documents & monitor their project's progression. I additionally assisted with front-end development on the site using AngularJS v1 to creative custom UI directives.</p>
 		`
@@ -294,7 +316,7 @@ export default  [
 		projectImgs: [
 			'logo-00.jpg', 'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
 		],
-		siteUrl: 'http://tomtommag.com',
+		siteUrl: 'https://tomtommag.com',
 		projectType: 'Responsive E-commerce/Music Publication website',
 		projectRole: [
 			'Front-end developer',
@@ -305,7 +327,7 @@ export default  [
 		technologyUsed: 'HTML5, CSS3, jQUERY, Ajax, PHP, Photoshop, Shopify',
 		intro:
 			`
-			<p><a href="http://tomtommag.com/" target="_blank">Tom Tom Magazine</a> is a quarterly print magazine and website based out of New York City. It is the only magazine in the world that is dedicated to female drummers.</p>
+			<p><a href="https://tomtommag.com/" target="_blank">Tom Tom Magazine</a> is a quarterly print magazine and website based out of New York City. It is the only magazine in the world that is dedicated to female drummers.</p>
 			<br/>
 			<p>I was hired to build out Tom Tom's e-commerce platform to leverage site visits into opportunities to sell the publication or goods related to the brand. Using the Shopify CMS I built a custom responsive template theme for the Tom Tom store.</p>
 			`
@@ -316,7 +338,7 @@ export default  [
 		tileImg: 'bg-00.png',
 		heroImg: 'bg-00.png',
 		imgKey: 'projects/rga',
-		siteUrl: 'http://rga.com',
+		siteUrl: 'https://rga.com',
 		screenShots: [
 		],
 		projectImgs: [
