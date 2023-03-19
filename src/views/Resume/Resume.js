@@ -13,7 +13,6 @@ const Resume = () => (
 					<div className="center">
 						<p className="monospace uppercase">hello@kimispencer.com</p>
 						<p className="monospace uppercase">Brooklyn, NY</p>
-						<p className="monospace uppercase">San Francisco, CA</p>
 						<img alt="profile" className="circle-img profile-pic" src={ProfilePic} />
 						{/*<ImageLoader className="circle-img profile-pic" src="profile.jpg" imgKey="resume" isBg={false} alt="Profile Pic" />*/}
 					</div>
@@ -26,11 +25,11 @@ const Resume = () => (
 				<div className="right-col">
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
-							<p>Hi, I’m Kimi!<br/><br/>I’m a senior front-end software engineer, and user experience + interaction designer.
+							<p>Hi, I’m Kimi!<br/><br/>I’m a product designer (specializing in user experience + interface design) and senior front-end software engineer.
 							I have over 10 years expertise working in interactive technology. From San Francisco startups to NYC digital agencies; spanning industries from interactive advertising,  online magazines/publications, AR games for museum education, to high-end fashion.
 							<br/>
 							<br/>
-							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music, and am currently pursuing my interests in architecture & spatial design culminating in a VR experience.</p>
+							I create digital identity and experiences through concept development, UX & visual design, and creative coding solutions. I also like creating data visualizations, and visuals for live performances/music.</p>
 						</div>
 					</div>
 				</div>
@@ -40,6 +39,19 @@ const Resume = () => (
 					<h4 className="bold title">WORK EXPERIENCE</h4>
 				</div>
 				<div className="right-col">
+					<div className="resume-section-item">
+						<div className="flex-row responsive title">
+							<div className="flex-col institution">
+								<h4 className="bold uppercase">KDS Studios</h4>
+							</div>
+							<p className="job-title monospace attribute">Product Designer & Software Engineer — 2021 to present</p>
+						</div>
+						<p>Product designer, software engineer and founder of a boutique digital agency.</p>
+						<br/>
+						<p>Working with multiple clients in diverse technology sectors to help design and build their user experience and web apps.</p>
+						<br />
+						<p>Figma design files & user research available upon request.</p>
+					</div>
 					<div className="resume-section-item">
 						<div className="flex-row responsive title">
 							<div className="flex-col institution">
@@ -183,7 +195,7 @@ const Resume = () => (
 									<li>NPM & Webpack</li>
 									<li>Squarespace & Shopify</li>
 									<li>Data Visualization</li>
-									<li>UX Design</li>
+									<li>UX/UI Design</li>
 								</ul>
 							</div>
 						</div>
