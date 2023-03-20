@@ -6,10 +6,10 @@ export default  [
 		heroImg: 'smarty-bg.png',
 		imgKey: 'projects/smarty',
 		screenShots: [
-			'desktop-00.jpg', 'desktop-smarty-auto-schedule.jpg', 'desktop-smarty-date-picker.jpg'
+			'desktop-00.jpg', 'desktop-smarty-auto-schedule.jpg', 'desktop-smarty-date-picker.jpg', 'desktop-smarty-calendar.jpg'
 		],
 		projectImgs: [
-			'color-palette.jpg'
+			'color-palette.jpg', 'smarty-logo-detail.jpg'
 		],
 		siteUrl: 'https://www.smarty.ai/',
 		projectType: 'Product design for web app + Chrome extension',
@@ -19,7 +19,13 @@ export default  [
 			'UX research & design'
 		],
 		technologyUsed: 'Figma',
-		intro: `<p>Lorem ipsum </p>`
+		intro:
+			`<p><a href="https://smarty.ai" target="_blank">Smarty AI</a> unifies task management, calendar scheduling into one clean and unified view. Powered with a natural language processing interface, users can enter text to create tasks, events, scheduling links and more.</p>
+			</br>
+			<p>As lead product designer, I created the foundational core interface for Smarty's responsive desktop & mobile app and Chrome extension. Working closely with the CEO and engineering team, I created the core UI component library and app interfaces, as well as conducted user research & testing.</p>
+			</br>
+			<p>Figma design files & user research available upon request.</p>
+			`
 	},
 	{ url: "architecture"
 	, name: "Architecture"
@@ -314,7 +320,7 @@ export default  [
 			'desktop-00.png', 'phone-00.png', 'desktop-01.png', 'phone-01.png'
 		],
 		projectImgs: [
-			'logo-00.jpg', 'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
+			'logo-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
 		],
 		siteUrl: 'https://tomtommag.com',
 		projectType: 'Responsive E-commerce/Music Publication website',
