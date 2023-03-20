@@ -27,51 +27,17 @@ export default  [
 			<p>Figma design files & user research available upon request.</p>
 			`
 	},
-	{ url: "architecture"
-	, name: "Architecture"
-	, tileImg: "exterior-folly-01.jpg"
-	, heroImg: "exploded-axon.jpg"
-	, imgKey: "projects/architecture"
-	, screenShots: []
-	, projectImgs:
-			[ "folly-exterior.jpg"
-			, "folly-interior.jpg"
-			, "exploded-diagram.jpg"
-			, "exploded-axon.jpg"
-			, "roof-plan.jpg"
-			, "floor-plan.jpg"
-			, "elevation.jpg"
-			, "section-00.jpg"
-			, "site-plan.jpg"
-			]
-	, siteUrl: ""
-	, projectType: "Architecture + Spatial design"
-	, projectRole:
-			[ "Lead designer"
-			]
-	, technologyUsed: "Rhino, Illustrator, Photoshop, InDesign"
-	, intro:
-			`
-			<p>This proposal for a new Willard Park Community Center (located in Berkeley, CA) is inspired by the action word “emergence” and the concept of subtractive openness “to carve”— and the intention of creating a building that is an extension of the ground, and is carved open to external air and light.</p>
-			</br>
-			<p>The foundational earthen mound informs the basis of the design. The building’s structure is extended from the topography and the interior courtyard carved out. The main body of the structure is surrounded by the mounded earth. The structure is created by a balance between curvature and angular cuts.</p>
-			</br>
-			<p>The courtyard plays with natural materiality: stone, wood, earthen supports for a vertical garden, as well as contain interior trees and small garden areas. The vertical gardens in the courtyard reinforce the connection of the structure as emergent from the earth. The green roof extends into the ground and creates a seamless extension, the open-air corridor and rooms are made of planked concrete as an affordable and durable option that represents organic wood and stone; with steel guard railings built along the walkable green roof around the courtyard for safety. And large glass windows allow external views into the interior, and provide light to all the rooms.</p>
-			</br>
-			<p>This community center is meant to evoke a subtle connection to the natural landscape of the park, and invite community members to engage with it from different views and flows. To see it as a part of the park, emergent and carved from, rather than imposed.</p>
-			`
-	},
 	{
 		url: 'lumi',
 		name: "Lumi",
 		tileImg: 'packaging-00.jpg',
-		heroImg: 'bg-01.png',
+		heroImg: 'bg-00.png',
 		imgKey: 'projects/lumi',
 		screenShots: [
 			'desktop-00.jpg', 'phone-00.png', 'phone-01.png', 'phone-02.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png'
 		],
 		projectImgs: [
-			'typography.png', 'colors.png', 'table-component.png', 'packaging-00.jpg', 'packaging-01.jpg', 'packaging-02.jpg', 'packaging-03.jpg', 'packaging-04.jpg', 'packaging-05.jpg', 'packaging-06.jpg', 'packaging-07.jpg'
+			'typography.png', 'colors.png', 'table-component.png', 'packaging-01.jpg', 'packaging-03.jpg', 'packaging-06.jpg'
 		],
 		siteUrl: 'https://lumi.com',
 		projectType: 'UI component libarary + Dashboard Apps',
@@ -101,7 +67,7 @@ export default  [
 			'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
 		],
 		projectImgs: [
-			'cover-16.jpg', 'cover-10.jpg', 'cover-13.jpg', 'cover-00.jpg', 'cover-17.jpg', 'cover-01.jpg', 'cover-02.jpg', 'cover-03.jpg', 'cover-04.jpg', 'cover-05.jpg', 'cover-14.jpg', 'cover-06.jpg', 'cover-07.jpg', 'cover-08.jpg', 'cover-09.jpg'
+			'cover-00.jpg', 'cover-17.jpg', 'cover-02.jpg', 'cover-04.jpg', 'cover-14.jpg'
 		],
 		projectPDFs: [
 			'arrivals_wireframes'
@@ -138,7 +104,7 @@ export default  [
 			'desktop-03.jpg', 'phone-01.jpg', 'desktop-01.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
-			'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
+			'magazine-01.jpg', 'magazine-02.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
 		],
 		siteUrl: 'https://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
@@ -167,7 +133,7 @@ export default  [
 			'desktop-00.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
-			 'products-03.jpg', 'products-00.jpg', 'products-01.jpg','products-04.jpg', 'products-09.jpg', 'products-05.jpg', 'products-06.jpg', 'products-07.jpg', 'products-08.jpg'
+			 'products-04.jpg', 'products-09.jpg', 'products-07.jpg', 'products-08.jpg'
 		],
 		siteUrl: 'https://onomie.com',
 		projectType: 'Responsive E-commerce/Beauty website',
@@ -186,7 +152,41 @@ export default  [
 			<p>I was brought on to lead the front-end web development and interaction design for onomie.com to help it stand out from a competitive market by featuring interactive trials and science backed beauty products.</p>
 			`
 
-	}
+	},
+	{ url: "architecture"
+	, name: "Architecture"
+	, tileImg: "exterior-folly-01.jpg"
+	, heroImg: "exploded-axon.jpg"
+	, imgKey: "projects/architecture"
+	, screenShots: []
+	, projectImgs:
+			[ "exploded-diagram.jpg"
+			, "exploded-axon.jpg"
+			, "roof-plan.jpg"
+			, "floor-plan.jpg"
+			, "elevation.jpg"
+			, "section-00.jpg"
+			, "site-plan.jpg"
+			, "folly-exterior.jpg"
+			, "folly-interior.jpg"
+			]
+	, siteUrl: ""
+	, projectType: "Architecture + Spatial design"
+	, projectRole:
+			[ "Lead designer"
+			]
+	, technologyUsed: "Rhino, Illustrator, Photoshop, InDesign"
+	, intro:
+			`
+			<p>This proposal for a new Willard Park Community Center (located in Berkeley, CA) is inspired by the action word “emergence” and the concept of subtractive openness “to carve”— and the intention of creating a building that is an extension of the ground, and is carved open to external air and light.</p>
+			</br>
+			<p>The foundational earthen mound informs the basis of the design. The building’s structure is extended from the topography and the interior courtyard carved out. The main body of the structure is surrounded by the mounded earth. The structure is created by a balance between curvature and angular cuts.</p>
+			</br>
+			<p>The courtyard plays with natural materiality: stone, wood, earthen supports for a vertical garden, as well as contain interior trees and small garden areas. The vertical gardens in the courtyard reinforce the connection of the structure as emergent from the earth. The green roof extends into the ground and creates a seamless extension, the open-air corridor and rooms are made of planked concrete as an affordable and durable option that represents organic wood and stone; with steel guard railings built along the walkable green roof around the courtyard for safety. And large glass windows allow external views into the interior, and provide light to all the rooms.</p>
+			</br>
+			<p>This community center is meant to evoke a subtle connection to the natural landscape of the park, and invite community members to engage with it from different views and flows. To see it as a part of the park, emergent and carved from, rather than imposed.</p>
+			`
+	},
 	// , {
 	// 	url: 'brainchild',
 	// 	name: "Brainchild.Co",
@@ -317,7 +317,7 @@ export default  [
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/tomtom',
 		screenShots: [
-			'desktop-00.jpg', 'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
+			'desktop-01.jpg', 'phone-01.jpg', 'desktop-00.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
 			'logo-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
@@ -416,7 +416,7 @@ export default  [
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/data-visualization',
 		projectImgs: [
-			'00.jpg', '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'
+			'05.jpg', '01.jpg', '03.jpg', '04.jpg'
 		],
 		projectVids: [
 		],
