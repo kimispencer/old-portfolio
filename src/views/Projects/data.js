@@ -68,10 +68,10 @@ export default  [
 		heroImg: 'bg-01.png',
 		imgKey: 'projects/lumi',
 		screenShots: [
-			'phone-00.png', 'phone-01.png', 'phone-02.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png'
+			'desktop-00.jpg', 'phone-00.png', 'phone-01.png', 'phone-02.png', 'desktop-01.png', 'desktop-02.png', 'desktop-03.png'
 		],
 		projectImgs: [
-			'typography.png', 'colors.png', 'table-component.png', 'packaging-00.jpg', 'packaging-01.png', 'packaging-02.jpg', 'packaging-03.jpg', 'packaging-04.jpg', 'packaging-05.jpg', 'packaging-06.png', 'packaging-07.png'
+			'typography.png', 'colors.png', 'table-component.png', 'packaging-00.jpg', 'packaging-01.jpg', 'packaging-02.jpg', 'packaging-03.jpg', 'packaging-04.jpg', 'packaging-05.jpg', 'packaging-06.jpg', 'packaging-07.jpg'
 		],
 		siteUrl: 'https://lumi.com',
 		projectType: 'UI component libarary + Dashboard Apps',
@@ -135,10 +135,10 @@ export default  [
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/suited',
 		screenShots: [
-			'desktop-03.jpg', 'phone-00.jpg', 'desktop-00.jpg'
+			'desktop-03.jpg', 'phone-01.jpg', 'desktop-01.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
-			'magazine-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
+			'magazine-01.jpg', 'magazine-02.jpg', 'magazine-03.jpg', 'magazine-04.jpg', 'magazine-05.jpg', 'magazine-06.jpg'
 		],
 		siteUrl: 'https://suitedmagazine.com',
 		projectType: 'Responsive Publication/Editorial website',
@@ -164,10 +164,10 @@ export default  [
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/onomie',
 		screenShots: [
-			'desktop-00.png', 'phone-00.png'
+			'desktop-00.jpg', 'phone-00.jpg'
 		],
 		projectImgs: [
-			 'products-03.jpg', 'products-00.png', 'products-01.png','products-04.jpg', 'products-09.jpg', 'products-05.jpg', 'products-06.jpg', 'products-07.jpg', 'products-08.jpg'
+			 'products-03.jpg', 'products-00.jpg', 'products-01.jpg','products-04.jpg', 'products-09.jpg', 'products-05.jpg', 'products-06.jpg', 'products-07.jpg', 'products-08.jpg'
 		],
 		siteUrl: 'https://onomie.com',
 		projectType: 'Responsive E-commerce/Beauty website',
@@ -287,12 +287,12 @@ export default  [
 		url: 'plusign',
 		name: "Plusign",
 		tileImg: 'bg-00.jpg',
-		heroImg: 'bg-01.png',
+		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/plusign',
 		screenShots: [
 		],
 		projectImgs: [
-			'logo-00.jpg', 'logo-02.png', 'logo-03.png', 'logo-04.png'
+			'logo-00.jpg', 'logo-02.jpg', 'logo-03.jpg', 'logo-04.jpg'
 		],
 		siteUrl: 'http://plusign.com',
 		projectType: 'Generative Logo Design',
@@ -317,7 +317,7 @@ export default  [
 		heroImg: 'bg-01.jpg',
 		imgKey: 'projects/tomtom',
 		screenShots: [
-			'desktop-00.png', 'phone-00.png', 'desktop-01.png', 'phone-01.png'
+			'desktop-00.jpg', 'phone-00.jpg', 'desktop-01.jpg', 'phone-01.jpg'
 		],
 		projectImgs: [
 			'logo-00.jpg', 'magazine-01.jpg', 'magazine-02.jpg'
