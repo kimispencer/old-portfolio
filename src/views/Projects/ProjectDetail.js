@@ -76,8 +76,8 @@ class ProjectDetail extends React.Component {
 			    return p;
 			}
 		})[0];
-        const previous = (projectIndex + length - 1) % length;
-        const next = (projectIndex + 1) % length;
+		const previous = (projectIndex + length - 1) % length;
+		const next = (projectIndex + 1) % length;
 
 		const prevLink = PROJECTS[previous] ? PROJECTS[previous].url : null;
 		const nextLink = PROJECTS[next] ? PROJECTS[next].url : null;

@@ -225,7 +225,7 @@ export default  [
 	// 		`
 
 	// }
-	, {
+	{
 		url: 'bolster',
 		name: "Bolster",
 		tileImg: 'bg-00.jpg',
