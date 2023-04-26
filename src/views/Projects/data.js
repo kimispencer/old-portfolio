@@ -23,8 +23,6 @@ export default  [
 			`<p><a href="https://smarty.ai" target="_blank">Smarty AI</a> unifies task management, calendar scheduling into one clean and unified view. Powered with a natural language processing interface, users can enter text to create tasks, events, scheduling links and more.</p>
 			</br>
 			<p>As lead product designer, I created the foundational core interface for Smarty's responsive desktop & mobile app and Chrome extension. Working closely with the CEO and engineering team, I created the core UI component library and app interfaces, as well as conducted user research & testing.</p>
-			</br>
-			<p>Figma design files & user research available upon request.</p>
 			`
 	},
 	{
